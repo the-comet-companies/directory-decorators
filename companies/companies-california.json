@@ -1,0 +1,2548 @@
+[
+  {
+    "id": "dtla-print-los-angeles-ca",
+    "name": "DTLA Print",
+    "address": {
+      "street": "4901 S Santa Fe Ave, Los Angeles, CA 90058",
+      "city": "Los Angeles",
+      "state": "California",
+      "zipCode": "90058",
+      "coordinates": {
+        "lat": 33.998314939584944,
+        "lng": -118.2306772519764
+      }
+    },
+    "phone": "(323) 261-8700",
+    "website": "https://dtlaprint.com",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Embroidery"
+      },
+      {
+        "type": "dtg-printing",
+        "name": "DTG Printing"
+      },
+      {
+        "type": "promotional-products",
+        "name": "Promotional Products"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 284,
+    "hours": {
+      "monday": "8:00 AM - 5:00 PM",
+      "tuesday": "8:00 AM - 5:00 PM",
+      "wednesday": "8:00 AM - 5:00 PM",
+      "thursday": "8:00 AM - 5:00 PM",
+      "friday": "8:00 AM - 5:00 PM",
+      "saturday": "9:00 AM - 2:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Premier custom apparel printing and embroidery services in Los Angeles area. Established 2010. Specializing in screen printing, embroidery, DTG printing, and promotional products for businesses, events, and organizations.",
+    "specialties": [
+      "Screen Printing",
+      "Embroidery",
+      "DTG Printing", 
+      "Construction Uniforms",
+      "Restaurant Apparel",
+      "Corporate Gifts",
+      "Event Merchandise"
+    ],
+    "equipment": [
+      "Automatic Screen Printing Presses",
+      "Embroidery Machines",
+      "DTG Printers",
+      "Heat Press Equipment"
+    ],
+    "minimums": {
+      "screenPrinting": "25",
+      "embroidery": "3",
+      "dtg": "1"
+    },
+    "turnaround": {
+      "standard": "7-10 business days",
+      "rush": "3-5 business days"
+    },
+    "source": "dtla-print-official",
+    "scrapedAt": "2025-09-02T07:00:00.000Z",
+    "isPremium": true,
+    "featured": true,
+    "established": "2010",
+    "employees": "15-25"
+  },
+  {
+    "id": "ChIJtUbbSHhclIARe-GM33t-KZ4",
+    "name": "Ember Ink Garment Printing",
+    "address": {
+      "street": "850 San Jose Ave Ste 101, Clovis, CA 93612",
+      "city": "Clovis",
+      "state": "California",
+      "zipCode": "93612",
+      "coordinates": {
+        "lat": 36.8120367,
+        "lng": -119.6984632
+      }
+    },
+    "phone": "(559) 325-8967",
+    "website": "http://www.emberinkprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Clovis.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWRmT4jJDlIARTtvO1VtZUVc",
+    "name": "Central Valley Sports",
+    "address": {
+      "street": "5856 E Brown Ave, Fresno, CA 93727",
+      "city": "Fresno",
+      "state": "California",
+      "zipCode": "93727",
+      "coordinates": {
+        "lat": 36.7745333,
+        "lng": -119.6883532
+      }
+    },
+    "phone": "(559) 347-9776",
+    "website": "http://mycentralvalleysports.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 32,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fresno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJmxNyDyXklIARMVCE7ls4tb4",
+    "name": "Print Theory®",
+    "address": {
+      "street": "126 Ventura Ct Suite G, Kingsburg, CA 93631",
+      "city": "Kingsburg",
+      "state": "California",
+      "zipCode": "93631",
+      "coordinates": {
+        "lat": 36.5206911,
+        "lng": -119.5685182
+      }
+    },
+    "phone": "(559) 707-1714",
+    "website": "http://printtheoryco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 83,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kingsburg.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJScM-J0smlYARv6Ad1kVqYA0",
+    "name": "Visual Ink",
+    "address": {
+      "street": "1130 E Mineral King Ave, Visalia, CA 93292",
+      "city": "Visalia",
+      "state": "California",
+      "zipCode": "93292",
+      "coordinates": {
+        "lat": 36.3275927,
+        "lng": -119.2802128
+      }
+    },
+    "phone": "(559) 712-2020",
+    "website": "http://www.visualink.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 176,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Visalia.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ1UwOmYHjlIAR2mWCcj3jmHU",
+    "name": "Star Designs & Prints",
+    "address": {
+      "street": "19406 E Parlier Ave, Reedley, CA 93654",
+      "city": "Reedley",
+      "state": "California",
+      "zipCode": "93654",
+      "coordinates": {
+        "lat": 36.6120128,
+        "lng": -119.4417143
+      }
+    },
+    "phone": "(559) 643-2327",
+    "website": "https://www.stardesignsandprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Reedley.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJtUbbSHhclIARaeUIb0Scij8",
+    "name": "Priceless Kreations",
+    "address": {
+      "street": "1261 Hoblitt Ave Suite 201, Clovis, CA 93612",
+      "city": "Clovis",
+      "state": "California",
+      "zipCode": "93612",
+      "coordinates": {
+        "lat": 36.8141837,
+        "lng": -119.6920903
+      }
+    },
+    "phone": "(559) 765-0424",
+    "website": "https://pricelesskreations.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Clovis.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJS8_TfrhXlIARylbLTTe9Cvg",
+    "name": "BB Design, LLC",
+    "address": {
+      "street": "12266 E Shields Ave, Sanger, CA 93657",
+      "city": "Sanger",
+      "state": "California",
+      "zipCode": "93657",
+      "coordinates": {
+        "lat": 36.7798503,
+        "lng": -119.5690935
+      }
+    },
+    "phone": "(559) 250-9965",
+    "website": "http://www.biddybling.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Sanger.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJHaluUGEvlYARur-48Axxvgw",
+    "name": "Sua Sponte Design",
+    "address": {
+      "street": "1746 E Finni Ct, Visalia, CA 93292",
+      "city": "Visalia",
+      "state": "California",
+      "zipCode": "93292",
+      "coordinates": {
+        "lat": 36.3314956,
+        "lng": -119.2731928
+      }
+    },
+    "phone": "(559) 358-8357",
+    "website": "https://suaspontedesign.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 46,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Visalia.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQUKJRQ1nlIARqqMleyQgKt0",
+    "name": "A-MARK T-SHIRTS INC",
+    "address": {
+      "street": "3 E Shields Ave, Fresno, CA 93704",
+      "city": "Fresno",
+      "state": "California",
+      "zipCode": "93704",
+      "coordinates": {
+        "lat": 36.7796459,
+        "lng": -119.8128654
+      }
+    },
+    "phone": "(559) 227-6370",
+    "website": "http://www.amarktshirts.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 24,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fresno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJtUbbSHhclIAROGtzGtGM-xI",
+    "name": "All Signs & Screen Printing Inc.",
+    "address": {
+      "street": "252 N Fairfax Ave, Clovis, CA 93612",
+      "city": "Clovis",
+      "state": "California",
+      "zipCode": "93612",
+      "coordinates": {
+        "lat": 36.8352054,
+        "lng": -119.7088317
+      }
+    },
+    "phone": "(559) 696-2480",
+    "website": "https://www.allsignsusa.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 21,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Clovis.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJDUT2yFoHkYARFan8bGynd_g",
+    "name": "Impact Prints",
+    "address": {
+      "street": "1140 N Front St, Turlock, CA 95380",
+      "city": "Turlock",
+      "state": "California",
+      "zipCode": "95380",
+      "coordinates": {
+        "lat": 37.5045666,
+        "lng": -120.8578015
+      }
+    },
+    "phone": "(209) 788-3535",
+    "website": "https://goimpactprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 45,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Turlock.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuf6NMxpolIAR_wmjCYXDFtM",
+    "name": "Stitch Master Custom Embroidery",
+    "address": {
+      "street": "344 W Bedford Ave #101, Fresno, CA 93711",
+      "city": "Fresno",
+      "state": "California",
+      "zipCode": "93711",
+      "coordinates": {
+        "lat": 36.846536,
+        "lng": -119.7973991
+      }
+    },
+    "phone": "(559) 431-1598",
+    "website": "http://slasherslasher.squarespace.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 243,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fresno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJBxUd0NvHwoARfnsHyrCBWy4",
+    "name": "Rheetech Sales & Service Inc.",
+    "address": {
+      "street": "2401 Main St, Los Angeles, CA 90007",
+      "city": "Los Angeles",
+      "state": "California",
+      "zipCode": "90007",
+      "coordinates": {
+        "lat": 34.0267326,
+        "lng": -118.2677153
+      }
+    },
+    "phone": "(213) 749-9111",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 131,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Los Angeles.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJNcDXm1BmlIAR3FW33Q6hsJk",
+    "name": "Impress Printing and Signs",
+    "address": {
+      "street": "4762 W Jennifer Ave, Fresno, CA 93722",
+      "city": "Fresno",
+      "state": "California",
+      "zipCode": "93722",
+      "coordinates": {
+        "lat": 36.8125039,
+        "lng": -119.8791877
+      }
+    },
+    "phone": "(559) 221-7077",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fresno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJodkChJacwoARmv06DptAemo",
+    "name": "California Print Co.",
+    "address": {
+      "street": "9428 Eton Ave unit i, Chatsworth, CA 91311",
+      "city": "Chatsworth",
+      "state": "California",
+      "zipCode": "91311",
+      "coordinates": {
+        "lat": 34.242113,
+        "lng": -118.596831
+      }
+    },
+    "phone": "(818) 882-4578",
+    "website": "https://www.instagram.com/californiaprintco/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 37,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Chatsworth.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJda4cBRlmlIAR4q42_yjdFwk",
+    "name": "Express Graphics",
+    "address": {
+      "street": "4781 W Jacquelyn Ave Suite A, Fresno, CA 93722",
+      "city": "Fresno",
+      "state": "California",
+      "zipCode": "93722",
+      "coordinates": {
+        "lat": 36.8142529,
+        "lng": -119.8801248
+      }
+    },
+    "phone": "(559) 271-5000",
+    "website": "http://www.expressgraphicsfresno.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 23,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fresno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.102Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJHYJlYR9AjoARIDhUM4FCcgs",
+    "name": "Sports Design",
+    "address": {
+      "street": "2557 Soquel Dr Unit B, Santa Cruz, CA 95065",
+      "city": "Santa Cruz",
+      "state": "California",
+      "zipCode": "95065",
+      "coordinates": {
+        "lat": 36.9884577,
+        "lng": -121.9739764
+      }
+    },
+    "phone": "(831) 427-3771",
+    "website": "http://www.sportsdesign.biz/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Santa Cruz.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:36.151Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJFXlSh93ilIARA_OQB8lataE",
+    "name": "Mprints Custom Screen Printing",
+    "address": {
+      "street": "1219 M St, Reedley, CA 93654",
+      "city": "Reedley",
+      "state": "California",
+      "zipCode": "93654",
+      "coordinates": {
+        "lat": 36.59046,
+        "lng": -119.456032
+      }
+    },
+    "phone": "(559) 638-3556",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Reedley.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:48.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJfwAidJBqlIARgh9mhvsIW4I",
+    "name": "K & M Unlimited",
+    "address": {
+      "street": "14545 Skyview Rd, Madera, CA 93636",
+      "city": "Madera",
+      "state": "California",
+      "zipCode": "93636",
+      "coordinates": {
+        "lat": 36.960391,
+        "lng": -119.800728
+      }
+    },
+    "phone": "(559) 269-7453",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Madera.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:48.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuX60p7DllIARJgcmosjWvDQ",
+    "name": "Screenprinting",
+    "address": {
+      "street": "40207 Rd 24, Kingsburg, CA 93631",
+      "city": "Kingsburg",
+      "state": "California",
+      "zipCode": "93631",
+      "coordinates": {
+        "lat": 36.5216222,
+        "lng": -119.5214823
+      }
+    },
+    "phone": "(559) 790-1861",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kingsburg.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:48.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJx4dH1gIllYARTaICoXiwGIM",
+    "name": "T.O.B -Visalia",
+    "address": {
+      "street": "303 N Garden St, Visalia, CA 93291",
+      "city": "Visalia",
+      "state": "California",
+      "zipCode": "93291",
+      "coordinates": {
+        "lat": 36.3322392,
+        "lng": -119.2903471
+      }
+    },
+    "phone": "(559) 713-8635",
+    "website": "http://www.tobgraphics.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 12,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Visalia.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:53.811Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ_9CiQdDHwoARrBYIdZYP0PE",
+    "name": "The Best Screen Printing & Embroidery",
+    "address": {
+      "street": "2710 S Broadway, Los Angeles, CA 90007",
+      "city": "Los Angeles",
+      "state": "California",
+      "zipCode": "90007",
+      "coordinates": {
+        "lat": 34.0239567,
+        "lng": -118.2705069
+      }
+    },
+    "phone": "(323) 433-0033",
+    "website": "https://thebestscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 74,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Los Angeles.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:55.455Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ_-7XvHlclIARLLAVaNf5-ro",
+    "name": "Artworkz Screen Printing & Embroidery",
+    "address": {
+      "street": "1646 Clovis Ave, Clovis, CA 93612",
+      "city": "Clovis",
+      "state": "California",
+      "zipCode": "93612",
+      "coordinates": {
+        "lat": 36.8114202,
+        "lng": -119.700576
+      }
+    },
+    "phone": "(559) 472-3070",
+    "website": "http://artworkzclovis.com/",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 39,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Clovis.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.131Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJTf_VKZmcwoARwo_5NIxmDjg",
+    "name": "Screentec",
+    "address": {
+      "street": "9551 Irondale Ave, Chatsworth, CA 91311",
+      "city": "Chatsworth",
+      "state": "California",
+      "zipCode": "91311",
+      "coordinates": {
+        "lat": 34.2442927,
+        "lng": -118.5865359
+      }
+    },
+    "phone": "(818) 709-8232",
+    "website": "http://screenteclogo.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3.5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Chatsworth.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:19.798Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJZRQYUqcng4AR10qSQv7eTsQ",
+    "name": "North State Screen Print",
+    "address": {
+      "street": "641 Nord Ave A, Chico, CA 95926",
+      "city": "Chico",
+      "state": "California",
+      "zipCode": "95926",
+      "coordinates": {
+        "lat": 39.728546,
+        "lng": -121.8555049
+      }
+    },
+    "phone": "(530) 895-9193",
+    "website": "http://northstatescreenprint.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Chico.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:30.623Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJz6AV6IAr3YARFwVcXwrwln8",
+    "name": "All American Print Supply | DTG MART | Cerritos | CA Branch",
+    "address": {
+      "street": "17511 Valley View Ave, Cerritos, CA 90703",
+      "city": "Cerritos",
+      "state": "California",
+      "zipCode": "90703",
+      "coordinates": {
+        "lat": 33.8720389,
+        "lng": -118.029122
+      }
+    },
+    "phone": "(714) 576-2900",
+    "website": "https://aaprintsupplyco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 613,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Cerritos.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.867Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJc79D-zK9hYARWG9rrprrMus",
+    "name": "Screenprinting Products",
+    "address": {
+      "street": "530c Alameda del Prado #398, Novato, CA 94945, United States",
+      "city": "Novato",
+      "state": "California",
+      "zipCode": "94945",
+      "coordinates": {
+        "lat": 38.0657449,
+        "lng": -122.5394681
+      }
+    },
+    "phone": "+1 619-818-6117",
+    "website": "http://screenprintingproducts.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Novato.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:50.624Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ940Lj4SRwoARByel5zMtSkA",
+    "name": "Print Service LA",
+    "address": {
+      "street": "1150 S Olive St 10th Floor, Los Angeles, CA 90015",
+      "city": "Los Angeles",
+      "state": "California",
+      "zipCode": "90015",
+      "coordinates": {
+        "lat": 34.0315807,
+        "lng": -118.2450615
+      }
+    },
+    "phone": "(323) 952-6002",
+    "website": "http://www.printservicela.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 50,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Los Angeles.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:58.566Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJU1lx-h-23IAR9JtJNks1P6o",
+    "name": "Silkscreen now",
+    "address": {
+      "street": "2834 Hamner Ave #403, Norco, CA 92860",
+      "city": "Norco",
+      "state": "California",
+      "zipCode": "92860",
+      "coordinates": {
+        "lat": 33.9234603,
+        "lng": -117.5601933
+      }
+    },
+    "phone": "(919) 525-7911",
+    "website": "http://www.silkscreennow.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Norco.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:15.942Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJZ3zmQw1U2YARZt4XqqQ6mBo",
+    "name": "aka screen printing",
+    "address": {
+      "street": "3919 Illinois St, San Diego, CA 92104",
+      "city": "San Diego",
+      "state": "California",
+      "zipCode": "92104",
+      "coordinates": {
+        "lat": 32.748932,
+        "lng": -117.1273255
+      }
+    },
+    "phone": "(619) 280-0252",
+    "website": "http://www.galleryaka.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Diego.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:16.904Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJld_jKEV5j4ARaLgbUpgnYbE",
+    "name": "Pacific Brothers Prints",
+    "address": {
+      "street": "390 Swift Ave, South San Francisco, CA 94080",
+      "city": "South San Francisco",
+      "state": "California",
+      "zipCode": "94080",
+      "coordinates": {
+        "lat": 37.6492581,
+        "lng": -122.3881137
+      }
+    },
+    "phone": "(707) 863-1337",
+    "website": "https://www.pacificbrothersprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 29,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in South San Francisco.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ1_C49B5-hYARvUkl_5ZcgAI",
+    "name": "Lucky Mule",
+    "address": {
+      "street": "2311 Adeline St, Oakland, CA 94607",
+      "city": "Oakland",
+      "state": "California",
+      "zipCode": "94607",
+      "coordinates": {
+        "lat": 37.8164006,
+        "lng": -122.2838641
+      }
+    },
+    "phone": "(510) 451-2177",
+    "website": "https://luckymule.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 25,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Oakland.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ8XTeP3yjj4AR54PtjaSulV4",
+    "name": "Bigfoot Tees",
+    "address": {
+      "street": "2200 Village Ct, Belmont, CA 94002",
+      "city": "Belmont",
+      "state": "California",
+      "zipCode": "94002",
+      "coordinates": {
+        "lat": 37.5083532,
+        "lng": -122.2942449
+      }
+    },
+    "phone": "(650) 389-5789",
+    "website": "https://bigfoot-tees.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 20,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Belmont.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJe2sZOk5-j4ARO6kq4EQ3QnQ",
+    "name": "Against The Grain",
+    "address": {
+      "street": "974 Geneva Ave Suite 101, San Francisco, CA 94112",
+      "city": "San Francisco",
+      "state": "California",
+      "zipCode": "94112",
+      "coordinates": {
+        "lat": 37.7156715,
+        "lng": -122.4401107
+      }
+    },
+    "phone": "(415) 407-2691",
+    "website": "http://www.atgsupplyco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Francisco.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJD_Xyi3dhhYARwiSfkJl-k-E",
+    "name": "We Need Merch Screen Printing",
+    "address": {
+      "street": "1241 Boulevard Way, Walnut Creek, CA 94595",
+      "city": "Walnut Creek",
+      "state": "California",
+      "zipCode": "94595",
+      "coordinates": {
+        "lat": 37.8941384,
+        "lng": -122.0759802
+      }
+    },
+    "phone": "(925) 577-3132",
+    "website": "http://www.weneedmerch.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 117,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Walnut Creek.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJxfuZEkkVjoAREJdDsKnXBt4",
+    "name": "Santa Cruz Custom Screen Printing",
+    "address": {
+      "street": "250 Potrero St # A, Santa Cruz, CA 95060",
+      "city": "Santa Cruz",
+      "state": "California",
+      "zipCode": "95060",
+      "coordinates": {
+        "lat": 36.9808389,
+        "lng": -122.0304693
+      }
+    },
+    "phone": "(831) 475-1606",
+    "website": "https://santacruzcustomscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 16,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Santa Cruz.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQZEG-f96j4AR-aTbh_3My9U",
+    "name": "John the Sign Guy",
+    "address": {
+      "street": "1830 Palmetto Ave, Pacifica, CA 94044",
+      "city": "Pacifica",
+      "state": "California",
+      "zipCode": "94044",
+      "coordinates": {
+        "lat": 37.6348735,
+        "lng": -122.4922206
+      }
+    },
+    "phone": "(650) 359-1626",
+    "website": "http://www.johnthesignguy.biz/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pacifica.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ18pxlHl3j4ARO1Zt6m07nGw",
+    "name": "Bay Ink Screen",
+    "address": {
+      "street": "109 Santa Lucia Ave, San Bruno, CA 94066",
+      "city": "San Bruno",
+      "state": "California",
+      "zipCode": "94066",
+      "coordinates": {
+        "lat": 37.6154627,
+        "lng": -122.4060313
+      }
+    },
+    "phone": "(650) 583-8647",
+    "website": "http://www.bayinkscreen.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Bruno.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJO2tBCtYzjoARNlCgAz1zAbw",
+    "name": "iCustom Oakridge",
+    "address": {
+      "street": "925 Blossom Hill Rd #1469, San Jose, CA 95123",
+      "city": "San Jose",
+      "state": "California",
+      "zipCode": "95123",
+      "coordinates": {
+        "lat": 37.2516388,
+        "lng": -121.8641883
+      }
+    },
+    "phone": "(408) 763-6069",
+    "website": "https://www.icustomoakridge.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 156,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Jose.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ2St7cmKGj4ARh--RCtDdRWE",
+    "name": "Lot78 Studios",
+    "address": {
+      "street": "850 42nd Ave t, Oakland, CA 94601",
+      "city": "Oakland",
+      "state": "California",
+      "zipCode": "94601",
+      "coordinates": {
+        "lat": 37.7700302,
+        "lng": -122.2193402
+      }
+    },
+    "phone": "(510) 671-8655",
+    "website": "https://www.lot78studio.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Oakland.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJI1avYfcyjoARRYgVfDMJFUg",
+    "name": "Shock N Awe Prints",
+    "address": {
+      "street": "394 Umbarger Rd unit d, San Jose, CA 95111",
+      "city": "San Jose",
+      "state": "California",
+      "zipCode": "95111",
+      "coordinates": {
+        "lat": 37.2984674,
+        "lng": -121.8447206
+      }
+    },
+    "phone": "(408) 440-1773",
+    "website": "http://shocknaweprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Jose.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJh_pkeFrLj4ARgVsec9zsdu4",
+    "name": "SPECTRUM PRINT SHOP",
+    "address": {
+      "street": "881 Park Ave, San Jose, CA 95126",
+      "city": "San Jose",
+      "state": "California",
+      "zipCode": "95126",
+      "coordinates": {
+        "lat": 37.3263517,
+        "lng": -121.9068658
+      }
+    },
+    "phone": "(408) 288-7433",
+    "website": "https://www.spectrumapparelprinting.com/index.php#instant_quote",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Jose.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJT27tKC18j4ARXvPuheeR65Q",
+    "name": "ESTBC PRINTS",
+    "address": {
+      "street": "4706 3rd St, San Francisco, CA 94124",
+      "city": "San Francisco",
+      "state": "California",
+      "zipCode": "94124",
+      "coordinates": {
+        "lat": 37.7354887,
+        "lng": -122.3907688
+      }
+    },
+    "phone": "(415) 404-1426",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Francisco.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJqS6Ko2h-hYARH-CTqn5rAEk",
+    "name": "Forthrite Printing",
+    "address": {
+      "street": "5857 San Pablo Ave, Oakland, CA 94608",
+      "city": "Oakland",
+      "state": "California",
+      "zipCode": "94608",
+      "coordinates": {
+        "lat": 37.8419568,
+        "lng": -122.283686
+      }
+    },
+    "phone": "(510) 923-1544",
+    "website": "http://www.forthriteprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3.6,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Oakland.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJXRMcF4WPj4ARoJ5kg_evF9w",
+    "name": "AGW Screenworks",
+    "address": {
+      "street": "436 Peralta Ave, San Leandro, CA 94577",
+      "city": "San Leandro",
+      "state": "California",
+      "zipCode": "94577",
+      "coordinates": {
+        "lat": 37.7275817,
+        "lng": -122.1649302
+      }
+    },
+    "phone": "(510) 924-7190",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 15,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Leandro.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJlRDUDEyij4AR6uqQE8J-r0M",
+    "name": "New Wave GraphiX",
+    "address": {
+      "street": "673 El Camino Real, Redwood City, CA 94063",
+      "city": "Redwood City",
+      "state": "California",
+      "zipCode": "94063",
+      "coordinates": {
+        "lat": 37.4877901,
+        "lng": -122.2362469
+      }
+    },
+    "phone": "(650) 520-1537",
+    "website": "http://www.newwavegraphix.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Redwood City.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJyWC3E0aRj4ARIDAU4G45TpQ",
+    "name": "iCustom Southland",
+    "address": {
+      "street": "1 Southland Mall ste k004, Hayward, CA 94545",
+      "city": "Hayward",
+      "state": "California",
+      "zipCode": "94545",
+      "coordinates": {
+        "lat": 37.6509817,
+        "lng": -122.1018517
+      }
+    },
+    "phone": "(510) 857-9239",
+    "website": "http://hayward.icustomca.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 77,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hayward.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJjX1XZxDHj4ARdjlT2BXeRCg",
+    "name": "Tee Rabbit",
+    "address": {
+      "street": "49103 Milmont Dr, Fremont, CA 94538",
+      "city": "Fremont",
+      "state": "California",
+      "zipCode": "94538",
+      "coordinates": {
+        "lat": 37.4584878,
+        "lng": -121.9211392
+      }
+    },
+    "phone": "(510) 461-7870",
+    "website": "http://www.teerabbit.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 19,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fremont.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQ1Qqt2-ej4ARcKmpG95WAdE",
+    "name": "ELITE PROMO INC",
+    "address": {
+      "street": "411 Borel Ave Suite 350, San Mateo, CA 94402",
+      "city": "San Mateo",
+      "state": "California",
+      "zipCode": "94402",
+      "coordinates": {
+        "lat": 37.5483759,
+        "lng": -122.3202886
+      }
+    },
+    "phone": "(650) 513-1037",
+    "website": "http://www.shopelitepromo.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 74,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in San Mateo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:27.770Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJMYP8zbG4moARtCi_20uvQ2E",
+    "name": "Elk Grove Screen Printing",
+    "address": {
+      "street": "9090 Union Park Way #106, Elk Grove, CA 95624",
+      "city": "Elk Grove",
+      "state": "California",
+      "zipCode": "95624",
+      "coordinates": {
+        "lat": 38.385513,
+        "lng": -121.362327
+      }
+    },
+    "phone": "(916) 681-9448",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Elk Grove.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:31.024Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJrXvXdwqEHEcR_pDDUl8pmKU",
+    "name": "Town Print Shop",
+    "address": {
+      "street": "1025 Harrison St, Oakland, CA 94607",
+      "city": "Oakland",
+      "state": "California",
+      "zipCode": "94607",
+      "coordinates": {
+        "lat": 37.8007222,
+        "lng": -122.26931
+      }
+    },
+    "phone": "(510) 288-6128",
+    "website": "http://www.townprintshop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Oakland.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:31.024Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuQ-u7VAzaE0RVL91X5DQIZc",
+    "name": "Vividly Branded",
+    "address": {
+      "street": "1461 Hoboken Dr, Tracy, CA 95377",
+      "city": "Tracy",
+      "state": "California",
+      "zipCode": "95377",
+      "coordinates": {
+        "lat": 37.7076613,
+        "lng": -121.4427833
+      }
+    },
+    "phone": "(209) 637-0703",
+    "website": "https://www.vividlybranded.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 21,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Tracy.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:31.024Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJM-hZdtBQkIARiidgTLufTPk",
+    "name": "Atomic Tees",
+    "address": {
+      "street": "4620 N Star Way, Modesto, CA 95356",
+      "city": "Modesto",
+      "state": "California",
+      "zipCode": "95356",
+      "coordinates": {
+        "lat": 37.7060986,
+        "lng": -121.0018503
+      }
+    },
+    "phone": "(209) 324-9667",
+    "website": "http://atomicteesusa.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Modesto.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:31.024Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

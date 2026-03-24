@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ChIJx7h2GcYN3okR5R7327fTwJA",
+    "name": "Michaels",
+    "address": {
+      "street": "221 Wade Rd Ext Latham Center, Latham, NY 12110",
+      "city": "Latham",
+      "state": "NY",
+      "zipCode": "12110",
+      "coordinates": {
+        "lat": 42.7574602,
+        "lng": -73.7685212
+      }
+    },
+    "phone": "(518) 213-3083",
+    "website": "https://locations.michaels.com/ny/latham/5144/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 545,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Latham.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:14.370Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

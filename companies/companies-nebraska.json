@@ -1,0 +1,53 @@
+[
+  {
+    "id": "ChIJt4i_3f2-locRe2umZbBAZHQ",
+    "name": "Screen Ink.",
+    "address": {
+      "street": "1827 O St, Lincoln, NE 68508",
+      "city": "Lincoln",
+      "state": "Nebraska",
+      "zipCode": "68508",
+      "coordinates": {
+        "lat": 40.813239,
+        "lng": -96.694491
+      }
+    },
+    "phone": "(402) 464-0501",
+    "website": "http://www.screenink.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 71,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lincoln.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:36.152Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

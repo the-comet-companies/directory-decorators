@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ChIJ-akTRxBL34cR09q99xPJpLU",
+    "name": "Lawson Screen & Digital Products, Inc",
+    "address": {
+      "street": "5110 Penrose St, St. Louis, MO 63115",
+      "city": "St. Louis",
+      "state": "Missouri",
+      "zipCode": "63115",
+      "coordinates": {
+        "lat": 38.6826515,
+        "lng": -90.2508316
+      }
+    },
+    "phone": "(314) 382-9300",
+    "website": "http://www.golawson.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 95,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in St. Louis.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.867Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "id": "ChIJJQYLYicGw4kRotO2QA44KHY",
+    "name": "Contract Screen Printers",
+    "address": {
+      "street": "313 Mechanic St #2nd, Boonton, NJ 07005",
+      "city": "Boonton",
+      "state": "New Jersey",
+      "zipCode": "07005",
+      "coordinates": {
+        "lat": 40.9063437,
+        "lng": -74.405553
+      }
+    },
+    "phone": "(973) 299-1644",
+    "website": "http://www.contractscreenprinters.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Boonton.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:48.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJP2utzJD9wokRHBaZ3vrAoxw",
+    "name": "The Branding Company LLC.",
+    "address": {
+      "street": "151 Belmont Ave, Paterson, NJ 07502",
+      "city": "Paterson",
+      "state": "New Jersey",
+      "zipCode": "07502",
+      "coordinates": {
+        "lat": 40.9287166,
+        "lng": -74.1815512
+      }
+    },
+    "phone": "(862) 239-2144",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 101,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Paterson.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:55.455Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJmUgC1JEYw4kRU6ij-oD4NS4",
+    "name": "JR's Screen Printing & Embroidery",
+    "address": {
+      "street": "1930 Greenwood Lake Turnpike, Hewitt, NJ 07421",
+      "city": "Hewitt",
+      "state": "New Jersey",
+      "zipCode": "07421",
+      "coordinates": {
+        "lat": 41.1485831,
+        "lng": -74.3469519
+      }
+    },
+    "phone": "(973) 728-2526",
+    "website": "http://www.jrsscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 29,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hewitt.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:02.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWc0txMCdwYkR0jG6GmWvoLs",
+    "name": "Always Driven Apparel - Screen Print, Embroidery, Bling Apparel, Varsity Jackets, Custom T-Shirts",
+    "address": {
+      "street": "1341 Lakewood Rd Suite 4, Toms River, NJ 08755",
+      "city": "Toms River",
+      "state": "New Jersey",
+      "zipCode": "08755",
+      "coordinates": {
+        "lat": 39.9919425,
+        "lng": -74.210079
+      }
+    },
+    "phone": "(732) 489-4321",
+    "website": "https://alwaysdrivenapparel.com/always_driven_apparel_designer/shop/home",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 19,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Toms River.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:22.351Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

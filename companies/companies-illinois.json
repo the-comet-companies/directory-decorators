@@ -1,0 +1,96 @@
+[
+  {
+    "id": "ChIJM9daaDaBD4gR4dR8a_44U7Y",
+    "name": "Impressions Count",
+    "address": {
+      "street": "907 Main St, Antioch, IL 60002",
+      "city": "Antioch",
+      "state": "Illinois",
+      "zipCode": "60002",
+      "coordinates": {
+        "lat": 42.4781173,
+        "lng": -88.0958409
+      }
+    },
+    "phone": "(847) 395-2445",
+    "website": "http://impcount.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 88,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Antioch.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.101Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJR2ZlNIC-D4gRbN3P3SGAmzc",
+    "name": "Anatol Equipment",
+    "address": {
+      "street": "1429 Shields Dr, Waukegan, IL 60085, United States",
+      "city": "Waukegan",
+      "state": "Illinois",
+      "zipCode": "60085",
+      "coordinates": {
+        "lat": 42.3355239,
+        "lng": -87.8901817
+      }
+    },
+    "phone": "+1 847-367-9760",
+    "website": "https://anatol.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 116,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waukegan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:34.269Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

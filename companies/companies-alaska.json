@@ -1,0 +1,2511 @@
+[
+  {
+    "id": "ChIJu46cjJyXyFYRf1t9kChKxAc",
+    "name": "America North Printers",
+    "address": {
+      "street": "907 E Dowling Rd Suite 15, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1670791,
+        "lng": -149.8656836
+      }
+    },
+    "phone": "(907) 562-6416",
+    "website": "http://www.anprinters.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 160,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJd0PrkJSXyFYRSduoAXBgNXI",
+    "name": "Blue Moose Designs, LLC",
+    "address": {
+      "street": "5430 Fairbanks St #5, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1705988,
+        "lng": -149.8747605
+      }
+    },
+    "phone": "(907) 929-2583",
+    "website": "http://akbluemoose.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQ8SB096ZyFYRUqftR1Xny2A",
+    "name": "Alaska Serigraphics",
+    "address": {
+      "street": "1711 Abbott Rd #3444, Anchorage, AK 99507",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99507",
+      "coordinates": {
+        "lat": 61.1436458,
+        "lng": -149.847546
+      }
+    },
+    "phone": "(907) 561-2000",
+    "website": "http://www.akserigraphics.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 34,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJR3pzspCXyFYR1iq-zE3QgrE",
+    "name": "Great Originals",
+    "address": {
+      "street": "360 E International Airport Rd, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1732445,
+        "lng": -149.8753189
+      }
+    },
+    "phone": "(907) 561-8922",
+    "website": "http://www.greatoriginals.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJKyFWf46XyFYR5f_nr_7ElyE",
+    "name": "Technipress Printing | Printing Company in Anchorage, AK",
+    "address": {
+      "street": "552 W 58th Ave D, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1683565,
+        "lng": -149.8931055
+      }
+    },
+    "phone": "(907) 561-8477",
+    "website": "http://www.tpress.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 47,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWeHt18GXyFYR4dKJ9t3bjGI",
+    "name": "Shirts Up Serigraphics & Solutions",
+    "address": {
+      "street": "300 Latouche St, Anchorage, AK 99501",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99501",
+      "coordinates": {
+        "lat": 61.2192674,
+        "lng": -149.8614111
+      }
+    },
+    "phone": "(907) 227-7923",
+    "website": "http://www.shirtsup.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 79,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ3et89dmXyFYRWxCgZUV84BU",
+    "name": "The Printer",
+    "address": {
+      "street": "2415 Spenard Rd, Anchorage, AK 99503",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99503",
+      "coordinates": {
+        "lat": 61.1985785,
+        "lng": -149.904931
+      }
+    },
+    "phone": "(907) 258-5700",
+    "website": "http://www.theprinterak.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 15,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:30.295Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJq7DBzHPryFYRvvApS1mauKw",
+    "name": "Hi-Res Graphics",
+    "address": {
+      "street": "16946 N Eagle River Loop Rd, Eagle River, AK 99577",
+      "city": "Eagle River",
+      "state": "Alaska",
+      "zipCode": "99577",
+      "coordinates": {
+        "lat": 61.3285948,
+        "lng": -149.5656585
+      }
+    },
+    "phone": "(907) 694-1280",
+    "website": "http://www.hiresgraphicsak.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 45,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Eagle River.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJS78kEWBhxlYRegWJkm0UnkI",
+    "name": "Heather & Heather, Inc. Screen Printing and Gifts",
+    "address": {
+      "street": "197 Shady Ln, Soldotna, AK 99669",
+      "city": "Soldotna",
+      "state": "Alaska",
+      "zipCode": "99669",
+      "coordinates": {
+        "lat": 60.4886815,
+        "lng": -151.0654903
+      }
+    },
+    "phone": "(907) 262-1025",
+    "website": "http://www.heatherandheather.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 31,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Soldotna.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ3zC513CXyFYRlPXl_dxK-mo",
+    "name": "Stellar Designs",
+    "address": {
+      "street": "6340 Petersburg St, Anchorage, AK 99507",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99507",
+      "coordinates": {
+        "lat": 61.162926,
+        "lng": -149.84714
+      }
+    },
+    "phone": "(907) 562-4248",
+    "website": "http://www.stellar-designs.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJn0U7EIotwVYRCIW0p9E9RU8",
+    "name": "LazerPrint & Graphics",
+    "address": {
+      "street": "432 E Pioneer Ave B, Homer, AK 99603",
+      "city": "Homer",
+      "state": "Alaska",
+      "zipCode": "99603",
+      "coordinates": {
+        "lat": 59.647159,
+        "lng": -151.5348669
+      }
+    },
+    "phone": "(907) 235-2335",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 26,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Homer.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ79mPR8KXyFYRkv6prTDNQfU",
+    "name": "Alaska Printing, Inc.",
+    "address": {
+      "street": "3685 Arctic Blvd, Anchorage, AK 99503",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99503",
+      "coordinates": {
+        "lat": 61.1874173,
+        "lng": -149.8974655
+      }
+    },
+    "phone": "(907) 563-1989",
+    "website": "https://alaskaprintinginc.com/?utm_source=omg-gbp&utm_medium=webclick",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 16,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ4_KcpqtjxlYR1ZCS7gF0dKw",
+    "name": "G F Sherman Signs",
+    "address": {
+      "street": "43420 Kalifornsky Beach Rd, Soldotna, AK 99669",
+      "city": "Soldotna",
+      "state": "Alaska",
+      "zipCode": "99669",
+      "coordinates": {
+        "lat": 60.4918663,
+        "lng": -151.1591576
+      }
+    },
+    "phone": "(907) 262-4294",
+    "website": "https://www.gfshermansigns.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Soldotna.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJUaeQJ5OXyFYRBouewL30UvQ",
+    "name": "Chinook Printing Co",
+    "address": {
+      "street": "639 W International Airport Rd #34, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1751935,
+        "lng": -149.8952146
+      }
+    },
+    "phone": "(907) 276-7354",
+    "website": "http://www.chinookprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJM41NOo6XyFYRkegmSp31ZRw",
+    "name": "Northern Printing",
+    "address": {
+      "street": "3685 Arctic Blvd, Anchorage, AK 99503",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99503",
+      "coordinates": {
+        "lat": 61.1874218,
+        "lng": -149.8974639
+      }
+    },
+    "phone": "(907) 562-6554",
+    "website": "http://www.northernprintinginc.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.508Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ0dzxcM6XyFYRGKjRIPySgyM",
+    "name": "tdt screen printing & custom decals",
+    "address": {
+      "street": "105 W 22nd Ave, Anchorage, AK 99503",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99503",
+      "coordinates": {
+        "lat": 61.2009176,
+        "lng": -149.8837092
+      }
+    },
+    "phone": "(907) 223-2157",
+    "website": "http://www.tdtprinting.com/Contact-Us.html",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.509Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJr5eE_5p8xlYRUsNPJjisw5w",
+    "name": "Polar Screens & Signs",
+    "address": {
+      "street": "14063 Kenai Spur Hwy, Kenai, AK 99611",
+      "city": "Kenai",
+      "state": "Alaska",
+      "zipCode": "99611",
+      "coordinates": {
+        "lat": 60.5755388,
+        "lng": -151.3148562
+      }
+    },
+    "phone": "(907) 283-3783",
+    "website": "http://www.polarscreensak.com/",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kenai.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:38.509Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ6cywrHDhyFYRrSUEPUYC3-k",
+    "name": "Glacier Graphics",
+    "address": {
+      "street": "2850 Cottonwood Loop, Wasilla, AK 99654, United States",
+      "city": "Wasilla",
+      "state": "Alaska",
+      "zipCode": "99654",
+      "coordinates": {
+        "lat": 61.611908,
+        "lng": -149.3058403
+      }
+    },
+    "phone": "+1 907-841-4875",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wasilla.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:43.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJAYABb-paMlER3wxyA9gbLbk",
+    "name": "Santa's Stitches",
+    "address": {
+      "street": "603 30th Ave, Fairbanks, AK 99701",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99701",
+      "coordinates": {
+        "lat": 64.8189779,
+        "lng": -147.7134913
+      }
+    },
+    "phone": "(907) 457-7848",
+    "website": "http://www.santasstitches.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 23,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:46.757Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJW3NyE91aMlERagtPtmGa7B4",
+    "name": "Great Alaskan Shirt Co/ Raven Screens",
+    "address": {
+      "street": "2421 Hill Rd, Fairbanks, AK 99709",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99709",
+      "coordinates": {
+        "lat": 64.8251649,
+        "lng": -147.7946461
+      }
+    },
+    "phone": "(907) 474-9446",
+    "website": "http://www.greatalaskanshirtco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 16,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:46.757Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJExe7hURFMlER-0OEMP_6lPw",
+    "name": "Trademark the Screenprinters",
+    "address": {
+      "street": "2421 Hill Rd, Fairbanks, AK 99709",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99709",
+      "coordinates": {
+        "lat": 64.8251504,
+        "lng": -147.7945937
+      }
+    },
+    "phone": "(907) 456-3777",
+    "website": "http://www.trademarkalaska.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:46.757Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJowMxns1EMlERzBXLUS99_1U",
+    "name": "Nomadic Stars",
+    "address": {
+      "street": "1327 Hayes Ave, Fairbanks, AK 99709",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99709",
+      "coordinates": {
+        "lat": 64.8560723,
+        "lng": -147.8049305
+      }
+    },
+    "phone": "(907) 457-5132",
+    "website": "http://www.nomadicstars.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:46.757Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJI0XkcXofAFQR_1jGl-TMMlM",
+    "name": "Sea Wolf & Whale Rider Galleries",
+    "address": {
+      "street": "20 Portage Dr, Haines, AK 99827",
+      "city": "Haines",
+      "state": "Alaska",
+      "zipCode": "99827",
+      "coordinates": {
+        "lat": 59.2280985,
+        "lng": -135.44003
+      }
+    },
+    "phone": "(907) 766-2540",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Haines.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.346Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJu46cjJyXyFYRBm1ZjFSKER4",
+    "name": "Alaska Printer's Supply",
+    "address": {
+      "street": "7820 King St #4, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1497054,
+        "lng": -149.8785303
+      }
+    },
+    "phone": "(907) 563-7060",
+    "website": "http://alaskaprinterssupply.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:57.222Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJaf-73e-XyFYRUVAgC2e3elA",
+    "name": "Tent City Press",
+    "address": {
+      "street": "333 W 4th Ave, Anchorage, AK 99501",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99501",
+      "coordinates": {
+        "lat": 61.2188619,
+        "lng": -149.8883902
+      }
+    },
+    "phone": "(907) 250-2660",
+    "website": "http://tentcitypress.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:57.222Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJp59e0iqYyFYR_b1D7MhNEts",
+    "name": "Top Of The World Graphics home of the Just Made 1",
+    "address": {
+      "street": "324 W 4th Ave, Anchorage, AK 99501",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99501",
+      "coordinates": {
+        "lat": 61.2182715,
+        "lng": -149.8884475
+      }
+    },
+    "phone": "(907) 279-8050",
+    "website": "http://www.totwgraphics.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:57.223Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJrXBP5ymWyFYRmve3crXOA-Y",
+    "name": "Butterville T-Shirt Company, LLC",
+    "address": {
+      "street": "7851 Spring St #3, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.1496328,
+        "lng": -149.8611311
+      }
+    },
+    "phone": "(907) 770-7540",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:04.319Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJew_evSmWyFYRYlOL-xJtzMk",
+    "name": "ASAP CUSTOM",
+    "address": {
+      "street": "320 W 5th Ave suit #15, Anchorage, AK 99501",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99501",
+      "coordinates": {
+        "lat": 61.2170649,
+        "lng": -149.888222
+      }
+    },
+    "phone": "(907) 201-4414",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 254,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:10.120Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJU9vRn5KXyFYRq-WkJjd3VeA",
+    "name": "Kraken Shirt Company (Big Dipper Clothing)",
+    "address": {
+      "street": "7851 Spring St Unit 4, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.149649,
+        "lng": -149.8610739
+      }
+    },
+    "phone": "(907) 244-3434",
+    "website": "http://krakenshirtco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:10.120Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJvwFZiwclDFQR3svh95CP840",
+    "name": "Pacific Printing",
+    "address": {
+      "street": "4978 Sleeping Lady Ct, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3422222,
+        "lng": -131.6461112
+      }
+    },
+    "phone": "(907) 225-7939",
+    "website": "https://pacificprintingak.com/contact/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:10.839Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJUf8ArgQlDFQRw3Ivf7MZkHg",
+    "name": "Joe's Screenprinting",
+    "address": {
+      "street": "407 Stedman St, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3401481,
+        "lng": -131.6389054
+      }
+    },
+    "phone": "(907) 225-9313",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:10.839Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJo_B7_PkmDFQRgPWnzHlWaVc",
+    "name": "North Creative Design Co",
+    "address": {
+      "street": "9737 Mud Bay Rd Bld 300, Unit #303, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.419302,
+        "lng": -131.7688179
+      }
+    },
+    "phone": "(907) 247-6674",
+    "website": "http://northcreativedesign.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJz0f7VKQlDFQR_dayV3jjAZI",
+    "name": "Frontier Shipping & Copyworks",
+    "address": {
+      "street": "2417 Tongass Ave Suite 111, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3484234,
+        "lng": -131.6724827
+      }
+    },
+    "phone": "(907) 247-2705",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 30,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJt5pGagQlDFQRN5CK5Po-jsY",
+    "name": "Tongass Business Center",
+    "address": {
+      "street": "618 Dock St, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3421281,
+        "lng": -131.6438064
+      }
+    },
+    "phone": "(907) 225-9015",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 33,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJVyZKTBslDFQRl42WAxzMIRo",
+    "name": "The Local Paper",
+    "address": {
+      "street": "516 Stedman St, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.339567,
+        "lng": -131.6383589
+      }
+    },
+    "phone": "(907) 225-6540",
+    "website": "http://www.thelocalpaper.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJle6DagQlDFQRYi71rq4B2-w",
+    "name": "Pioneer Printing Co Inc",
+    "address": {
+      "street": "501 Dock St, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3422696,
+        "lng": -131.6448424
+      }
+    },
+    "phone": "(907) 225-3157",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJb-kGusglDFQRdIwh21vnOJw",
+    "name": "Custom Digital T-Shirt Printing",
+    "address": {
+      "street": "730 Canyon Rd, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3635643,
+        "lng": -131.6930468
+      }
+    },
+    "phone": "(907) 821-8102",
+    "website": "http://www.weegieprints.com/contacts.html",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJa79JnG4lDFQRDH6ucKdK0fI",
+    "name": "Sun Stitched Clothing",
+    "address": {
+      "street": "1601 Tongass Ave #100, Ketchikan, AK 99901",
+      "city": "Ketchikan",
+      "state": "Alaska",
+      "zipCode": "99901",
+      "coordinates": {
+        "lat": 55.3470954,
+        "lng": -131.6631
+      }
+    },
+    "phone": "(907) 220-9973",
+    "website": "https://www.facebook.com/SunStitchedCothes",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ketchikan.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:13.105Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJUdLDw8xEMlERxowjlQKNiYw",
+    "name": "Date-Line Digital Printing",
+    "address": {
+      "street": "3677 College Rd, Fairbanks, AK 99709",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99709",
+      "coordinates": {
+        "lat": 64.8554552,
+        "lng": -147.8109928
+      }
+    },
+    "phone": "(907) 206-4174",
+    "website": "http://www.datelinedigitalprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 158,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.731Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJBat_w6haMlERHQVTr_E0sAo",
+    "name": "Advance Printing Co",
+    "address": {
+      "street": "612 30th Ave, Fairbanks, AK 99701",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99701",
+      "coordinates": {
+        "lat": 64.8198593,
+        "lng": -147.7160507
+      }
+    },
+    "phone": "(907) 451-1111",
+    "website": "http://www.hotprinter.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 81,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.731Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQXa-H0RFMlERT3uIWHxzYHw",
+    "name": "Graphic North Printing Co",
+    "address": {
+      "street": "157 Old Steese Hwy, Fairbanks, AK 99701",
+      "city": "Fairbanks",
+      "state": "Alaska",
+      "zipCode": "99701",
+      "coordinates": {
+        "lat": 64.8471259,
+        "lng": -147.7066282
+      }
+    },
+    "phone": "(907) 452-1907",
+    "website": "http://www.graphicnorth.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Fairbanks.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.732Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJZXDl-Ws851YRjF56z1OAS6Q",
+    "name": "Bristol Bay Graphics",
+    "address": {
+      "street": "1846 Nerka Loop #1247, Dillingham, AK 99576",
+      "city": "Dillingham",
+      "state": "Alaska",
+      "zipCode": "99576",
+      "coordinates": {
+        "lat": 59.0514959,
+        "lng": -158.5579821
+      }
+    },
+    "phone": "(907) 843-3000",
+    "website": "http://www.uluaq.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Dillingham.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:21.646Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJC3s9SMmXyFYR8ESuTpNG7UA",
+    "name": "Service Business Printing",
+    "address": {
+      "street": "323 E Fireweed Ln, Anchorage, AK 99503",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99503",
+      "coordinates": {
+        "lat": 61.198317,
+        "lng": -149.8774652
+      }
+    },
+    "phone": "(907) 276-3004",
+    "website": "http://www.serviceprint.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 37,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:24.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJOa1hAxPeyFYRdGfyU4fhOrA",
+    "name": "L&B Color Printing",
+    "address": {
+      "street": "590 E Railroad Ave, Wasilla, AK 99654",
+      "city": "Wasilla",
+      "state": "Alaska",
+      "zipCode": "99654",
+      "coordinates": {
+        "lat": 61.5796667,
+        "lng": -149.4360207
+      }
+    },
+    "phone": "(907) 376-2081",
+    "website": "https://wp.lbcolor.biz/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 38,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wasilla.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:36.977Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJFS9RS4vfAFQR6sFhpoF4kzU",
+    "name": "Frost + Fur",
+    "address": {
+      "street": "2 Marine Way, Juneau, AK 99801",
+      "city": "Juneau",
+      "state": "Alaska",
+      "zipCode": "99801",
+      "coordinates": {
+        "lat": 58.2993727,
+        "lng": -134.4075192
+      }
+    },
+    "phone": "",
+    "website": "http://www.frostandfur.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Juneau.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:43.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJn6RzExbE6lYR7AWvz1L6w6A",
+    "name": "Kodiak Print Shop",
+    "address": {
+      "street": "1117 Mill Bay Rd, Kodiak, AK 99615",
+      "city": "Kodiak",
+      "state": "Alaska",
+      "zipCode": "99615",
+      "coordinates": {
+        "lat": 57.7961177,
+        "lng": -152.393192
+      }
+    },
+    "phone": "(907) 486-3023",
+    "website": "http://www.kodiakprintshop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kodiak.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:43.721Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJDRUPR1aWyFYR0z8Gc4SiYEo",
+    "name": "Assets Printing",
+    "address": {
+      "street": "2330 Nichols St, Anchorage, AK 99508",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99508",
+      "coordinates": {
+        "lat": 61.1995169,
+        "lng": -149.8145889
+      }
+    },
+    "phone": "(907) 334-8624",
+    "website": "https://www.assetsprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:49.799Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJv0Bl-u8dyVYR1Ic3d0zG67Q",
+    "name": "Silvertip Design",
+    "address": {
+      "street": "421 S Alaska St, Palmer, AK 99645",
+      "city": "Palmer",
+      "state": "Alaska",
+      "zipCode": "99645",
+      "coordinates": {
+        "lat": 61.6029968,
+        "lng": -149.113704
+      }
+    },
+    "phone": "(907) 745-2902",
+    "website": "http://silvertipdesignalaska.com/",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 33,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Palmer.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:55.005Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJIcaLzGzeyFYRn832v8SDyEg",
+    "name": "The Shirt Lady",
+    "address": {
+      "street": "525 N Begich Dr, Wasilla, AK 99654",
+      "city": "Wasilla",
+      "state": "Alaska",
+      "zipCode": "99654",
+      "coordinates": {
+        "lat": 61.5837205,
+        "lng": -149.3336369
+      }
+    },
+    "phone": "(907) 357-2859",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 23,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wasilla.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:55.005Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ9dlvs6nfyFYRFwNn-mcsnkI",
+    "name": "Alaska Custom Embroidery Company",
+    "address": {
+      "street": "120 N Rosie Cir A, Wasilla, AK 99654",
+      "city": "Wasilla",
+      "state": "Alaska",
+      "zipCode": "99654",
+      "coordinates": {
+        "lat": 61.581864,
+        "lng": -149.393522
+      }
+    },
+    "phone": "(907) 357-0122",
+    "website": "http://akcustomembroidery.com/",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wasilla.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:55.006Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuUchNPLfyFYRMZNMYn5q4xU",
+    "name": "Bare Metal Prints +, LLC",
+    "address": {
+      "street": "3990 E Glendale Dr, Wasilla, AK 99654",
+      "city": "Wasilla",
+      "state": "Alaska",
+      "zipCode": "99654",
+      "coordinates": {
+        "lat": 61.6362972,
+        "lng": -149.3510323
+      }
+    },
+    "phone": "(907) 671-1010",
+    "website": "http://baremetalprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wasilla.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:55.006Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJd0AQK1fLCFQRDldCAqTOrvg",
+    "name": "Stikine River Gifts & Apparel",
+    "address": {
+      "street": "4 Front St, Wrangell, AK 99929",
+      "city": "Wrangell",
+      "state": "Alaska",
+      "zipCode": "99929",
+      "coordinates": {
+        "lat": 56.471847,
+        "lng": -132.3864972
+      }
+    },
+    "phone": "(907) 874-3640",
+    "website": "http://www.facebook.com/Angermans",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wrangell.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:03.137Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJMzbwEDfKCFQRUz4QX5ZPgy4",
+    "name": "Wrangell IGA",
+    "address": {
+      "street": "223 Brueger St, Wrangell, AK 99929",
+      "city": "Wrangell",
+      "state": "Alaska",
+      "zipCode": "99929",
+      "coordinates": {
+        "lat": 56.4704511,
+        "lng": -132.383894
+      }
+    },
+    "phone": "(907) 874-2341",
+    "website": "http://www.wrangelliga.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 88,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wrangell.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:03.137Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJqe-fwo-XyFYRHS4raxS8EnQ",
+    "name": "Jim Dooley's Athletic Supply",
+    "address": {
+      "street": "230 Center Ct, Anchorage, AK 99518",
+      "city": "Anchorage",
+      "state": "Alaska",
+      "zipCode": "99518",
+      "coordinates": {
+        "lat": 61.168253,
+        "lng": -149.8838456
+      }
+    },
+    "phone": "(907) 272-5660",
+    "website": "http://www.dooleysathletic.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Anchorage.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:11.663Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ1dG68mF7xlYRw1fvE3uiWew",
+    "name": "Printer's Ink",
+    "address": {
+      "street": "150 Trading Bay Rd STE 2, Kenai, AK 99611",
+      "city": "Kenai",
+      "state": "Alaska",
+      "zipCode": "99611",
+      "coordinates": {
+        "lat": 60.5614496,
+        "lng": -151.2440357
+      }
+    },
+    "phone": "(907) 283-4977",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kenai.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:18.793Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ_0Nry5FGtlYRBHnwo_LstG0",
+    "name": "RadioShack",
+    "address": {
+      "street": "100 Chitina Ave, Valdez, AK 99686, United States",
+      "city": "Valdez",
+      "state": "Alaska",
+      "zipCode": "99686",
+      "coordinates": {
+        "lat": 61.1280021,
+        "lng": -146.3454132
+      }
+    },
+    "phone": "+1 907-835-3641",
+    "website": "https://radioshack.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 44,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Valdez.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:26.891Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

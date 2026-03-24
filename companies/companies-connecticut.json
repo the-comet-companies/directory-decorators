@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "ChIJrYd9CHTg54kRIgl8FzPdfoQ",
+    "name": "Shelton Printing",
+    "address": {
+      "street": "52 Center St #1, Shelton, CT 06484",
+      "city": "Shelton",
+      "state": "Connecticut",
+      "zipCode": "06484",
+      "coordinates": {
+        "lat": 41.31641,
+        "lng": -73.0933953
+      }
+    },
+    "phone": "(203) 924-1029",
+    "website": "http://www.sheltonprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 91,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Shelton.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJbb2uJI7O54kRkj58hU0AeHo",
+    "name": "Micro Print Shop",
+    "address": {
+      "street": "46 Capital Dr, Wallingford, CT 06492",
+      "city": "Wallingford",
+      "state": "Connecticut",
+      "zipCode": "06492",
+      "coordinates": {
+        "lat": 41.4798889,
+        "lng": -72.8158569
+      }
+    },
+    "phone": "(203) 265-3303",
+    "website": "http://www.microprintshop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 67,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wallingford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJHTZBo4r254kROVmNxUxr23g",
+    "name": "Fat City Screen Printing & Embroidery",
+    "address": {
+      "street": "99 Danbury Rd, New Milford, CT 06776",
+      "city": "New Milford",
+      "state": "Connecticut",
+      "zipCode": "06776",
+      "coordinates": {
+        "lat": 41.560657,
+        "lng": -73.415327
+      }
+    },
+    "phone": "(860) 354-4650",
+    "website": "http://www.fatcityscreenprinting.com/?utm_source=google&utm_medium=GMB",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 27,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in New Milford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQyKqDYvo54kRR10SqrvrrV4",
+    "name": "Grand Concepts",
+    "address": {
+      "street": "756 Derby Ave, Seymour, CT 06483",
+      "city": "Seymour",
+      "state": "Connecticut",
+      "zipCode": "06483",
+      "coordinates": {
+        "lat": 41.365323,
+        "lng": -73.0915264
+      }
+    },
+    "phone": "(203) 881-2332",
+    "website": "http://www.grandconcepts.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 20,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Seymour.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJF-CnNljQ54kRhVV5QLel4u8",
+    "name": "American Stitch & Print",
+    "address": {
+      "street": "222 Elm St, North Haven, CT 06473",
+      "city": "North Haven",
+      "state": "Connecticut",
+      "zipCode": "06473",
+      "coordinates": {
+        "lat": 41.3740272,
+        "lng": -72.8653878
+      }
+    },
+    "phone": "(203) 239-5383",
+    "website": "http://www.american-stitch.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 19,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in North Haven.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ-xeU7g1U5okRSdN363E7rAo",
+    "name": "Exclusive Linez",
+    "address": {
+      "street": "40 Thomas St, East Hartford, CT 06108",
+      "city": "East Hartford",
+      "state": "Connecticut",
+      "zipCode": "06108",
+      "coordinates": {
+        "lat": 41.7723996,
+        "lng": -72.6532754
+      }
+    },
+    "phone": "(860) 206-9394",
+    "website": "http://www.exclusivelinez.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 46,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in East Hartford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.498Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ8x5Aq6Dh5YkRSQGXAjOpuPw",
+    "name": "My Screen Print Guy",
+    "address": {
+      "street": "46 Taugwonk Spur Rd Unit 3, Stonington, CT 06378",
+      "city": "Stonington",
+      "state": "Connecticut",
+      "zipCode": "06378",
+      "coordinates": {
+        "lat": 41.382154,
+        "lng": -71.9031733
+      }
+    },
+    "phone": "(860) 788-5566",
+    "website": "https://myscreenprintguy.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Stonington.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:02.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJne5MnioO6IkRJ0CyRLhk9iI",
+    "name": "Mark's Art: Printing & Graphics",
+    "address": {
+      "street": "190 Ferry Blvd, Stratford, CT 06615",
+      "city": "Stratford",
+      "state": "Connecticut",
+      "zipCode": "06615",
+      "coordinates": {
+        "lat": 41.1909602,
+        "lng": -73.1235085
+      }
+    },
+    "phone": "(203) 572-1278",
+    "website": "https://www.map-g.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 24,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Stratford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:02.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJh_ZO7tDD54kR12TSKy_U8YA",
+    "name": "Liberty Screen Print Co.",
+    "address": {
+      "street": "141 S Main St, Beacon Falls, CT 06403",
+      "city": "Beacon Falls",
+      "state": "Connecticut",
+      "zipCode": "06403",
+      "coordinates": {
+        "lat": 41.4370108,
+        "lng": -73.0590941
+      }
+    },
+    "phone": "(203) 632-5449",
+    "website": "http://libertyprintco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Beacon Falls.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.607Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJMVTpUKQK6IkRldVrMrNa1vs",
+    "name": "Hot Tops",
+    "address": {
+      "street": "240 Long Hill Cross Rd, Shelton, CT 06484",
+      "city": "Shelton",
+      "state": "Connecticut",
+      "zipCode": "06484",
+      "coordinates": {
+        "lat": 41.2879888,
+        "lng": -73.103673
+      }
+    },
+    "phone": "(203) 926-2067",
+    "website": "https://www.hottops.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Shelton.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.607Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJq7_o2qVX5okRrU1wd-Nn41Y",
+    "name": "Artisan Ink",
+    "address": {
+      "street": "134 Pine St, Manchester, CT 06040",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zipCode": "06040",
+      "coordinates": {
+        "lat": 41.7686522,
+        "lng": -72.5309781
+      }
+    },
+    "phone": "(877) 886-8954",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Manchester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.608Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJq7sqw3AO6IkRU29sWM4xK8E",
+    "name": "Paradox Ink",
+    "address": {
+      "street": "1001 Main St, Bridgeport, CT 06604",
+      "city": "Bridgeport",
+      "state": "Connecticut",
+      "zipCode": "06604",
+      "coordinates": {
+        "lat": 41.1782174,
+        "lng": -73.1893487
+      }
+    },
+    "phone": "(203) 521-8681",
+    "website": "http://www.paradoxink.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Bridgeport.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.608Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJn8mIz0rB54kRCTJj1ovTbl8",
+    "name": "Brass City Screen Printing",
+    "address": {
+      "street": "39 Stevens St building 14, Waterbury, CT 06704",
+      "city": "Waterbury",
+      "state": "Connecticut",
+      "zipCode": "06704",
+      "coordinates": {
+        "lat": 41.5888214,
+        "lng": -73.0532379
+      }
+    },
+    "phone": "",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3,
+    "reviewCount": 5,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waterbury.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.608Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWdt-jOXX54kRr0I76L2LHgA",
+    "name": "Special Events Screen Printing",
+    "address": {
+      "street": "35 Washington Ave, East Haven, CT 06512",
+      "city": "East Haven",
+      "state": "Connecticut",
+      "zipCode": "06512",
+      "coordinates": {
+        "lat": 41.2703737,
+        "lng": -72.883559
+      }
+    },
+    "phone": "(203) 468-5453",
+    "website": "http://www.specialeventssp.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 12,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in East Haven.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:05.122Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ58ldMdBZ5okRVvBlAeO9FKg",
+    "name": "ARM SCREEN PRINTING",
+    "address": {
+      "street": "307 E Center St, Manchester, CT 06040",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zipCode": "06040",
+      "coordinates": {
+        "lat": 41.7785112,
+        "lng": -72.5103179
+      }
+    },
+    "phone": "(860) 649-6295",
+    "website": "http://armprintshop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Manchester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:05.122Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJQcXgvdjZ54kRD2orlQca_7A",
+    "name": "Left Hand Screen Print Shoppe",
+    "address": {
+      "street": "315 Peck St, New Haven, CT 06513",
+      "city": "New Haven",
+      "state": "Connecticut",
+      "zipCode": "06513",
+      "coordinates": {
+        "lat": 41.3159716,
+        "lng": -72.8996837
+      }
+    },
+    "phone": "(203) 843-7039",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in New Haven.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:05.122Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJjTXzN6z_54kR3F5DptnNDYk",
+    "name": "Tri Star Graphics",
+    "address": {
+      "street": "274 Greenwood Ave, Bethel, CT 06801",
+      "city": "Bethel",
+      "state": "Connecticut",
+      "zipCode": "06801",
+      "coordinates": {
+        "lat": 41.3740104,
+        "lng": -73.4228522
+      }
+    },
+    "phone": "(203) 748-4792",
+    "website": "https://tsgsportswear.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Bethel.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.888Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWUIqn-0B6IkRRZ9EA8qqJnA",
+    "name": "Custom Ts 'n More",
+    "address": {
+      "street": "135 Ethan Allen Hwy, Ridgefield, CT 06877",
+      "city": "Ridgefield",
+      "state": "Connecticut",
+      "zipCode": "06877",
+      "coordinates": {
+        "lat": 41.2728954,
+        "lng": -73.443917
+      }
+    },
+    "phone": "(203) 438-1592",
+    "website": "http://tsandmore.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ridgefield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.888Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJtR8qYVb254kRVC0gjK7lQUg",
+    "name": "Images Unlimited",
+    "address": {
+      "street": "38 Old State Rd, New Milford, CT 06776",
+      "city": "New Milford",
+      "state": "Connecticut",
+      "zipCode": "06776",
+      "coordinates": {
+        "lat": 41.5400818,
+        "lng": -73.4230291
+      }
+    },
+    "phone": "(860) 350-6608",
+    "website": "http://www.imagesultd.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in New Milford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.889Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJNetKG1vd54kRniVbYl24Tqk",
+    "name": "Korzon Screen Printing LLC",
+    "address": {
+      "street": "53 Lancaster Dr, Beacon Falls, CT 06403",
+      "city": "Beacon Falls",
+      "state": "Connecticut",
+      "zipCode": "06403",
+      "coordinates": {
+        "lat": 41.4367146,
+        "lng": -73.0771067
+      }
+    },
+    "phone": "(203) 729-1090",
+    "website": "http://korzonscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Beacon Falls.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.889Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJOcboXq-y54kRziMtlyEdKhE",
+    "name": "The Green-O Screen Printing Co.",
+    "address": {
+      "street": "87-B Market Square, Newington, CT 06111",
+      "city": "Newington",
+      "state": "Connecticut",
+      "zipCode": "06111",
+      "coordinates": {
+        "lat": 41.6963372,
+        "lng": -72.7213063
+      }
+    },
+    "phone": "(860) 953-4410",
+    "website": "http://www.thegreen-o.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 5,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Newington.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.889Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJy5JQrj5Y5okR780EuIR_mak",
+    "name": "Good Sports",
+    "address": {
+      "street": "349 Progress Dr, Manchester, CT 06042",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zipCode": "06042",
+      "coordinates": {
+        "lat": 41.799299,
+        "lng": -72.5023743
+      }
+    },
+    "phone": "(860) 647-0880",
+    "website": "http://www.hotleathers.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Manchester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.225Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJUZgtdDVT5okRbUArUIP4r5k",
+    "name": "Bristol Lettering LLC.",
+    "address": {
+      "street": "1718 Park St, Hartford, CT 06106",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "zipCode": "06106",
+      "coordinates": {
+        "lat": 41.7573375,
+        "lng": -72.7070427
+      }
+    },
+    "phone": "(860) 232-5739",
+    "website": "http://www.bristolletteringllc.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hartford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJnwLUG6XB54kRcFGrq4mLYDQ",
+    "name": "Pink Square Embroidery LLC",
+    "address": {
+      "street": "Drake St, Waterbury, CT 06704",
+      "city": "Waterbury",
+      "state": "Connecticut",
+      "zipCode": "06704",
+      "coordinates": {
+        "lat": 41.5632087,
+        "lng": -73.0228628
+      }
+    },
+    "phone": "(203) 598-9645",
+    "website": "https://psq-emb.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 68,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waterbury.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJH7dt3NLk5okRN-4VODpgxMg",
+    "name": "Minuteman Press",
+    "address": {
+      "street": "1 Anngina Drive, Enfield, CT 06082",
+      "city": "Enfield",
+      "state": "Connecticut",
+      "zipCode": "06082",
+      "coordinates": {
+        "lat": 42.0020944,
+        "lng": -72.5384444
+      }
+    },
+    "phone": "(860) 745-3600",
+    "website": "https://minuteman.com/us/locations/ct/enfield/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 113,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Enfield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJXZ0-1atT5okRssu5XWwE6Cw",
+    "name": "Tees & More, LLC",
+    "address": {
+      "street": "306 Murphy Rd, Hartford, CT 06114",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "zipCode": "06114",
+      "coordinates": {
+        "lat": 41.735594,
+        "lng": -72.6572236
+      }
+    },
+    "phone": "(860) 244-2224",
+    "website": "http://www.teesandmore.shop/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hartford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJoU6NFZ9W3YkR-zcfzjDf040",
+    "name": "The Stitching Loft",
+    "address": {
+      "street": "45 Milltown Rd, Danbury, CT 06811",
+      "city": "Danbury",
+      "state": "Connecticut",
+      "zipCode": "06811",
+      "coordinates": {
+        "lat": 41.4397124,
+        "lng": -73.5341239
+      }
+    },
+    "phone": "(203) 470-9597",
+    "website": "http://thestitchingloft.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 12,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Danbury.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:09.745Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJl0hXW0tT5okROqOx8_ZMb2c",
+    "name": "The Stitch N Print Store - Screen Printing & Embroidery Shop",
+    "address": {
+      "street": "100 Pearl St, Hartford, CT 06103",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "zipCode": "06103",
+      "coordinates": {
+        "lat": 41.7663459,
+        "lng": -72.6748922
+      }
+    },
+    "phone": "(888) 547-4767",
+    "website": "https://thestitchnprintstore.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hartford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:11.349Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJXVgqaasn5IkRJI6S_ZdvPBI",
+    "name": "Terri's Embroidery",
+    "address": {
+      "street": "144 Providence St, Putnam, CT 06260",
+      "city": "Putnam",
+      "state": "Connecticut",
+      "zipCode": "06260",
+      "coordinates": {
+        "lat": 41.9229049,
+        "lng": -71.9077586
+      }
+    },
+    "phone": "(860) 928-0552",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Putnam.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:11.349Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJNVCViyWqwokRTRQm8fxkLaE",
+    "name": "Tiger Sports",
+    "address": {
+      "street": "27 Catoonah St, Ridgefield, CT 06877",
+      "city": "Ridgefield",
+      "state": "Connecticut",
+      "zipCode": "06877",
+      "coordinates": {
+        "lat": 41.281244,
+        "lng": -73.5007654
+      }
+    },
+    "phone": "(203) 894-3286",
+    "website": "https://catoonahink.com/tiger_store/shop/home",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 13,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Ridgefield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:11.349Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJNzD4acHQ54kRgD5sfYwiY9I",
+    "name": "Michaels",
+    "address": {
+      "street": "Pavilion, 170 Universal Dr N, North Haven, CT 06473",
+      "city": "North Haven",
+      "state": "Connecticut",
+      "zipCode": "06473",
+      "coordinates": {
+        "lat": 41.3522517,
+        "lng": -72.8702865
+      }
+    },
+    "phone": "(203) 985-0302",
+    "website": "https://locations.michaels.com/ct/north-haven/4722/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 803,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in North Haven.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:14.370Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ61qNweAo5IkRPusPbchOlHs",
+    "name": "Michaels",
+    "address": {
+      "street": "2091 Killingly Cmns, Dayville, CT 06241",
+      "city": "Dayville",
+      "state": "Connecticut",
+      "zipCode": "06241",
+      "coordinates": {
+        "lat": 41.8411106,
+        "lng": -71.8850623
+      }
+    },
+    "phone": "(860) 779-0572",
+    "website": "https://locations.michaels.com/ct/dayville/8710/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 419,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Dayville.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.674Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJERikZFR06IkRI45LrWOrntI",
+    "name": "Michaels",
+    "address": {
+      "street": "79 Turnpike Square, Milford, CT 06460",
+      "city": "Milford",
+      "state": "Connecticut",
+      "zipCode": "06460",
+      "coordinates": {
+        "lat": 41.2423775,
+        "lng": -73.0347167
+      }
+    },
+    "phone": "(203) 877-9677",
+    "website": "https://locations.michaels.com/ct/milford/9949/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 856,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Milford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.675Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJySk-1SP554kRmrZqhwSn5hs",
+    "name": "Michaels",
+    "address": {
+      "street": "Candlewood Lake Plaza, 14 Candlewood Lake Rd Ste 200, Brookfield, CT 06804",
+      "city": "Brookfield",
+      "state": "Connecticut",
+      "zipCode": "06804",
+      "coordinates": {
+        "lat": 41.4348002,
+        "lng": -73.4128644
+      }
+    },
+    "phone": "(203) 885-7008",
+    "website": "https://locations.michaels.com/ct/brookfield/5090/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 590,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Brookfield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.675Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJfRnty0Gz54kR9PnOwcdwMWQ",
+    "name": "Michaels",
+    "address": {
+      "street": "Brickyard Plaza, 259 Berlin Tpke, Berlin, CT 06037",
+      "city": "Berlin",
+      "state": "Connecticut",
+      "zipCode": "06037",
+      "coordinates": {
+        "lat": 41.6433446,
+        "lng": -72.7287754
+      }
+    },
+    "phone": "(860) 357-6287",
+    "website": "https://locations.michaels.com/ct/berlin/5072/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 662,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Berlin.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:17.020Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJH1_LdPEm5IkR8dZ2ksAQooA",
+    "name": "Walmart Supercenter",
+    "address": {
+      "street": "625 School St, Putnam, CT 06260",
+      "city": "Putnam",
+      "state": "Connecticut",
+      "zipCode": "06260",
+      "coordinates": {
+        "lat": 41.9233519,
+        "lng": -71.8891874
+      }
+    },
+    "phone": "(860) 928-3999",
+    "website": "https://www.walmart.com/store/1980-putnam-ct/?veh=seo_loc",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 2526,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Putnam.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:17.021Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJeWcRIcTQ54kR8dHh1LVUQMs",
+    "name": "P.C. Richard & Son",
+    "address": {
+      "street": "19 Universal Dr, North Haven, CT 06473",
+      "city": "North Haven",
+      "state": "Connecticut",
+      "zipCode": "06473",
+      "coordinates": {
+        "lat": 41.3505973,
+        "lng": -72.8693313
+      }
+    },
+    "phone": "(203) 848-2270",
+    "website": "https://www.pcrichard.com/stores/connecticut/new-haven-county/north-haven.html?utm_source=Google-My-Business&utm_medium=organic&utm_campaign=Google-My-Business",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 4117,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in North Haven.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.347Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJu9SA_i4q5IkRnIndMtA4ecs",
+    "name": "Walmart Supercenter",
+    "address": {
+      "street": "450 Providence Rd, Brooklyn, CT 06234",
+      "city": "Brooklyn",
+      "state": "Connecticut",
+      "zipCode": "06234",
+      "coordinates": {
+        "lat": 41.7987709,
+        "lng": -71.9134521
+      }
+    },
+    "phone": "(860) 412-5137",
+    "website": "https://www.walmart.com/store/5777-brooklyn-ct/?veh=seo_loc",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 2128,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Brooklyn.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.347Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWybxQjuz54kRVoYH7ZRqdd8",
+    "name": "P.C. Richard & Son",
+    "address": {
+      "street": "3440 Berlin Tpke, Newington, CT 06111",
+      "city": "Newington",
+      "state": "Connecticut",
+      "zipCode": "06111",
+      "coordinates": {
+        "lat": 41.6530147,
+        "lng": -72.7258794
+      }
+    },
+    "phone": "(860) 474-2995",
+    "website": "https://www.pcrichard.com/stores/connecticut/hartford-county/newington.html?utm_source=Google-My-Business&utm_medium=organic&utm_campaign=Google-My-Business",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 3864,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Newington.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.347Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJq5GVqnIe6IkRd7DhjaKJKMg",
+    "name": "P.C. Richard & Son",
+    "address": {
+      "street": "444 Connecticut Ave, Norwalk, CT 06854",
+      "city": "Norwalk",
+      "state": "Connecticut",
+      "zipCode": "06854",
+      "coordinates": {
+        "lat": 41.1004786,
+        "lng": -73.4421486
+      }
+    },
+    "phone": "(203) 604-1104",
+    "website": "https://www.pcrichard.com/stores/connecticut/fairfield-county/norwalk.html?utm_source=Google-My-Business&utm_medium=organic&utm_campaign=Google-My-Business",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 3947,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Norwalk.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.348Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJsTdfypJX5okRF4-eCMxCgy0",
+    "name": "P.C. Richard & Son",
+    "address": {
+      "street": "230 Hale Rd, Manchester, CT 06042",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zipCode": "06042",
+      "coordinates": {
+        "lat": 41.8082894,
+        "lng": -72.5335048
+      }
+    },
+    "phone": "(860) 929-7935",
+    "website": "https://www.pcrichard.com/stores/connecticut/hartford-county/manchester.html?utm_source=Google-My-Business&utm_medium=organic&utm_campaign=Google-My-Business",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 7450,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Manchester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:18.348Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJAdPhMZ3h54kRwrOUDc8vY74",
+    "name": "Fully Promoted of Shelton, CT",
+    "address": {
+      "street": "Conti Building, 415 Howe Ave Suite B1, Shelton, CT 06484",
+      "city": "Shelton",
+      "state": "Connecticut",
+      "zipCode": "06484",
+      "coordinates": {
+        "lat": 41.3163742,
+        "lng": -73.0921934
+      }
+    },
+    "phone": "(203) 732-0055",
+    "website": "https://fullypromoted.com/locations/shelton-ct/?utm_source=gmb&utm_medium=organic",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Shelton.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:20.055Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJTY-2vAIS5okRDn-xr9yfJwA",
+    "name": "Best Buy",
+    "address": {
+      "street": "913 Hartford Turnpike, Waterford, CT 06385",
+      "city": "Waterford",
+      "state": "Connecticut",
+      "zipCode": "06385",
+      "coordinates": {
+        "lat": 41.3814101,
+        "lng": -72.1517467
+      }
+    },
+    "phone": "(860) 701-0300",
+    "website": "https://stores.bestbuy.com/ct/waterford/913-hartford-tpke-549.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 2083,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waterford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:20.056Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJiRvYdqDB54kRzogidXT2U_A",
+    "name": "Production Decorating Company Inc.",
+    "address": {
+      "street": "184 Railroad Hill St, Waterbury, CT 06708",
+      "city": "Waterbury",
+      "state": "Connecticut",
+      "zipCode": "06708",
+      "coordinates": {
+        "lat": 41.538933,
+        "lng": -73.0406914
+      }
+    },
+    "phone": "(203) 574-2975",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waterbury.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:20.056Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJlx9rIJNX5okRp5kFOgzxoBE",
+    "name": "Best Buy",
+    "address": {
+      "street": "120 Slater St, Manchester, CT 06042",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zipCode": "06042",
+      "coordinates": {
+        "lat": 41.8071916,
+        "lng": -72.5352704
+      }
+    },
+    "phone": "(860) 648-5870",
+    "website": "https://stores.bestbuy.com/ct/manchester/120-slater-st-484.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 2791,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Manchester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:21.725Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJY7ciwSSz54kRNNWW9TjcTnc",
+    "name": "Best Buy",
+    "address": {
+      "street": "3377 Berlin Tpke, Newington, CT 06111",
+      "city": "Newington",
+      "state": "Connecticut",
+      "zipCode": "06111",
+      "coordinates": {
+        "lat": 41.655815,
+        "lng": -72.726497
+      }
+    },
+    "phone": "(860) 666-5100",
+    "website": "https://stores.bestbuy.com/ct/newington/3377-berlin-tpke-487.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 2561,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Newington.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:21.725Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJAalatHMe6IkRnHQ8aYUAa1A",
+    "name": "Best Buy",
+    "address": {
+      "street": "330 Connecticut Ave Ste 4, Norwalk, CT 06854",
+      "city": "Norwalk",
+      "state": "Connecticut",
+      "zipCode": "06854",
+      "coordinates": {
+        "lat": 41.103522,
+        "lng": -73.438439
+      }
+    },
+    "phone": "(203) 857-4543",
+    "website": "https://stores.bestbuy.com/ct/norwalk/330-connecticut-ave-886.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 2396,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Norwalk.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:21.725Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJx38sgp6t54kRercQRprSPWQ",
+    "name": "Best Buy",
+    "address": {
+      "street": "1501 New Britain Ave, West Hartford, CT 06110",
+      "city": "West Hartford",
+      "state": "Connecticut",
+      "zipCode": "06110",
+      "coordinates": {
+        "lat": 41.7231003,
+        "lng": -72.7588877
+      }
+    },
+    "phone": "(860) 521-5400",
+    "website": "https://stores.bestbuy.com/ct/west-hartford/1501-new-britain-ave-381.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 2464,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in West Hartford.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:21.726Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJRYmBNdX-54kR_fE8wnwYPXo",
+    "name": "Best Buy",
+    "address": {
+      "street": "2 International Dr, Danbury, CT 06810",
+      "city": "Danbury",
+      "state": "Connecticut",
+      "zipCode": "06810",
+      "coordinates": {
+        "lat": 41.417281,
+        "lng": -73.418048
+      }
+    },
+    "phone": "(203) 798-9699",
+    "website": "https://stores.bestbuy.com/ct/danbury/2-international-dr-331.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 2607,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Danbury.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:23.267Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

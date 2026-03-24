@@ -1,0 +1,603 @@
+[
+  {
+    "id": "ChIJfZSnoK1c5IkRRPWGaQygU-o",
+    "name": "Mirror Image Inc",
+    "address": {
+      "street": "190 Exchange St, Pawtucket, RI 02860",
+      "city": "Pawtucket",
+      "state": "Rhode Island",
+      "zipCode": "02860",
+      "coordinates": {
+        "lat": 41.8799614,
+        "lng": -71.3793924
+      }
+    },
+    "phone": "(401) 724-5353",
+    "website": "http://www.mirrorimage.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 21,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pawtucket.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:59.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJeZO22lZD5IkRuWkoqFr38HM",
+    "name": "ClassSick Custom",
+    "address": {
+      "street": "5 Carpenter St, Pawtucket, RI 02860",
+      "city": "Pawtucket",
+      "state": "Rhode Island",
+      "zipCode": "02860",
+      "coordinates": {
+        "lat": 41.8781442,
+        "lng": -71.3966197
+      }
+    },
+    "phone": "(401) 475-7288",
+    "website": "http://www.classsick.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 32,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pawtucket.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:02.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJm02bdcBa5IkR2yvzLotFf2k",
+    "name": "Graphic Ink Inc",
+    "address": {
+      "street": "629 Warren Ave, East Providence, RI 02914",
+      "city": "East Providence",
+      "state": "Rhode Island",
+      "zipCode": "02914",
+      "coordinates": {
+        "lat": 41.8111783,
+        "lng": -71.3603266
+      }
+    },
+    "phone": "(401) 431-5081",
+    "website": "http://www.graphicinkonline.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 35,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in East Providence.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:02.394Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJRarvxxtH5IkRJl2WJ083uj8",
+    "name": "OSS Apparel",
+    "address": {
+      "street": "166 Putnam Pike, Johnston, RI 02919",
+      "city": "Johnston",
+      "state": "Rhode Island",
+      "zipCode": "02919",
+      "coordinates": {
+        "lat": 41.8652717,
+        "lng": -71.499591
+      }
+    },
+    "phone": "(401) 854-6581",
+    "website": "https://oss-apparel.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 32,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Johnston.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.607Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ0VDlmaZF5IkR2baXh9LQ1Wo",
+    "name": "SWG Promotions",
+    "address": {
+      "street": "6 Robin St, Providence, RI 02908",
+      "city": "Providence",
+      "state": "Rhode Island",
+      "zipCode": "02908",
+      "coordinates": {
+        "lat": 41.8298453,
+        "lng": -71.4349739
+      }
+    },
+    "phone": "(401) 272-6050",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Providence.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:03.607Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJgU0mRBTn5YkRAJTePdGtZVI",
+    "name": "J Mack Studios",
+    "address": {
+      "street": "101 Cross St, Westerly, RI 02891",
+      "city": "Westerly",
+      "state": "Rhode Island",
+      "zipCode": "02891",
+      "coordinates": {
+        "lat": 41.3705475,
+        "lng": -71.8165388
+      }
+    },
+    "phone": "(401) 932-8600",
+    "website": "http://www.jmackstudios.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 12,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Westerly.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.888Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJU3rzs-5O5IkRnsUtDcAd0Wg",
+    "name": "Commercial Screenprint Plus",
+    "address": {
+      "street": "1080 Pontiac Ave, Cranston, RI 02920",
+      "city": "Cranston",
+      "state": "Rhode Island",
+      "zipCode": "02920",
+      "coordinates": {
+        "lat": 41.754296,
+        "lng": -71.4477534
+      }
+    },
+    "phone": "(401) 467-8111",
+    "website": "http://www.tshirtsplusri.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Cranston.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.889Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ94UnDRJP5IkRyKFk18oXhKM",
+    "name": "PVD Design Company",
+    "address": {
+      "street": "35 Baker St Suite: 3, Providence, RI 02905",
+      "city": "Providence",
+      "state": "Rhode Island",
+      "zipCode": "02905",
+      "coordinates": {
+        "lat": 41.7939866,
+        "lng": -71.3990983
+      }
+    },
+    "phone": "(401) 942-6102",
+    "website": "http://www.pvddesign.co/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 29,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Providence.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:09.745Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJyQdPWp9E5IkRpkEAfeB7vaU",
+    "name": "Ink Solutions",
+    "address": {
+      "street": "1 Partridge St, Providence, RI 02908",
+      "city": "Providence",
+      "state": "Rhode Island",
+      "zipCode": "02908",
+      "coordinates": {
+        "lat": 41.8285382,
+        "lng": -71.4370064
+      }
+    },
+    "phone": "(401) 241-7043",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Providence.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:09.745Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJeWhrDblE5IkRaXPAtBFP5YA",
+    "name": "Precision Graphics & Signs",
+    "address": {
+      "street": "250 Esten Ave, Pawtucket, RI 02860",
+      "city": "Pawtucket",
+      "state": "Rhode Island",
+      "zipCode": "02860",
+      "coordinates": {
+        "lat": 41.8617598,
+        "lng": -71.4016534
+      }
+    },
+    "phone": "(401) 726-1626",
+    "website": "http://www.demandattention.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 13,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pawtucket.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:11.349Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJPcRYluBG5IkRSQEBbFHXQBk",
+    "name": "Michaels",
+    "address": {
+      "street": "The Crossing at Smithfield, 371 Putnam Pike Ste 240, Smithfield, RI 02917",
+      "city": "Smithfield",
+      "state": "Rhode Island",
+      "zipCode": "02917",
+      "coordinates": {
+        "lat": 41.8760818,
+        "lng": -71.5196469
+      }
+    },
+    "phone": "(401) 233-0539",
+    "website": "https://locations.michaels.com/ri/smithfield/2703/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 593,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Smithfield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.675Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJBR5k6ki15YkR7f4iXs1wapI",
+    "name": "Walmart Supercenter",
+    "address": {
+      "street": "650 Centre of New England Blvd, Coventry, RI 02816",
+      "city": "Coventry",
+      "state": "Rhode Island",
+      "zipCode": "02816",
+      "coordinates": {
+        "lat": 41.6628464,
+        "lng": -71.5553941
+      }
+    },
+    "phone": "(401) 823-7780",
+    "website": "https://www.walmart.com/store/2283-coventry-ri/?veh=seo_loc",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 4621,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Coventry.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:20.055Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJh7d9ip5L5IkR2dNf0uAVdbQ",
+    "name": "Best Buy",
+    "address": {
+      "street": "24 Universal Blvd, Warwick, RI 02886",
+      "city": "Warwick",
+      "state": "Rhode Island",
+      "zipCode": "02886",
+      "coordinates": {
+        "lat": 41.701315,
+        "lng": -71.495997
+      }
+    },
+    "phone": "(401) 826-7007",
+    "website": "https://stores.bestbuy.com/ri/warwick/24-universal-blvd-569.html/?ref=NS&loc=ns100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 3809,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Warwick.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:23.267Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

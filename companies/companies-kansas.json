@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ChIJmf0fdl7huocR9qVX1buB_Cc",
+    "name": "Wichita Screen Printing",
+    "address": {
+      "street": "1433 W Douglas Ave, Wichita, KS 67213",
+      "city": "Wichita",
+      "state": "Kansas",
+      "zipCode": "67213",
+      "coordinates": {
+        "lat": 37.6837941,
+        "lng": -97.3573329
+      }
+    },
+    "phone": "(316) 390-9725",
+    "website": "https://www.wichitascreenprinting.com/Wichita_Screen_Printing/shop/home",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 70,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wichita.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:36.152Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJWc7aL1TwwIcRu5afVwdG97Y",
+    "name": "Union Press Screen Printing",
+    "address": {
+      "street": "626 Kansas Ave, Kansas City, KS 66105",
+      "city": "Kansas City",
+      "state": "Kansas",
+      "zipCode": "66105",
+      "coordinates": {
+        "lat": 39.0876914,
+        "lng": -94.6241307
+      }
+    },
+    "phone": "(913) 233-0710",
+    "website": "https://www.unionpresskc.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 82,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kansas City.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:55.455Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

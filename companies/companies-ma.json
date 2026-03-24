@@ -1,0 +1,221 @@
+[
+  {
+    "id": "ChIJqaSCRUKL44kRPzzMREpiGG0",
+    "name": "Midland Graphics",
+    "address": {
+      "street": "207 E Main St, BEHIND CURTIS AVE CARWASH, Marlborough, MA 01752",
+      "city": "Marlborough",
+      "state": "MA",
+      "zipCode": "01752",
+      "coordinates": {
+        "lat": 42.3500968,
+        "lng": -71.5365986
+      }
+    },
+    "phone": "(508) 481-3811",
+    "website": "http://midlandgraphics.online/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Marlborough.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:05.123Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ8wpi7dTJxokRh2-ztmghXKs",
+    "name": "Atmosphere Printing Company",
+    "address": {
+      "street": "Basement Studio, 137 North St, Pittsfield, MA 01201",
+      "city": "Pittsfield",
+      "state": "MA",
+      "zipCode": "01201",
+      "coordinates": {
+        "lat": 42.4506156,
+        "lng": -73.2537758
+      }
+    },
+    "phone": "",
+    "website": "http://www.atmoprintco.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pittsfield.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:06.888Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ6UjSn8QW44kRpMXbDEXkzXI",
+    "name": "Staples",
+    "address": {
+      "street": "65 Dodge St, North Unit C Unit C, Beverly, MA 01915",
+      "city": "Beverly",
+      "state": "MA",
+      "zipCode": "01915",
+      "coordinates": {
+        "lat": 42.5760281,
+        "lng": -70.8886144
+      }
+    },
+    "phone": "(978) 922-3339",
+    "website": "https://stores.staples.com/ma/north-beverly/65-dodge-st-unit-c?cmpid=st_ll_goo&cid=LS:RETAIL:G&utm_source=google&utm_medium=organic&utm_campaign=Google_Business_Listing",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 88,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Beverly.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:12.664Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJh7c_1zCA5IkRuMyI9T-g5i4",
+    "name": "Michaels",
+    "address": {
+      "street": "261 University Ave Westwood Station, Westwood, MA 02090",
+      "city": "Westwood",
+      "state": "MA",
+      "zipCode": "02090",
+      "coordinates": {
+        "lat": 42.2025863,
+        "lng": -71.1557132
+      }
+    },
+    "phone": "(774) 999-0181",
+    "website": "https://locations.michaels.com/ma/westwood/1075/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 550,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Westwood.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.675Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJK29u9yiJ44kRg5fEZq_fIW0",
+    "name": "Michaels",
+    "address": {
+      "street": "1 Worcester Rd, Shoppers World Dr, Framingham, MA 01701",
+      "city": "Framingham",
+      "state": "MA",
+      "zipCode": "01701",
+      "coordinates": {
+        "lat": 42.3040103,
+        "lng": -71.3957587
+      }
+    },
+    "phone": "(508) 387-3866",
+    "website": "https://locations.michaels.com/ma/framingham/8352/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 689,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Framingham.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:17.020Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

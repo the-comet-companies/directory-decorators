@@ -1,0 +1,3263 @@
+[
+  {
+    "id": "ChIJ8TvnqZNtAHwRb7NlbLM6y-E",
+    "name": "Made In Hawaii - Oahu",
+    "address": {
+      "street": "949 McCully St, Honolulu, HI 96826",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96826",
+      "coordinates": {
+        "lat": 21.294629,
+        "lng": -157.829989
+      }
+    },
+    "phone": "(808) 824-5110",
+    "website": "http://www.madeinhawaii808.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 83,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:37.390Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJyZjfR3RuAHwRRE5V0_QUpVw",
+    "name": "Blank Canvas",
+    "address": {
+      "street": "76 N King St Unit 100, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.311446,
+        "lng": -157.8631893
+      }
+    },
+    "phone": "(808) 780-4720",
+    "website": "http://www.blankcanvascustom.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 40,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:37.390Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJA5b89x9vAHwRguScIGJEYnU",
+    "name": "Warrior Printing",
+    "address": {
+      "street": "2223 Ho‘one‘e Pl, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3279718,
+        "lng": -157.8884383
+      }
+    },
+    "phone": "(808) 762-9950",
+    "website": "http://www.warriorprintinghawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ7QAlke5tAHwRnDClT5igNZs",
+    "name": "Amano Prints",
+    "address": {
+      "street": "914 Kaaahi Pl Ste C, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.3170981,
+        "lng": -157.8653478
+      }
+    },
+    "phone": "(808) 387-5874",
+    "website": "http://amanoprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 14,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ0xMDT25uAHwRwtf_cwjMnmw",
+    "name": "808 Printer",
+    "address": {
+      "street": "650 Iwilei Rd, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.3162449,
+        "lng": -157.8708663
+      }
+    },
+    "phone": "(808) 779-1230",
+    "website": "https://808printer.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJma-MUEVuAHwRVN547oXfE2E",
+    "name": "Squeeze Play",
+    "address": {
+      "street": "80 Sand Island Access Rd #233, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3226425,
+        "lng": -157.8924678
+      }
+    },
+    "phone": "(808) 845-1609",
+    "website": "http://www.squeezeplayhi.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 18,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJsYDz1f9lAHwRYwfuLbodl4o",
+    "name": "Plan B Printing",
+    "address": {
+      "street": "98-138 Hila Pl, Pearl City, HI 96782",
+      "city": "Pearl City",
+      "state": "Hawaii",
+      "zipCode": "96782",
+      "coordinates": {
+        "lat": 21.3883479,
+        "lng": -157.954878
+      }
+    },
+    "phone": "(808) 725-2955",
+    "website": "https://www.planbprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 21,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pearl City.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJLXD4HWBuAHwR3Q2Qemf78hI",
+    "name": "Island Graphics & Screens",
+    "address": {
+      "street": "238 Sand Island Access Rd, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3265068,
+        "lng": -157.8893518
+      }
+    },
+    "phone": "(808) 853-1070",
+    "website": "http://www.islandgraphicsandscreens.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ5eFA_j9kAHwRYbOTeLxHx2o",
+    "name": "T's on Me",
+    "address": {
+      "street": "94-148 Leowaena St # W, Waipahu, HI 96797",
+      "city": "Waipahu",
+      "state": "Hawaii",
+      "zipCode": "96797",
+      "coordinates": {
+        "lat": 21.37441,
+        "lng": -158.024048
+      }
+    },
+    "phone": "(808) 676-1100",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Waipahu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJXQzsi3BuAHwRj2wBxM8WmAE",
+    "name": "Bad Boy Hawaii",
+    "address": {
+      "street": "500 Alakawa St #100F, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.3187014,
+        "lng": -157.8728726
+      }
+    },
+    "phone": "(808) 845-6200",
+    "website": "http://badboyhawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 16,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ1_tDzVxuAHwRC4Cf6xXfBzk",
+    "name": "Print Proz",
+    "address": {
+      "street": "205 Kalihi St, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.321416,
+        "lng": -157.884519
+      }
+    },
+    "phone": "(808) 842-1644",
+    "website": "http://printprozhawaii.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17090049675779139189",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJqxN05l9uAHwRY0IsPdWjktE",
+    "name": "X-Press Tees & Silkscreen",
+    "address": {
+      "street": "1425 Middle St #2, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3414711,
+        "lng": -157.8790036
+      }
+    },
+    "phone": "(808) 841-6676",
+    "website": "http://www.x-presstees.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.681Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJOTU2QIFtAHwRBza8o3fqif0",
+    "name": "T-shirt Printing Hawaii",
+    "address": {
+      "street": "927 McCully St unit A, Honolulu, HI 96816",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96816",
+      "coordinates": {
+        "lat": 21.293912,
+        "lng": -157.830357
+      }
+    },
+    "phone": "(808) 393-6122",
+    "website": "http://tshirtprintinghawaii.bigcartel.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 34,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJLXD4HWBuAHwRdMVFDi8PxeY",
+    "name": "Status Designs",
+    "address": {
+      "street": "1824 Kahai St B, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.323674,
+        "lng": -157.8850531
+      }
+    },
+    "phone": "(808) 843-5371",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJB9ipH-ZtAHwRoheX_3cG4oM",
+    "name": "Best Printing",
+    "address": {
+      "street": "1251 S King St # A, Honolulu, HI 96814",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96814",
+      "coordinates": {
+        "lat": 21.2991818,
+        "lng": -157.8428592
+      }
+    },
+    "phone": "(808) 949-5554",
+    "website": "https://bestprinting.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 19,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJf8ZTDL5lAHwR7LBuqxVXt9o",
+    "name": "GKprints LLC",
+    "address": {
+      "street": "91-371 Komohana St #104, Kapolei, HI 96707",
+      "city": "Kapolei",
+      "state": "Hawaii",
+      "zipCode": "96707",
+      "coordinates": {
+        "lat": 21.3162351,
+        "lng": -158.0941709
+      }
+    },
+    "phone": "(808) 451-2662",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kapolei.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJx4OjQNZuAHwRTot1FhoRVdg",
+    "name": "JCS Enterprises Inc",
+    "address": {
+      "street": "99-061 Koaha Way #101, Aiea, HI 96701",
+      "city": "Aiea",
+      "state": "Hawaii",
+      "zipCode": "96701",
+      "coordinates": {
+        "lat": 21.3726088,
+        "lng": -157.9032747
+      }
+    },
+    "phone": "(808) 488-6195",
+    "website": "http://www.jcsenterprisesinc.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Aiea.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJAQCUAmNuAHwRyV52twHi0og",
+    "name": "Life Impressions Hawaii",
+    "address": {
+      "street": "1363 N King St, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.328048,
+        "lng": -157.8712312
+      }
+    },
+    "phone": "(808) 476-5800",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:42.682Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJDcXGn4geB3wRTy10Viwj6C4",
+    "name": "Fantasy Shirts",
+    "address": {
+      "street": "Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9811111,
+        "lng": -159.3711111
+      }
+    },
+    "phone": "(808) 652-0119",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJCUFL_I4eB3wRWZk_BaBOJmM",
+    "name": "Island Image Hawai‘i",
+    "address": {
+      "street": "3129 Peleke St, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.968903,
+        "lng": -159.354498
+      }
+    },
+    "phone": "(808) 246-8600",
+    "website": "http://www.islandimagehawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 29,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJVTYyDxocB3wRvYMxcad_vbs",
+    "name": "Pau Hana T's",
+    "address": {
+      "street": "3-3257 Kuhio Hwy, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9819318,
+        "lng": -159.3680445
+      }
+    },
+    "phone": "(808) 245-6551",
+    "website": "http://www.pauhanatskauai.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ5zXukZEeB3wRqWSmoL4L_kU",
+    "name": "Kauai Printing Solutions Inc.",
+    "address": {
+      "street": "2950 Kress St Suite D, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9715064,
+        "lng": -159.365961
+      }
+    },
+    "phone": "(808) 245-2670",
+    "website": "http://www.kauaiprintingsolutions.net/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJB9q_WvbgBnwRJpch7P2qMlo",
+    "name": "The Sign & Print Machine, Inc",
+    "address": {
+      "street": "4-1191 Kuhio Hwy #104, Kapaʻa, HI 96746",
+      "city": "Kapaʻa",
+      "state": "Hawaii",
+      "zipCode": "96746",
+      "coordinates": {
+        "lat": 22.071383,
+        "lng": -159.319863
+      }
+    },
+    "phone": "(808) 823-0869",
+    "website": "https://signandprintmachine.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kapaʻa.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ9_UGJY4eB3wRmLDdwUj4e58",
+    "name": "C G Custom Prints",
+    "address": {
+      "street": "1544 Haleukana St #1, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9585389,
+        "lng": -159.392086
+      }
+    },
+    "phone": "(808) 245-7774",
+    "website": "http://cgcustomprints.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 5,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJOQx7iettAHwR1PoAO3WJJkM",
+    "name": "Threads Embroidery",
+    "address": {
+      "street": "1350 S King St Ste. 104, Honolulu, HI 96814",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96814",
+      "coordinates": {
+        "lat": 21.2991327,
+        "lng": -157.8408415
+      }
+    },
+    "phone": "(808) 218-8990",
+    "website": "http://www.threadshawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 22,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJKZFjBr8eB3wR_XE7HyYgsWc",
+    "name": "Island Art and Screen Printing",
+    "address": {
+      "street": "3651F Lala Rd bldg 4a, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9580433,
+        "lng": -159.3613818
+      }
+    },
+    "phone": "(808) 245-4211",
+    "website": "http://www.islandartandscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJb__S35IeB3wREz4_xkY9UgQ",
+    "name": "Ink Spot Printing Corp",
+    "address": {
+      "street": "4100 Rice St #10, Lihue, HI 96766",
+      "city": "Lihue",
+      "state": "Hawaii",
+      "zipCode": "96766",
+      "coordinates": {
+        "lat": 21.9702108,
+        "lng": -159.3615241
+      }
+    },
+    "phone": "(808) 246-0147",
+    "website": "http://www.inkspotkauai.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 15,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lihue.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.144Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJIXe5g38FB3wRPJOjfvO7A3M",
+    "name": "Inky Pop Print Shop",
+    "address": {
+      "street": "2501 Kino Rd, Kalaheo, HI 96741",
+      "city": "Kalaheo",
+      "state": "Hawaii",
+      "zipCode": "96741",
+      "coordinates": {
+        "lat": 21.9272146,
+        "lng": -159.5261006
+      }
+    },
+    "phone": "(808) 647-4308",
+    "website": "http://www.inkypopprintshop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kalaheo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:12:52.145Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJF1qa5FnLU3kRNOaJqM4UCAU",
+    "name": "Wild Side Printing",
+    "address": {
+      "street": "Mountain View, HI 96771",
+      "city": "Mountain View",
+      "state": "Hawaii",
+      "zipCode": "96771",
+      "coordinates": {
+        "lat": 19.5247456,
+        "lng": -155.155121
+      }
+    },
+    "phone": "(808) 895-7104",
+    "website": "https://wildsideprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Mountain View.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJR3lrmINMUnkR_5zOToQuCZk",
+    "name": "Creative Arts Hawaii",
+    "address": {
+      "street": "500 Kalanianaole St, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7259577,
+        "lng": -155.0568865
+      }
+    },
+    "phone": "(808) 935-7393",
+    "website": "http://www.creativeartshawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 17,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJwRlFZGtLUnkR7SXVc8AZJPY",
+    "name": "Prints Unlimited",
+    "address": {
+      "street": "140 Holomua St A, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7019756,
+        "lng": -155.0664093
+      }
+    },
+    "phone": "(808) 934-0892",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ38mufd-flqwR7jGd8nMeykE",
+    "name": "East Shore Printing",
+    "address": {
+      "street": "15-1919 20th Ave, Keaau, HI 96749",
+      "city": "Keaau",
+      "state": "Hawaii",
+      "zipCode": "96749",
+      "coordinates": {
+        "lat": 19.5685005,
+        "lng": -154.963182
+      }
+    },
+    "phone": "(808) 209-0668",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Keaau.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ_____2pLUnkRKlGLmWvlSs8",
+    "name": "Aloha Signs Plus",
+    "address": {
+      "street": "851 Leilani St, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7097448,
+        "lng": -155.062273
+      }
+    },
+    "phone": "(808) 935-5575",
+    "website": "http://www.alohasignsplus.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 6,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJVUmg2ldLUnkRUuKsktYtlMg",
+    "name": "Hilo Fine Art Center",
+    "address": {
+      "street": "16-643 Kipimana St #14, Keaau, HI 96749",
+      "city": "Keaau",
+      "state": "Hawaii",
+      "zipCode": "96749",
+      "coordinates": {
+        "lat": 19.6348278,
+        "lng": -155.0495821
+      }
+    },
+    "phone": "(808) 966-9995",
+    "website": "http://www.hilofineart.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 13,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Keaau.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:31.922Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuaU5jq8rVXkRZwee3DMNpbI",
+    "name": "King Screen Printing",
+    "address": {
+      "street": "12 Ulupono St STE C, Lahaina, HI 96761, United States",
+      "city": "Lahaina",
+      "state": "Hawaii",
+      "zipCode": "96761",
+      "coordinates": {
+        "lat": 20.8848149,
+        "lng": -156.6780884
+      }
+    },
+    "phone": "+1 808-283-6626",
+    "website": "https://kingscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 110,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Lahaina.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.441Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ4deSJDLTVHkRdJ3L7l-BdS8",
+    "name": "Pualani's Custom Screen Printing",
+    "address": {
+      "street": "800 Eha St, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.9056522,
+        "lng": -156.4886361
+      }
+    },
+    "phone": "+1 808-242-5702",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJuf4wBi7TVHkRxPUv3B3xAB8",
+    "name": "Printhouse Maui",
+    "address": {
+      "street": "331 Hookahi St #204, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.9044459,
+        "lng": -156.4859929
+      }
+    },
+    "phone": "+1 808-856-6174",
+    "website": "https://www.facebook.com/print.house.549",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ4deSJDLTVHkRWyZjgkLhDag",
+    "name": "Positive Apparel / Maui Screen Printing",
+    "address": {
+      "street": "130 Mamane Pl #2, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.855078,
+        "lng": -156.497484
+      }
+    },
+    "phone": "+1 808-242-5858",
+    "website": "http://mauiscreenprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 9,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJx4xAxghuAHwRgJPZfZ5EJP4",
+    "name": "Fully Promoted | EmbroidMe Honolulu | Dumaki",
+    "address": {
+      "street": "3332 Campbell Ave, Honolulu, HI 96815, United States",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96815",
+      "coordinates": {
+        "lat": 21.2770177,
+        "lng": -157.8131169
+      }
+    },
+    "phone": "+1 808-566-6561",
+    "website": "https://dumaki.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 61,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ-QC13onMVHkRrczzEsVYX_U",
+    "name": "Made In Hawaii - Maui",
+    "address": {
+      "street": "55 Pukalani St #880888, Pukalani, HI 96788, United States",
+      "city": "Pukalani",
+      "state": "Hawaii",
+      "zipCode": "96788",
+      "coordinates": {
+        "lat": 20.8379209,
+        "lng": -156.3419183
+      }
+    },
+    "phone": "+1 808-793-5388",
+    "website": "http://www.madeinhawaii808.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 20,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Pukalani.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ9wL-f2NuAHwRwZA4c5R-58o",
+    "name": "Aloha T-Shirt Factory",
+    "address": {
+      "street": "819 Moowaa St Unit 103, Honolulu, HI 96817, United States",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.32515,
+        "lng": -157.8715829
+      }
+    },
+    "phone": "+1 808-372-1774",
+    "website": "https://www.alohatshirtfactory.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 57,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJv521L1HJVHkRNXI7o7qiDVg",
+    "name": "Kula Shirt Company",
+    "address": {
+      "street": "104 Waimele Pl, Kula, HI 96790, United States",
+      "city": "Kula",
+      "state": "Hawaii",
+      "zipCode": "96790",
+      "coordinates": {
+        "lat": 20.7910318,
+        "lng": -156.3236458
+      }
+    },
+    "phone": "+1 808-688-8008",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kula.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ4deSJDLTVHkRmONCNMmvOQE",
+    "name": "Printers Inc",
+    "address": {
+      "street": "800 Eha St STE 26, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.9056097,
+        "lng": -156.4885943
+      }
+    },
+    "phone": "+1 808-244-9261",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ2a2aH0DTVHkR59dDRiFiuQQ",
+    "name": "Maui Print Works",
+    "address": {
+      "street": "70 Central Ave Suite A, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.8899362,
+        "lng": -156.5001832
+      }
+    },
+    "phone": "+1 808-242-6634",
+    "website": "http://www.mauiprintworks.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJVZOMj5k0q34RNAKmeXvugXM",
+    "name": "A Makebelieve Company",
+    "address": {
+      "street": "810 Haiku Rd #310, Haiku, HI 96708, United States",
+      "city": "Haiku",
+      "state": "Hawaii",
+      "zipCode": "96708",
+      "coordinates": {
+        "lat": 20.912555,
+        "lng": -156.323147
+      }
+    },
+    "phone": "+1 808-652-1476",
+    "website": "http://ambchawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Haiku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJBQ3EBsLTVHkRm9m0AyzADq4",
+    "name": "Automatic T-Shirt Printing/DeRay's Poi Mochi",
+    "address": {
+      "street": "1464 Lower Main St, Wailuku, HI 96793, United States",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.8947104,
+        "lng": -156.4939048
+      }
+    },
+    "phone": "+1 808-877-4478",
+    "website": "https://maui-tee-shirt-printing.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 2.6,
+    "reviewCount": 5,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJg3eTnCtvAHwR5IK5b3XsRxY",
+    "name": "moxie3innovations",
+    "address": {
+      "street": "99-1112 Iwaena St Suite 3, Aiea, HI 96701, United States",
+      "city": "Aiea",
+      "state": "Hawaii",
+      "zipCode": "96701",
+      "coordinates": {
+        "lat": 21.3784649,
+        "lng": -157.9096537
+      }
+    },
+    "phone": "+1 808-487-8470",
+    "website": "https://www.moxie3innovations.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Aiea.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJi_w3W9cUAHwRPZJNoLtZhcw",
+    "name": "Designs 2A Tee",
+    "address": {
+      "street": "622 Kuaaina Way, Kailua, HI 96734, United States",
+      "city": "Kailua",
+      "state": "Hawaii",
+      "zipCode": "96734",
+      "coordinates": {
+        "lat": 21.399677,
+        "lng": -157.7503784
+      }
+    },
+    "phone": "+1 808-247-8709",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kailua.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:32.442Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJI5arNEdfAHwRdWhOTTY59X0",
+    "name": "Woolley Bros",
+    "address": {
+      "street": "66-250 Kamehameha Hwy, Haleiwa, HI 96712",
+      "city": "Haleiwa",
+      "state": "Hawaii",
+      "zipCode": "96712",
+      "coordinates": {
+        "lat": 21.5858787,
+        "lng": -158.10258
+      }
+    },
+    "phone": "(808) 637-7468",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Haleiwa.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:36.496Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ6Y5yXpJZAHwRKzMvstfwwc8",
+    "name": "Expressive Design",
+    "address": {
+      "street": "59-740 Amaumau Pl, Haleiwa, HI 96712",
+      "city": "Haleiwa",
+      "state": "Hawaii",
+      "zipCode": "96712",
+      "coordinates": {
+        "lat": 21.6474076,
+        "lng": -158.0613261
+      }
+    },
+    "phone": "(808) 638-9090",
+    "website": "http://www.expressivedesignshawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Haleiwa.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:36.496Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJy-_DaKn6BnwR2dn9VheCa7U",
+    "name": "Spinning Dolphin Design",
+    "address": {
+      "street": "5-5190 Kuhio Hwy, Hanalei, HI 96714",
+      "city": "Hanalei",
+      "state": "Hawaii",
+      "zipCode": "96714",
+      "coordinates": {
+        "lat": 22.2030198,
+        "lng": -159.4965817
+      }
+    },
+    "phone": "(808) 826-7461",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 42,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hanalei.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:36.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJif5WRXBuAHwR0QFWfX4XL38",
+    "name": "Promotions In Paradise",
+    "address": {
+      "street": "1221 Kapiolani Blvd, Honolulu, HI 96814",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96814",
+      "coordinates": {
+        "lat": 21.295035,
+        "lng": -157.8476406
+      }
+    },
+    "phone": "(808) 546-1009",
+    "website": "https://www.promotionsinparadise.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 13,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:36.497Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJjW4ogPhvAHwRXD_hJV-3bOc",
+    "name": "DSTNY HAWAII SCREEN PRINTING",
+    "address": {
+      "street": "1031 Gulick Ave, Honolulu, HI 96819, United States",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3337025,
+        "lng": -157.8782304
+      }
+    },
+    "phone": "+1 808-687-1435",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:43.382Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJa9H-woNuAHwRkd7z-9ToZBA",
+    "name": "Hocus Pocus – Screen Printing",
+    "address": {
+      "street": "2316 Makanani Dr, Honolulu, HI 96817, United States",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.3360224,
+        "lng": -157.8612734
+      }
+    },
+    "phone": "+1 808-671-0126",
+    "website": "http://www.oahucustomshirtprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:43.382Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJPUyUzPUOllQRLAWHBw4AN9E",
+    "name": "Mix Plate Printing",
+    "address": {
+      "street": "Mamaka St, Keaau, HI 96749",
+      "city": "Keaau",
+      "state": "Hawaii",
+      "zipCode": "96749",
+      "coordinates": {
+        "lat": 19.6090633,
+        "lng": -155.0319077
+      }
+    },
+    "phone": "(808) 987-2745",
+    "website": "http://mixplateprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Keaau.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJI8f_B0JLUnkR18ertTb2Ng8",
+    "name": "Fully Promoted Hilo",
+    "address": {
+      "street": "507 E Lanikaula St, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7073157,
+        "lng": -155.0651204
+      }
+    },
+    "phone": "(808) 934-0011",
+    "website": "https://fullypromoted.com/locations/hilo-hi/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 3,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJj0Ye7m9LUnkRosWT9ehB0wk",
+    "name": "Big Island Image Screen Printing",
+    "address": {
+      "street": "831 Leilani St a, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7097503,
+        "lng": -155.062656
+      }
+    },
+    "phone": "(808) 969-3908",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 2,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJj-JZFm9LUnkRoKmFAgdP9eU",
+    "name": "Hawaii Printing Corporation",
+    "address": {
+      "street": "714 Kanoelehua Ave Suite 105, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7090352,
+        "lng": -155.0646752
+      }
+    },
+    "phone": "(808) 961-6651",
+    "website": "https://hawaiiprintinginstantsign.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 49,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJBbiLOVdLUnkRI47dl2dEVd8",
+    "name": "Big Island Ink",
+    "address": {
+      "street": "194 Kamehameha Ave, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.7250588,
+        "lng": -155.0862993
+      }
+    },
+    "phone": "(808) 939-7575",
+    "website": "http://www.bigislandink.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJgyPjtWVLUnkRWcqGFS2ksPg",
+    "name": "Large Format Printing Hilo",
+    "address": {
+      "street": "558 Kanoelehua Ave # 102, Hilo, HI 96720",
+      "city": "Hilo",
+      "state": "Hawaii",
+      "zipCode": "96720",
+      "coordinates": {
+        "lat": 19.713346,
+        "lng": -155.0645721
+      }
+    },
+    "phone": "(808) 935-1770",
+    "website": "http://www.lfphilo.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 8,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Hilo.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJkRgpFPgOVHkR3LCkVqt0jUA",
+    "name": "West Hawai‘i Screen Printers",
+    "address": {
+      "street": "74-5616 Alapa St # 5, Kailua-Kona, HI 96740",
+      "city": "Kailua-Kona",
+      "state": "Hawaii",
+      "zipCode": "96740",
+      "coordinates": {
+        "lat": 19.6446115,
+        "lng": -155.9975659
+      }
+    },
+    "phone": "(808) 329-9474",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kailua-Kona.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:48.634Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJjZilKfHgBnwRFE-lLue0u28",
+    "name": "Island Temptation",
+    "address": {
+      "street": "4569 Kukui St #101b, Kapaʻa, HI 96746",
+      "city": "Kapaʻa",
+      "state": "Hawaii",
+      "zipCode": "96746",
+      "coordinates": {
+        "lat": 22.0755991,
+        "lng": -159.3201253
+      }
+    },
+    "phone": "(808) 822-5537",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kapaʻa.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:09.384Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJqdKOY9bnBnwRTOx98gGZMgw",
+    "name": "Elephit Skate - N - surf shop",
+    "address": {
+      "street": "4-1373 Kuhio Hwy # C, Kapaʻa, HI 96746",
+      "city": "Kapaʻa",
+      "state": "Hawaii",
+      "zipCode": "96746",
+      "coordinates": {
+        "lat": 22.0763785,
+        "lng": -159.3183874
+      }
+    },
+    "phone": "(808) 635-9283",
+    "website": "http://elephit.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 31,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kapaʻa.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:09.384Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJDfCCJOJtAHwR9ptejNZDs9s",
+    "name": "PD Technologies",
+    "address": {
+      "street": "1205 Hopaka St, Honolulu, HI 96814",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96814",
+      "coordinates": {
+        "lat": 21.294769,
+        "lng": -157.8479835
+      }
+    },
+    "phone": "(808) 312-1610",
+    "website": "http://www.pdthawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 5,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:10.283Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ_3EOIF5uAHwRLkZkVNZqNdc",
+    "name": "Service Printers Hawaii, Inc.",
+    "address": {
+      "street": "99-807 Iwaena St #100, Aiea, HI 96701",
+      "city": "Aiea",
+      "state": "Hawaii",
+      "zipCode": "96701",
+      "coordinates": {
+        "lat": 21.3715903,
+        "lng": -157.9146332
+      }
+    },
+    "phone": "(808) 841-7644",
+    "website": "http://www.serviceprintershawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Aiea.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:10.283Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJq5NWbNZtAHwR0c2AfL69cbY",
+    "name": "Lanakila Custom Products",
+    "address": {
+      "street": "1809 Bachelot St, Honolulu, HI 96817",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96817",
+      "coordinates": {
+        "lat": 21.3221656,
+        "lng": -157.8552866
+      }
+    },
+    "phone": "(808) 356-8539",
+    "website": "https://www.lanakilapacific.org/customproducts",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:15.310Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJgd0xsVtuAHwRdN4ow3qPcMA",
+    "name": "Pacific Creations",
+    "address": {
+      "street": "4384 Malaai St, Honolulu, HI 96818",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96818",
+      "coordinates": {
+        "lat": 21.3557917,
+        "lng": -157.9300896
+      }
+    },
+    "phone": "(808) 841-5785",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:15.310Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJwdXG8XRuAHwRSWokakkWcPk",
+    "name": "Pineapple Printz",
+    "address": {
+      "street": "1050 Bishop St suite 267, Honolulu, HI 96813",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96813",
+      "coordinates": {
+        "lat": 21.3091283,
+        "lng": -157.8609594
+      }
+    },
+    "phone": "(808) 683-6119",
+    "website": "https://www.pineappleprintz.com/contact",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:15.310Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJAYkzG-JtAHwRaZngj5oinH0",
+    "name": "Hybrid Design llc",
+    "address": {
+      "street": "742 Queen St, Honolulu, HI 96813",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96813",
+      "coordinates": {
+        "lat": 21.300175,
+        "lng": -157.8563055
+      }
+    },
+    "phone": "(808) 200-1287",
+    "website": "http://hybriddesignhi.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:15.310Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJlz1-rWBuAHwREYCF_Fnd-yU",
+    "name": "Kenjo, Inc",
+    "address": {
+      "street": "524 Kalihi St, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3266939,
+        "lng": -157.8800442
+      }
+    },
+    "phone": "(808) 841-8282",
+    "website": "https://www.kenjoinc-hawaii.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 19,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:26.380Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJfXmiuF1uAHwRu7rhyiNY6DQ",
+    "name": "Certified Hawaiian Designs",
+    "address": {
+      "street": "1808 Kanakanui St #200, Honolulu, HI 96819",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "zipCode": "96819",
+      "coordinates": {
+        "lat": 21.3253975,
+        "lng": -157.8828033
+      }
+    },
+    "phone": "(808) 841-4119",
+    "website": "http://certifiedhawaiian.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 1,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Honolulu.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:26.380Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJZ-E_DcLSVHkRhlad9_Z_lUY",
+    "name": "Maui Printing Company",
+    "address": {
+      "street": "345 E Ahuli'u Way, Wailuku, HI 96793",
+      "city": "Wailuku",
+      "state": "Hawaii",
+      "zipCode": "96793",
+      "coordinates": {
+        "lat": 20.8514418,
+        "lng": -156.4880655
+      }
+    },
+    "phone": "(808) 877-7177",
+    "website": "http://www.mauiprinting.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 10,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wailuku.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:29.369Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJiweFJcLSVHkRU9uMDyxUwWM",
+    "name": "Ultra Hawaii Maui",
+    "address": {
+      "street": "326 Alamaha St #1, Kahului, HI 96732",
+      "city": "Kahului",
+      "state": "Hawaii",
+      "zipCode": "96732",
+      "coordinates": {
+        "lat": 20.8857595,
+        "lng": -156.4574667
+      }
+    },
+    "phone": "(808) 264-5504",
+    "website": "http://www.hawaiicustomprinting.com/",
+    "services": [
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      },
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Kahului.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:14:29.370Z",
+    "isPremium": false,
+    "featured": false
+  }
+]

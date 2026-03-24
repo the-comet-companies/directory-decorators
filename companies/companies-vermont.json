@@ -1,0 +1,190 @@
+[
+  {
+    "id": "ChIJ375HigRr4IkReuVXY6cNtZo",
+    "name": "Miller's Screen Printing & Embroidery",
+    "address": {
+      "street": "2955 E Wells Rd, Wells, VT 05774",
+      "city": "Wells",
+      "state": "Vermont",
+      "zipCode": "05774",
+      "coordinates": {
+        "lat": 43.4105052,
+        "lng": -73.149772
+      }
+    },
+    "phone": "(802) 325-2259",
+    "website": "http://www.millertee.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "custom apparel"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 11,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Wells.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:08.226Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJ2wwjkj6x4YkRiXJBjSzdYgQ",
+    "name": "Vermont T's Inc.",
+    "address": {
+      "street": "354 Elm St, Chester, VT 05143",
+      "city": "Chester",
+      "state": "Vermont",
+      "zipCode": "05143",
+      "coordinates": {
+        "lat": 43.266785,
+        "lng": -72.586693
+      }
+    },
+    "phone": "(802) 875-2091",
+    "website": "https://www.vermontcustommerch.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "embroidery",
+        "name": "Custom Embroidery"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 7,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Chester.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:09.745Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJb-aBPlwhtUwRr7ihQorxEP0",
+    "name": "Magee Office Products",
+    "address": {
+      "street": "463 VT-12, Randolph, VT 05060",
+      "city": "Randolph",
+      "state": "Vermont",
+      "zipCode": "05060",
+      "coordinates": {
+        "lat": 43.9079196,
+        "lng": -72.6611439
+      }
+    },
+    "phone": "(802) 728-5521",
+    "website": "https://mageeop.com/",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      },
+      {
+        "type": "screen-printing",
+        "name": "promotional products"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 31,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Randolph.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:12.664Z",
+    "isPremium": false,
+    "featured": false
+  },
+  {
+    "id": "ChIJyY1IrOwk4IkRwPLCzOiDAsA",
+    "name": "Michaels",
+    "address": {
+      "street": "US Route 7 S Green Mountain Plaza, 324 S Main St, Rutland, VT 05701",
+      "city": "Rutland",
+      "state": "Vermont",
+      "zipCode": "05701",
+      "coordinates": {
+        "lat": 43.5846787,
+        "lng": -72.9690188
+      }
+    },
+    "phone": "(802) 786-2435",
+    "website": "https://locations.michaels.com/vt/rutland/7775/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
+    "services": [
+      {
+        "type": "screen-printing",
+        "name": "Screen Printing"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 441,
+    "hours": {
+      "monday": "9:00 AM - 5:00 PM",
+      "tuesday": "9:00 AM - 5:00 PM",
+      "wednesday": "9:00 AM - 5:00 PM",
+      "thursday": "9:00 AM - 5:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "saturday": "10:00 AM - 3:00 PM",
+      "sunday": "Closed"
+    },
+    "images": [],
+    "description": "Professional printing services in Rutland.",
+    "specialties": [],
+    "equipment": [],
+    "minimums": {},
+    "turnaround": {},
+    "source": "google-places",
+    "scrapedAt": "2025-08-31T10:13:15.675Z",
+    "isPremium": false,
+    "featured": false
+  }
+]
