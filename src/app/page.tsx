@@ -28,6 +28,11 @@ export default async function BrowsePage({ searchParams }: PageProps) {
     ecoFriendly: (params.ecoFriendly as string) || '',
     fulfillment: normalizeArray(params.fulfillment),
     rating: (params.rating as string) || '',
+    bulkOrders: (params.bulkOrders as string) || '',
+    smallBatch: (params.smallBatch as string) || '',
+    customDesign: (params.customDesign as string) || '',
+    onlineOrdering: (params.onlineOrdering as string) || '',
+    nationwideShipping: (params.nationwideShipping as string) || '',
   };
 
   const currentSort = (params.sort as string) || 'recommended';
@@ -46,6 +51,11 @@ export default async function BrowsePage({ searchParams }: PageProps) {
     ecoFriendly: activeFilters.ecoFriendly === 'true' ? true : null,
     fulfillment: activeFilters.fulfillment as string[],
     rating: activeFilters.rating as string,
+    bulkOrders: activeFilters.bulkOrders === 'true' ? true : null,
+    smallBatch: activeFilters.smallBatch === 'true' ? true : null,
+    customDesign: activeFilters.customDesign === 'true' ? true : null,
+    onlineOrdering: activeFilters.onlineOrdering === 'true' ? true : null,
+    nationwideShipping: activeFilters.nationwideShipping === 'true' ? true : null,
     sort: currentSort,
     page: currentPage,
   });

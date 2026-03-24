@@ -131,13 +131,31 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
     results = results.filter(p => p.ecoFriendly);
   }
 
-  // Fulfillment (pickup / delivery)
+  // Fulfillment (pickup / delivery / nationwide shipping)
   if (filters.fulfillment?.length) {
     results = results.filter(p => {
       if (filters.fulfillment!.includes('Pickup') && !p.pickup) return false;
       if (filters.fulfillment!.includes('Delivery') && !p.delivery) return false;
+      if (filters.fulfillment!.includes('Nationwide Shipping') && !p.nationwideShipping) return false;
       return true;
     });
+  }
+
+  // Feature filters
+  if (filters.bulkOrders === true) {
+    results = results.filter(p => p.bulkOrders);
+  }
+  if (filters.smallBatch === true) {
+    results = results.filter(p => p.smallBatch);
+  }
+  if (filters.customDesign === true) {
+    results = results.filter(p => p.customDesign);
+  }
+  if (filters.onlineOrdering === true) {
+    results = results.filter(p => p.onlineOrdering);
+  }
+  if (filters.nationwideShipping === true) {
+    results = results.filter(p => p.nationwideShipping);
   }
 
   // Rating

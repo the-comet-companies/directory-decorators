@@ -36,6 +36,17 @@ export interface Provider {
   customizationMethods: string[];
   ecoFriendly: boolean;
   finishingOptions: string[];
+  // Feature flags from enrichment
+  logoImage?: string;
+  sameDayPrinting?: boolean;
+  bulkOrders?: boolean;
+  smallBatch?: boolean;
+  customDesign?: boolean;
+  onlineOrdering?: boolean;
+  freeQuotes?: boolean;
+  nationwideShipping?: boolean;
+  contractPrinting?: boolean;
+  dropshipping?: boolean;
 }
 
 export interface PricingTier {
@@ -96,6 +107,12 @@ export interface FilterState {
   rating: string;
   sort: string;
   page: number;
+  // New feature filters
+  bulkOrders: boolean | null;
+  smallBatch: boolean | null;
+  customDesign: boolean | null;
+  onlineOrdering: boolean | null;
+  nationwideShipping: boolean | null;
 }
 
 export type SortOption = 

@@ -199,35 +199,75 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
           </div>
         </DropdownPill>
 
-        {/* More: Eco + Fulfillment */}
+        {/* Features */}
         <DropdownPill
-          label="More"
-          isActive={activeFilters.ecoFriendly === 'true' || activeFulfillment.length > 0}
-          isOpen={openGroup === 'more'}
-          onToggle={() => setOpenGroup(openGroup === 'more' ? null : 'more')}
+          label="Features"
+          isActive={
+            activeFilters.bulkOrders === 'true' || activeFilters.smallBatch === 'true' ||
+            activeFilters.customDesign === 'true' || activeFilters.onlineOrdering === 'true' ||
+            activeFilters.ecoFriendly === 'true'
+          }
+          isOpen={openGroup === 'features'}
+          onToggle={() => setOpenGroup(openGroup === 'features' ? null : 'features')}
         >
-          <div className="space-y-3 min-w-[190px]">
+          <div className="space-y-3 min-w-[210px]">
             <div>
-              <p className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1.5">Eco-Friendly</p>
+              <p className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1.5">Production</p>
               <CheckboxItem
-                label="Eco-friendly options"
+                label="Bulk orders"
+                checked={activeFilters.bulkOrders === 'true'}
+                onChange={() => updateFilter('bulkOrders', 'true')}
+              />
+              <CheckboxItem
+                label="Small batch / No minimum"
+                checked={activeFilters.smallBatch === 'true'}
+                onChange={() => updateFilter('smallBatch', 'true')}
+              />
+              <CheckboxItem
+                label="Eco-friendly"
                 checked={activeFilters.ecoFriendly === 'true'}
                 onChange={() => updateFilter('ecoFriendly', 'true')}
               />
             </div>
             <div>
-              <p className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1.5">Fulfillment</p>
+              <p className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1.5">Services</p>
               <CheckboxItem
-                label="Pickup available"
-                checked={activeFulfillment.includes('Pickup')}
-                onChange={() => updateFilter('fulfillment', 'Pickup', true)}
+                label="Custom design help"
+                checked={activeFilters.customDesign === 'true'}
+                onChange={() => updateFilter('customDesign', 'true')}
               />
               <CheckboxItem
-                label="Delivery available"
-                checked={activeFulfillment.includes('Delivery')}
-                onChange={() => updateFilter('fulfillment', 'Delivery', true)}
+                label="Online ordering"
+                checked={activeFilters.onlineOrdering === 'true'}
+                onChange={() => updateFilter('onlineOrdering', 'true')}
               />
             </div>
+          </div>
+        </DropdownPill>
+
+        {/* Fulfillment */}
+        <DropdownPill
+          label="Fulfillment"
+          isActive={activeFulfillment.length > 0 || activeFilters.nationwideShipping === 'true'}
+          isOpen={openGroup === 'fulfillment'}
+          onToggle={() => setOpenGroup(openGroup === 'fulfillment' ? null : 'fulfillment')}
+        >
+          <div className="space-y-0.5 min-w-[200px]">
+            <CheckboxItem
+              label="Pickup available"
+              checked={activeFulfillment.includes('Pickup')}
+              onChange={() => updateFilter('fulfillment', 'Pickup', true)}
+            />
+            <CheckboxItem
+              label="Delivery available"
+              checked={activeFulfillment.includes('Delivery')}
+              onChange={() => updateFilter('fulfillment', 'Delivery', true)}
+            />
+            <CheckboxItem
+              label="Nationwide shipping"
+              checked={activeFulfillment.includes('Nationwide Shipping') || activeFilters.nationwideShipping === 'true'}
+              onChange={() => updateFilter('nationwideShipping', 'true')}
+            />
           </div>
         </DropdownPill>
 

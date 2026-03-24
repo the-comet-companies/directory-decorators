@@ -17,7 +17,7 @@ export default function Footer() {
               Discover and compare top-rated printing services across the United States for custom apparel, including screen printing, DTG, embroidery, and specialty finishes.
             </p>
             <a
-              href="#get-quotes"
+              href="/get-quote"
               className="inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 transition-colors"
             >
               Get Free Quotes
@@ -78,11 +78,10 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-surface-900 mb-3">Company</h3>
             <ul className="space-y-2">
               {[
+                { label: 'Browse', href: '/' },
+                { label: 'Services', href: '/services' },
+                { label: 'Near Me', href: '/near-me' },
                 { label: 'About', href: '/about' },
-                { label: 'Blog', href: '#blog' },
-                { label: 'Contact', href: '#contact' },
-                { label: 'Privacy Policy', href: '#privacy' },
-                { label: 'Terms of Service', href: '#terms' },
               ].map(link => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-surface-500 hover:text-brand-600 transition-colors">

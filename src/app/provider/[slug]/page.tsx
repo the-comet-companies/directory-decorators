@@ -96,6 +96,19 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             <section className="mb-8">
               <h2 className="text-lg font-semibold text-surface-900 mb-3">About</h2>
               <p className="text-sm text-surface-600 leading-relaxed">{provider.description}</p>
+              {provider.website && (
+                <a
+                  href={provider.website.startsWith('http') ? provider.website : `https://${provider.website}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Visit Website
+                </a>
+              )}
             </section>
 
             {/* Services & Products */}

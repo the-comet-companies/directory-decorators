@@ -1,16 +1,7 @@
 'use client'
 
 import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMapEvents,
-  useMap,
-} from 'react-leaflet'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
+import { GoogleMap, useJsApiLoader, MarkerF, InfoWindowF } from '@react-google-maps/api'
 import companiesData from '@/lib/companies.json'
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -313,49 +304,17 @@ function NearMeFilterBar({
 
 // ─── Map utilities ───────────────────────────────────────────────────────────
 
-function makeMarkerIcon(selected: boolean, price: number | null) {
+function makeMarkerIcon(selected: boolean, price: number | null): string {
   const bg = selected ? '#dc2626' : '#4f46e5'
   const label = price ? `$${price}` : ''
-  return L.divIcon({
-    html: `
-      <div style="
-        display:flex;align-items:center;justify-content:center;
-        background:${bg};color:#fff;font-weight:700;font-size:11px;
-        padding:${label ? '4px 8px' : '0'};
-        min-width:${label ? 'auto' : '14px'};
-        height:${label ? 'auto' : '14px'};
-        border-radius:${label ? '20px' : '50%'};
-        border:2.5px solid #fff;
-        box-shadow:0 2px 6px rgba(0,0,0,0.35);
-        white-space:nowrap;
-        transform:${selected ? 'scale(1.3)' : 'scale(1)'};
-        transition:transform .15s;
-      ">${label}</div>
-    `,
-    className: '',
-    iconAnchor: label ? [undefined as unknown as number, 14] : [7, 7],
-  })
-}
-
-function BoundsWatcher({ onChange }: { onChange: (b: Bounds) => void }) {
-  const report = (m: L.Map) => {
-    const b = m.getBounds()
-    onChange({ n: b.getNorth(), s: b.getSouth(), e: b.getEast(), w: b.getWest() })
-  }
-  const map = useMapEvents({
-    moveend: () => report(map),
-    zoomend: () => report(map),
-  })
-  useEffect(() => { report(map) }, []) // eslint-disable-line
-  return null
-}
-
-function MapFocus({ target }: { target: { lat: number; lng: number; zoom?: number } | null }) {
-  const map = useMap()
-  useEffect(() => {
-    if (target) map.setView([target.lat, target.lng], target.zoom ?? 13, { animate: true })
-  }, [target, map])
-  return null
+  const w = label ? 12 + label.length * 7 : 14
+  const h = label ? 24 : 14
+  const rx = label ? 12 : 7
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">
+    <rect x="0" y="0" width="${w}" height="${h}" rx="${rx}" fill="${bg}" stroke="white" stroke-width="2"/>
+    ${label ? `<text x="${w / 2}" y="${h / 2 + 4}" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="sans-serif">${label}</text>` : ''}
+  </svg>`
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`
 }
 
 // ─── FilterBar ───────────────────────────────────────────────────────────────
@@ -595,6 +554,8 @@ function ListingCard({
 
 // ─── MapView ─────────────────────────────────────────────────────────────────
 
+const DTLA_CENTER = { lat: 33.9983, lng: -118.2307 }
+
 function MapView({
   companies,
   selected,
@@ -608,53 +569,106 @@ function MapView({
   onBoundsChange: (b: Bounds) => void
   onMarkerClick: (c: Company) => void
 }) {
-  return (
-    <MapContainer
-      center={[33.9983, -118.2307]}
-      zoom={13}
-      style={{ width: '100%', height: '100%' }}
-      zoomControl
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <BoundsWatcher onChange={onBoundsChange} />
-      <MapFocus target={focusTarget} />
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
+  })
 
+  const mapRef = useRef<google.maps.Map | null>(null)
+  const [infoWindow, setInfoWindow] = useState<Company | null>(null)
+
+  const reportBounds = useCallback(() => {
+    const map = mapRef.current
+    if (!map) return
+    const b = map.getBounds()
+    if (!b) return
+    const ne = b.getNorthEast()
+    const sw = b.getSouthWest()
+    onBoundsChange({ n: ne.lat(), s: sw.lat(), e: ne.lng(), w: sw.lng() })
+  }, [onBoundsChange])
+
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !focusTarget) return
+    map.panTo({ lat: focusTarget.lat, lng: focusTarget.lng })
+    if (focusTarget.zoom) map.setZoom(focusTarget.zoom)
+  }, [focusTarget])
+
+  const onLoad = useCallback((map: google.maps.Map) => {
+    mapRef.current = map
+    google.maps.event.addListenerOnce(map, 'tilesloaded', reportBounds)
+  }, [reportBounds])
+
+  if (!isLoaded) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-surface-100">
+        <svg className="w-8 h-8 animate-spin text-brand-500" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+        </svg>
+      </div>
+    )
+  }
+
+  return (
+    <GoogleMap
+      mapContainerStyle={{ width: '100%', height: '100%' }}
+      center={DTLA_CENTER}
+      zoom={13}
+      onLoad={onLoad}
+      onIdle={reportBounds}
+      options={{
+        streetViewControl: false,
+        mapTypeControl: false,
+        fullscreenControl: false,
+      }}
+    >
       {companies.map(c => (
-        <Marker
+        <MarkerF
           key={c.id}
-          position={[c.coordinates.lat, c.coordinates.lng]}
-          icon={makeMarkerIcon(selected?.id === c.id, c.startingPrice)}
-          eventHandlers={{ click: () => onMarkerClick(c) }}
-          zIndexOffset={selected?.id === c.id ? 1000 : 0}
-        >
-          <Popup>
-            <div style={{ minWidth: 170 }}>
-              <p className="font-semibold text-sm text-surface-900">{c.name}</p>
-              <p className="text-xs text-surface-500 mt-0.5">{c.address}</p>
-              {c.startingPrice && (
-                <p className="text-xs font-bold text-brand-600 mt-1">from ${c.startingPrice}</p>
-              )}
-              <div className="flex items-center gap-1 mt-1">
-                <svg className="w-3 h-3 fill-amber-400" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-                <span className="text-xs font-semibold">{c.rating}</span>
-                <span className="text-xs text-surface-400">({c.reviewCount})</span>
-              </div>
-              <a
-                href={`/provider/${c.slug}`}
-                className="block mt-2 text-center text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white rounded-lg px-3 py-1.5 transition-colors"
-              >
-                View Details →
-              </a>
-            </div>
-          </Popup>
-        </Marker>
+          position={{ lat: c.coordinates.lat, lng: c.coordinates.lng }}
+          icon={{
+            url: makeMarkerIcon(selected?.id === c.id, c.startingPrice),
+            scaledSize: new google.maps.Size(
+              c.startingPrice ? 12 + `$${c.startingPrice}`.length * 7 : 14,
+              c.startingPrice ? 24 : 14
+            ),
+          }}
+          zIndex={selected?.id === c.id ? 1000 : 1}
+          onClick={() => {
+            onMarkerClick(c)
+            setInfoWindow(c)
+          }}
+        />
       ))}
-    </MapContainer>
+
+      {infoWindow && (
+        <InfoWindowF
+          position={{ lat: infoWindow.coordinates.lat, lng: infoWindow.coordinates.lng }}
+          onCloseClick={() => setInfoWindow(null)}
+        >
+          <div style={{ minWidth: 170, padding: '4px 0' }}>
+            <p className="font-semibold text-sm text-surface-900">{infoWindow.name}</p>
+            <p className="text-xs text-surface-500 mt-0.5">{infoWindow.address}</p>
+            {infoWindow.startingPrice && (
+              <p className="text-xs font-bold text-brand-600 mt-1">from ${infoWindow.startingPrice}</p>
+            )}
+            <div className="flex items-center gap-1 mt-1">
+              <svg className="w-3 h-3 fill-amber-400" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <span className="text-xs font-semibold">{infoWindow.rating}</span>
+              <span className="text-xs text-surface-400">({infoWindow.reviewCount})</span>
+            </div>
+            <a
+              href={`/provider/${infoWindow.slug}`}
+              className="block mt-2 text-center text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white rounded-lg px-3 py-1.5 transition-colors"
+            >
+              View Details →
+            </a>
+          </div>
+        </InfoWindowF>
+      )}
+    </GoogleMap>
   )
 }
 
