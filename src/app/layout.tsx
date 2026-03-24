@@ -55,12 +55,12 @@ function Navbar() {
           <NavLinks />
         </div>
         <div className="flex items-center gap-3">
-          <a
+          {/* <a
             href="/list-business"
             className="hidden sm:inline-flex items-center rounded-full border border-surface-300 px-4 py-2 text-sm font-medium text-surface-700 hover:bg-surface-100 transition-colors focus-ring"
           >
             List Your Business
-          </a>
+          </a> */}
           <a
             href="/get-quote"
             className="inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 transition-colors shadow-sm focus-ring"
