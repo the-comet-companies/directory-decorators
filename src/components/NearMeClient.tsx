@@ -68,6 +68,39 @@ const ALL_SERVICES = [...new Set(companies.flatMap(c => c.servicesOffered))].sor
 const ALL_PRODUCT_CATS = [...new Set(companies.flatMap(c => c.productCategories))].sort()
 const ALL_PRINTING_METHODS = [...new Set(companies.flatMap(c => c.printingMethods))].sort()
 
+// Map full state names to abbreviations
+const STATE_ABBR: Record<string, string> = {
+  'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
+  'Colorado':'CO','Connecticut':'CT','Delaware':'DE','Florida':'FL','Georgia':'GA',
+  'Hawaii':'HI','Idaho':'ID','Illinois':'IL','Indiana':'IN','Iowa':'IA','Kansas':'KS',
+  'Kentucky':'KY','Louisiana':'LA','Maine':'ME','Maryland':'MD','Massachusetts':'MA',
+  'Michigan':'MI','Minnesota':'MN','Mississippi':'MS','Missouri':'MO','Montana':'MT',
+  'Nebraska':'NE','Nevada':'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM',
+  'New York':'NY','North Carolina':'NC','North Dakota':'ND','Ohio':'OH','Oklahoma':'OK',
+  'Oregon':'OR','Pennsylvania':'PA','Rhode Island':'RI','South Carolina':'SC',
+  'South Dakota':'SD','Tennessee':'TN','Texas':'TX','Utah':'UT','Vermont':'VT',
+  'Virginia':'VA','Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY',
+}
+
+// Build full state name → cities map from company data
+const STATE_CITIES: Record<string, string[]> = {}
+for (const c of companies) {
+  const sa = c.serviceArea
+  if (sa && sa.length >= 2) {
+    const abbr = sa[1]
+    const city = sa[0] || c.city
+    // Find the full state name for this abbreviation
+    const fullState = Object.entries(STATE_ABBR).find(([, a]) => a === abbr)?.[0]
+    if (fullState && city) {
+      if (!STATE_CITIES[fullState]) STATE_CITIES[fullState] = []
+      if (!STATE_CITIES[fullState].includes(city)) STATE_CITIES[fullState].push(city)
+    }
+  }
+}
+for (const st of Object.keys(STATE_CITIES)) {
+  STATE_CITIES[st].sort()
+}
+
 const MOQ_OPTIONS = [
   { label: 'No minimum', value: '1' },
   { label: '12 or fewer', value: '12' },
@@ -366,6 +399,13 @@ function FilterBar({
   const [query, setQuery] = useState('')
   const [state, setState] = useState('')
 
+  const cities = state ? (STATE_CITIES[state] || []) : []
+
+  const handleStateChange = (newState: string) => {
+    setState(newState)
+    setQuery('') // Reset city when state changes
+  }
+
   const handleSubmit = (e?: React.SyntheticEvent) => {
     e?.preventDefault()
     onSearch({ query, state, radius })
@@ -384,7 +424,7 @@ function FilterBar({
           <label className="text-sm font-bold text-surface-800">State</label>
           <select
             value={state}
-            onChange={e => setState(e.target.value)}
+            onChange={e => handleStateChange(e.target.value)}
             className="h-12 w-full border border-surface-200 rounded-xl px-3 py-0 text-sm text-surface-700 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white appearance-none"
             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '16px', paddingRight: '36px' }}
           >
@@ -393,16 +433,28 @@ function FilterBar({
           </select>
         </div>
 
-        {/* City / State / Zip */}
+        {/* City — dropdown when state selected, text input otherwise */}
         <div className="flex flex-col gap-1.5">
-          <label className="text-sm font-bold text-surface-800">City, State or Zip</label>
-          <input
-            type="text"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search for City, State or Zip"
-            className="h-12 w-full border border-surface-200 rounded-xl px-4 text-sm text-surface-700 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white"
-          />
+          <label className="text-sm font-bold text-surface-800">{state ? 'City' : 'City, State or Zip'}</label>
+          {state && cities.length > 0 ? (
+            <select
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              className="h-12 w-full border border-surface-200 rounded-xl px-3 py-0 text-sm text-surface-700 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white appearance-none"
+              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '16px', paddingRight: '36px' }}
+            >
+              <option value="">All Cities in {state}</option>
+              {cities.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+          ) : (
+            <input
+              type="text"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              placeholder="Search for City, State or Zip"
+              className="h-12 w-full border border-surface-200 rounded-xl px-4 text-sm text-surface-700 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white"
+            />
+          )}
         </div>
 
         {/* Radius */}
@@ -596,8 +648,8 @@ function MapView({
 }) {
   return (
     <MapContainer
-      center={[33.9983, -118.2307]}
-      zoom={13}
+      center={[39.5, -98.35]}
+      zoom={1}
       style={{ width: '100%', height: '100%' }}
       zoomControl
     >
