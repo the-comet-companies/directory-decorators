@@ -12,13 +12,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const provider = getProviderBySlug(slug);
   if (!provider) return {};
+
+  const services = provider.servicesOffered.slice(0, 3).join(', ');
+  const title = `${provider.name} | ${services} in ${provider.city}`;
+  const description = `${provider.name} offers ${services} in ${provider.city}. Rated ${provider.rating}/5 from ${provider.reviewCount} reviews.${provider.rushAvailable ? ' Rush orders available.' : ''}${provider.startingPrice ? ` Starting at $${provider.startingPrice}.` : ''}`;
+
   return {
-    title: provider.seoTitle,
-    description: provider.seoDescription,
+    title,
+    description,
     openGraph: {
-      title: provider.seoTitle,
-      description: provider.seoDescription,
+      title,
+      description,
       type: 'website',
+      url: `https://directory.dtlaprint.com/provider/${slug}`,
+      images: provider.coverImage ? [{ url: provider.coverImage, alt: provider.name }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://directory.dtlaprint.com/provider/${slug}`,
     },
   };
 }
@@ -405,34 +420,71 @@ export default async function ProviderDetailPage({ params }: PageProps) {
 
       <Footer />
 
-      {/* JSON-LD */}
+      {/* JSON-LD: LocalBusiness + AggregateRating + Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
+            '@id': `https://directory.dtlaprint.com/provider/${provider.slug}`,
             name: provider.name,
             description: provider.description,
+            image: [provider.coverImage, ...provider.galleryImages].filter(Boolean),
             address: {
               '@type': 'PostalAddress',
               streetAddress: provider.address,
               addressLocality: provider.city,
-              addressRegion: 'CA',
+              addressRegion: provider.serviceArea[1] || '',
+              addressCountry: 'US',
             },
             geo: {
               '@type': 'GeoCoordinates',
               latitude: provider.coordinates.lat,
               longitude: provider.coordinates.lng,
             },
-            telephone: provider.phone,
-            email: provider.email,
-            url: provider.website,
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: provider.rating,
-              reviewCount: provider.reviewCount,
+            telephone: provider.phone || undefined,
+            email: provider.email || undefined,
+            url: provider.website || `https://directory.dtlaprint.com/provider/${provider.slug}`,
+            priceRange: provider.startingPrice ? `From $${provider.startingPrice}` : undefined,
+            ...(provider.rating > 0 && provider.reviewCount > 0 ? {
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: provider.rating,
+                bestRating: 5,
+                worstRating: 1,
+                reviewCount: provider.reviewCount,
+              },
+            } : {}),
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Printing Services',
+              itemListElement: provider.servicesOffered.map(s => ({
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: s,
+                },
+              })),
             },
+            areaServed: provider.serviceArea.length > 0 ? {
+              '@type': 'City',
+              name: provider.serviceArea[0],
+            } : undefined,
+          }),
+        }}
+      />
+      {/* JSON-LD: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Printing Services', item: 'https://directory.dtlaprint.com' },
+              { '@type': 'ListItem', position: 2, name: provider.name, item: `https://directory.dtlaprint.com/provider/${provider.slug}` },
+            ],
           }),
         }}
       />

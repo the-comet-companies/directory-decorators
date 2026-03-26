@@ -2,8 +2,14 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Printing Services — Print Services Hub USA',
-  description: 'Browse all custom printing services available across the USA: screen printing, DTG, embroidery, heat transfer, sublimation, and more.',
+  title: 'Printing Services — Screen Printing, DTG, Embroidery & More | Print Services Hub USA',
+  description: 'Browse all custom printing services available across the USA: screen printing, DTG, DTF, embroidery, heat transfer, sublimation, vinyl, and large format printing. Compare providers and get free quotes.',
+  openGraph: {
+    title: 'Printing Services — Screen Printing, DTG, Embroidery & More',
+    description: 'Browse all custom printing services available across the USA. Compare providers and get free quotes.',
+    type: 'website',
+  },
+  alternates: { canonical: 'https://directory.dtlaprint.com/services' },
 };
 
 const services = [
@@ -231,6 +237,98 @@ export default function ServicesPage() {
           ))}
         </section>
 
+        {/* Comparison Table — AI Overview bait */}
+        <section className="pb-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-surface-900 mb-2">Printing Method Comparison Chart</h2>
+          <p className="text-surface-500 mb-6">Compare cost, minimums, turnaround, and best use cases for every printing method at a glance.</p>
+          <div className="overflow-x-auto rounded-2xl border border-surface-200">
+            <table className="w-full text-sm text-left">
+              <thead>
+                <tr className="bg-surface-50 border-b border-surface-200">
+                  <th className="px-4 py-3 font-semibold text-surface-800">Method</th>
+                  <th className="px-4 py-3 font-semibold text-surface-800">Cost per Unit</th>
+                  <th className="px-4 py-3 font-semibold text-surface-800">Min. Order</th>
+                  <th className="px-4 py-3 font-semibold text-surface-800">Turnaround</th>
+                  <th className="px-4 py-3 font-semibold text-surface-800">Best For</th>
+                  <th className="px-4 py-3 font-semibold text-surface-800">Durability</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-surface-100">
+                {[
+                  { method: 'Screen Printing', cost: '$5–$15', min: '12–24 pcs', turn: '5–10 days', best: 'Bulk orders, simple designs', durability: 'Excellent' },
+                  { method: 'DTG Printing', cost: '$10–$25', min: '1 pc', turn: '3–7 days', best: 'Full-color, small batches', durability: 'Good' },
+                  { method: 'DTF Printing', cost: '$8–$20', min: '1 pc', turn: '3–7 days', best: 'Vibrant colors, any fabric', durability: 'Very Good' },
+                  { method: 'Embroidery', cost: '$8–$20', min: '6–12 pcs', turn: '5–14 days', best: 'Logos, corporate, hats', durability: 'Excellent' },
+                  { method: 'Sublimation', cost: '$12–$30', min: '1 pc', turn: '3–7 days', best: 'All-over prints, polyester', durability: 'Excellent' },
+                  { method: 'Heat Transfer', cost: '$3–$12', min: '1 pc', turn: '1–5 days', best: 'Names, numbers, small runs', durability: 'Good' },
+                  { method: 'Vinyl Printing', cost: '$5–$15', min: '1 pc', turn: '1–3 days', best: 'Simple graphics, signage', durability: 'Very Good' },
+                  { method: 'Large Format', cost: '$2–$10/sqft', min: '1 pc', turn: '2–5 days', best: 'Banners, posters, wraps', durability: 'Good' },
+                ].map(row => (
+                  <tr key={row.method} className="hover:bg-surface-50 transition-colors">
+                    <td className="px-4 py-3 font-medium text-surface-900">{row.method}</td>
+                    <td className="px-4 py-3 text-surface-600">{row.cost}</td>
+                    <td className="px-4 py-3 text-surface-600">{row.min}</td>
+                    <td className="px-4 py-3 text-surface-600">{row.turn}</td>
+                    <td className="px-4 py-3 text-surface-600">{row.best}</td>
+                    <td className="px-4 py-3 text-surface-600">{row.durability}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* FAQ Section — targets "People Also Ask" and AI Overview */}
+        <section className="pb-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-surface-900 mb-6">Frequently Asked Questions About Printing Services</h2>
+          <div className="space-y-3 max-w-3xl">
+            {[
+              {
+                q: 'How much does screen printing cost?',
+                a: 'Screen printing typically costs $5–$15 per shirt for orders of 24+ pieces. Prices decrease with larger quantities. Setup fees usually range from $20–$50 per color. For a 1-color design on 100 shirts, expect to pay around $6–$8 per shirt.',
+              },
+              {
+                q: 'What is the difference between DTG and screen printing?',
+                a: 'Screen printing uses stencils and ink pushed through a mesh screen — it is best for large orders (24+) with 1–4 colors. DTG (Direct to Garment) uses inkjet technology to print directly on fabric — it is best for full-color designs and small orders (1–23 pieces). Screen printing is more cost-effective at scale, while DTG has no minimum order.',
+              },
+              {
+                q: 'What is DTF printing?',
+                a: 'DTF (Direct to Film) printing transfers a design from a special film onto fabric using heat and adhesive powder. It works on any fabric color and type, produces vibrant colors, and has no minimum order. DTF is newer than DTG and offers better color vibrancy on dark garments.',
+              },
+              {
+                q: 'What is the minimum order for custom t-shirts?',
+                a: 'It depends on the printing method. Screen printing typically requires 12–24 pieces minimum. DTG and DTF printing have no minimum — you can order a single shirt. Embroidery usually requires 6–12 pieces. Many shops offer "no minimum" options for DTG and heat transfer.',
+              },
+              {
+                q: 'How long does custom t-shirt printing take?',
+                a: 'Standard turnaround is 5–10 business days for screen printing and 3–7 days for DTG/DTF. Many shops offer rush services (24–48 hours) for an additional fee. Embroidery may take 7–14 days depending on complexity. Always confirm deadlines with your printer before placing an order.',
+              },
+              {
+                q: 'What is the best printing method for small orders?',
+                a: 'For orders under 24 pieces, DTG (Direct to Garment) or DTF (Direct to Film) printing are the best options. Both have no minimum order, support full-color designs, and offer quick turnaround. Heat transfer vinyl is another good option for very small runs (1–10 pieces) with simple designs.',
+              },
+              {
+                q: 'Is embroidery better than screen printing?',
+                a: 'They serve different purposes. Embroidery is best for logos, corporate wear, hats, and polo shirts — it looks premium and is extremely durable. Screen printing is best for t-shirts, event merchandise, and designs with large graphics. Embroidery is more expensive per unit but creates a high-end, textured finish.',
+              },
+              {
+                q: 'Can I print on dark colored shirts?',
+                a: 'Yes. Screen printing, DTF, and heat transfer all work well on dark garments. DTG can also print on dark shirts but requires a white underbase layer. Embroidery works on any color. Sublimation only works on white or light-colored polyester fabrics.',
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group rounded-xl border border-surface-200 bg-white overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer text-sm font-semibold text-surface-800 hover:bg-surface-50 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-surface-400 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-surface-600 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="pb-20">
           <div className="rounded-3xl bg-brand-600 px-8 py-14 text-center">
@@ -249,8 +347,72 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        {/* Browse by State — internal linking for SEO */}
+        <section className="pb-20">
+          <h2 className="text-2xl font-bold text-surface-900 mb-2">Browse by State</h2>
+          <p className="text-surface-500 mb-6">Find printing companies in your state.</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { name: 'Alaska', slug: 'alaska' },
+              { name: 'California', slug: 'california' },
+              { name: 'Colorado', slug: 'colorado' },
+              { name: 'Connecticut', slug: 'connecticut' },
+              { name: 'Florida', slug: 'florida' },
+              { name: 'Hawaii', slug: 'hawaii' },
+              { name: 'Illinois', slug: 'illinois' },
+              { name: 'Kansas', slug: 'kansas' },
+              { name: 'Maine', slug: 'maine' },
+              { name: 'Massachusetts', slug: 'massachusetts' },
+              { name: 'Michigan', slug: 'michigan' },
+              { name: 'Minnesota', slug: 'minnesota' },
+              { name: 'Missouri', slug: 'missouri' },
+              { name: 'Nebraska', slug: 'nebraska' },
+              { name: 'Nevada', slug: 'nevada' },
+              { name: 'New Hampshire', slug: 'new-hampshire' },
+              { name: 'New Jersey', slug: 'new-jersey' },
+              { name: 'New York', slug: 'new-york' },
+              { name: 'Ohio', slug: 'ohio' },
+              { name: 'Oregon', slug: 'oregon' },
+              { name: 'Pennsylvania', slug: 'pennsylvania' },
+              { name: 'Rhode Island', slug: 'rhode-island' },
+              { name: 'Texas', slug: 'texas' },
+              { name: 'Vermont', slug: 'vermont' },
+              { name: 'Washington', slug: 'washington' },
+            ].map(state => (
+              <a
+                key={state.slug}
+                href={`/state/${state.slug}`}
+                className="rounded-full border border-surface-200 bg-white px-3.5 py-1.5 text-sm font-medium text-surface-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700 transition-colors"
+              >
+                {state.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
       </div>
       <Footer />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'How much does screen printing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Screen printing typically costs $5–$15 per shirt for orders of 24+ pieces. Prices decrease with larger quantities. Setup fees usually range from $20–$50 per color.' } },
+              { '@type': 'Question', name: 'What is the difference between DTG and screen printing?', acceptedAnswer: { '@type': 'Answer', text: 'Screen printing uses stencils and ink pushed through a mesh screen — best for large orders with 1–4 colors. DTG uses inkjet technology to print directly on fabric — best for full-color designs and small orders. Screen printing is more cost-effective at scale, while DTG has no minimum order.' } },
+              { '@type': 'Question', name: 'What is DTF printing?', acceptedAnswer: { '@type': 'Answer', text: 'DTF (Direct to Film) printing transfers a design from a special film onto fabric using heat and adhesive powder. It works on any fabric color and type, produces vibrant colors, and has no minimum order.' } },
+              { '@type': 'Question', name: 'What is the minimum order for custom t-shirts?', acceptedAnswer: { '@type': 'Answer', text: 'Screen printing typically requires 12–24 pieces minimum. DTG and DTF printing have no minimum — you can order a single shirt. Embroidery usually requires 6–12 pieces.' } },
+              { '@type': 'Question', name: 'How long does custom t-shirt printing take?', acceptedAnswer: { '@type': 'Answer', text: 'Standard turnaround is 5–10 business days for screen printing and 3–7 days for DTG/DTF. Many shops offer rush services (24–48 hours) for an additional fee.' } },
+              { '@type': 'Question', name: 'What is the best printing method for small orders?', acceptedAnswer: { '@type': 'Answer', text: 'For orders under 24 pieces, DTG or DTF printing are the best options. Both have no minimum order, support full-color designs, and offer quick turnaround.' } },
+              { '@type': 'Question', name: 'Is embroidery better than screen printing?', acceptedAnswer: { '@type': 'Answer', text: 'They serve different purposes. Embroidery is best for logos, corporate wear, hats, and polo shirts. Screen printing is best for t-shirts, event merchandise, and large graphics.' } },
+              { '@type': 'Question', name: 'Can I print on dark colored shirts?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Screen printing, DTF, and heat transfer all work well on dark garments. DTG can also print on dark shirts but requires a white underbase layer. Sublimation only works on white or light-colored polyester.' } },
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

@@ -3,17 +3,39 @@ import NavLinks from "@/components/NavLinks";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://directory.dtlaprint.com"),
   icons: {
     icon: "/favicon.ico",
   },
-  title: "Printing Services Hub",
-  description: "Discover and compare top-rated printing services across the United States for custom apparel, including screen printing, DTG, embroidery, and specialty finishes.",
-  keywords: "printing services USA, screen printing United States, custom t-shirts, DTG printing, embroidery services, DTF printing, custom apparel",
+  title: {
+    default: "Print Services Hub USA — Find & Compare 596+ Printing Companies",
+    template: "%s | Print Services Hub USA",
+  },
+  description: "The #1 directory of printing companies in the United States. Compare 596+ screen printing, DTG, embroidery, and custom apparel providers. Get free quotes.",
+  keywords: "printing services USA, screen printing near me, custom t-shirts, DTG printing, embroidery services, DTF printing, custom apparel, printing companies, screen printers directory",
   openGraph: {
-    title: "Printing Services Hub",
-    description: "Discover and compare top-rated printing services across the United States for custom apparel, including screen printing, DTG, embroidery, and specialty finishes.",
+    title: "Print Services Hub USA — Find & Compare 596+ Printing Companies",
+    description: "The #1 directory of printing companies in the United States. Compare screen printing, DTG, embroidery, and custom apparel providers.",
     type: "website",
     locale: "en_US",
+    siteName: "Print Services Hub USA",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://directory.dtlaprint.com",
   },
 };
 

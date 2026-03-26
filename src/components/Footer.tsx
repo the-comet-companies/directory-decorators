@@ -29,44 +29,43 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-surface-900 mb-3">Services</h3>
             <ul className="space-y-2">
               {[
-                'Screen Printing',
-                'DTG Printing',
-                'Embroidery',
-                'DTF Printing',
-                'Sublimation',
-                'Custom T-Shirts',
-                'Corporate Merch',
-                'Rush Printing',
-                'Specialty Finishes',
-              ].map(service => (
-                <li key={service}>
-                  <a href="#" className="text-sm text-surface-500 hover:text-brand-600 transition-colors">
-                    {service}
+                { label: 'Screen Printing', href: '/?serviceType=Screen+Printing' },
+                { label: 'DTG Printing', href: '/?serviceType=DTG+Printing' },
+                { label: 'Embroidery', href: '/?serviceType=Embroidery' },
+                { label: 'DTF Printing', href: '/?serviceType=DTF+Printing' },
+                { label: 'Sublimation', href: '/?serviceType=Sublimation' },
+                { label: 'Heat Transfer', href: '/?serviceType=Heat+Transfer' },
+                { label: 'Custom Apparel', href: '/?serviceType=Custom+Apparel' },
+                { label: 'All Services', href: '/services' },
+              ].map(link => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-surface-500 hover:text-brand-600 transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* States */}
+          {/* Top States */}
           <div>
-            <h3 className="text-sm font-semibold text-surface-900 mb-3">States</h3>
+            <h3 className="text-sm font-semibold text-surface-900 mb-3">Top States</h3>
             <ul className="space-y-2">
               {[
-                'California',
-                'New York',
-                'Texas',
-                'Florida',
-                'Illinois',
-                'Oregon',
-                'Washington',
-                'Massachusetts',
-                'Colorado',
-                'Georgia',
-              ].map(state => (
-                <li key={state}>
-                  <a href="#" className="text-sm text-surface-500 hover:text-brand-600 transition-colors">
-                    {state}
+                { label: 'California', href: '/state/california' },
+                { label: 'Massachusetts', href: '/state/massachusetts' },
+                { label: 'New York', href: '/state/new-york' },
+                { label: 'Florida', href: '/state/florida' },
+                { label: 'Michigan', href: '/state/michigan' },
+                { label: 'Ohio', href: '/state/ohio' },
+                { label: 'Oregon', href: '/state/oregon' },
+                { label: 'Hawaii', href: '/state/hawaii' },
+                { label: 'Connecticut', href: '/state/connecticut' },
+                { label: 'New Hampshire', href: '/state/new-hampshire' },
+              ].map(link => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-surface-500 hover:text-brand-600 transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}
