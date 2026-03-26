@@ -17,10 +17,10 @@ export default function Footer() {
               Discover and compare top-rated printing services across the United States for custom apparel, including screen printing, DTG, embroidery, and specialty finishes.
             </p>
             <a
-              href="/get-quote"
+              href="/near-me"
               className="inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 transition-colors"
             >
-              Get Free Quotes
+              Find Near Me
             </a>
           </div>
 

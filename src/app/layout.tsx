@@ -87,10 +87,10 @@ function Navbar() {
             List Your Business
           </a> */}
           <a
-            href="/get-quote"
+            href="/near-me"
             className="inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 transition-colors shadow-sm focus-ring"
           >
-            Get Free Quotes
+            Find Near Me
           </a>
         </div>
       </div>
