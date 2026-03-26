@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://directory.dtlaprint.com",
   },
+  verification: {
+    google: "y6a0_7x48GwVxJKyQBMtPyztVQRgsndB3b-dPdx4wao",
+  },
 };
 
 export default function RootLayout({

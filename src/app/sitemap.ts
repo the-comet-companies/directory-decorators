@@ -4,6 +4,18 @@ import { getAllStateSlugs, getAllCitySlugs } from '@/lib/geo'
 
 const BASE_URL = 'https://directory.dtlaprint.com'
 
+const SERVICE_SLUGS = [
+  'screen-printing',
+  'dtg-printing',
+  'dtf-printing',
+  'embroidery',
+  'sublimation',
+  'heat-transfer',
+  'vinyl-printing',
+  'large-format-printing',
+  'custom-apparel',
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const providerSlugs = getAllProviderSlugs()
   const stateSlugs = getAllStateSlugs()
@@ -39,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...statePages, ...cityPages, ...providerPages]
+  const servicePages: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
+    url: `${BASE_URL}/service/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...servicePages, ...statePages, ...cityPages, ...providerPages]
 }

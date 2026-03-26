@@ -45,8 +45,9 @@ export default function ProviderCard({ provider, index }: ProviderCardProps) {
           <>
             <img
               src={coverImage}
-              alt={provider.name}
+              alt={`${provider.name} — ${provider.servicesOffered.slice(0, 2).join(', ')} in ${provider.city}`}
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
               onError={() => setCoverError(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
