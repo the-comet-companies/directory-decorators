@@ -14,12 +14,15 @@ export default function ResultsGrid({ providers, total }: ResultsGridProps) {
     return <EmptyState />;
   }
 
+  // Find the first provider with a cover image — that's the LCP element
+  const firstWithImage = providers.findIndex(p => p.coverImage);
+
   return (
-    <div className="grid gap-5 sm:grid-cols-2">
+    <div className="grid gap-5 sm:grid-cols-2" style={{ minHeight: providers.length > 0 ? '600px' : undefined, contentVisibility: 'auto' }}>
       {providers.map((provider, index) => (
         index < 4 ? (
-          <div key={provider.id}>
-            <ProviderCard provider={provider} index={index} priority={index === 0} />
+          <div key={provider.id} className="min-h-[420px]">
+            <ProviderCard provider={provider} index={index} priority={index === firstWithImage} />
           </div>
         ) : (
           <AnimatedCard key={provider.id} index={index}>
