@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Image from "next/image";
 import NavLinks from "@/components/NavLinks";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://directory.dtlaprint.com"),
@@ -48,16 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-screen bg-surface-50 text-surface-800 antialiased" suppressHydrationWarning>
+    <html lang="en" className={inter.variable}>
+      <body className={`${inter.className} min-h-screen bg-surface-50 text-surface-800 antialiased`} suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
       </body>
@@ -70,8 +71,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-surface-200 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="/" className="flex items-center gap-0.1 focus-ring rounded-lg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icon-bg-none.png" alt="Print Services Hub icon" className="h-14 w-14 object-contain" />
+          <Image src="/icon-bg-none.png" alt="Print Services Hub USA — Printing Directory" width={56} height={56} className="object-contain" priority />
           <span className="text-lg font-bold tracking-tight text-surface-900">
             Print Services <span className="text-brand-600">Hub USA</span>
           </span>

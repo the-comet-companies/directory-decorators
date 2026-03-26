@@ -17,9 +17,15 @@ export default function ResultsGrid({ providers, total }: ResultsGridProps) {
   return (
     <div className="grid gap-5 sm:grid-cols-2">
       {providers.map((provider, index) => (
-        <AnimatedCard key={provider.id} index={index}>
-          <ProviderCard provider={provider} index={index} />
-        </AnimatedCard>
+        index < 4 ? (
+          <div key={provider.id}>
+            <ProviderCard provider={provider} index={index} />
+          </div>
+        ) : (
+          <AnimatedCard key={provider.id} index={index}>
+            <ProviderCard provider={provider} index={index} />
+          </AnimatedCard>
+        )
       ))}
     </div>
   );

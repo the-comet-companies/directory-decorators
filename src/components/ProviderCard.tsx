@@ -40,7 +40,7 @@ export default function ProviderCard({ provider, index }: ProviderCardProps) {
       style={{ animationDelay: `${index * 80}ms` }}
     >
       {/* Cover / Logo area */}
-      <div className="relative aspect-[16/9] overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden bg-surface-100">
         {coverImage ? (
           <>
             <img

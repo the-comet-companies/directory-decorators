@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -194,11 +195,12 @@ export default function ServicesPage() {
             >
               {/* Image */}
               <div className="lg:w-1/2 h-64 lg:h-auto relative overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={service.image}
-                  alt={service.name}
-                  className="w-full h-full object-cover"
+                  alt={`${service.name} — custom printing services`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <span className={`absolute top-4 left-4 ${service.tagColor} text-white text-xs font-bold px-3 py-1 rounded-full`}>
