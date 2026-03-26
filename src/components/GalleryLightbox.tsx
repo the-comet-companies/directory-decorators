@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 interface GalleryLightboxProps {
   images: string[];
@@ -49,12 +50,14 @@ export default function GalleryLightbox({ images, providerName, gradients, neigh
         {/* Main / cover image */}
         <div className="col-span-2 md:row-span-2 aspect-[4/3] rounded-2xl overflow-hidden">
           {coverSrc ? (
-            <button onClick={() => openAt(0)} className="block w-full h-full cursor-zoom-in">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <button onClick={() => openAt(0)} className="relative block w-full h-full cursor-zoom-in">
+              <Image
                 src={coverSrc}
                 alt={providerName}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                priority={true}
               />
             </button>
           ) : (
@@ -71,12 +74,14 @@ export default function GalleryLightbox({ images, providerName, gradients, neigh
         {[1, 2, 3, 4].map(i => (
           <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden hidden md:block">
             {allImages[i] ? (
-              <button onClick={() => openAt(i)} className="block w-full h-full cursor-zoom-in">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <button onClick={() => openAt(i)} className="relative block w-full h-full cursor-zoom-in">
+                <Image
                   src={allImages[i]}
                   alt={`${providerName} - photo ${i + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 22vw"
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </button>
             ) : (
@@ -124,12 +129,14 @@ export default function GalleryLightbox({ images, providerName, gradients, neigh
           )}
 
           {/* Image */}
-          <div className="max-w-5xl max-h-[85vh] px-20" onClick={e => e.stopPropagation()}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="relative max-w-5xl w-full aspect-[16/9] mx-20" onClick={e => e.stopPropagation()}>
+            <Image
               src={allImages[activeIndex]}
               alt={`${providerName} - photo ${activeIndex + 1}`}
-              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+              fill
+              sizes="90vw"
+              className="object-contain rounded-xl shadow-2xl"
+              priority={true}
             />
           </div>
 

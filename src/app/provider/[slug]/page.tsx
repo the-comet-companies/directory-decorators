@@ -1,3 +1,5 @@
+export const revalidate = 86400;
+
 import { notFound } from 'next/navigation';
 import { getProviderBySlug, getRelatedProviders } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -66,12 +68,14 @@ export default async function ProviderDetailPage({ params }: PageProps) {
           {/* Main content */}
           <div className="flex-1 min-w-0">
             {/* Gallery */}
-            <GalleryLightbox
-              images={[provider.coverImage, ...provider.galleryImages].filter(Boolean) as string[]}
-              providerName={provider.name}
-              gradients={gradients}
-              neighborhood={provider.neighborhood}
-            />
+            <div className="aspect-[16/9] md:aspect-auto">
+              <GalleryLightbox
+                images={[provider.coverImage, ...provider.galleryImages].filter(Boolean) as string[]}
+                providerName={provider.name}
+                gradients={gradients}
+                neighborhood={provider.neighborhood}
+              />
+            </div>
 
             {/* Header */}
             <div className="mb-8">

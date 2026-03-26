@@ -19,7 +19,7 @@ export default function ResultsGrid({ providers, total }: ResultsGridProps) {
       {providers.map((provider, index) => (
         index < 4 ? (
           <div key={provider.id}>
-            <ProviderCard provider={provider} index={index} />
+            <ProviderCard provider={provider} index={index} priority={index === 0} />
           </div>
         ) : (
           <AnimatedCard key={provider.id} index={index}>

@@ -2,10 +2,12 @@
 
 import { Provider } from '@/lib/types';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProviderCardProps {
   provider: Provider;
   index: number;
+  priority?: boolean;
 }
 
 function getDomain(website: string): string | null {
@@ -16,7 +18,7 @@ function getDomain(website: string): string | null {
   }
 }
 
-export default function ProviderCard({ provider, index }: ProviderCardProps) {
+export default function ProviderCard({ provider, index, priority = false }: ProviderCardProps) {
   const [coverError, setCoverError] = useState(false);
   const [faviconError, setFaviconError] = useState(false);
 
@@ -43,11 +45,13 @@ export default function ProviderCard({ provider, index }: ProviderCardProps) {
       <div className="relative aspect-[16/9] overflow-hidden bg-surface-100">
         {coverImage ? (
           <>
-            <img
+            <Image
               src={coverImage}
               alt={`${provider.name} — ${provider.servicesOffered.slice(0, 2).join(', ')} in ${provider.city}`}
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              className="object-cover"
+              priority={priority}
               onError={() => setCoverError(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -57,11 +61,11 @@ export default function ProviderCard({ provider, index }: ProviderCardProps) {
             {faviconUrl && !faviconError ? (
               <div className="flex flex-col items-center gap-2">
                 <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg overflow-hidden">
-                  <img
+                  <Image
                     src={faviconUrl}
                     alt={`${provider.name} logo`}
-                    width={64}
-                    height={64}
+                    width={40}
+                    height={40}
                     className="w-10 h-10 object-contain"
                     onError={() => setFaviconError(true)}
                   />
@@ -77,7 +81,7 @@ export default function ProviderCard({ provider, index }: ProviderCardProps) {
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         {/* Featured badge */}
         {provider.featured && (
           <div className="absolute top-3 left-3 flex items-center gap-1 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-1 shadow-sm">
