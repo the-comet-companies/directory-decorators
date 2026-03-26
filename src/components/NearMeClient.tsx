@@ -649,7 +649,7 @@ function MapView({
   return (
     <MapContainer
       center={[39.5, -98.35]}
-      zoom={1}
+      zoom={8}
       style={{ width: '100%', height: '100%' }}
       zoomControl
     >

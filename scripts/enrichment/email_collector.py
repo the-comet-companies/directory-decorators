@@ -17,7 +17,13 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-EMAIL_PAGES = ["/contact", "/contact-us", "/about", "/about-us", "/", "/get-in-touch", "/reach-us"]
+EMAIL_PAGES = [
+    "/contact", "/contact-us", "/about", "/about-us", "/",
+    "/get-in-touch", "/reach-us", "/info", "/support",
+    "/pages/contact", "/pages/about", "/footer",
+    "/connect", "/location", "/locations", "/find-us",
+    "/get-a-quote", "/request-a-quote", "/quote",
+]
 
 # Regex to find emails in page content
 EMAIL_REGEX = re.compile(
