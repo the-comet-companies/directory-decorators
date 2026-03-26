@@ -61,8 +61,8 @@ export default async function CityPage({ params }: PageProps) {
         {/* Provider grid */}
         {providers.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {providers.map(p => (
-              <ProviderCard key={p.id} provider={p} />
+            {providers.map((p, i) => (
+              <ProviderCard key={p.id} provider={p} index={i} />
             ))}
           </div>
         ) : (
