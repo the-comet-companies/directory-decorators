@@ -17,7 +17,7 @@ export default function FeaturedProviders({ providers }: FeaturedProvidersProps)
         </div>
         <h2 className="text-sm font-semibold text-surface-700 uppercase tracking-wider">Featured Providers</h2>
       </div>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" style={{ minHeight: '120px' }}>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {providers.map(provider => (
           <a
             key={provider.id}

@@ -38,7 +38,8 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
 
   return (
     <article
-      className="group relative rounded-2xl border border-surface-200 bg-white overflow-hidden transition-all duration-300 hover:shadow-card-hover hover:border-surface-300 hover:-translate-y-0.5"
+      onClick={() => { window.location.href = `/provider/${provider.slug}`; }}
+      className="group relative rounded-2xl border border-surface-200 bg-white overflow-hidden transition-all duration-300 hover:shadow-card-hover hover:border-surface-300 hover:-translate-y-0.5 cursor-pointer"
       style={{ animationDelay: `${index * 80}ms` }}
     >
       {/* Cover / Logo area */}
@@ -193,18 +194,17 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
 
         {/* CTA buttons */}
         <div className="flex gap-2">
-          <a
-            href={`/provider/${provider.slug}`}
-            className="flex-1 rounded-full border border-surface-300 py-2.5 text-center text-sm font-medium text-surface-700 hover:bg-surface-50 hover:border-surface-400 transition-all duration-200 focus-ring"
+          <span
+            className="flex-1 rounded-full border border-surface-300 py-2.5 text-center text-sm font-medium text-surface-700 group-hover:bg-surface-50 group-hover:border-surface-400 transition-all duration-200"
           >
             View Details
-          </a>
-          <a
-            href={`/provider/${provider.slug}#quote`}
-            className="flex-1 rounded-full bg-brand-600 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-700 transition-all duration-200 shadow-sm focus-ring"
+          </span>
+          <span
+            onClick={(e) => { e.stopPropagation(); window.location.href = `/provider/${provider.slug}#quote`; }}
+            className="flex-1 rounded-full bg-brand-600 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-700 transition-all duration-200 shadow-sm cursor-pointer"
           >
             Request Quote
-          </a>
+          </span>
         </div>
       </div>
     </article>

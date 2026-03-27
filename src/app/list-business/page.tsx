@@ -60,6 +60,8 @@ export default function ListBusinessPage() {
   const [showToast, setShowToast] = useState(false)
   const [errors, setErrors] = useState<Errors>({})
   const [methods, setMethods] = useState<string[]>([])
+  const [logo, setLogo] = useState<File | null>(null)
+  const [images, setImages] = useState<File[]>([])
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [form, setForm] = useState({
     name: '',
@@ -71,13 +73,6 @@ export default function ListBusinessPage() {
     email: '',
     website: '',
     description: '',
-    coverImage: '',
-    startingPrice: '',
-    moq: '',
-    turnaroundDays: '',
-    rushAvailable: false,
-    pickup: false,
-    delivery: false,
   })
 
   const validate = (f: typeof form): Errors => {
@@ -118,15 +113,25 @@ export default function ListBusinessPage() {
 
     setStatus('loading')
     try {
+      // Convert images to base64
+      const toBase64 = async (file: File) => {
+        const buffer = await file.arrayBuffer()
+        const base64 = btoa(String.fromCharCode(...new Uint8Array(buffer)))
+        return `data:${file.type};base64,${base64}`
+      }
+
+      const imageData: string[] = []
+      for (const file of images) imageData.push(await toBase64(file))
+      const logoData = logo ? await toBase64(logo) : null
+
       const res = await fetch('/api/list-business', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
           printingMethods: methods,
-          startingPrice: form.startingPrice ? Number(form.startingPrice) : null,
-          moq: form.moq ? Number(form.moq) : null,
-          turnaroundDays: form.turnaroundDays ? Number(form.turnaroundDays) : null,
+          logo: logoData,
+          sampleImages: imageData,
         }),
       })
       const data = await res.json()
@@ -271,6 +276,48 @@ export default function ListBusinessPage() {
               </div>
             </section>
 
+            {/* Logo Upload */}
+            <section className="bg-white rounded-2xl border border-surface-200 p-6">
+              <h2 className="text-sm font-bold text-surface-800 uppercase tracking-wide mb-4">Business Logo</h2>
+              <div className="flex items-center gap-5">
+                {logo ? (
+                  <div className="relative w-20 h-20 rounded-xl overflow-hidden border border-surface-200 shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={URL.createObjectURL(logo)} alt="Logo preview" className="w-full h-full object-contain bg-white" />
+                    <button
+                      type="button"
+                      onClick={() => setLogo(null)}
+                      className="absolute top-1 right-1 w-5 h-5 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+                    >
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                    </button>
+                  </div>
+                ) : (
+                  <label className="flex flex-col items-center justify-center w-20 h-20 rounded-xl border-2 border-dashed border-surface-300 hover:border-brand-400 hover:bg-brand-50/30 cursor-pointer transition-colors shrink-0">
+                    <svg className="w-6 h-6 text-surface-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4"/>
+                    </svg>
+                    <input
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp,image/svg+xml"
+                      className="sr-only"
+                      onChange={e => {
+                        const file = e.target.files?.[0]
+                        if (file && file.size <= 5 * 1024 * 1024) setLogo(file)
+                        e.target.value = ''
+                      }}
+                    />
+                  </label>
+                )}
+                <div>
+                  <p className="text-sm font-medium text-surface-700">Upload your logo</p>
+                  <p className="text-xs text-surface-400 mt-0.5">JPG, PNG, WebP, or SVG. Max 5MB.</p>
+                </div>
+              </div>
+            </section>
+
             {/* Printing Methods */}
             <section className="bg-white rounded-2xl border border-surface-200 p-6">
               <h2 className="text-sm font-bold text-surface-800 uppercase tracking-wide mb-4">Printing Methods</h2>
@@ -297,46 +344,49 @@ export default function ListBusinessPage() {
               </div>
             </section>
 
-            {/* Pricing & Details */}
+            {/* Sample Images */}
             <section className="bg-white rounded-2xl border border-surface-200 p-6">
-              <h2 className="text-sm font-bold text-surface-800 uppercase tracking-wide mb-4">Pricing & Details</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-surface-700">Starting Price ($)</label>
-                  <input type="number" min="0" value={form.startingPrice} onChange={e => set('startingPrice', e.target.value)} placeholder="e.g. 50" className={inputCls('startingPrice')}/>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-surface-700">Min. Order (pieces)</label>
-                  <input type="number" min="0" value={form.moq} onChange={e => set('moq', e.target.value)} placeholder="e.g. 12" className={inputCls('moq')}/>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-surface-700">Turnaround (days)</label>
-                  <input type="number" min="0" value={form.turnaroundDays} onChange={e => set('turnaroundDays', e.target.value)} placeholder="e.g. 7" className={inputCls('turnaroundDays')}/>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-4 mt-4">
-                {([['rushAvailable', 'Rush Available'], ['pickup', 'In-store Pickup'], ['delivery', 'Delivery']] as [string, string][]).map(([k, label]) => (
-                  <label key={k} className="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" checked={form[k as keyof typeof form] as boolean} onChange={e => set(k, e.target.checked)} className="sr-only"/>
-                    <span className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${form[k as keyof typeof form] ? 'bg-brand-600 border-brand-600' : 'border-surface-300 bg-white'}`}>
-                      {form[k as keyof typeof form] && (
-                        <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/>
+              <h2 className="text-sm font-bold text-surface-800 uppercase tracking-wide mb-4">Sample Product Images</h2>
+              <p className="text-xs text-surface-500 mb-4">Upload up to 4 images of your work (max 5MB each). Accepted: JPG, PNG, WebP.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {[0, 1, 2, 3].map(i => (
+                  <div key={i} className="relative">
+                    {images[i] ? (
+                      <div className="relative aspect-square rounded-xl overflow-hidden border border-surface-200">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={URL.createObjectURL(images[i])} alt={`Sample ${i + 1}`} className="w-full h-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => setImages(prev => prev.filter((_, idx) => idx !== i))}
+                          className="absolute top-1.5 right-1.5 w-6 h-6 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+                        >
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                          </svg>
+                        </button>
+                      </div>
+                    ) : (
+                      <label className="flex flex-col items-center justify-center aspect-square rounded-xl border-2 border-dashed border-surface-300 hover:border-brand-400 hover:bg-brand-50/30 cursor-pointer transition-colors">
+                        <svg className="w-6 h-6 text-surface-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4"/>
                         </svg>
-                      )}
-                    </span>
-                    <span className="text-sm font-medium text-surface-700">{label}</span>
-                  </label>
+                        <span className="text-[10px] text-surface-400 font-medium">Add Image</span>
+                        <input
+                          type="file"
+                          accept="image/jpeg,image/png,image/webp"
+                          className="sr-only"
+                          onChange={e => {
+                            const file = e.target.files?.[0]
+                            if (file && file.size <= 5 * 1024 * 1024) {
+                              setImages(prev => [...prev, file])
+                            }
+                            e.target.value = ''
+                          }}
+                        />
+                      </label>
+                    )}
+                  </div>
                 ))}
-              </div>
-            </section>
-
-            {/* Cover Image */}
-            <section className="bg-white rounded-2xl border border-surface-200 p-6">
-              <h2 className="text-sm font-bold text-surface-800 uppercase tracking-wide mb-4">Cover Image</h2>
-              <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-surface-700">Cover Image URL</label>
-                <input type="url" value={form.coverImage} onChange={e => set('coverImage', e.target.value)} placeholder="https://yourbiz.com/images/cover.jpg" className={inputCls('coverImage')}/>
               </div>
             </section>
 

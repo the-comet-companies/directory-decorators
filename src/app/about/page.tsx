@@ -213,30 +213,21 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA — List your business */}
+        {/* CTA */}
         <section className="py-16 sm:py-20 border-t border-surface-100">
           <div className="rounded-3xl bg-brand-600 px-8 py-14 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-              Own a printing company?
+              Ready to get started?
             </h2>
             <p className="text-brand-100 max-w-xl mx-auto mb-8 leading-relaxed">
-              Get your shop in front of thousands of buyers looking for custom printing every month.
-              Listing is free and takes less than 5 minutes.
+              Browse our directory to find the perfect printer for your project.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="#list-business"
-                className="inline-flex items-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors shadow-sm"
-              >
-                List Your Business — It&apos;s Free
-              </a>
-              <a
-                href="/"
-                className="inline-flex items-center rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-              >
-                Browse the Directory
-              </a>
-            </div>
+            <a
+              href="/"
+              className="inline-flex items-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors shadow-sm"
+            >
+              Browse the Directory
+            </a>
           </div>
         </section>
 

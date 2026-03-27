@@ -346,13 +346,14 @@ function NearMeFilterBar({
 
 // ─── Map utilities ───────────────────────────────────────────────────────────
 
-function makeMarkerIcon(selected: boolean, price: number | null) {
-  const bg = selected ? '#dc2626' : '#4f46e5'
-  const label = price ? `$${price}` : ''
+function makeMarkerIcon(selected: boolean, _price: number | null) {
+  const color = selected ? '#dc2626' : '#4f46e5'
+  const size = selected ? 38 : 30
   return L.divIcon({
-    html: `<div style="display:flex;align-items:center;justify-content:center;background:${bg};color:#fff;font-weight:700;font-size:11px;padding:${label ? '4px 8px' : '0'};min-width:${label ? 'auto' : '14px'};height:${label ? 'auto' : '14px'};border-radius:${label ? '20px' : '50%'};border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.35);white-space:nowrap;transform:${selected ? 'scale(1.3)' : 'scale(1)'};transition:transform .15s;">${label}</div>`,
+    html: `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));transform:${selected ? 'scale(1.2)' : 'scale(1)'};transition:transform .15s;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>`,
     className: '',
-    iconAnchor: label ? [undefined as unknown as number, 14] : [7, 7],
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size],
   })
 }
 
@@ -546,11 +547,11 @@ function ListingCard({
   return (
     <div
       id={`listing-${company.id}`}
-      onClick={onClick}
-      className={`relative rounded-2xl overflow-hidden border cursor-pointer transition-all duration-200 bg-white group
+      onClick={() => { onClick(); window.location.href = `/provider/${company.slug}`; }}
+      className={`relative rounded-2xl overflow-hidden border-2 cursor-pointer transition-all duration-200 group
         ${selected
-          ? 'border-brand-500 shadow-lg shadow-brand-100 scale-[1.01]'
-          : 'border-surface-200 shadow-sm hover:shadow-md hover:scale-[1.01]'
+          ? 'border-red-500 bg-red-50 shadow-lg shadow-red-100 scale-[1.02] ring-2 ring-red-300'
+          : 'border-surface-200 bg-white shadow-sm hover:shadow-md hover:scale-[1.01]'
         }`}
     >
       {/* Image */}
@@ -626,7 +627,6 @@ function ListingCard({
       </div>
 
       {/* Selected indicator */}
-      {selected && <div className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-500" />}
     </div>
   )
 }
@@ -648,8 +648,8 @@ function MapView({
 }) {
   return (
     <MapContainer
-      center={[39.5, -98.35]}
-      zoom={8}
+      center={[34.0, -118.0]}
+      zoom={9}
       style={{ width: '100%', height: '100%' }}
       zoomControl
     >
@@ -684,7 +684,8 @@ function MapView({
               </div>
               <a
                 href={`/provider/${c.slug}`}
-                className="block mt-2 text-center text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white rounded-lg px-3 py-1.5 transition-colors"
+                className="block mt-2 text-center text-xs font-semibold bg-brand-600 hover:bg-brand-700 rounded-lg px-3 py-1.5 transition-colors"
+                style={{ color: '#ffffff', textDecoration: 'none' }}
               >
                 View Details →
               </a>
@@ -888,7 +889,7 @@ export default function NearMeClient() {
       <div className="flex flex-1 overflow-hidden">
 
         {/* Cards — 70% */}
-        <div ref={listRef} className="flex-[7] overflow-y-auto bg-surface-50">
+        <div ref={listRef} className="w-1/2 overflow-y-auto bg-surface-50">
           {visible.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-20">
               <svg className="w-12 h-12 text-surface-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -914,7 +915,7 @@ export default function NearMeClient() {
         </div>
 
         {/* Map — 30% */}
-        <div className="flex-[3] relative border-l border-surface-200">
+        <div className="w-1/2 relative border-l border-surface-200">
           <MapView
             companies={companies}
             selected={selected}
