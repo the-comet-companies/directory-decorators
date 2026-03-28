@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "Print Services Hub USA — Find & Compare 596+ Printing Companies",
     template: "%s | Print Services Hub USA",
   },
-  description: "The #1 directory of printing companies in the United States. Compare 596+ screen printing, DTG, embroidery, and custom apparel providers. Get free quotes.",
+  description: "The #1 directory of printing companies in the United States. Compare 596+ screen printing, DTG, embroidery, and custom apparel providers.",
   keywords: "printing services USA, screen printing near me, custom t-shirts, DTG printing, embroidery services, DTF printing, custom apparel, printing companies, screen printers directory",
   openGraph: {
     title: "Print Services Hub USA — Find & Compare 596+ Printing Companies",

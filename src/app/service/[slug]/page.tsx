@@ -158,7 +158,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const count = providers.length;
 
   const title = `${service.name} Services USA | ${count}+ Companies | Print Services Hub`;
-  const description = `Compare ${count}+ ${service.name.toLowerCase()} companies across the USA. ${service.benefits.slice(0, 2).join(', ')}. Get free quotes, read reviews, and find the best ${service.name.toLowerCase()} provider near you.`;
+  const description = `Compare ${count}+ ${service.name.toLowerCase()} companies across the USA. ${service.benefits.slice(0, 2).join(', ')}. Read reviews and find the best ${service.name.toLowerCase()} provider near you.`;
 
   return {
     title,
@@ -311,21 +311,20 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Get Free Quotes CTA */}
+        {/* Find Near Me CTA */}
         <section className="mb-12 rounded-2xl bg-brand-600 text-white p-8 sm:p-10 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Get Free {service.name} Quotes
+            Find {service.name} Near You
           </h2>
           <p className="text-brand-100 max-w-2xl mx-auto mb-6">
-            Compare prices from {providers.length}+ verified {service.name.toLowerCase()}{' '}
-            companies. Tell us about your project and receive competitive quotes within 24
-            hours — no obligation.
+            Browse {providers.length}+ verified {service.name.toLowerCase()}{' '}
+            companies across the USA. Compare ratings, services, and turnaround times.
           </p>
           <a
-            href="/get-quote"
+            href="/near-me"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-brand-700 hover:bg-brand-50 transition-colors shadow-lg"
           >
-            Get Free Quotes
+            Find Near Me
             <svg
               className="w-4 h-4"
               fill="none"

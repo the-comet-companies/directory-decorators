@@ -1,7 +1,46 @@
+'use client';
+
 import { Provider } from '@/lib/types';
+import { useState } from 'react';
+import Image from 'next/image';
 
 interface FeaturedProvidersProps {
   providers: Provider[];
+}
+
+function getDomain(website: string): string | null {
+  try {
+    return new URL(website).hostname.replace(/^www\./, '');
+  } catch {
+    return null;
+  }
+}
+
+function LogoIcon({ provider }: { provider: Provider }) {
+  const [error, setError] = useState(false);
+  const domain = provider.website ? getDomain(provider.website) : null;
+  const logoUrl = domain ? `https://logo.clearbit.com/${domain}` : null;
+
+  if (logoUrl && !error) {
+    return (
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white border border-surface-200 overflow-hidden">
+        <Image
+          src={logoUrl}
+          alt={`${provider.name} logo`}
+          width={32}
+          height={32}
+          className="w-8 h-8 object-contain"
+          onError={() => setError(true)}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-black text-white font-bold text-sm">
+      {provider.name.charAt(0)}
+    </div>
+  );
 }
 
 export default function FeaturedProviders({ providers }: FeaturedProvidersProps) {
@@ -10,8 +49,8 @@ export default function FeaturedProviders({ providers }: FeaturedProvidersProps)
   return (
     <section className="mb-8">
       <div className="flex items-center gap-2 mb-4">
-        <div className="flex h-6 w-6 items-center justify-center rounded-md bg-amber-100">
-          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+        <div className="flex h-6 w-6 items-center justify-center rounded-md bg-neutral-100">
+          <svg className="w-3.5 h-3.5 text-neutral-600" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
         </div>
@@ -24,9 +63,7 @@ export default function FeaturedProviders({ providers }: FeaturedProvidersProps)
             href={`/provider/${provider.slug}`}
             className="group flex items-center gap-3 rounded-xl border border-surface-200 bg-white p-3 hover:shadow-card-hover hover:border-surface-300 transition-all duration-200 focus-ring"
           >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 text-white font-bold text-sm">
-              {provider.name.charAt(0)}
-            </div>
+            <LogoIcon provider={provider} />
             <div className="min-w-0">
               <h3 className="text-sm font-semibold text-surface-800 truncate group-hover:text-brand-700 transition-colors">
                 {provider.name}

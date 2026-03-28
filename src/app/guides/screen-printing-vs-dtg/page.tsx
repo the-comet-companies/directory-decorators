@@ -179,7 +179,7 @@ export default function ScreenPrintingVsDtg() {
         {/* CTA */}
         <section className="mb-10 rounded-2xl bg-brand-600 px-6 py-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Ready to print?</h2>
-          <p className="text-brand-100 mb-6 max-w-md mx-auto">Compare screen printing and DTG shops near you, or request a free quote in minutes.</p>
+          <p className="text-brand-100 mb-6 max-w-md mx-auto">Compare screen printing and DTG shops near you and find the best printer for your project.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/service/screen-printing" className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors">
               Screen Printing Shops
@@ -187,8 +187,8 @@ export default function ScreenPrintingVsDtg() {
             <a href="/service/dtg-printing" className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors">
               DTG Printing Shops
             </a>
-            <a href="/get-quote" className="rounded-full border border-white/40 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
-              Get Free Quotes
+            <a href="/near-me" className="rounded-full border border-white/40 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Find Near Me
             </a>
           </div>
         </section>

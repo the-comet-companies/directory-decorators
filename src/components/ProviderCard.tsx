@@ -22,18 +22,8 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
   const [coverError, setCoverError] = useState(false);
   const [faviconError, setFaviconError] = useState(false);
 
-  const placeholderGradients = [
-    'from-brand-500 to-purple-600',
-    'from-emerald-500 to-teal-600',
-    'from-orange-500 to-rose-600',
-    'from-cyan-500 to-blue-600',
-    'from-violet-500 to-fuchsia-600',
-    'from-amber-500 to-orange-600',
-  ];
-
-  const gradient = placeholderGradients[index % placeholderGradients.length];
   const domain = provider.website ? getDomain(provider.website) : null;
-  const faviconUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : null;
+  const faviconUrl = domain ? `https://logo.clearbit.com/${domain}` : null;
   const coverImage = provider.coverImage && !coverError ? provider.coverImage : null;
 
   return (
@@ -58,7 +48,7 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </>
         ) : (
-          <div className={`absolute inset-0 bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+          <div className="absolute inset-0 bg-black flex items-center justify-center">
             {faviconUrl && !faviconError ? (
               <div className="flex flex-col items-center gap-2">
                 <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg overflow-hidden">
@@ -86,7 +76,7 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
         {/* Featured badge */}
         {provider.featured && (
           <div className="absolute top-3 left-3 flex items-center gap-1 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-1 shadow-sm">
-            <svg className="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
             <span className="text-xs font-semibold text-surface-700">Featured</span>
@@ -97,12 +87,12 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
         {/* Badges */}
         <div className="absolute bottom-3 left-3 flex gap-1.5">
           {provider.rushAvailable && (
-            <span className="rounded-full bg-amber-500/90 backdrop-blur-sm px-2 py-0.5 text-xs font-semibold text-white">
+            <span className="rounded-full bg-black/80 backdrop-blur-sm px-2 py-0.5 text-xs font-semibold text-white">
               ⚡ Rush
             </span>
           )}
           {provider.ecoFriendly && (
-            <span className="rounded-full bg-emerald-500/90 backdrop-blur-sm px-2 py-0.5 text-xs font-semibold text-white">
+            <span className="rounded-full bg-black/80 backdrop-blur-sm px-2 py-0.5 text-xs font-semibold text-white">
               🌿 Eco
             </span>
           )}
@@ -176,7 +166,7 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
         <div className="flex items-center gap-2 mb-4">
           {provider.pickup && (
             <span className="inline-flex items-center gap-1 text-xs text-surface-500">
-              <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               Pickup
@@ -184,7 +174,7 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
           )}
           {provider.delivery && (
             <span className="inline-flex items-center gap-1 text-xs text-surface-500">
-              <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               Delivery

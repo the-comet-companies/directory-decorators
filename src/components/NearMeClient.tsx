@@ -347,7 +347,7 @@ function NearMeFilterBar({
 // ─── Map utilities ───────────────────────────────────────────────────────────
 
 function makeMarkerIcon(selected: boolean, _price: number | null) {
-  const color = selected ? '#dc2626' : '#4f46e5'
+  const color = selected ? '#F8843F' : '#dc2626'
   const size = selected ? 38 : 30
   return L.divIcon({
     html: `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));transform:${selected ? 'scale(1.2)' : 'scale(1)'};transition:transform .15s;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>`,
@@ -544,6 +544,7 @@ function ListingCard({
   favorited: boolean
   onToggleFav: (e: React.MouseEvent) => void
 }) {
+  const [imgError, setImgError] = useState(false)
   return (
     <div
       id={`listing-${company.id}`}
@@ -556,22 +557,23 @@ function ListingCard({
     >
       {/* Image */}
       <div className="relative h-36 overflow-hidden bg-surface-100">
-        {company.coverImage ? (
+        {company.coverImage && !imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={company.coverImage}
             alt={company.name}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            onError={() => setImgError(true)}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-brand-400 to-purple-600 flex items-center justify-center">
+          <div className="w-full h-full bg-black flex items-center justify-center">
             <span className="text-4xl font-bold text-white/80">{company.name.charAt(0)}</span>
           </div>
         )}
 
         {/* Badge */}
         {company.featured && (
-          <span className="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+          <span className="absolute top-2 left-2 bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
             Featured
           </span>
         )}
@@ -874,11 +876,11 @@ export default function NearMeClient() {
               {geoError}
             </p>
           )}
-          <div className="mt-3 rounded-xl bg-blue-50 border border-blue-100 px-4 py-2 flex items-center gap-2.5">
-            <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="mt-3 rounded-xl bg-neutral-50 border border-neutral-200 px-4 py-2 flex items-center gap-2.5">
+            <svg className="w-4 h-4 text-neutral-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <p className="text-xs text-blue-700">
+            <p className="text-xs text-neutral-600">
               Pan or zoom the map to explore — the list updates automatically to show only companies visible in your current view.
             </p>
           </div>
