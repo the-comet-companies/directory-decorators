@@ -157,8 +157,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const providers = getProvidersForService(service.filterValue);
   const count = providers.length;
 
-  const title = `${service.name} Services USA | ${count}+ Companies | Print Services Hub`;
-  const description = `Compare ${count}+ ${service.name.toLowerCase()} companies across the USA. ${service.benefits.slice(0, 2).join(', ')}. Read reviews and find the best ${service.name.toLowerCase()} provider near you.`;
+  const title = `Best ${service.name} Services — Compare ${count}+ Top-Rated Companies 2026`;
+  const description = `Compare ${count}+ top-rated ${service.name.toLowerCase()} companies across the USA. ${service.benefits.slice(0, 2).join(', ')}. Find the best ${service.name.toLowerCase()} provider near you. Updated 2026.`;
 
   return {
     title,

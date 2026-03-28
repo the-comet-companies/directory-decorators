@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Printing Services — Screen Printing, DTG, Embroidery & More | Print Services Hub USA',
-  description: 'Browse all custom printing services available across the USA: screen printing, DTG, DTF, embroidery, heat transfer, sublimation, vinyl, and large format printing. Compare providers and find the best printer near you.',
+  title: 'Best Printing Services in the USA — Compare Top Providers 2026',
+  description: 'Browse all custom printing services: screen printing, DTG, DTF, embroidery, heat transfer, sublimation, and more. Compare top-rated providers across 50 states. Updated 2026.',
   openGraph: {
-    title: 'Printing Services — Screen Printing, DTG, Embroidery & More',
-    description: 'Browse all custom printing services available across the USA. Compare providers and find the best printer near you.',
+    title: 'Best Printing Services in the USA — Compare Top Providers 2026',
+    description: 'Browse all custom printing services: screen printing, DTG, DTF, embroidery, heat transfer, sublimation, and more. Compare top-rated providers across 50 states. Updated 2026.',
     type: 'website',
   },
   alternates: { canonical: 'https://directory.dtlaprint.com/services' },

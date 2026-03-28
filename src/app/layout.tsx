@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   title: {
-    default: "Print Services Hub USA — Find & Compare 596+ Printing Companies",
+    default: "Top 596+ Printing Companies in the USA | Compare the Best Printers 2026",
     template: "%s | Print Services Hub USA",
   },
-  description: "The #1 directory of printing companies in the United States. Compare 596+ screen printing, DTG, embroidery, and custom apparel providers.",
+  description: "Compare 596+ top-rated printing companies across all 50 states. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.",
   keywords: "printing services USA, screen printing near me, custom t-shirts, DTG printing, embroidery services, DTF printing, custom apparel, printing companies, screen printers directory",
   openGraph: {
-    title: "Print Services Hub USA — Find & Compare 596+ Printing Companies",
-    description: "The #1 directory of printing companies in the United States. Compare screen printing, DTG, embroidery, and custom apparel providers.",
+    title: "Top 596+ Printing Companies in the USA | Compare the Best Printers 2026",
+    description: "Compare 596+ top-rated printing companies across all 50 states. Find the best printers near you.",
     type: "website",
     locale: "en_US",
     siteName: "Print Services Hub USA",
@@ -59,6 +59,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className={`${inter.className} min-h-screen bg-surface-50 text-surface-800 antialiased`} suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Print Services Hub USA',
+              url: 'https://directory.dtlaprint.com',
+              description: 'The #1 directory of printing companies in the United States.',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://directory.dtlaprint.com/?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <Navbar />
         <main>{children}</main>
       </body>

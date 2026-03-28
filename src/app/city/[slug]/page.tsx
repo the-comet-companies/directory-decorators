@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const city = getCityBySlug(slug);
   if (!city) return {};
   const providers = getProvidersForCity(city.city, city.stateAbbr);
-  const title = `Printing Services in ${city.city}, ${city.stateAbbr} | ${providers.length} Companies`;
-  const description = `Find ${providers.length} printing ${providers.length === 1 ? 'company' : 'companies'} in ${city.city}, ${city.stateName}. Compare screen printing, embroidery, DTG, and custom apparel services near you.`;
+  const title = `Top 10 Best Printers in ${city.city}, ${city.stateAbbr} — Updated 2026`;
+  const description = `Compare the best printing companies in ${city.city}, ${city.stateAbbr}. Screen printing, DTG, embroidery, and more. Find top-rated local printers. Updated 2026.`;
   return {
     title,
     description,

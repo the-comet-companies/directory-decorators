@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const state = getStateBySlug(slug);
   if (!state) return {};
-  const title = `Printing Services in ${state.name} | ${state.count} Companies`;
-  const description = `Find the best printing companies in ${state.name}. Browse ${state.count} screen printing, embroidery, DTG, and custom apparel providers across ${state.cities.length} cities.`;
+  const title = `Top 10 Best Printing Companies in ${state.name} — Updated 2026`;
+  const description = `Compare the top ${state.count}+ printing companies in ${state.name}. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.`;
   return {
     title,
     description,

@@ -15,9 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const provider = getProviderBySlug(slug);
   if (!provider) return {};
 
-  const services = provider.servicesOffered.slice(0, 3).join(', ');
-  const title = `${provider.name} | ${services} in ${provider.city}`;
-  const description = `${provider.name} offers ${services} in ${provider.city}. Rated ${provider.rating}/5 from ${provider.reviewCount} reviews.${provider.rushAvailable ? ' Rush orders available.' : ''}${provider.startingPrice ? ` Starting at $${provider.startingPrice}.` : ''}`;
+  const state = provider.serviceArea[1] || '';
+  const title = `${provider.name} — ${provider.city}, ${state} | Reviews & Services 2026`;
+  const description = `${provider.name} in ${provider.city}, ${state} — rated ${provider.rating}/5 from ${provider.reviewCount} reviews. Services: ${provider.servicesOffered.slice(0,3).join(', ')}. Compare and contact today.`;
 
   return {
     title,
@@ -50,6 +50,40 @@ export default async function ProviderDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: provider.name,
+            description: provider.shortSummary,
+            url: `https://directory.dtlaprint.com/provider/${provider.slug}`,
+            telephone: provider.phone || undefined,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: provider.address,
+              addressLocality: provider.city,
+              addressRegion: provider.serviceArea[1] || '',
+              addressCountry: 'US',
+            },
+            geo: provider.coordinates ? {
+              '@type': 'GeoCoordinates',
+              latitude: provider.coordinates.lat,
+              longitude: provider.coordinates.lng,
+            } : undefined,
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: provider.rating,
+              reviewCount: provider.reviewCount,
+              bestRating: 5,
+              worstRating: 1,
+            },
+            image: provider.coverImage || undefined,
+            priceRange: provider.startingPrice ? `From $${provider.startingPrice}` : '$$',
+          }),
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-surface-500">

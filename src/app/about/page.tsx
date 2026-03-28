@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About Print Services Hub USA — The #1 Printing Directory',
-  description: 'Print Services Hub USA is the most complete directory of 596+ custom printing companies across 27 states. Find screen printing, embroidery, DTG, and more.',
+  title: 'About Print Services Hub USA — The #1 Printing Directory 2026',
+  description: 'Print Services Hub USA is the most complete directory of 596+ verified printing companies across all 50 states. Compare screen printing, embroidery, DTG, and more. Updated 2026.',
   openGraph: {
     title: 'About Print Services Hub USA — The #1 Printing Directory',
     description: 'The most complete directory of 596+ custom printing companies across 27 states.',
