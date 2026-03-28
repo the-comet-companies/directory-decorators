@@ -20,21 +20,21 @@ const guides = [
     description: 'A 7-step guide from choosing a printing method to receiving your finished order. Includes cost breakdowns and pro tips.',
     href: '/guides/how-to-order-custom-t-shirts',
     tag: 'Step-by-Step',
-    tagColor: 'bg-brand-600',
+    tagColor: 'bg-black',
   },
   {
     title: 'Screen Printing vs DTG — Which Is Right for You?',
     description: 'Side-by-side comparison of cost, quality, minimums, and turnaround. Find out which method fits your project.',
     href: '/guides/screen-printing-vs-dtg',
     tag: 'Comparison',
-    tagColor: 'bg-purple-600',
+    tagColor: 'bg-black',
   },
   {
     title: 'How Much Does Custom Embroidery Cost in 2026?',
     description: 'Detailed pricing tables by stitch count and quantity. Learn what affects embroidery pricing and how to save.',
     href: '/guides/how-much-does-embroidery-cost',
     tag: 'Pricing Guide',
-    tagColor: 'bg-emerald-600',
+    tagColor: 'bg-black',
   },
 ];
 

@@ -67,6 +67,10 @@ const SCREEN_PRINTING_TYPES = [
   'Foil Printing',
 ];
 
+export function getAllProviders(): Provider[] {
+  return [...seedProviders, ...loadAddedCompanies()];
+}
+
 export function getProviders(filters: Partial<FilterState>): { providers: Provider[]; total: number } {
   let results = [...seedProviders, ...loadAddedCompanies()];
 

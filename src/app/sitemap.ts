@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/list-business`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/cost-estimator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
 { url: `${BASE_URL}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/guides/how-to-order-custom-t-shirts`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/guides/screen-printing-vs-dtg`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
@@ -61,5 +62,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...servicePages, ...statePages, ...cityPages, ...providerPages]
+  const bestOfServices = ['screen-printing', 'dtg-printing', 'embroidery', 'dtf-printing', 'heat-transfer', 'sublimation']
+  const bestOfCities = [
+    'los-angeles-ca', 'new-york-ny', 'chicago-il', 'houston-tx', 'portland-or',
+    'san-francisco-ca', 'miami-fl', 'denver-co', 'austin-tx', 'san-diego-ca',
+    'boston-ma', 'columbus-oh', 'detroit-mi', 'minneapolis-mn', 'honolulu-hi',
+    'las-vegas-nv', 'kansas-city-ks', 'hartford-ct', 'manchester-nh', 'philadelphia-pa',
+  ]
+  const bestOfPages: MetadataRoute.Sitemap = bestOfServices.flatMap(service =>
+    bestOfCities.map(city => ({
+      url: `${BASE_URL}/best/${service}-in-${city}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+  )
+
+  return [...staticPages, ...servicePages, ...statePages, ...cityPages, ...providerPages, ...bestOfPages]
 }

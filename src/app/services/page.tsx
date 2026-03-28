@@ -17,6 +17,7 @@ const services = [
   {
     name: 'Screen Printing',
     slug: 'Screen Printing',
+    urlSlug: 'screen-printing',
     image: 'https://blog.uberprints.com/content/images/2020/08/screen-printing-process-01-2000w.jpg',
     tag: 'Most Popular',
     tagColor: 'bg-brand-600',
@@ -36,6 +37,7 @@ const services = [
   {
     name: 'DTG Printing',
     slug: 'DTG Printing',
+    urlSlug: 'dtg-printing',
     image: 'https://ricohdtg.com/hs-fs/hubfs/20230828_212757367_iOS.webp?width=950&height=1267&name=20230828_212757367_iOS.webp',
     tag: 'No Minimums',
     tagColor: 'bg-neutral-800',
@@ -55,6 +57,7 @@ const services = [
   {
     name: 'Embroidery',
     slug: 'Embroidery',
+    urlSlug: 'embroidery',
     image: 'https://melco.com/wp-content/uploads/2023/04/Hats-Header.jpg',
     tag: 'Premium Look',
     tagColor: 'bg-neutral-800',
@@ -74,6 +77,7 @@ const services = [
   {
     name: 'Heat Transfer',
     slug: 'Heat Transfer',
+    urlSlug: 'heat-transfer',
     image: 'https://www.allprintheads.com/cdn/shop/articles/heat_press_35b30dad-8c92-48d7-8b7f-f0213b468a23.jpg?v=1758019009&width=1024',
     tag: 'Versatile',
     tagColor: 'bg-neutral-800',
@@ -93,6 +97,7 @@ const services = [
   {
     name: 'Sublimation',
     slug: 'Sublimation',
+    urlSlug: 'sublimation',
     image: 'https://nightfoxdesigns.com/wp-content/uploads/2024/05/Sublimation-Jerseys-Nightfox-Labs.jpg',
     tag: 'All-Over Print',
     tagColor: 'bg-neutral-800',
@@ -112,6 +117,7 @@ const services = [
   {
     name: 'Promotional Products',
     slug: 'Promotional Products',
+    urlSlug: 'custom-apparel',
     image: 'https://printify.com/wp-content/uploads/2025/01/Branded-merchandise-Printify-1024x683.png',
     tag: 'Brand Merch',
     tagColor: 'bg-neutral-800',
@@ -131,6 +137,7 @@ const services = [
   {
     name: 'Custom Apparel',
     slug: 'Custom Apparel',
+    urlSlug: 'custom-apparel',
     image: 'https://burst.shopifycdn.com/photos/t-shirts-hanging-on-rack.jpg',
     tag: 'End-to-End',
     tagColor: 'bg-neutral-800',
@@ -226,10 +233,10 @@ export default function ServicesPage() {
                 </dl>
 
                 <a
-                  href={`/?serviceType=${encodeURIComponent(service.slug)}`}
+                  href={`/service/${service.urlSlug}`}
                   className={`self-start inline-flex items-center gap-2 rounded-full bg-surface-900 hover:bg-surface-700 text-white px-6 py-2.5 text-sm font-semibold transition-colors`}
                 >
-                  Browse {service.name} shops
+                  Browse {service.name} Shops
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

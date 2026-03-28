@@ -80,6 +80,8 @@ export default function Footer() {
                 { label: 'Browse', href: '/' },
                 { label: 'Services', href: '/services' },
                 { label: 'Near Me', href: '/near-me' },
+                { label: 'Cost Estimator', href: '/cost-estimator' },
+                { label: 'Multi Quote', href: '/request-quotes' },
                 { label: 'About', href: '/about' },
               ].map(link => (
                 <li key={link.label}>

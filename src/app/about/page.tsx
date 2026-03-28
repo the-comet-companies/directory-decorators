@@ -27,6 +27,7 @@ const services = [
       </svg>
     ),
     title: 'Screen Printing',
+    slug: 'screen-printing',
     description: 'The gold standard for bulk apparel. Vivid, durable prints on t-shirts, hoodies, and more — with specialty techniques like puff, high density, foil, and waterbased.',
   },
   {
@@ -36,6 +37,7 @@ const services = [
       </svg>
     ),
     title: 'Embroidery',
+    slug: 'embroidery',
     description: 'Classic, premium texture for hats, polos, jackets, and branded uniforms. Embroidery adds a professional look that lasts as long as the garment.',
   },
   {
@@ -45,6 +47,7 @@ const services = [
       </svg>
     ),
     title: 'DTG Printing',
+    slug: 'dtg-printing',
     description: 'Direct-to-garment printing with no minimums. Perfect for full-color artwork, photos, and small runs where every piece can be different.',
   },
   {
@@ -54,6 +57,7 @@ const services = [
       </svg>
     ),
     title: 'Heat Transfer',
+    slug: 'heat-transfer',
     description: 'Versatile transfers applied with heat and pressure. Great for names and numbers, one-offs, and specialty materials that can\'t go through other processes.',
   },
   {
@@ -63,6 +67,7 @@ const services = [
       </svg>
     ),
     title: 'Sublimation',
+    slug: 'sublimation',
     description: 'All-over, edge-to-edge printing on polyester and performance fabrics. Used for sportswear, jerseys, and fully custom cut-and-sew apparel.',
   },
   {
@@ -72,6 +77,7 @@ const services = [
       </svg>
     ),
     title: 'Promotional Products',
+    slug: 'custom-apparel',
     description: 'Branded hats, tote bags, drinkware, patches, and more. Everything a business needs to outfit a team, run an event, or grow brand awareness.',
   },
 ];
@@ -179,13 +185,13 @@ export default function AboutPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(s => (
-              <div key={s.title} className="rounded-2xl border border-surface-100 bg-white p-6 hover:border-brand-200 hover:shadow-sm transition-all duration-200">
+              <a key={s.title} href={`/service/${s.slug}`} className="rounded-2xl border border-surface-100 bg-white p-6 hover:border-brand-200 hover:shadow-sm transition-all duration-200 block">
                 <div className="inline-flex items-center justify-center h-11 w-11 rounded-xl bg-brand-50 text-brand-600 mb-4">
                   {s.icon}
                 </div>
                 <h3 className="font-semibold text-surface-900 mb-2">{s.title}</h3>
                 <p className="text-sm text-surface-500 leading-relaxed">{s.description}</p>
-              </div>
+              </a>
             ))}
           </div>
         </section>
