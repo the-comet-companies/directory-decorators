@@ -248,10 +248,10 @@ export default function CostEstimatorPage() {
 
                 {/* CTA */}
                 <a
-                  href={`/?serviceType=${service.slug}`}
+                  href="/request-quotes"
                   className="flex items-center justify-center gap-2 w-full rounded-xl bg-black hover:bg-neutral-800 text-white text-sm font-semibold py-3.5 transition-colors"
                 >
-                  Find {service.name} Providers
+                  Get Multi Quote
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
