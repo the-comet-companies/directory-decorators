@@ -1,5 +1,6 @@
 export const revalidate = 3600;
 
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { getProviders, getFeaturedProviders, getFilterOptions } from '@/lib/data';
 import SearchHeader from '@/components/SearchHeader';
@@ -13,6 +14,57 @@ import Footer from '@/components/Footer';
 
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
+}
+
+function buildDynamicTitle(params: Record<string, string | string[] | undefined>): string {
+  const serviceType = Array.isArray(params.serviceType)
+    ? params.serviceType[0]
+    : params.serviceType || ''
+  const search = (params.search as string) || ''
+
+  const parts: string[] = []
+
+  if (serviceType) {
+    parts.push(serviceType.replace(/\+/g, ' '))
+  } else if (search) {
+    parts.push(search)
+  }
+
+  if (parts.length > 0) {
+    return `${parts.join(' ')} — Compare Top Providers 2026 | Print Services Hub USA`
+  }
+
+  return 'Find the Best Printing Companies Near You | Compare 596+ Providers 2026'
+}
+
+function buildDynamicDescription(params: Record<string, string | string[] | undefined>): string {
+  const serviceType = Array.isArray(params.serviceType)
+    ? params.serviceType[0]
+    : params.serviceType || ''
+  const search = (params.search as string) || ''
+
+  if (serviceType) {
+    const name = serviceType.replace(/\+/g, ' ')
+    return `Compare top-rated ${name.toLowerCase()} companies. Find the best ${name.toLowerCase()} providers near you with reviews, pricing, and turnaround times. Updated 2026.`
+  }
+
+  if (search) {
+    return `Search results for "${search}" — compare top-rated printing companies with reviews, pricing, and turnaround times. Updated 2026.`
+  }
+
+  return 'Compare 596+ top-rated printing companies across all 50 states. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.'
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const params = await searchParams
+  const title = buildDynamicTitle(params)
+  const description = buildDynamicDescription(params)
+
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+  }
 }
 
 export default async function BrowsePage({ searchParams }: PageProps) {
