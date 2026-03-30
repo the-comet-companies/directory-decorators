@@ -220,7 +220,7 @@ export function getFeaturedProviders(): Provider[] {
 }
 
 export function getProviderBySlug(slug: string): Provider | undefined {
-  return seedProviders.find(p => p.slug === slug);
+  return getAllProviders().find(p => p.slug === slug);
 }
 
 export function getRelatedProviders(slug: string, limit = 3): Provider[] {

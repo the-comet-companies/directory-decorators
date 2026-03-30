@@ -2,8 +2,11 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllProviders } from '@/lib/data'
 import { Provider } from '@/lib/types'
+import dynamic from 'next/dynamic'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+
+const BestOfFilters = dynamic(() => import('@/components/BestOfFilters'))
 
 const SERVICES = [
   { id: 'screen-printing', name: 'Screen Printing', filter: 'Screen Printing' },
@@ -132,6 +135,9 @@ export default async function BestOfPage({ params }: PageProps) {
           <span className="mx-2">›</span>
           <span className="text-surface-800 font-medium">{city.city}, {city.state}</span>
         </nav>
+
+        {/* Filters */}
+        <BestOfFilters currentServiceId={service.id} currentCitySlug={city.slug} />
 
         {/* Header */}
         <div className="mb-10">

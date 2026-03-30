@@ -10,6 +10,19 @@ const SERVICES_LIST = [
 
 const CHEVRON_SVG = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`
 
+const STATE_ABBR_TO_FULL: Record<string, string> = {
+  'AL':'Alabama','AK':'Alaska','AZ':'Arizona','AR':'Arkansas','CA':'California',
+  'CO':'Colorado','CT':'Connecticut','DE':'Delaware','FL':'Florida','GA':'Georgia',
+  'HI':'Hawaii','ID':'Idaho','IL':'Illinois','IN':'Indiana','IA':'Iowa','KS':'Kansas',
+  'KY':'Kentucky','LA':'Louisiana','ME':'Maine','MD':'Maryland','MA':'Massachusetts',
+  'MI':'Michigan','MN':'Minnesota','MS':'Mississippi','MO':'Missouri','MT':'Montana',
+  'NE':'Nebraska','NV':'Nevada','NH':'New Hampshire','NJ':'New Jersey','NM':'New Mexico',
+  'NY':'New York','NC':'North Carolina','ND':'North Dakota','OH':'Ohio','OK':'Oklahoma',
+  'OR':'Oregon','PA':'Pennsylvania','RI':'Rhode Island','SC':'South Carolina',
+  'SD':'South Dakota','TN':'Tennessee','TX':'Texas','UT':'Utah','VT':'Vermont',
+  'VA':'Virginia','WA':'Washington','WV':'West Virginia','WI':'Wisconsin','WY':'Wyoming',
+}
+
 type Status = 'idle' | 'loading' | 'success' | 'error'
 type Step = 'select' | 'form'
 
@@ -29,9 +42,9 @@ export default function RequestQuotesPage() {
   const [status, setStatus] = useState<Status>('idle')
   const [allProviders, setAllProviders] = useState<ProviderOption[]>([])
   const [selected, setSelected] = useState<Set<string>>(new Set())
-  const [search, setSearch] = useState('')
   const [filterService, setFilterService] = useState('')
   const [filterState, setFilterState] = useState('')
+  const [filterCity, setFilterCity] = useState('')
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -50,18 +63,27 @@ export default function RequestQuotesPage() {
   }, [])
 
   const states = useMemo(() => {
-    const s = new Set(allProviders.map(p => p.state))
+    const s = new Set(allProviders.filter(p => p.hasEmail).map(p => p.state))
     return Array.from(s).sort()
   }, [allProviders])
 
+  const cities = useMemo(() => {
+    const providers = filterState
+      ? allProviders.filter(p => p.hasEmail && p.state === filterState)
+      : allProviders.filter(p => p.hasEmail)
+    const c = new Set(providers.map(p => p.city))
+    return Array.from(c).sort()
+  }, [allProviders, filterState])
+
   const filtered = useMemo(() => {
     return allProviders.filter(p => {
-      if (search && !p.name.toLowerCase().includes(search.toLowerCase()) && !p.city.toLowerCase().includes(search.toLowerCase())) return false
-      if (filterService && !p.services.some(s => s.toLowerCase().includes(filterService.toLowerCase()))) return false
+      if (!p.hasEmail) return false
       if (filterState && p.state !== filterState) return false
+      if (filterCity && p.city !== filterCity) return false
+      if (filterService && !p.services.some(s => s.toLowerCase().includes(filterService.toLowerCase()))) return false
       return true
     }).slice(0, 50)
-  }, [allProviders, search, filterService, filterState])
+  }, [allProviders, filterService, filterState, filterCity])
 
   const toggle = (slug: string) => {
     setSelected(prev => {
@@ -189,32 +211,44 @@ export default function RequestQuotesPage() {
               )}
 
               {/* Filters */}
-              <div className="bg-white rounded-2xl border border-surface-200 p-5 mb-5">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <input
-                    value={search}
-                    onChange={e => setSearch(e.target.value)}
-                    placeholder="Search by name or city..."
-                    className="w-full h-10 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/20"
-                  />
-                  <select
-                    value={filterService}
-                    onChange={e => setFilterService(e.target.value)}
-                    className="w-full h-10 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/20 bg-white appearance-none"
-                    style={{ backgroundImage: CHEVRON_SVG, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center', backgroundSize: '14px', paddingRight: '32px' }}
-                  >
-                    <option value="">All Services</option>
-                    {SERVICES_LIST.map(s => <option key={s} value={s}>{s}</option>)}
-                  </select>
-                  <select
-                    value={filterState}
-                    onChange={e => setFilterState(e.target.value)}
-                    className="w-full h-10 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/20 bg-white appearance-none"
-                    style={{ backgroundImage: CHEVRON_SVG, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center', backgroundSize: '14px', paddingRight: '32px' }}
-                  >
-                    <option value="">All States</option>
-                    {states.map(s => <option key={s} value={s}>{s}</option>)}
-                  </select>
+              <div className="mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-surface-800 mb-1.5">State</label>
+                    <select
+                      value={filterState}
+                      onChange={e => { setFilterState(e.target.value); setFilterCity('') }}
+                      className="w-full h-11 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-0 bg-white appearance-none cursor-pointer"
+                      style={{ backgroundImage: CHEVRON_SVG, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '14px', paddingRight: '32px' }}
+                    >
+                      <option value="">All States</option>
+                      {states.map(s => <option key={s} value={s}>{STATE_ABBR_TO_FULL[s] || s}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-surface-800 mb-1.5">City</label>
+                    <select
+                      value={filterCity}
+                      onChange={e => setFilterCity(e.target.value)}
+                      className="w-full h-11 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-0 bg-white appearance-none cursor-pointer"
+                      style={{ backgroundImage: CHEVRON_SVG, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '14px', paddingRight: '32px' }}
+                    >
+                      <option value="">All Cities</option>
+                      {cities.map(c => <option key={c} value={c}>{c}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-surface-800 mb-1.5">Service Type</label>
+                    <select
+                      value={filterService}
+                      onChange={e => setFilterService(e.target.value)}
+                      className="w-full h-11 border border-surface-200 rounded-xl px-3 text-sm focus:outline-none focus:ring-0 bg-white appearance-none cursor-pointer"
+                      style={{ backgroundImage: CHEVRON_SVG, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '14px', paddingRight: '32px' }}
+                    >
+                      <option value="">All Services</option>
+                      {SERVICES_LIST.map(s => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                  </div>
                 </div>
               </div>
 
@@ -259,9 +293,6 @@ export default function RequestQuotesPage() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
                           <p className="text-sm font-semibold text-surface-900 truncate">{p.name}</p>
-                          {p.hasEmail && (
-                            <span className="text-[9px] font-medium bg-surface-100 text-surface-500 px-1.5 py-0.5 rounded-full shrink-0">Direct</span>
-                          )}
                         </div>
                         <p className="text-xs text-surface-500">{p.city}, {p.state}</p>
                       </div>
