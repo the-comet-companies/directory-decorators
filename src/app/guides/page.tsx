@@ -16,6 +16,20 @@ export const metadata: Metadata = {
 
 const guides = [
   {
+    title: 'How Much Does Screen Printing Cost in 2026?',
+    description: 'Full pricing table by quantity and color count. Learn what drives screen printing costs and how to save on your next order.',
+    href: '/guides/how-much-does-screen-printing-cost',
+    tag: 'Pricing Guide',
+    tagColor: 'bg-black',
+  },
+  {
+    title: 'DTF vs DTG Printing — Which Is Better in 2026?',
+    description: 'Head-to-head comparison of DTF and DTG: cost, quality, durability, fabric compatibility, and best use cases.',
+    href: '/guides/dtf-vs-dtg-printing',
+    tag: 'Comparison',
+    tagColor: 'bg-black',
+  },
+  {
     title: 'How to Order Custom T-Shirts',
     description: 'A 7-step guide from choosing a printing method to receiving your finished order. Includes cost breakdowns and pro tips.',
     href: '/guides/how-to-order-custom-t-shirts',
