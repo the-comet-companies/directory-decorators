@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const users = getUsers()
     const user = users.find(u =>
       u.email.toLowerCase() === email.toLowerCase() &&
-      (u as Record<string, unknown>).resetToken === token
+      (u as unknown as Record<string, unknown>).resetToken === token
     )
 
     if (!user) {
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Check expiration
-    const expires = (user as Record<string, unknown>).resetTokenExpires as string
+    const expires = (user as unknown as Record<string, unknown>).resetTokenExpires as string
     if (!expires || new Date() > new Date(expires)) {
       return NextResponse.json({ ok: false, error: 'Reset link has expired. Please request a new one.' }, { status: 410 })
     }
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       passwordHash: newHash,
       resetToken: '',
       resetTokenExpires: '',
-    } as Record<string, string>)
+    } as Partial<typeof user>)
 
     return NextResponse.json({ ok: true })
   } catch (err) {

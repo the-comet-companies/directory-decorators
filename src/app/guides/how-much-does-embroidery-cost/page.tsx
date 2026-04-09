@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Custom embroidery pricing breakdown by stitch count, quantity, and garment type. Realistic 2026 US market rates.',
     type: 'article',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides/how-much-does-embroidery-cost' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides/how-much-does-embroidery-cost' },
 };
 
 const pricingData = [
@@ -268,9 +268,9 @@ export default function EmbroideryPricingGuide() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.dtlaprint.com/services' },
-              { '@type': 'ListItem', position: 3, name: 'Embroidery Cost Guide', item: 'https://directory.dtlaprint.com/guides/how-much-does-embroidery-cost' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.shoptitan.app/services' },
+              { '@type': 'ListItem', position: 3, name: 'Embroidery Cost Guide', item: 'https://directory.shoptitan.app/guides/how-much-does-embroidery-cost' },
             ],
           }),
         }}

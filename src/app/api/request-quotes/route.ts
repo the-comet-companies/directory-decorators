@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
           html: `
             <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
               <h2 style="color:#1e293b;margin-bottom:4px;">New Quote Request</h2>
-              <p style="color:#64748b;margin-top:0;">A customer found you on <a href="https://directory.dtlaprint.com/provider/${provider.slug}">Print Services Hub USA</a></p>
+              <p style="color:#64748b;margin-top:0;">A customer found you on <a href="https://directory.shoptitan.app/provider/${provider.slug}">Print Services Hub USA</a></p>
               <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
               ${projectHtml}
               <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>

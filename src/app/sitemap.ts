@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllProviderSlugs } from '@/lib/data'
 import { getAllStateSlugs, getAllCitySlugs } from '@/lib/geo'
 
-const BASE_URL = 'https://directory.dtlaprint.com'
+const BASE_URL = 'https://directory.shoptitan.app'
 
 const SERVICE_SLUGS = [
   'screen-printing',

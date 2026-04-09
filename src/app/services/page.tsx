@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Browse all custom printing services: screen printing, DTG, DTF, embroidery, heat transfer, sublimation, and more. Compare top-rated providers across 50 states. Updated 2026.',
     type: 'website',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/services' },
+  alternates: { canonical: 'https://directory.shoptitan.app/services' },
 };
 
 const services = [

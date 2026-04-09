@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     openGraph: { title, description, type: 'website' },
-    alternates: { canonical: `https://directory.dtlaprint.com/city/${slug}` },
+    alternates: { canonical: `https://directory.shoptitan.app/city/${slug}` },
   };
 }
 
@@ -99,7 +99,7 @@ export default async function CityPage({ params }: PageProps) {
               item: {
                 '@type': 'LocalBusiness',
                 name: p.name,
-                url: `https://directory.dtlaprint.com/provider/${p.slug}`,
+                url: `https://directory.shoptitan.app/provider/${p.slug}`,
                 address: { '@type': 'PostalAddress', addressLocality: city.city, addressRegion: city.stateAbbr },
                 aggregateRating: p.rating > 0 ? { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } : undefined,
               },
@@ -115,9 +115,9 @@ export default async function CityPage({ params }: PageProps) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: city.stateName, item: `https://directory.dtlaprint.com/state/${stateSlug}` },
-              { '@type': 'ListItem', position: 3, name: city.city, item: `https://directory.dtlaprint.com/city/${slug}` },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: city.stateName, item: `https://directory.shoptitan.app/state/${stateSlug}` },
+              { '@type': 'ListItem', position: 3, name: city.city, item: `https://directory.shoptitan.app/city/${slug}` },
             ],
           }),
         }}

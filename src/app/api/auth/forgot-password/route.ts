@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     // Store token on user (using passwordHash field prefix trick won't work, use a simple approach)
     updateUser(user.id, { resetToken: token, resetTokenExpires: expires } as Record<string, string>)
 
-    const baseUrl = process.env.NEXTAUTH_URL || 'https://directory.dtlaprint.com'
+    const baseUrl = process.env.NEXTAUTH_URL || 'https://directory.shoptitan.app'
     const resetUrl = `${baseUrl}/auth/reset-password?token=${token}&email=${encodeURIComponent(email)}`
 
     const transporter = nodemailer.createTransport({

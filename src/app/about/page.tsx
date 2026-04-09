@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'The most complete directory of 15,000+ custom printing companies across all 50 states.',
     type: 'website',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/about' },
+  alternates: { canonical: 'https://directory.shoptitan.app/about' },
 };
 
 const stats = [

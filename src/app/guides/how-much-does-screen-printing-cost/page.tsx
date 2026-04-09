@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Screen printing cost breakdown by colors, quantity, and garment type. Updated 2026 US market rates.',
     type: 'article',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides/how-much-does-screen-printing-cost' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides/how-much-does-screen-printing-cost' },
 };
 
 const pricingData = [
@@ -296,8 +296,8 @@ export default function ScreenPrintingCostGuide() {
             description: 'Screen printing costs $5–$15 per shirt for orders of 72+. Full pricing table by quantity, number of colors, and garment type.',
             datePublished: '2026-04-01',
             dateModified: '2026-04-07',
-            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.dtlaprint.com' },
-            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.dtlaprint.com' },
+            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
+            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
           }),
         }}
       />
@@ -309,9 +309,9 @@ export default function ScreenPrintingCostGuide() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://directory.dtlaprint.com/guides' },
-              { '@type': 'ListItem', position: 3, name: 'Screen Printing Cost Guide', item: 'https://directory.dtlaprint.com/guides/how-much-does-screen-printing-cost' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://directory.shoptitan.app/guides' },
+              { '@type': 'ListItem', position: 3, name: 'Screen Printing Cost Guide', item: 'https://directory.shoptitan.app/guides/how-much-does-screen-printing-cost' },
             ],
           }),
         }}

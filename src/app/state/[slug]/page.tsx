@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     openGraph: { title, description, type: 'website' },
-    alternates: { canonical: `https://directory.dtlaprint.com/state/${slug}` },
+    alternates: { canonical: `https://directory.shoptitan.app/state/${slug}` },
   };
 }
 
@@ -104,7 +104,7 @@ export default async function StatePage({ params }: PageProps) {
               item: {
                 '@type': 'LocalBusiness',
                 name: p.name,
-                url: `https://directory.dtlaprint.com/provider/${p.slug}`,
+                url: `https://directory.shoptitan.app/provider/${p.slug}`,
                 address: { '@type': 'PostalAddress', addressLocality: p.city, addressRegion: state.abbr },
                 aggregateRating: p.rating > 0 ? { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } : undefined,
               },

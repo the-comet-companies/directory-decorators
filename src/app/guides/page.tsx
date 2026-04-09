@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Free guides to help you choose the right printing method and order custom apparel.',
     type: 'website',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides' },
 };
 
 const guides = [

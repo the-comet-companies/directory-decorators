@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Search 15,000+ printing companies by location on an interactive map.',
     type: 'website',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/near-me' },
+  alternates: { canonical: 'https://directory.shoptitan.app/near-me' },
 }
 
 export default function NearMePage() {

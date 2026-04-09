@@ -175,10 +175,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       type: 'website',
-      url: `https://directory.dtlaprint.com/service/${slug}`,
+      url: `https://directory.shoptitan.app/service/${slug}`,
     },
     alternates: {
-      canonical: `https://directory.dtlaprint.com/service/${slug}`,
+      canonical: `https://directory.shoptitan.app/service/${slug}`,
     },
   };
 }
@@ -204,19 +204,19 @@ export default async function ServicePage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://directory.dtlaprint.com',
+        item: 'https://directory.shoptitan.app',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://directory.dtlaprint.com/services',
+        item: 'https://directory.shoptitan.app/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: service.name,
-        item: `https://directory.dtlaprint.com/service/${slug}`,
+        item: `https://directory.shoptitan.app/service/${slug}`,
       },
     ],
   };
@@ -233,7 +233,7 @@ export default async function ServicePage({ params }: PageProps) {
       item: {
         '@type': 'LocalBusiness',
         name: p.name,
-        url: `https://directory.dtlaprint.com/provider/${p.slug}`,
+        url: `https://directory.shoptitan.app/provider/${p.slug}`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: p.city,

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Learn how to order custom t-shirts in 7 easy steps. Free guide with tips from industry experts.',
     type: 'article',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides/how-to-order-custom-t-shirts' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides/how-to-order-custom-t-shirts' },
 };
 
 const steps = [
@@ -230,9 +230,9 @@ export default function HowToOrderCustomTShirts() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.dtlaprint.com/services' },
-              { '@type': 'ListItem', position: 3, name: 'How to Order Custom T-Shirts', item: 'https://directory.dtlaprint.com/guides/how-to-order-custom-t-shirts' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.shoptitan.app/services' },
+              { '@type': 'ListItem', position: 3, name: 'How to Order Custom T-Shirts', item: 'https://directory.shoptitan.app/guides/how-to-order-custom-t-shirts' },
             ],
           }),
         }}

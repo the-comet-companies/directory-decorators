@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Side-by-side comparison of screen printing and DTG printing. Find out which method fits your budget, timeline, and design.',
     type: 'article',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides/screen-printing-vs-dtg' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides/screen-printing-vs-dtg' },
 };
 
 const comparisonRows = [
@@ -219,9 +219,9 @@ export default function ScreenPrintingVsDtg() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.dtlaprint.com/services' },
-              { '@type': 'ListItem', position: 3, name: 'Screen Printing vs DTG', item: 'https://directory.dtlaprint.com/guides/screen-printing-vs-dtg' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://directory.shoptitan.app/services' },
+              { '@type': 'ListItem', position: 3, name: 'Screen Printing vs DTG', item: 'https://directory.shoptitan.app/guides/screen-printing-vs-dtg' },
             ],
           }),
         }}

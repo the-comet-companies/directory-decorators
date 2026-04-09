@@ -116,7 +116,7 @@ export async function PATCH(req: NextRequest) {
         auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
       })
 
-      const baseUrl = process.env.NEXTAUTH_URL || 'https://directory.dtlaprint.com'
+      const baseUrl = process.env.NEXTAUTH_URL || 'https://directory.shoptitan.app'
       const listingUrl = `${baseUrl}/provider/${slug}`
       const loginUrl = `${baseUrl}/auth/login`
 

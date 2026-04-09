@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://directory.dtlaprint.com/sitemap.xml',
+    sitemap: 'https://directory.shoptitan.app/sitemap.xml',
   }
 }

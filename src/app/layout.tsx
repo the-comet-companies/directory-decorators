@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://directory.dtlaprint.com"),
+  metadataBase: new URL("https://directory.shoptitan.app"),
   icons: {
     icon: "/favicon.ico",
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://directory.dtlaprint.com",
+    canonical: "https://directory.shoptitan.app",
   },
   verification: {
     google: "y6a0_7x48GwVxJKyQBMtPyztVQRgsndB3b-dPdx4wao",
@@ -68,11 +68,11 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Print Services Hub USA',
-              url: 'https://directory.dtlaprint.com',
+              url: 'https://directory.shoptitan.app',
               description: 'The #1 directory of printing companies in the United States.',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: 'https://directory.dtlaprint.com/?q={search_term_string}',
+                target: 'https://directory.shoptitan.app/?q={search_term_string}',
                 'query-input': 'required name=search_term_string',
               },
             }),

@@ -63,11 +63,11 @@ export async function PATCH(req: NextRequest) {
 
       const dashboardUrl = process.env.NEXTAUTH_URL
         ? `${process.env.NEXTAUTH_URL}/dashboard`
-        : 'https://directory.dtlaprint.com/dashboard'
+        : 'https://directory.shoptitan.app/dashboard'
 
       const loginUrl = process.env.NEXTAUTH_URL
         ? `${process.env.NEXTAUTH_URL}/auth/login`
-        : 'https://directory.dtlaprint.com/auth/login'
+        : 'https://directory.shoptitan.app/auth/login'
 
       await transporter.sendMail({
         from: `"Print Services Hub" <${process.env.SMTP_USER}>`,

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       type: 'website',
-      url: `https://directory.dtlaprint.com/provider/${slug}`,
+      url: `https://directory.shoptitan.app/provider/${slug}`,
       images: provider.coverImage ? [{ url: provider.coverImage, alt: provider.name }] : [],
     },
     twitter: {
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
     },
     alternates: {
-      canonical: `https://directory.dtlaprint.com/provider/${slug}`,
+      canonical: `https://directory.shoptitan.app/provider/${slug}`,
     },
   };
 }
@@ -62,7 +62,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             '@type': 'LocalBusiness',
             name: provider.name,
             description: provider.shortSummary,
-            url: `https://directory.dtlaprint.com/provider/${provider.slug}`,
+            url: `https://directory.shoptitan.app/provider/${provider.slug}`,
             telephone: provider.phone || undefined,
             ...(provider.address ? { address: {
               '@type': 'PostalAddress',
@@ -432,7 +432,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            '@id': `https://directory.dtlaprint.com/provider/${provider.slug}`,
+            '@id': `https://directory.shoptitan.app/provider/${provider.slug}`,
             name: provider.name,
             description: provider.description,
             image: [provider.coverImage, ...(provider.galleryImages || [])].filter(Boolean),
@@ -450,7 +450,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             },
             telephone: provider.phone || undefined,
             email: provider.email || undefined,
-            url: provider.website || `https://directory.dtlaprint.com/provider/${provider.slug}`,
+            url: provider.website || `https://directory.shoptitan.app/provider/${provider.slug}`,
             priceRange: provider.startingPrice ? `From $${provider.startingPrice}` : undefined,
             ...(provider.rating > 0 && provider.reviewCount > 0 ? {
               aggregateRating: {
@@ -487,8 +487,8 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Printing Services', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: provider.name, item: `https://directory.dtlaprint.com/provider/${provider.slug}` },
+              { '@type': 'ListItem', position: 1, name: 'Printing Services', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: provider.name, item: `https://directory.shoptitan.app/provider/${provider.slug}` },
             ],
           }),
         }}

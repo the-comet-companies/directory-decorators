@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Head-to-head comparison of DTF and DTG printing: cost, quality, durability, and best use cases.',
     type: 'article',
   },
-  alternates: { canonical: 'https://directory.dtlaprint.com/guides/dtf-vs-dtg-printing' },
+  alternates: { canonical: 'https://directory.shoptitan.app/guides/dtf-vs-dtg-printing' },
 };
 
 const comparisonData = [
@@ -265,8 +265,8 @@ export default function DtfVsDtgGuide() {
             description: 'DTF vs DTG printing compared: cost, quality, durability, fabric compatibility, and minimums.',
             datePublished: '2026-04-01',
             dateModified: '2026-04-07',
-            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.dtlaprint.com' },
-            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.dtlaprint.com' },
+            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
+            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
           }),
         }}
       />
@@ -278,9 +278,9 @@ export default function DtfVsDtgGuide() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.dtlaprint.com' },
-              { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://directory.dtlaprint.com/guides' },
-              { '@type': 'ListItem', position: 3, name: 'DTF vs DTG Printing', item: 'https://directory.dtlaprint.com/guides/dtf-vs-dtg-printing' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://directory.shoptitan.app' },
+              { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://directory.shoptitan.app/guides' },
+              { '@type': 'ListItem', position: 3, name: 'DTF vs DTG Printing', item: 'https://directory.shoptitan.app/guides/dtf-vs-dtg-printing' },
             ],
           }),
         }}

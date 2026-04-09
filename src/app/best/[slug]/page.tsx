@@ -108,7 +108,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     openGraph: { title, description, type: 'website' },
-    alternates: { canonical: `https://directory.dtlaprint.com/best/${slug}` },
+    alternates: { canonical: `https://directory.shoptitan.app/best/${slug}` },
   }
 }
 
