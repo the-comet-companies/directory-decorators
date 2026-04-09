@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import ProviderCard from '@/components/ProviderCard';
+import { getClaimedSlugs } from '@/lib/db';
 import { providers as seedProviders } from '@/lib/seed-data';
 import { Provider } from '@/lib/types';
 import Link from 'next/link';
@@ -193,6 +194,7 @@ export default async function ServicePage({ params }: PageProps) {
 
   const providers = getProvidersForService(service.filterValue);
   const relatedServices = getRelatedServices(slug);
+  const claimedSlugs = getClaimedSlugs();
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -313,7 +315,7 @@ export default async function ServicePage({ params }: PageProps) {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {providers.map((p, i) => (
-              <ProviderCard key={p.id} provider={p} index={i} />
+              <ProviderCard key={p.id} provider={p} index={i} verified={claimedSlugs.has(p.slug)} />
             ))}
           </div>
         </section>

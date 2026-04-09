@@ -7,9 +7,11 @@ import { useEffect, useRef, useState } from 'react';
 interface ResultsGridProps {
   providers: Provider[];
   total: number;
+  claimedSlugs?: string[];
 }
 
-export default function ResultsGrid({ providers, total }: ResultsGridProps) {
+export default function ResultsGrid({ providers, total, claimedSlugs = [] }: ResultsGridProps) {
+  const claimedSet = new Set(claimedSlugs);
   if (providers.length === 0) {
     return <EmptyState />;
   }
@@ -22,11 +24,11 @@ export default function ResultsGrid({ providers, total }: ResultsGridProps) {
       {providers.map((provider, index) => (
         index < 4 ? (
           <div key={provider.id} className="min-h-[420px]">
-            <ProviderCard provider={provider} index={index} priority={index === firstWithImage} />
+            <ProviderCard provider={provider} index={index} priority={index === firstWithImage} verified={claimedSet.has(provider.slug)} />
           </div>
         ) : (
           <AnimatedCard key={provider.id} index={index}>
-            <ProviderCard provider={provider} index={index} />
+            <ProviderCard provider={provider} index={index} verified={claimedSet.has(provider.slug)} />
           </AnimatedCard>
         )
       ))}

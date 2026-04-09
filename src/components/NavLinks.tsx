@@ -15,6 +15,7 @@ const MORE_LINKS = [
   { href: '/cost-estimator', label: 'Cost Estimator' },
   { href: '/request-quotes', label: 'Multi Quote' },
   { href: '/best/screen-printing-in-los-angeles-ca', label: 'Top Companies' },
+  { href: '/auth/login', label: 'Login' },
 ]
 
 export default function NavLinks() {

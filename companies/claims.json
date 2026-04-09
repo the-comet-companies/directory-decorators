@@ -1,0 +1,14 @@
+[
+  {
+    "businessSlug": "test-no-email-company-los-angeles-ca",
+    "businessName": "Test No Email Company",
+    "userEmail": "john@gmail.com",
+    "userName": "John",
+    "verificationCode": "",
+    "codeExpiresAt": "",
+    "verified": false,
+    "status": "approved",
+    "id": "claim_1775725648292_0t4zxj",
+    "createdAt": "2026-04-09T09:07:28.292Z"
+  }
+]

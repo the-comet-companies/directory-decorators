@@ -3,6 +3,7 @@ export const revalidate = 3600;
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { getProviders, getFeaturedProviders, getFilterOptions } from '@/lib/data';
+import { getClaimedSlugs } from '@/lib/db';
 import SearchHeader from '@/components/SearchHeader';
 import FilterBar from '@/components/FilterBar';
 import MobileFilterDrawer from '@/components/MobileFilterDrawer';
@@ -153,7 +154,7 @@ export default async function BrowsePage({ searchParams }: PageProps) {
         {currentPage === 1 && !currentSearch && <FeaturedProviders providers={featured} />}
 
         {/* Results - full width */}
-        <ResultsGrid providers={providers} total={total} />
+        <ResultsGrid providers={providers} total={total} claimedSlugs={[...getClaimedSlugs()]} />
         <Suspense fallback={null}>
           <Pagination currentPage={currentPage} totalResults={total} />
         </Suspense>

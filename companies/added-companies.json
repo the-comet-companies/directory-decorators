@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "test-no-email",
+    "name": "Test No Email Company",
+    "city": "Los Angeles",
+    "state": "CA",
+    "address": "456 Test Ave, Los Angeles, CA 90002",
+    "email": "",
+    "phone": "(555) 987-6543",
+    "website": "",
+    "description": "Test company without email for claim testing.",
+    "printingMethods": [
+      "Screen Printing"
+    ],
+    "coverImage": "",
+    "moq": 1,
+    "turnaroundDays": 7,
+    "rushAvailable": false,
+    "startingPrice": null,
+    "pickup": false,
+    "delivery": false
+  }
+]

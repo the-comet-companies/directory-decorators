@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:blog.ricoma.com)"
+      "WebFetch(domain:blog.ricoma.com)",
+      "Bash(vercel domains:*)"
     ]
   }
 }
