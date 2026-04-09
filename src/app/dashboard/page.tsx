@@ -339,7 +339,7 @@ export default function DashboardPage() {
               { key: 'sameDayPrinting', label: 'Same Day Printing' },
             ].map(({ key, label }) => (
               <label key={key} className="flex items-center gap-2.5 cursor-pointer rounded-xl border border-surface-200 px-3 py-2.5 hover:bg-surface-50 transition-colors">
-                <input type="checkbox" checked={!!(business as Record<string, unknown>)[key]}
+                <input type="checkbox" checked={!!(business as unknown as Record<string, unknown>)[key]}
                   onChange={e => setBusiness({ ...business, [key]: e.target.checked })}
                   className="w-4 h-4 rounded border-surface-300 accent-black" />
                 <span className="text-sm text-surface-700">{label}</span>
