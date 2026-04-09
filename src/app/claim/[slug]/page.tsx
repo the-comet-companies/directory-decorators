@@ -16,6 +16,7 @@ export default function ClaimPage() {
   const [reqName, setReqName] = useState('')
   const [reqEmail, setReqEmail] = useState('')
   const [reqMessage, setReqMessage] = useState('')
+  const [proofImage, setProofImage] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [code, setCode] = useState('')
@@ -243,12 +244,13 @@ export default function ClaimPage() {
                 <form onSubmit={async (e) => {
                   e.preventDefault()
                   if (!reqName || !reqEmail) { setError('Please fill in all fields.'); return }
+                  if (!proofImage) { setError('Please upload proof of ownership.'); return }
                   setLoading(true)
                   setError('')
                   const res = await fetch('/api/claim/request-access', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ slug, name: reqName, email: reqEmail, message: reqMessage }),
+                    body: JSON.stringify({ slug, name: reqName, email: reqEmail, message: reqMessage, proofImage }),
                   })
                   const data = await res.json()
                   setLoading(false)
@@ -268,6 +270,38 @@ export default function ClaimPage() {
                     <label className="block text-sm font-semibold text-surface-800 mb-1.5">Message (optional)</label>
                     <textarea value={reqMessage} onChange={e => setReqMessage(e.target.value)} placeholder="Tell us how you're associated with this business..."
                       rows={3} className="w-full rounded-xl border border-surface-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black resize-none" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-surface-800 mb-1.5">Proof of Ownership <span className="text-red-500">*</span></label>
+                    <p className="text-xs text-surface-400 mb-2">Upload a screenshot of your Google Business Profile, business license, or similar document.</p>
+                    {proofImage ? (
+                      <div className="relative rounded-xl overflow-hidden border border-surface-200">
+                        <img src={proofImage} alt="Proof" className="w-full max-h-48 object-contain bg-surface-50" />
+                        <button type="button" onClick={() => setProofImage('')}
+                          className="absolute top-2 right-2 bg-black/70 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-black">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                          </svg>
+                        </button>
+                      </div>
+                    ) : (
+                      <label className="flex flex-col items-center justify-center w-full h-32 rounded-xl border-2 border-dashed border-surface-300 hover:border-surface-400 hover:bg-surface-50 transition-colors cursor-pointer">
+                        <svg className="w-8 h-8 text-surface-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span className="text-xs text-surface-500">Click to upload image</span>
+                        <span className="text-[10px] text-surface-400 mt-0.5">JPG, PNG, WebP (max 5MB)</span>
+                        <input type="file" accept="image/jpeg,image/png,image/webp" className="hidden"
+                          onChange={e => {
+                            const file = e.target.files?.[0]
+                            if (!file) return
+                            if (file.size > 5 * 1024 * 1024) { setError('Image must be under 5MB.'); return }
+                            const reader = new FileReader()
+                            reader.onload = () => setProofImage(reader.result as string)
+                            reader.readAsDataURL(file)
+                          }} />
+                      </label>
+                    )}
                   </div>
                   <button type="submit" disabled={loading}
                     className="w-full h-11 rounded-xl bg-black text-white text-sm font-semibold hover:bg-neutral-800 transition-colors disabled:opacity-50">

@@ -7,6 +7,7 @@ import { fullStateName } from '@/lib/states';
 import { isBusinessClaimed } from '@/lib/db';
 import Footer from '@/components/Footer';
 import GalleryLightbox from '@/components/GalleryLightbox';
+import ProviderQuoteForm from '@/components/ProviderQuoteForm';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -110,7 +111,14 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             <div className="mb-8">
               <div className="flex items-start justify-between flex-wrap gap-4">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-surface-900 tracking-tight">{provider.name}</h1>
+                  <h1 className="text-2xl sm:text-3xl font-bold text-surface-900 tracking-tight flex items-center gap-2">
+                    {provider.name}
+                    {claimed && (
+                      <svg className="w-6 h-6 text-green-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </h1>
                   <div className="flex items-center gap-3 mt-2 text-sm text-surface-500 flex-wrap">
                     <div className="flex items-center gap-1">
                       <svg className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -350,66 +358,13 @@ export default async function ProviderDetailPage({ params }: PageProps) {
           {/* Sticky sidebar - Quote form */}
           <div className="hidden lg:block w-80 shrink-0">
             <div id="quote" className="sticky top-20">
-              <div className="rounded-2xl border border-surface-200 bg-white p-6 shadow-card">
-                <h3 className="text-lg font-semibold text-surface-900 mb-1">Request a Quote</h3>
-                <p className="text-sm text-surface-500 mb-5">Get a custom quote from {provider.name}</p>
-                
-                <form className="space-y-3">
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Your Name</label>
-                    <input type="text" className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all" placeholder="Full name" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Email</label>
-                    <input type="email" className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all" placeholder="you@company.com" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Phone</label>
-                    <input type="tel" className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all" placeholder="(555) 000-0000" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Service Needed</label>
-                    <select className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all">
-                      <option value="">Select a service</option>
-                      {provider.servicesOffered.map(s => (
-                        <option key={s} value={s}>{s}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Quantity</label>
-                    <input type="number" className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all" placeholder="e.g., 100" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-surface-700 mb-1">Project Details</label>
-                    <textarea rows={3} className="w-full rounded-lg border border-surface-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all resize-none" placeholder="Describe your project…" />
-                  </div>
-                  <button type="button" className="w-full rounded-full bg-brand-600 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-sm focus-ring">
-                    Send Quote Request
-                  </button>
-                </form>
-
-                <div className="mt-4 pt-4 border-t border-surface-100 space-y-2 text-xs text-surface-500">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Free, no-obligation quote
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Usually responds within 24 hours
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {provider.reviewCount} verified reviews
-                  </div>
-                </div>
-              </div>
+              <ProviderQuoteForm
+                providerName={provider.name}
+                providerSlug={provider.slug}
+                providerEmail={provider.email}
+                services={provider.servicesOffered}
+                reviewCount={provider.reviewCount}
+              />
 
               {/* Contact info */}
               <div className="mt-4 rounded-xl border border-surface-200 bg-white p-4">
@@ -440,26 +395,17 @@ export default async function ProviderDetailPage({ params }: PageProps) {
               </div>
 
               {/* Claim This Business */}
+              {!claimed && (
               <div className="mt-4 rounded-xl border border-surface-200 bg-white p-4">
-                {claimed ? (
-                  <div className="flex items-center gap-2 text-sm text-green-700">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-semibold">Verified Business</span>
-                  </div>
-                ) : (
-                  <>
-                    <p className="text-xs text-surface-500 mb-3">Is this your business?</p>
-                    <a
-                      href={`/claim/${provider.slug}`}
-                      className="block w-full rounded-xl bg-black text-white text-center py-2.5 text-sm font-semibold hover:bg-neutral-800 transition-colors"
-                    >
-                      Claim This Business
-                    </a>
-                  </>
-                )}
+                <p className="text-xs text-surface-500 mb-3">Is this your business?</p>
+                <a
+                  href={`/claim/${provider.slug}`}
+                  className="block w-full rounded-xl bg-black text-white text-center py-2.5 text-sm font-semibold hover:bg-neutral-800 transition-colors"
+                >
+                  Claim This Business
+                </a>
               </div>
+              )}
             </div>
           </div>
         </div>

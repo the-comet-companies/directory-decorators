@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: '729+', label: 'Printing Companies' },
+  { value: '15k+', label: 'Printing Companies' },
   { value: '50', label: 'States Covered' },
   { value: '6', label: 'Service Types' },
   { value: '100%', label: 'Free to Use' },

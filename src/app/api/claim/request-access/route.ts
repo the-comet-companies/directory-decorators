@@ -4,10 +4,14 @@ import { createClaim, getClaimBySlug } from '@/lib/db'
 
 export async function POST(req: NextRequest) {
   try {
-    const { slug, name, email, message } = await req.json()
+    const { slug, name, email, message, proofImage } = await req.json()
 
     if (!slug || !name || !email) {
       return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 400 })
+    }
+
+    if (!proofImage) {
+      return NextResponse.json({ ok: false, error: 'Please upload proof of ownership.' }, { status: 400 })
     }
 
     const provider = getProviderBySlug(slug)
@@ -29,6 +33,8 @@ export async function POST(req: NextRequest) {
       codeExpiresAt: '',
       verified: false,
       status: 'pending',
+      proofImage: proofImage || '',
+      message: message || '',
     })
 
     return NextResponse.json({ ok: true })

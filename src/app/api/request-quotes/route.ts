@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { getProviderBySlug } from '@/lib/data'
+import { createQuoteLead } from '@/lib/db'
 
 export async function POST(req: NextRequest) {
   try {
@@ -72,6 +73,18 @@ export async function POST(req: NextRequest) {
         noEmail.push(provider.name)
       }
     }
+
+    // Save lead to database
+    createQuoteLead({
+      name,
+      email,
+      phone: phone || '',
+      serviceType: serviceType || '',
+      quantity: quantity || '',
+      deadline: deadline || '',
+      description: description || '',
+      providers: providers.map((p: { slug: string; name: string }) => ({ slug: p.slug, name: p.name })),
+    })
 
     // Send summary to admin
     const providerList = providers.map((p: { name: string; email?: string; city: string; serviceArea: string[] }) =>

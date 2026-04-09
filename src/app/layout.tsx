@@ -103,7 +103,7 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-3">
           <a
-            href="/list-business"
+            href="/dashboard/list"
             className="hidden sm:inline-flex items-center rounded-full border border-surface-300 px-4 py-2 text-sm font-medium text-surface-700 hover:bg-surface-100 transition-colors focus-ring"
           >
             List Your Business

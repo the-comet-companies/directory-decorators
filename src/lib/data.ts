@@ -82,16 +82,65 @@ export function getAllProviders(): Provider[] {
 export function getProviders(filters: Partial<FilterState>): { providers: Provider[]; total: number } {
   let results = [...seedProviders, ...loadAddedCompanies()];
 
-  // Search
+  // Search with relevance scoring
   if (filters.search) {
-    const q = filters.search.toLowerCase();
-    results = results.filter(p =>
-      (p.name || '').toLowerCase().includes(q) ||
-      (p.description || '').toLowerCase().includes(q) ||
-      (p.servicesOffered || []).some(s => (s || '').toLowerCase().includes(q)) ||
-      (p.productCategories || []).some(c => (c || '').toLowerCase().includes(q)) ||
-      (p.neighborhood || '').toLowerCase().includes(q)
-    );
+    const q = filters.search.toLowerCase().trim();
+    const words = q.split(/\s+/).filter(Boolean);
+
+    results = results
+      .map(p => {
+        let score = 0;
+        const name = (p.name || '').toLowerCase();
+        const city = (p.city || '').toLowerCase();
+        const neighborhood = (p.neighborhood || '').toLowerCase();
+        const description = (p.description || '').toLowerCase();
+        const state = ((p.serviceArea || [])[1] || '').toLowerCase();
+        const services = (p.servicesOffered || []).map(s => (s || '').toLowerCase());
+        const products = (p.productCategories || []).map(c => (c || '').toLowerCase());
+
+        // Exact name match (highest priority)
+        if (name === q) score += 100;
+        // Name starts with query
+        else if (name.startsWith(q)) score += 80;
+        // Name contains full query
+        else if (name.includes(q)) score += 60;
+        // All words appear in name
+        else if (words.every(w => name.includes(w))) score += 50;
+
+        // City/location match
+        if (city === q || city.includes(q)) score += 40;
+        if (state === q) score += 35;
+        if (neighborhood.includes(q)) score += 30;
+
+        // Service match
+        if (services.some(s => s === q)) score += 25;
+        if (services.some(s => s.includes(q))) score += 20;
+
+        // Product match
+        if (products.some(c => c === q)) score += 15;
+        if (products.some(c => c.includes(q))) score += 10;
+
+        // Description match (lowest priority)
+        if (description.includes(q)) score += 5;
+
+        // Individual word matches (for multi-word queries)
+        if (words.length > 1) {
+          for (const w of words) {
+            if (name.includes(w)) score += 8;
+            if (city.includes(w)) score += 5;
+            if (services.some(s => s.includes(w))) score += 3;
+            if (products.some(c => c.includes(w))) score += 2;
+          }
+        }
+
+        // Bonus for rating (small tiebreaker)
+        score += (p.rating || 0) * 0.5;
+
+        return { provider: p, score };
+      })
+      .filter(r => r.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(r => r.provider);
   }
 
   // Service type
@@ -176,11 +225,15 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
     results = results.filter(p => p.rating >= minRating);
   }
 
-  // Sort
+  // Sort (skip if search already ranked by relevance)
   const sort = (filters.sort || 'recommended') as SortOption;
+  const isSearching = !!(filters.search?.trim());
   switch (sort) {
     case 'recommended':
-      results.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || b.rating - a.rating);
+      if (!isSearching) {
+        results.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || b.rating - a.rating);
+      }
+      // When searching, results are already sorted by relevance
       break;
     case 'fastest':
       results.sort((a, b) => a.turnaroundDays - b.turnaroundDays);

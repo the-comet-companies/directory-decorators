@@ -13,7 +13,7 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
   const [activeIndex, setActiveIndex] = useState(0);
   const [failedUrls, setFailedUrls] = useState<Set<string>>(new Set());
 
-  const validImages = images.filter(Boolean).filter(src => !failedUrls.has(src));
+  const validImages = images.filter(Boolean).filter(src => !failedUrls.has(src)).slice(0, 4);
   const count = validImages.length;
 
   const handleImageError = (src: string) => {
@@ -44,10 +44,10 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     setOpen(true);
   };
 
-  const ImageButton = ({ src, alt, index, className, sizes, priority = false }: {
-    src: string; alt: string; index: number; className?: string; sizes: string; priority?: boolean;
+  const ImageButton = ({ src, alt, index, sizes, priority = false }: {
+    src: string; alt: string; index: number; sizes: string; priority?: boolean;
   }) => (
-    <button onClick={() => openAt(index)} className={`relative block w-full h-full cursor-zoom-in overflow-hidden ${className || ''}`}>
+    <button onClick={() => openAt(index)} className="relative block w-full h-full cursor-zoom-in overflow-hidden rounded-xl">
       <Image
         src={src}
         alt={alt}
@@ -60,7 +60,7 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     </button>
   );
 
-  // No valid images — show black container with company name
+  // No images
   if (count === 0) {
     return (
       <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/7] bg-black flex items-center justify-center">
@@ -72,7 +72,7 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     );
   }
 
-  // 1 image — full width
+  // 1 image
   if (count === 1) {
     return (
       <>
@@ -89,11 +89,11 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     return (
       <>
         <div className="grid grid-cols-2 gap-3 mb-8">
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+          <div className="aspect-[4/3]">
             <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="50vw" priority />
           </div>
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[1]} alt={`${providerName} - photo 2`} index={1} sizes="50vw" />
+          <div className="aspect-[4/3]">
+            <ImageButton src={validImages[1]} alt={`${providerName} - 2`} index={1} sizes="50vw" />
           </div>
         </div>
         <Lightbox images={validImages} providerName={providerName} open={open} setOpen={setOpen} activeIndex={activeIndex} setActiveIndex={setActiveIndex} prev={prev} next={next} />
@@ -101,42 +101,21 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     );
   }
 
-  // 3 images — 1 large left, 2 stacked right
+  // 3 images — 1 top full, 2 bottom
   if (count === 3) {
     return (
       <>
-        <div className="grid grid-cols-2 gap-3 mb-8">
-          <div className="row-span-2 aspect-[3/4] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="50vw" priority />
+        <div className="grid gap-3 mb-8">
+          <div className="aspect-[16/7]">
+            <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="100vw" priority />
           </div>
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[1]} alt={`${providerName} - photo 2`} index={1} sizes="50vw" />
-          </div>
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[2]} alt={`${providerName} - photo 3`} index={2} sizes="50vw" />
-          </div>
-        </div>
-        <Lightbox images={validImages} providerName={providerName} open={open} setOpen={setOpen} activeIndex={activeIndex} setActiveIndex={setActiveIndex} prev={prev} next={next} />
-      </>
-    );
-  }
-
-  // 4 images — 1 large left, 3 in right column (top + 2 bottom)
-  if (count === 4) {
-    return (
-      <>
-        <div className="grid grid-cols-3 gap-3 mb-8">
-          <div className="col-span-2 row-span-2 aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="66vw" priority />
-          </div>
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[1]} alt={`${providerName} - photo 2`} index={1} sizes="33vw" />
-          </div>
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[2]} alt={`${providerName} - photo 3`} index={2} sizes="33vw" />
-          </div>
-          <div className="col-span-3 aspect-[16/5] rounded-2xl overflow-hidden">
-            <ImageButton src={validImages[3]} alt={`${providerName} - photo 4`} index={3} sizes="100vw" />
+          <div className="grid grid-cols-2 gap-3">
+            <div className="aspect-[4/3]">
+              <ImageButton src={validImages[1]} alt={`${providerName} - 2`} index={1} sizes="50vw" />
+            </div>
+            <div className="aspect-[4/3]">
+              <ImageButton src={validImages[2]} alt={`${providerName} - 3`} index={2} sizes="50vw" />
+            </div>
           </div>
         </div>
         <Lightbox images={validImages} providerName={providerName} open={open} setOpen={setOpen} activeIndex={activeIndex} setActiveIndex={setActiveIndex} prev={prev} next={next} />
@@ -144,31 +123,28 @@ export default function GalleryLightbox({ images, providerName }: GalleryLightbo
     );
   }
 
-  // 5+ images — original grid layout (1 large + 4 thumbnails)
+  // 4 images — 2x2 grid
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-        <div className="col-span-2 md:row-span-2 aspect-[4/3] rounded-2xl overflow-hidden">
-          <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="(max-width: 768px) 100vw, 66vw" priority />
+      <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="aspect-[4/3]">
+          <ImageButton src={validImages[0]} alt={providerName} index={0} sizes="50vw" priority />
         </div>
-        {[1, 2, 3, 4].map(i => (
-          <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden hidden md:block">
-            {validImages[i] ? (
-              <ImageButton src={validImages[i]} alt={`${providerName} - photo ${i + 1}`} index={i} sizes="22vw" />
-            ) : (
-              <div className="w-full h-full bg-black flex items-center justify-center">
-                <span className="text-2xl font-bold text-white/40">{providerName.charAt(0)}</span>
-              </div>
-            )}
-          </div>
-        ))}
+        <div className="aspect-[4/3]">
+          <ImageButton src={validImages[1]} alt={`${providerName} - 2`} index={1} sizes="50vw" />
+        </div>
+        <div className="aspect-[4/3]">
+          <ImageButton src={validImages[2]} alt={`${providerName} - 3`} index={2} sizes="50vw" />
+        </div>
+        <div className="aspect-[4/3]">
+          <ImageButton src={validImages[3]} alt={`${providerName} - 4`} index={3} sizes="50vw" />
+        </div>
       </div>
       <Lightbox images={validImages} providerName={providerName} open={open} setOpen={setOpen} activeIndex={activeIndex} setActiveIndex={setActiveIndex} prev={prev} next={next} />
     </>
   );
 }
 
-// Lightbox modal component
 function Lightbox({ images, providerName, open, setOpen, activeIndex, setActiveIndex, prev, next }: {
   images: string[];
   providerName: string;
@@ -182,15 +158,8 @@ function Lightbox({ images, providerName, open, setOpen, activeIndex, setActiveI
   if (!open) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
-      onClick={() => setOpen(false)}
-    >
-      <button
-        className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-        onClick={() => setOpen(false)}
-        aria-label="Close"
-      >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={() => setOpen(false)}>
+      <button className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors" onClick={() => setOpen(false)}>
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
@@ -201,11 +170,7 @@ function Lightbox({ images, providerName, open, setOpen, activeIndex, setActiveI
       </div>
 
       {images.length > 1 && (
-        <button
-          className="absolute left-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-          onClick={e => { e.stopPropagation(); prev(); }}
-          aria-label="Previous image"
-        >
+        <button className="absolute left-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors" onClick={e => { e.stopPropagation(); prev(); }}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
@@ -213,22 +178,11 @@ function Lightbox({ images, providerName, open, setOpen, activeIndex, setActiveI
       )}
 
       <div className="relative max-w-5xl w-full aspect-[16/9] mx-20" onClick={e => e.stopPropagation()}>
-        <Image
-          src={images[activeIndex]}
-          alt={`${providerName} - photo ${activeIndex + 1}`}
-          fill
-          sizes="90vw"
-          className="object-contain rounded-xl shadow-2xl"
-          priority={true}
-        />
+        <Image src={images[activeIndex]} alt={`${providerName} - photo ${activeIndex + 1}`} fill sizes="90vw" className="object-contain rounded-xl shadow-2xl" priority />
       </div>
 
       {images.length > 1 && (
-        <button
-          className="absolute right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-          onClick={e => { e.stopPropagation(); next(); }}
-          aria-label="Next image"
-        >
+        <button className="absolute right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors" onClick={e => { e.stopPropagation(); next(); }}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
@@ -238,12 +192,8 @@ function Lightbox({ images, providerName, open, setOpen, activeIndex, setActiveI
       {images.length > 1 && (
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
           {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={e => { e.stopPropagation(); setActiveIndex(i); }}
-              className={`h-1.5 rounded-full transition-all duration-200 ${i === activeIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/40'}`}
-              aria-label={`Go to photo ${i + 1}`}
-            />
+            <button key={i} onClick={e => { e.stopPropagation(); setActiveIndex(i); }}
+              className={`h-1.5 rounded-full transition-all duration-200 ${i === activeIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/40'}`} />
           ))}
         </div>
       )}
