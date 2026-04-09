@@ -103,8 +103,15 @@ const DTLA_SLUG = 'dtla-print-los-angeles-ca';
 
 function getProvidersForService(filterValue: string): Provider[] {
   const results = seedProviders.filter((p) =>
-    p.servicesOffered.some((s) => s.toLowerCase() === filterValue.toLowerCase()),
+    (p.servicesOffered || []).some((s) => s?.toLowerCase() === filterValue.toLowerCase()),
   );
+
+  // Sort by rating * log(reviews) for best results first
+  results.sort((a, b) => {
+    const scoreA = (a.rating || 0) * Math.log((a.reviewCount || 0) + 1);
+    const scoreB = (b.rating || 0) * Math.log((b.reviewCount || 0) + 1);
+    return scoreB - scoreA;
+  });
 
   // Pin DTLA Print first
   const dtlaIndex = results.findIndex((p) => p.slug === DTLA_SLUG);
@@ -116,7 +123,7 @@ function getProvidersForService(filterValue: string): Provider[] {
     if (dtla) results.unshift(dtla);
   }
 
-  return results;
+  return results.slice(0, 60);
 }
 
 function getRelatedServices(currentSlug: string): ServiceInfo[] {
