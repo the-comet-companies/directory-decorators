@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
     const addedPath = path.join(process.cwd(), 'companies', 'added-companies.json')
     if (fs.existsSync(addedPath)) {
       const addedData = JSON.parse(fs.readFileSync(addedPath, 'utf-8'))
-      const addedIdx = addedData.findIndex((c: { id?: string; name?: string }) => {
+      const addedIdx = addedData.findIndex((c: Record<string, string>) => {
         const s = `${(c.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${(c.city || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${(c.state || '').toLowerCase()}`
         return s === slug || c.id === slug
       })
