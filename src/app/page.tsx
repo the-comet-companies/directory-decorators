@@ -34,7 +34,7 @@ function buildDynamicTitle(params: Record<string, string | string[] | undefined>
     return `${parts.join(' ')} — Compare Top Providers 2026 | Print Services Hub USA`
   }
 
-  return 'Find the Best Printing Companies Near You | Compare 596+ Providers 2026'
+  return 'Find the Best Printing Companies Near You | Compare 15,000+ Providers 2026'
 }
 
 function buildDynamicDescription(params: Record<string, string | string[] | undefined>): string {
@@ -52,7 +52,7 @@ function buildDynamicDescription(params: Record<string, string | string[] | unde
     return `Search results for "${search}" — compare top-rated printing companies with reviews, pricing, and turnaround times. Updated 2026.`
   }
 
-  return 'Compare 596+ top-rated printing companies across all 50 states. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.'
+  return 'Compare 15,000+ top-rated printing companies across all 50 states. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.'
 }
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {

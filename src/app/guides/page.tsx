@@ -104,7 +104,7 @@ export default function GuidesPage() {
         {/* CTA */}
         <div className="mt-12 rounded-2xl bg-brand-600 px-6 py-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Ready to find a printer?</h2>
-          <p className="text-brand-100 mb-6 max-w-md mx-auto">Browse 596+ verified printing companies and compare services, pricing, and reviews.</p>
+          <p className="text-brand-100 mb-6 max-w-md mx-auto">Browse 15,000+ verified printing companies and compare services, pricing, and reviews.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/" className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors">
               Browse Printers

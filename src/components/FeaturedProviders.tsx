@@ -19,7 +19,8 @@ function getDomain(website: string): string | null {
 function LogoIcon({ provider }: { provider: Provider }) {
   const [error, setError] = useState(false);
   const domain = provider.website ? getDomain(provider.website) : null;
-  const logoUrl = domain ? `https://logo.clearbit.com/${domain}` : null;
+  const clearbitUrl = domain ? `https://logo.clearbit.com/${domain}` : null;
+  const logoUrl = provider.logoImage || clearbitUrl;
 
   if (logoUrl && !error) {
     return (

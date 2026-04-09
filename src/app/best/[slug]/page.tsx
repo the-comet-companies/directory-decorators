@@ -4,6 +4,7 @@ import { getAllProviders } from '@/lib/data'
 import { Provider } from '@/lib/types'
 import dynamic from 'next/dynamic'
 import Footer from '@/components/Footer'
+import { fullStateName } from '@/lib/states'
 import Image from 'next/image'
 
 const BestOfFilters = dynamic(() => import('@/components/BestOfFilters'))
@@ -55,10 +56,10 @@ function getProviders(serviceName: string, city: string, state: string): Provide
   const all = getAllProviders()
   return all
     .filter(p =>
-      p.servicesOffered.some(s => s.toLowerCase().includes(serviceName.toLowerCase())) &&
-      (p.city.toLowerCase() === city.toLowerCase() ||
-       p.serviceArea[0]?.toLowerCase() === city.toLowerCase()) &&
-      p.serviceArea[1] === state
+      (p.servicesOffered || []).some(s => s?.toLowerCase().includes(serviceName.toLowerCase())) &&
+      ((p.city || '').toLowerCase() === city.toLowerCase() ||
+       (p.serviceArea?.[0] || '').toLowerCase() === city.toLowerCase()) &&
+      p.serviceArea?.[1] === state
     )
     .sort((a, b) => {
       const scoreA = a.rating * Math.log(a.reviewCount + 1)
@@ -194,7 +195,7 @@ export default async function BestOfPage({ params }: PageProps) {
                     </div>
                   </div>
 
-                  <p className="text-xs text-surface-500 mt-0.5">{provider.neighborhood}, {provider.city}</p>
+                  <p className="text-xs text-surface-500 mt-0.5">{[fullStateName(provider.serviceArea?.[1]), provider.city].filter(Boolean).join(', ')}</p>
                   <p className="text-sm text-surface-600 mt-1.5 line-clamp-2">{provider.shortSummary}</p>
 
                   <div className="flex flex-wrap gap-1.5 mt-2">

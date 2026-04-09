@@ -47,7 +47,7 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; href: 
   },
   {
     keywords: ['states', 'what states', 'coverage', 'nationwide', 'locations', 'where'],
-    answer: 'We cover all 50 states with 596+ verified printing companies! Our biggest directories are in California, New York, Texas, Florida, Massachusetts, Oregon, and Ohio.',
+    answer: 'We cover all 50 states with 15,000+ verified printing companies! Our biggest directories are in California, New York, Texas, Florida, Massachusetts, Oregon, and Ohio.',
     links: [{ label: 'Browse by State', href: '/' }],
   },
   {

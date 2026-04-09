@@ -78,32 +78,32 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
   if (filters.search) {
     const q = filters.search.toLowerCase();
     results = results.filter(p =>
-      p.name.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
-      p.servicesOffered.some(s => s.toLowerCase().includes(q)) ||
-      p.productCategories.some(c => c.toLowerCase().includes(q)) ||
-      p.neighborhood.toLowerCase().includes(q)
+      (p.name || '').toLowerCase().includes(q) ||
+      (p.description || '').toLowerCase().includes(q) ||
+      (p.servicesOffered || []).some(s => (s || '').toLowerCase().includes(q)) ||
+      (p.productCategories || []).some(c => (c || '').toLowerCase().includes(q)) ||
+      (p.neighborhood || '').toLowerCase().includes(q)
     );
   }
 
   // Service type
   if (filters.serviceType?.length) {
     results = results.filter(p =>
-      filters.serviceType!.some(s => p.servicesOffered.includes(s))
+      filters.serviceType!.some(s => (p.servicesOffered || []).includes(s))
     );
   }
 
   // Screen printing subtype (filter on printingMethods)
   if (filters.screenPrintingType?.length) {
     results = results.filter(p =>
-      filters.screenPrintingType!.some(t => p.printingMethods.includes(t))
+      filters.screenPrintingType!.some(t => (p.printingMethods || []).includes(t))
     );
   }
 
   // Product type
   if (filters.productType?.length) {
     results = results.filter(p =>
-      filters.productType!.some(pt => p.productCategories.includes(pt))
+      filters.productType!.some(pt => (p.productCategories || []).includes(pt))
     );
   }
 

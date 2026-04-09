@@ -1,6 +1,7 @@
 'use client';
 
 import { Provider } from '@/lib/types';
+import { fullStateName } from '@/lib/states';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -121,7 +122,7 @@ export default function ProviderCard({ provider, index, priority = false }: Prov
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <span>{provider.neighborhood}, {provider.city}</span>
+          <span>{[fullStateName(provider.serviceArea?.[1]), provider.city].filter(Boolean).join(', ')}</span>
         </div>
 
         {/* Summary */}

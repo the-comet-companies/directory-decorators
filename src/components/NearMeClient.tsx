@@ -11,7 +11,6 @@ import {
 } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import companiesData from '@/lib/companies.json'
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -61,13 +60,6 @@ const US_STATES = [
   'Virginia','Washington','West Virginia','Wisconsin','Wyoming',
 ]
 
-const companies = companiesData as unknown as Company[]
-
-// Derive unique filter values from the data
-const ALL_SERVICES = [...new Set(companies.flatMap(c => c.servicesOffered))].sort()
-const ALL_PRODUCT_CATS = [...new Set(companies.flatMap(c => c.productCategories))].sort()
-const ALL_PRINTING_METHODS = [...new Set(companies.flatMap(c => c.printingMethods))].sort()
-
 // Map full state names to abbreviations
 const STATE_ABBR: Record<string, string> = {
   'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
@@ -82,24 +74,9 @@ const STATE_ABBR: Record<string, string> = {
   'Virginia':'VA','Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY',
 }
 
-// Build full state name → cities map from company data
-const STATE_CITIES: Record<string, string[]> = {}
-for (const c of companies) {
-  const sa = c.serviceArea
-  if (sa && sa.length >= 2) {
-    const abbr = sa[1]
-    const city = sa[0] || c.city
-    // Find the full state name for this abbreviation
-    const fullState = Object.entries(STATE_ABBR).find(([, a]) => a === abbr)?.[0]
-    if (fullState && city) {
-      if (!STATE_CITIES[fullState]) STATE_CITIES[fullState] = []
-      if (!STATE_CITIES[fullState].includes(city)) STATE_CITIES[fullState].push(city)
-    }
-  }
-}
-for (const st of Object.keys(STATE_CITIES)) {
-  STATE_CITIES[st].sort()
-}
+const ABBR_TO_STATE: Record<string, string> = Object.fromEntries(
+  Object.entries(STATE_ABBR).map(([k, v]) => [v, k])
+)
 
 const MOQ_OPTIONS = [
   { label: 'No minimum', value: '1' },
@@ -217,10 +194,16 @@ function NearMeFilterBar({
   filters,
   onChange,
   onClear,
+  allServices,
+  allProducts,
+  allMethods,
 }: {
   filters: NearMeFilters
   onChange: (f: NearMeFilters) => void
   onClear: () => void
+  allServices: string[]
+  allProducts: string[]
+  allMethods: string[]
 }) {
   const [openGroup, setOpenGroup] = useState<string | null>(null)
   const barRef = useRef<HTMLDivElement>(null)
@@ -252,7 +235,7 @@ function NearMeFilterBar({
       {/* Service Type */}
       <DropdownPill label="Service Type" isActive={filters.serviceType.length > 0} isOpen={openGroup === 'service'} onToggle={() => setOpenGroup(openGroup === 'service' ? null : 'service')}>
         <div className="space-y-0.5 min-w-[200px]">
-          {ALL_SERVICES.map(s => (
+          {allServices.map(s => (
             <CheckboxItem key={s} label={s} checked={filters.serviceType.includes(s)} onChange={() => toggleArray('serviceType', s)} />
           ))}
         </div>
@@ -261,7 +244,7 @@ function NearMeFilterBar({
       {/* Printing Method */}
       <DropdownPill label="Printing Method" isActive={filters.printingMethod.length > 0} isOpen={openGroup === 'method'} onToggle={() => setOpenGroup(openGroup === 'method' ? null : 'method')}>
         <div className="space-y-0.5 min-w-[210px]">
-          {ALL_PRINTING_METHODS.map(m => (
+          {allMethods.map(m => (
             <CheckboxItem key={m} label={m} checked={filters.printingMethod.includes(m)} onChange={() => toggleArray('printingMethod', m)} />
           ))}
         </div>
@@ -270,7 +253,7 @@ function NearMeFilterBar({
       {/* Product Type */}
       <DropdownPill label="Product Type" isActive={filters.productType.length > 0} isOpen={openGroup === 'product'} onToggle={() => setOpenGroup(openGroup === 'product' ? null : 'product')}>
         <div className="space-y-0.5 min-w-[180px] max-h-[300px] overflow-y-auto">
-          {ALL_PRODUCT_CATS.map(c => (
+          {allProducts.map(c => (
             <CheckboxItem key={c} label={c} checked={filters.productType.includes(c)} onChange={() => toggleArray('productType', c)} />
           ))}
         </div>
@@ -348,7 +331,7 @@ function NearMeFilterBar({
 
 function makeMarkerIcon(selected: boolean, _price: number | null) {
   const color = selected ? '#F8843F' : '#dc2626'
-  const size = selected ? 38 : 30
+  const size = selected ? 30 : 20
   return L.divIcon({
     html: `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));transform:${selected ? 'scale(1.2)' : 'scale(1)'};transition:transform .15s;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>`,
     className: '',
@@ -388,6 +371,7 @@ function FilterBar({
   onRadiusChange,
   sortBy,
   onSortChange,
+  stateCities,
 }: {
   onSearch: (q: { query: string; state: string; radius: number }) => void
   onLocate: () => void
@@ -396,11 +380,12 @@ function FilterBar({
   onRadiusChange: (r: number) => void
   sortBy: SortKey
   onSortChange: (s: SortKey) => void
+  stateCities: Record<string, string[]>
 }) {
   const [query, setQuery] = useState('')
   const [state, setState] = useState('')
 
-  const cities = state ? (STATE_CITIES[state] || []) : []
+  const cities = state ? (stateCities[state] || []) : []
 
   const handleStateChange = (newState: string) => {
     setState(newState)
@@ -650,8 +635,8 @@ function MapView({
 }) {
   return (
     <MapContainer
-      center={[34.0, -118.0]}
-      zoom={9}
+      center={[34.0, -118.25]}
+      zoom={15}
       style={{ width: '100%', height: '100%' }}
       zoomControl
     >
@@ -703,6 +688,8 @@ function MapView({
 
 export default function NearMeClient() {
   const [bounds, setBounds] = useState<Bounds | null>(null)
+  const [companies, setCompanies] = useState<Company[]>([])
+  const [totalInArea, setTotalInArea] = useState(0)
   const [selected, setSelected] = useState<Company | null>(null)
   const [focusTarget, setFocusTarget] = useState<{ lat: number; lng: number; zoom?: number } | null>(null)
   const [searchCenter, setSearchCenter] = useState<{ lat: number; lng: number } | null>(null)
@@ -714,6 +701,54 @@ export default function NearMeClient() {
   const [geoError, setGeoError] = useState('')
   const listRef = useRef<HTMLDivElement>(null)
 
+  // Filter options from API
+  const [allServices, setAllServices] = useState<string[]>([])
+  const [allProducts, setAllProducts] = useState<string[]>([])
+  const [allMethods, setAllMethods] = useState<string[]>([])
+  const [stateCities, setStateCities] = useState<Record<string, string[]>>({})
+
+  // Load filter options once
+  useEffect(() => {
+    fetch('/api/near-me-filters')
+      .then(r => r.json())
+      .then(data => {
+        setAllServices(data.services || [])
+        setAllProducts(data.products || [])
+        setAllMethods(data.methods || [])
+        // Convert abbreviation-keyed stateCities to full state name keys
+        const sc: Record<string, string[]> = {}
+        for (const [abbr, cities] of Object.entries(data.stateCities || {})) {
+          const fullName = ABBR_TO_STATE[abbr] || abbr
+          sc[fullName] = cities as string[]
+        }
+        setStateCities(sc)
+      })
+      .catch(() => {})
+  }, [])
+
+  // Fetch companies when bounds change
+  const fetchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(() => {
+    if (!bounds) return
+    if (fetchTimerRef.current) clearTimeout(fetchTimerRef.current)
+    fetchTimerRef.current = setTimeout(() => {
+      const params = new URLSearchParams({
+        n: String(bounds.n),
+        s: String(bounds.s),
+        e: String(bounds.e),
+        w: String(bounds.w),
+        limit: '50',
+      })
+      fetch(`/api/near-me?${params}`)
+        .then(r => r.json())
+        .then(data => {
+          setCompanies(data.companies || [])
+          setTotalInArea(data.total || 0)
+        })
+        .catch(() => {})
+    }, 500) // debounce 500ms
+  }, [bounds])
+
   const handleRadiusChange = useCallback((r: number) => {
     setRadius(r)
     if (searchCenter) {
@@ -723,14 +758,8 @@ export default function NearMeClient() {
   }, [searchCenter])
 
   const visible = useMemo(() => {
-    let list = companies
-    if (bounds) {
-      list = list.filter(c => {
-        const { lat, lng } = c.coordinates
-        return lat >= bounds.s && lat <= bounds.n && lng >= bounds.w && lng <= bounds.e
-      })
-    }
-    // Apply filters
+    let list = [...companies]
+    // Apply client-side filters on the already-bounded data from API
     if (filters.serviceType.length > 0) {
       list = list.filter(c => filters.serviceType.some(s => c.servicesOffered?.includes(s)))
     }
@@ -765,12 +794,12 @@ export default function NearMeClient() {
       list = list.filter(c => c.delivery)
     }
 
-    return [...list].sort((a, b) => {
+    return list.sort((a, b) => {
       if (sortBy === 'rating') return b.rating - a.rating
       if (sortBy === 'reviews') return b.reviewCount - a.reviewCount
-      return a.name.localeCompare(b.name)
+      return (a.name || '').localeCompare(b.name || '')
     })
-  }, [bounds, sortBy, filters])
+  }, [companies, sortBy, filters])
 
   const handleMarkerClick = useCallback((c: Company) => {
     setSelected(c)
@@ -842,7 +871,7 @@ export default function NearMeClient() {
               <p className="text-sm text-surface-500 mt-0.5">
                 Showing{' '}
                 <span className="font-semibold text-surface-700">{visible.length}</span>{' '}
-                printing {visible.length === 1 ? 'company' : 'companies'} in this area
+                of {totalInArea} printing {totalInArea === 1 ? 'company' : 'companies'} in this area
               </p>
             </div>
           </div>
@@ -856,6 +885,7 @@ export default function NearMeClient() {
             onRadiusChange={handleRadiusChange}
             sortBy={sortBy}
             onSortChange={setSortBy}
+            stateCities={stateCities}
           />
 
           {/* Browse-style filters */}
@@ -864,6 +894,9 @@ export default function NearMeClient() {
               filters={filters}
               onChange={setFilters}
               onClear={() => setFilters(EMPTY_FILTERS)}
+              allServices={allServices}
+              allProducts={allProducts}
+              allMethods={allMethods}
             />
           </div>
 
@@ -919,7 +952,7 @@ export default function NearMeClient() {
         {/* Map — 30% */}
         <div className="w-1/2 relative border-l border-surface-200">
           <MapView
-            companies={companies}
+            companies={visible}
             selected={selected}
             focusTarget={focusTarget}
             onBoundsChange={setBounds}
