@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { getAllProviders } from '@/lib/data'
 
 export async function GET() {
-  const all = getAllProviders()
+  const all = await getAllProviders()
 
   const providers = all.map(p => ({
     name: p.name,

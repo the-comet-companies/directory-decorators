@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import ProviderCard from '@/components/ProviderCard';
 import { getClaimedSlugs } from '@/lib/db';
-import { providers as seedProviders } from '@/lib/seed-data';
+import { getProvidersForService } from '@/lib/data';
 import { Provider } from '@/lib/types';
 import Link from 'next/link';
 
@@ -96,36 +96,9 @@ const SERVICE_MAP: Record<string, ServiceInfo> = {
 
 const ALL_SERVICES = Object.values(SERVICE_MAP);
 
-const DTLA_SLUG = 'dtla-print-los-angeles-ca';
-
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
-
-function getProvidersForService(filterValue: string): Provider[] {
-  const results = seedProviders.filter((p) =>
-    (p.servicesOffered || []).some((s) => s?.toLowerCase() === filterValue.toLowerCase()),
-  );
-
-  // Sort by rating * log(reviews) for best results first
-  results.sort((a, b) => {
-    const scoreA = (a.rating || 0) * Math.log((a.reviewCount || 0) + 1);
-    const scoreB = (b.rating || 0) * Math.log((b.reviewCount || 0) + 1);
-    return scoreB - scoreA;
-  });
-
-  // Pin DTLA Print first
-  const dtlaIndex = results.findIndex((p) => p.slug === DTLA_SLUG);
-  if (dtlaIndex > 0) {
-    const [dtla] = results.splice(dtlaIndex, 1);
-    results.unshift(dtla);
-  } else if (dtlaIndex === -1) {
-    const dtla = seedProviders.find((p) => p.slug === DTLA_SLUG);
-    if (dtla) results.unshift(dtla);
-  }
-
-  return results.slice(0, 60);
-}
 
 function getRelatedServices(currentSlug: string): ServiceInfo[] {
   return ALL_SERVICES.filter((s) => s.slug !== currentSlug).slice(0, 6);
@@ -162,7 +135,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICE_MAP[slug];
   if (!service) return {};
 
-  const providers = getProvidersForService(service.filterValue);
+  const providers = await getProvidersForService(service.filterValue);
   const count = providers.length;
 
   const title = `Best ${service.name} Services — Compare ${count}+ Top-Rated Companies 2026`;
@@ -192,7 +165,7 @@ export default async function ServicePage({ params }: PageProps) {
   const service = SERVICE_MAP[slug];
   if (!service) notFound();
 
-  const providers = getProvidersForService(service.filterValue);
+  const providers = await getProvidersForService(service.filterValue);
   const relatedServices = getRelatedServices(slug);
   const claimedSlugs = await getClaimedSlugs();
 

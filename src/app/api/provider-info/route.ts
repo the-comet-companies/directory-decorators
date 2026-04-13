@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
   // Single slug lookup
   const slug = req.nextUrl.searchParams.get('slug')
   if (slug) {
-    const p = getProviderBySlug(slug)
+    const p = await getProviderBySlug(slug)
     if (!p) return NextResponse.json({ error: 'Not found' }, { status: 404 })
 
     return NextResponse.json({
@@ -18,8 +18,8 @@ export async function GET(req: NextRequest) {
 
   // Multi slug lookup
   const slugs = req.nextUrl.searchParams.get('slugs')?.split(',').filter(Boolean) || []
-  const providers = slugs.map(s => {
-    const p = getProviderBySlug(s)
+  const providers = (await Promise.all(slugs.map(async s => {
+    const p = await getProviderBySlug(s)
     if (!p) return null
     return {
       name: p.name,
@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
       city: `${p.city}, ${p.serviceArea?.[1] || ''}`,
       hasEmail: !!(p.email?.trim()),
     }
-  }).filter(Boolean)
+  }))).filter(Boolean)
 
   return NextResponse.json({ providers })
 }

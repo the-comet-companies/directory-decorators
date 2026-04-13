@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 400 })
     }
 
-    const provider = getProviderBySlug(slug)
+    const provider = await getProviderBySlug(slug)
     if (!provider) {
       return NextResponse.json({ ok: false, error: 'Business not found.' }, { status: 404 })
     }

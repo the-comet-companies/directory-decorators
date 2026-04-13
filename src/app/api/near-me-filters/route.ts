@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { getAllProviders } from '@/lib/data'
 
 export async function GET() {
-  const all = getAllProviders()
+  const all = await getAllProviders()
 
   const services = new Set<string>()
   const products = new Set<string>()

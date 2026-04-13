@@ -16,8 +16,8 @@ const SERVICE_SLUGS = [
   'custom-apparel',
 ]
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const providerSlugs = getAllProviderSlugs()
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const providerSlugs = await getAllProviderSlugs()
   const stateSlugs = getAllStateSlugs()
   const citySlugs = getAllCitySlugs()
 

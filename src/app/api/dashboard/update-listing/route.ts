@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
 import { getAuthUser } from '@/lib/auth'
 import { getUserByEmail } from '@/lib/db'
 import { getProviderBySlug } from '@/lib/data'
+import { supabase } from '@/lib/supabase'
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,53 +19,47 @@ export async function POST(req: NextRequest) {
     const updates = await req.json()
     const slug = user.claimedBusinessSlug
 
-    // Check which file the provider lives in
-    const provider = getProviderBySlug(slug)
+    const provider = await getProviderBySlug(slug)
     if (!provider) {
       return NextResponse.json({ ok: false, error: 'Business not found.' }, { status: 404 })
     }
 
-    const allowed = [
-      'name', 'description', 'shortSummary', 'address', 'phone', 'email',
-      'website', 'servicesOffered', 'productCategories', 'printingMethods',
-      'moq', 'turnaroundDays', 'rushAvailable', 'pickup', 'delivery',
-      'ecoFriendly', 'coverImage', 'galleryImages', 'logoImage',
-      'bulkOrders', 'smallBatch', 'customDesign', 'onlineOrdering',
-      'nationwideShipping', 'freeQuotes', 'sameDayPrinting',
-    ]
+    // Map camelCase updates to snake_case for Supabase
+    const row: Record<string, unknown> = {}
+    if (updates.name !== undefined) row.name = updates.name
+    if (updates.description !== undefined) row.description = updates.description
+    if (updates.shortSummary !== undefined) row.short_summary = updates.shortSummary
+    if (updates.address !== undefined) row.address = updates.address
+    if (updates.phone !== undefined) row.phone = updates.phone
+    if (updates.email !== undefined) row.email = updates.email
+    if (updates.website !== undefined) row.website = updates.website
+    if (updates.servicesOffered !== undefined) row.services_offered = updates.servicesOffered
+    if (updates.productCategories !== undefined) row.product_categories = updates.productCategories
+    if (updates.printingMethods !== undefined) row.printing_methods = updates.printingMethods
+    if (updates.moq !== undefined) row.moq = updates.moq
+    if (updates.turnaroundDays !== undefined) row.turnaround_days = updates.turnaroundDays
+    if (updates.rushAvailable !== undefined) row.rush_available = updates.rushAvailable
+    if (updates.pickup !== undefined) row.pickup = updates.pickup
+    if (updates.delivery !== undefined) row.delivery = updates.delivery
+    if (updates.ecoFriendly !== undefined) row.eco_friendly = updates.ecoFriendly
+    if (updates.coverImage !== undefined) row.cover_image = updates.coverImage
+    if (updates.galleryImages !== undefined) row.gallery_images = updates.galleryImages
+    if (updates.logoImage !== undefined) row.logo_image = updates.logoImage
+    if (updates.bulkOrders !== undefined) row.bulk_orders = updates.bulkOrders
+    if (updates.smallBatch !== undefined) row.small_batch = updates.smallBatch
+    if (updates.customDesign !== undefined) row.custom_design = updates.customDesign
+    if (updates.onlineOrdering !== undefined) row.online_ordering = updates.onlineOrdering
+    if (updates.nationwideShipping !== undefined) row.nationwide_shipping = updates.nationwideShipping
+    if (updates.freeQuotes !== undefined) row.free_quotes = updates.freeQuotes
+    if (updates.sameDayPrinting !== undefined) row.same_day_printing = updates.sameDayPrinting
 
-    // Try main companies.json first
-    const mainPath = path.join(process.cwd(), 'src', 'lib', 'companies.json')
-    const mainData = JSON.parse(fs.readFileSync(mainPath, 'utf-8'))
-    const mainIdx = mainData.findIndex((c: { slug?: string; id?: string }) => c.slug === slug || c.id === slug)
-
-    if (mainIdx !== -1) {
-      for (const key of allowed) {
-        if (updates[key] !== undefined) mainData[mainIdx][key] = updates[key]
-      }
-      fs.writeFileSync(mainPath, JSON.stringify(mainData, null, 2), 'utf-8')
-      return NextResponse.json({ ok: true })
+    const { error } = await supabase.from('companies').update(row).eq('slug', slug)
+    if (error) {
+      console.error('Supabase update error:', error)
+      return NextResponse.json({ ok: false, error: 'Failed to update.' }, { status: 500 })
     }
 
-    // Try added-companies.json
-    const addedPath = path.join(process.cwd(), 'companies', 'added-companies.json')
-    if (fs.existsSync(addedPath)) {
-      const addedData = JSON.parse(fs.readFileSync(addedPath, 'utf-8'))
-      const addedIdx = addedData.findIndex((c: Record<string, string>) => {
-        const s = `${(c.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${(c.city || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${(c.state || '').toLowerCase()}`
-        return s === slug || c.id === slug
-      })
-
-      if (addedIdx !== -1) {
-        for (const key of allowed) {
-          if (updates[key] !== undefined) addedData[addedIdx][key] = updates[key]
-        }
-        fs.writeFileSync(addedPath, JSON.stringify(addedData, null, 2), 'utf-8')
-        return NextResponse.json({ ok: true })
-      }
-    }
-
-    return NextResponse.json({ ok: false, error: 'Could not find business in data files.' }, { status: 404 })
+    return NextResponse.json({ ok: true })
   } catch (err) {
     console.error('Update listing error:', err)
     return NextResponse.json({ ok: false, error: 'Failed to update listing.' }, { status: 500 })

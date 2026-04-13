@@ -15,7 +15,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const provider = getProviderBySlug(slug);
+  const provider = await getProviderBySlug(slug);
   if (!provider) return {};
 
   const state = provider.serviceArea[1] || '';
@@ -45,10 +45,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ProviderDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const provider = getProviderBySlug(slug);
+  const provider = await getProviderBySlug(slug);
   if (!provider) notFound();
 
-  const related = getRelatedProviders(slug);
+  const related = await getRelatedProviders(slug);
   const claimed = await isBusinessClaimed(slug);
 
 

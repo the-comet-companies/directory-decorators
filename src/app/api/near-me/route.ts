@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   const w = parseFloat(params.get('w') || '-180')
   const limit = Math.min(parseInt(params.get('limit') || '200'), 500)
 
-  const all = getAllProviders()
+  const all = await getAllProviders()
 
   const filtered = all.filter(p => {
     const lat = p.coordinates?.lat

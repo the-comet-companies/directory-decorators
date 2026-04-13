@@ -20,9 +20,9 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    const providers = providerSlugs
-      .map((slug: string) => getProviderBySlug(slug))
-      .filter(Boolean)
+    const providers = (await Promise.all(
+      providerSlugs.map((slug: string) => getProviderBySlug(slug))
+    )).filter(Boolean)
 
     if (providers.length === 0) {
       return NextResponse.json({ ok: false, error: 'No valid providers found.' }, { status: 400 })

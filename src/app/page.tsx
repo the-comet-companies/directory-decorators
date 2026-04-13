@@ -94,7 +94,7 @@ export default async function BrowsePage({ searchParams }: PageProps) {
   const currentSearch = (params.search as string) || '';
   const currentPage = parseInt((params.page as string) || '1', 10);
 
-  const { providers, total } = getProviders({
+  const { providers, total } = await getProviders({
     search: currentSearch,
     serviceType: activeFilters.serviceType as string[],
     screenPrintingType: activeFilters.screenPrintingType as string[],
@@ -115,7 +115,7 @@ export default async function BrowsePage({ searchParams }: PageProps) {
     page: currentPage,
   });
 
-  const featured = getFeaturedProviders();
+  const featured = await getFeaturedProviders();
 
   return (
     <>

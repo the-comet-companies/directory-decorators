@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'No claimed business.' }, { status: 404 })
     }
 
-    const provider = getProviderBySlug(user.claimedBusinessSlug)
+    const provider = await getProviderBySlug(user.claimedBusinessSlug)
     if (!provider) {
       return NextResponse.json({ ok: false, error: 'Business not found.' }, { status: 404 })
     }

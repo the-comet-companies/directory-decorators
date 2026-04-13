@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
 import nodemailer from 'nodemailer'
 import { getAuthUser } from '@/lib/auth'
+import { supabase } from '@/lib/supabase'
 import { getPendingListings, updatePendingListing, updateUser, getUserByEmail, createClaim } from '@/lib/db'
 
 export async function GET(req: NextRequest) {
@@ -59,38 +58,31 @@ export async function PATCH(req: NextRequest) {
       const abbr = stateAbbr[updated.state] || updated.state
       const slug = slugify(`${updated.businessName}-${updated.city}-${abbr}`)
 
-      const newCompany = {
+      // Insert into companies table in Supabase
+      await supabase.from('companies').insert({
         id: slug,
         name: updated.businessName,
+        slug,
         city: updated.city,
-        state: stateAbbr[updated.state] || updated.state,
-        address: updated.address,
+        state: abbr,
+        service_area: [updated.city, abbr],
+        address: updated.address || '',
         email: updated.email,
         phone: updated.phone,
-        website: updated.website,
+        website: updated.website || '',
         description: updated.description,
-        servicesOffered: updated.servicesOffered,
-        productCategories: updated.productCategories,
-        printingMethods: updated.printingMethods,
-        coverImage: updated.coverImage,
-        galleryImages: updated.galleryImages,
+        services_offered: updated.servicesOffered,
+        product_categories: updated.productCategories,
+        printing_methods: updated.printingMethods,
+        cover_image: updated.coverImage,
+        gallery_images: updated.galleryImages,
         moq: updated.moq,
-        turnaroundDays: updated.turnaroundDays,
-        rushAvailable: updated.rushAvailable,
+        turnaround_days: updated.turnaroundDays,
+        rush_available: updated.rushAvailable,
         pickup: updated.pickup,
         delivery: updated.delivery,
-        ecoFriendly: updated.ecoFriendly,
-        startingPrice: null,
-      }
-
-      // Add to added-companies.json
-      const addedPath = path.join(process.cwd(), 'companies', 'added-companies.json')
-      let addedData = []
-      try {
-        addedData = JSON.parse(fs.readFileSync(addedPath, 'utf-8'))
-      } catch { /* empty */ }
-      addedData.push(newCompany)
-      fs.writeFileSync(addedPath, JSON.stringify(addedData, null, 2), 'utf-8')
+        eco_friendly: updated.ecoFriendly,
+      })
 
       // Link user to business and auto-verify
       const user = await getUserByEmail(updated.userEmail)

@@ -52,8 +52,8 @@ function parseSlug(slug: string): { service: typeof SERVICES[0]; city: typeof TO
   return null
 }
 
-function getProviders(serviceName: string, city: string, state: string): Provider[] {
-  const all = getAllProviders()
+async function getProviders(serviceName: string, city: string, state: string): Promise<Provider[]> {
+  const all = await getAllProviders()
   return all
     .filter(p =>
       (p.servicesOffered || []).some(s => s?.toLowerCase().includes(serviceName.toLowerCase())) &&
@@ -118,7 +118,7 @@ export default async function BestOfPage({ params }: PageProps) {
   if (!parsed) notFound()
 
   const { service, city } = parsed
-  const providers = getProviders(service.filter, city.city, city.state)
+  const providers = await getProviders(service.filter, city.city, city.state)
   const intro = getIntro(service.name, city.city, city.state, providers.length || 10)
 
   // Related "best of" pages for this city

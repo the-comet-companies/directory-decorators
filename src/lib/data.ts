@@ -1,68 +1,6 @@
 import { Provider, FilterState, SortOption } from './types';
-import { providers as seedProviders, services, neighborhoods, productCategories } from './seed-data';
-import fs from 'fs';
-import path from 'path';
-
-function slugify(text: string) {
-  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-}
-
-function loadAddedCompanies(): Provider[] {
-  try {
-    const file = path.join(process.cwd(), 'companies', 'added-companies.json');
-    if (!fs.existsSync(file)) return [];
-    const raw = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    return (raw as Record<string, unknown>[]).map((c) => ({
-      id: String(c.id ?? ''),
-      name: String(c.name ?? ''),
-      slug: slugify(`${String(c.name ?? '')}-${String(c.city ?? '')}-${String(c.state ?? '')}`),
-      description: String(c.description ?? ''),
-      shortSummary: String(c.shortSummary ?? String(c.description ?? '').slice(0, 120)),
-      address: String(c.address ?? ''),
-      neighborhood: String(c.city ?? ''),
-      city: String(c.city ?? ''),
-      serviceArea: [String(c.city ?? ''), String(c.state ?? '')].filter(Boolean),
-      coordinates: { lat: 0, lng: 0 },
-      phone: String(c.phone ?? ''),
-      email: String(c.email ?? ''),
-      website: String(c.website ?? ''),
-      servicesOffered: Array.isArray(c.servicesOffered) ? c.servicesOffered as string[] : (Array.isArray(c.printingMethods) ? c.printingMethods as string[] : []),
-      productCategories: Array.isArray(c.productCategories) ? c.productCategories as string[] : [],
-      printingMethods: Array.isArray(c.printingMethods) ? c.printingMethods as string[] : [],
-      moq: Number(c.moq ?? 1),
-      turnaroundDays: Number(c.turnaroundDays ?? 7),
-      rushAvailable: Boolean(c.rushAvailable),
-      startingPrice: c.startingPrice != null ? Number(c.startingPrice) : null,
-      pricingTiers: [],
-      pickup: Boolean(c.pickup),
-      delivery: Boolean(c.delivery),
-      sustainabilityTags: [],
-      galleryImages: Array.isArray(c.galleryImages) ? c.galleryImages as string[] : [],
-      coverImage: String(c.coverImage ?? ''),
-      logoImage: String(c.logoImage ?? ''),
-      featured: false,
-      rating: 0,
-      reviewCount: 0,
-      reviews: [],
-      faqs: [],
-      seoTitle: String(c.name ?? ''),
-      seoDescription: String(c.description ?? ''),
-      createdAt: String(c.submittedAt ?? new Date().toISOString()),
-      customizationMethods: [],
-      ecoFriendly: Boolean(c.ecoFriendly),
-      finishingOptions: [],
-      bulkOrders: Boolean(c.bulkOrders),
-      smallBatch: Boolean(c.smallBatch),
-      customDesign: Boolean(c.customDesign),
-      onlineOrdering: Boolean(c.onlineOrdering),
-      freeQuotes: Boolean(c.freeQuotes),
-      nationwideShipping: Boolean(c.nationwideShipping),
-      sameDayPrinting: Boolean(c.sameDayPrinting),
-    }));
-  } catch {
-    return [];
-  }
-}
+import { services, neighborhoods, productCategories } from './seed-data';
+import { supabase } from './supabase';
 
 const SCREEN_PRINTING_TYPES = [
   'Puff Printing',
@@ -75,12 +13,74 @@ const SCREEN_PRINTING_TYPES = [
   'Foil Printing',
 ];
 
-export function getAllProviders(): Provider[] {
-  return [...seedProviders, ...loadAddedCompanies()];
+// ─── Row mapper ────────────────────────────────────────────────────────────
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function providerFromRow(row: any): Provider {
+  return {
+    id: row.id,
+    name: row.name || '',
+    slug: row.slug || '',
+    description: row.description || '',
+    shortSummary: row.short_summary || '',
+    address: row.address || '',
+    neighborhood: row.neighborhood || '',
+    city: row.city || '',
+    serviceArea: row.service_area || [],
+    coordinates: { lat: row.lat || 0, lng: row.lng || 0 },
+    phone: row.phone || '',
+    email: row.email || '',
+    website: row.website || '',
+    servicesOffered: row.services_offered || [],
+    productCategories: row.product_categories || [],
+    printingMethods: row.printing_methods || [],
+    moq: row.moq || 1,
+    turnaroundDays: row.turnaround_days || 7,
+    rushAvailable: !!row.rush_available,
+    startingPrice: row.starting_price,
+    pricingTiers: row.pricing_tiers || [],
+    pickup: !!row.pickup,
+    delivery: !!row.delivery,
+    sustainabilityTags: row.sustainability_tags || [],
+    galleryImages: row.gallery_images || [],
+    coverImage: row.cover_image || '',
+    logoImage: row.logo_image || '',
+    featured: !!row.featured,
+    rating: row.rating || 0,
+    reviewCount: row.review_count || 0,
+    reviews: row.reviews || [],
+    faqs: row.faqs || [],
+    seoTitle: row.seo_title || '',
+    seoDescription: row.seo_description || '',
+    createdAt: row.created_at || '',
+    customizationMethods: row.customization_methods || [],
+    ecoFriendly: !!row.eco_friendly,
+    finishingOptions: row.finishing_options || [],
+    sameDayPrinting: !!row.same_day_printing,
+    bulkOrders: !!row.bulk_orders,
+    smallBatch: !!row.small_batch,
+    customDesign: !!row.custom_design,
+    onlineOrdering: !!row.online_ordering,
+    freeQuotes: !!row.free_quotes,
+    nationwideShipping: !!row.nationwide_shipping,
+    contractPrinting: !!row.contract_printing,
+    dropshipping: !!row.dropshipping,
+  };
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+// ─── Queries ───────────────────────────────────────────────────────────────
+
+export async function getAllProviders(): Promise<Provider[]> {
+  const { data, error } = await supabase.from('companies').select('*');
+  if (error || !data) return [];
+  return data.map(providerFromRow);
 }
 
-export function getProviders(filters: Partial<FilterState>): { providers: Provider[]; total: number } {
-  let results = [...seedProviders, ...loadAddedCompanies()];
+export async function getProviders(filters: Partial<FilterState>): Promise<{ providers: Provider[]; total: number }> {
+  // For complex search with relevance scoring, we load and score in JS
+  // This keeps the same relevance algorithm as before
+  let results = await getAllProviders();
 
   // Search with relevance scoring
   if (filters.search) {
@@ -95,45 +95,35 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
         const neighborhood = (p.neighborhood || '').toLowerCase();
         const description = (p.description || '').toLowerCase();
         const state = ((p.serviceArea || [])[1] || '').toLowerCase();
-        const services = (p.servicesOffered || []).map(s => (s || '').toLowerCase());
+        const srvcs = (p.servicesOffered || []).map(s => (s || '').toLowerCase());
         const products = (p.productCategories || []).map(c => (c || '').toLowerCase());
 
-        // Exact name match (highest priority)
         if (name === q) score += 100;
-        // Name starts with query
         else if (name.startsWith(q)) score += 80;
-        // Name contains full query
         else if (name.includes(q)) score += 60;
-        // All words appear in name
         else if (words.every(w => name.includes(w))) score += 50;
 
-        // City/location match
         if (city === q || city.includes(q)) score += 40;
         if (state === q) score += 35;
         if (neighborhood.includes(q)) score += 30;
 
-        // Service match
-        if (services.some(s => s === q)) score += 25;
-        if (services.some(s => s.includes(q))) score += 20;
+        if (srvcs.some(s => s === q)) score += 25;
+        if (srvcs.some(s => s.includes(q))) score += 20;
 
-        // Product match
         if (products.some(c => c === q)) score += 15;
         if (products.some(c => c.includes(q))) score += 10;
 
-        // Description match (lowest priority)
         if (description.includes(q)) score += 5;
 
-        // Individual word matches (for multi-word queries)
         if (words.length > 1) {
           for (const w of words) {
             if (name.includes(w)) score += 8;
             if (city.includes(w)) score += 5;
-            if (services.some(s => s.includes(w))) score += 3;
+            if (srvcs.some(s => s.includes(w))) score += 3;
             if (products.some(c => c.includes(w))) score += 2;
           }
         }
 
-        // Bonus for rating (small tiebreaker)
         score += (p.rating || 0) * 0.5;
 
         return { provider: p, score };
@@ -150,7 +140,7 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
     );
   }
 
-  // Screen printing subtype (filter on printingMethods)
+  // Screen printing subtype
   if (filters.screenPrintingType?.length) {
     results = results.filter(p =>
       filters.screenPrintingType!.some(t => (p.printingMethods || []).includes(t))
@@ -182,17 +172,9 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
     }
   }
 
-  // Rush available
-  if (filters.rushAvailable === true) {
-    results = results.filter(p => p.rushAvailable);
-  }
+  if (filters.rushAvailable === true) results = results.filter(p => p.rushAvailable);
+  if (filters.ecoFriendly === true) results = results.filter(p => p.ecoFriendly);
 
-  // Eco-friendly
-  if (filters.ecoFriendly === true) {
-    results = results.filter(p => p.ecoFriendly);
-  }
-
-  // Fulfillment (pickup / delivery / nationwide shipping)
   if (filters.fulfillment?.length) {
     results = results.filter(p => {
       if (filters.fulfillment!.includes('Pickup') && !p.pickup) return false;
@@ -202,30 +184,18 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
     });
   }
 
-  // Feature filters
-  if (filters.bulkOrders === true) {
-    results = results.filter(p => p.bulkOrders);
-  }
-  if (filters.smallBatch === true) {
-    results = results.filter(p => p.smallBatch);
-  }
-  if (filters.customDesign === true) {
-    results = results.filter(p => p.customDesign);
-  }
-  if (filters.onlineOrdering === true) {
-    results = results.filter(p => p.onlineOrdering);
-  }
-  if (filters.nationwideShipping === true) {
-    results = results.filter(p => p.nationwideShipping);
-  }
+  if (filters.bulkOrders === true) results = results.filter(p => p.bulkOrders);
+  if (filters.smallBatch === true) results = results.filter(p => p.smallBatch);
+  if (filters.customDesign === true) results = results.filter(p => p.customDesign);
+  if (filters.onlineOrdering === true) results = results.filter(p => p.onlineOrdering);
+  if (filters.nationwideShipping === true) results = results.filter(p => p.nationwideShipping);
 
-  // Rating
   if (filters.rating) {
     const minRating = parseFloat(filters.rating);
     results = results.filter(p => p.rating >= minRating);
   }
 
-  // Sort (skip if search already ranked by relevance)
+  // Sort
   const sort = (filters.sort || 'recommended') as SortOption;
   const isSearching = !!(filters.search?.trim());
   switch (sort) {
@@ -233,7 +203,6 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
       if (!isSearching) {
         results.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || b.rating - a.rating);
       }
-      // When searching, results are already sorted by relevance
       break;
     case 'fastest':
       results.sort((a, b) => a.turnaroundDays - b.turnaroundDays);
@@ -257,15 +226,15 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
       break;
   }
 
-  // Always pin DTLA Print as #1 — this is the site's primary business goal
+  // Pin DTLA Print as #1
   const DTLA_SLUG = 'dtla-print-los-angeles-ca';
   const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
   if (dtlaIndex > 0) {
     const [dtla] = results.splice(dtlaIndex, 1);
     results.unshift(dtla);
   } else if (dtlaIndex === -1) {
-    const dtla = seedProviders.find(p => p.slug === DTLA_SLUG);
-    if (dtla) results.unshift(dtla);
+    const { data: dtlaRow } = await supabase.from('companies').select('*').eq('slug', DTLA_SLUG).maybeSingle();
+    if (dtlaRow) results.unshift(providerFromRow(dtlaRow));
   }
 
   const total = results.length;
@@ -276,20 +245,41 @@ export function getProviders(filters: Partial<FilterState>): { providers: Provid
   return { providers: paginated, total };
 }
 
-export function getFeaturedProviders(): Provider[] {
-  return seedProviders.filter(p => p.featured);
+export async function getFeaturedProviders(): Promise<Provider[]> {
+  const { data, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('featured', true);
+  if (error || !data) return [];
+  return data.map(providerFromRow);
 }
 
-export function getProviderBySlug(slug: string): Provider | undefined {
-  return getAllProviders().find(p => p.slug === slug);
+export async function getProviderBySlug(slug: string): Promise<Provider | undefined> {
+  const { data, error } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('slug', slug)
+    .maybeSingle();
+  if (error || !data) return undefined;
+  return providerFromRow(data);
 }
 
-export function getRelatedProviders(slug: string, limit = 3): Provider[] {
-  const current = getProviderBySlug(slug);
+export async function getRelatedProviders(slug: string, limit = 3): Promise<Provider[]> {
+  const current = await getProviderBySlug(slug);
   if (!current) return [];
 
-  return seedProviders
-    .filter(p => p.slug !== slug)
+  // Get providers in same city or with similar services
+  const { data, error } = await supabase
+    .from('companies')
+    .select('*')
+    .neq('slug', slug)
+    .or(`city.eq.${current.city},state.eq.${(current.serviceArea || [])[1] || ''}`)
+    .limit(50);
+
+  if (error || !data) return [];
+
+  return data
+    .map(providerFromRow)
     .map(p => ({
       provider: p,
       score: p.servicesOffered.filter(s => current.servicesOffered.includes(s)).length +
@@ -337,6 +327,32 @@ export function getFilterOptions() {
   };
 }
 
-export function getAllProviderSlugs(): string[] {
-  return seedProviders.map(p => p.slug);
+export async function getAllProviderSlugs(): Promise<string[]> {
+  const { data, error } = await supabase.from('companies').select('slug');
+  if (error || !data) return [];
+  return data.map(r => r.slug);
+}
+
+export async function getProvidersForService(filterValue: string): Promise<Provider[]> {
+  const { data, error } = await supabase.from('companies').select('*');
+  if (error || !data) return [];
+
+  const results = data
+    .map(providerFromRow)
+    .filter(p => (p.servicesOffered || []).some(s => s?.toLowerCase() === filterValue.toLowerCase()));
+
+  results.sort((a, b) => {
+    const scoreA = (a.rating || 0) * Math.log((a.reviewCount || 0) + 1);
+    const scoreB = (b.rating || 0) * Math.log((b.reviewCount || 0) + 1);
+    return scoreB - scoreA;
+  });
+
+  const DTLA_SLUG = 'dtla-print-los-angeles-ca';
+  const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
+  if (dtlaIndex > 0) {
+    const [dtla] = results.splice(dtlaIndex, 1);
+    results.unshift(dtla);
+  }
+
+  return results.slice(0, 60);
 }
