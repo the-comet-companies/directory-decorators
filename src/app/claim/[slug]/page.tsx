@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 import Footer from '@/components/Footer'
+import { uploadImage } from '@/lib/upload'
 
 type Step = 'name' | 'code' | 'request' | 'done' | 'requested'
 
@@ -292,13 +293,14 @@ export default function ClaimPage() {
                         <span className="text-xs text-surface-500">Click to upload image</span>
                         <span className="text-[10px] text-surface-400 mt-0.5">JPG, PNG, WebP (max 5MB)</span>
                         <input type="file" accept="image/jpeg,image/png,image/webp" className="hidden"
-                          onChange={e => {
+                          onChange={async e => {
                             const file = e.target.files?.[0]
                             if (!file) return
                             if (file.size > 5 * 1024 * 1024) { setError('Image must be under 5MB.'); return }
-                            const reader = new FileReader()
-                            reader.onload = () => setProofImage(reader.result as string)
-                            reader.readAsDataURL(file)
+                            try {
+                              const url = await uploadImage(file, 'proofs')
+                              setProofImage(url)
+                            } catch { setError('Failed to upload image.') }
                           }} />
                       </label>
                     )}

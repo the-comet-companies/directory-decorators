@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react'
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Footer from '@/components/Footer'
+import { uploadImage } from '@/lib/upload'
 
 const SERVICE_OPTIONS = [
   'Screen Printing', 'DTG Printing', 'DTF Printing', 'Embroidery',
@@ -243,9 +244,9 @@ export default function ListBusinessPage() {
                 <label className="flex flex-col items-center justify-center w-full h-32 rounded-xl border-2 border-dashed border-surface-300 hover:border-surface-400 hover:bg-surface-50 transition-colors cursor-pointer">
                   <svg className="w-8 h-8 text-surface-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                   <span className="text-xs text-surface-500">Upload Cover Image</span>
-                  <input ref={coverRef} type="file" accept="image/*" className="hidden" onChange={e => {
+                  <input ref={coverRef} type="file" accept="image/*" className="hidden" onChange={async e => {
                     const file = e.target.files?.[0]; if (!file) return
-                    const reader = new FileReader(); reader.onload = () => setForm(prev => ({ ...prev, coverImage: reader.result as string })); reader.readAsDataURL(file)
+                    try { const url = await uploadImage(file, 'covers'); setForm(prev => ({ ...prev, coverImage: url })) } catch { alert('Failed to upload image.') }
                   }} />
                 </label>
               )}
@@ -278,9 +279,9 @@ export default function ListBusinessPage() {
                 })}
               </div>
               {form.galleryImages.length < 4 && (
-                <input ref={galleryRef} type="file" accept="image/*" className="hidden" onChange={e => {
+                <input ref={galleryRef} type="file" accept="image/*" className="hidden" onChange={async e => {
                   const file = e.target.files?.[0]; if (!file) return
-                  const reader = new FileReader(); reader.onload = () => setForm(prev => ({ ...prev, galleryImages: [...prev.galleryImages, reader.result as string].slice(0,4) })); reader.readAsDataURL(file)
+                  try { const url = await uploadImage(file, 'gallery'); setForm(prev => ({ ...prev, galleryImages: [...prev.galleryImages, url].slice(0,4) })) } catch { alert('Failed to upload image.') }
                 }} />
               )}
             </div>

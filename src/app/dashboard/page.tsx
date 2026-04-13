@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 import Footer from '@/components/Footer'
+import { uploadImage } from '@/lib/upload'
 
 interface BusinessData {
   name: string
@@ -125,19 +126,17 @@ export default function DashboardPage() {
   }
 
   const handleImageUpload = async (file: File) => {
-    return new Promise<void>((resolve) => {
-      const reader = new FileReader()
-      reader.onload = () => {
-        const dataUrl = reader.result as string
-        setBusiness(prev => {
-          if (!prev) return prev
-          if (prev.galleryImages.length >= MAX_GALLERY_IMAGES) return prev
-          return { ...prev, galleryImages: [...prev.galleryImages, dataUrl] }
-        })
-        resolve()
-      }
-      reader.readAsDataURL(file)
-    })
+    try {
+      const url = await uploadImage(file, 'gallery')
+      setBusiness(prev => {
+        if (!prev) return prev
+        if (prev.galleryImages.length >= MAX_GALLERY_IMAGES) return prev
+        return { ...prev, galleryImages: [...prev.galleryImages, url] }
+      })
+    } catch {
+      setToast({ message: 'Failed to upload image.', type: 'error' })
+      setTimeout(() => setToast(null), 4000)
+    }
   }
 
   const removeGalleryImage = (index: number) => {
@@ -354,13 +353,14 @@ export default function DashboardPage() {
                 <span className="text-xs text-surface-500">Upload Cover Image</span>
                 <span className="text-[10px] text-surface-400 mt-0.5">JPG, PNG, WebP (max 5MB)</span>
                 <input ref={coverInputRef} type="file" accept="image/jpeg,image/png,image/webp" className="hidden"
-                  onChange={e => {
+                  onChange={async e => {
                     const file = e.target.files?.[0]
                     if (!file) return
                     if (file.size > 5 * 1024 * 1024) { setToast({ message: 'Image must be under 5MB.', type: 'error' }); setTimeout(() => setToast(null), 4000); return }
-                    const reader = new FileReader()
-                    reader.onload = () => setBusiness(prev => prev ? { ...prev, coverImage: reader.result as string } : prev)
-                    reader.readAsDataURL(file)
+                    try {
+                      const url = await uploadImage(file, 'covers')
+                      setBusiness(prev => prev ? { ...prev, coverImage: url } : prev)
+                    } catch { setToast({ message: 'Failed to upload cover image.', type: 'error' }); setTimeout(() => setToast(null), 4000) }
                   }} />
               </label>
             )}
