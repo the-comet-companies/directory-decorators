@@ -1,8 +1,3 @@
-import { Provider } from './types';
-import companiesData from './companies.json';
-
-export const providers: Provider[] = companiesData as Provider[];
-
 export const services = [
   { id: '1', name: 'Screen Printing', slug: 'screen-printing', description: 'High-quality screen printing for bulk orders.', icon: '🖨️' },
   { id: '2', name: 'Embroidery', slug: 'embroidery', description: 'Professional embroidery for apparel and accessories.', icon: '🧵' },
@@ -16,11 +11,8 @@ export const services = [
   { id: '10', name: 'Signage Printing', slug: 'signage-printing', description: 'Business signs, yard signs, and trade show displays.', icon: '🪧' },
 ];
 
-export const neighborhoods = [
-  ...Array.from(new Set((companiesData as Provider[]).map(p => p.city).filter(Boolean)))
-    .sort()
-    .map((city, i) => ({ id: String(i + 1), name: city, slug: city.toLowerCase().replace(/\s+/g, '-'), city, region: '' })),
-];
+// Neighborhoods are no longer needed from static data — cities come from Supabase
+export const neighborhoods: { id: string; name: string; slug: string; city: string; region: string }[] = [];
 
 export const productCategories = [
   { id: '1', name: 'T-Shirts', slug: 't-shirts' },

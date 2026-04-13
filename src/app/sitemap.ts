@@ -18,8 +18,8 @@ const SERVICE_SLUGS = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const providerSlugs = await getAllProviderSlugs()
-  const stateSlugs = getAllStateSlugs()
-  const citySlugs = getAllCitySlugs()
+  const stateSlugs = await getAllStateSlugs()
+  const citySlugs = await getAllCitySlugs()
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },

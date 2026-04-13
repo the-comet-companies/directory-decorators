@@ -8,15 +8,15 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllCitySlugs().map(slug => ({ slug }));
+export async function generateStaticParams() {
+  return (await getAllCitySlugs()).map(slug => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const city = getCityBySlug(slug);
+  const city = await getCityBySlug(slug);
   if (!city) return {};
-  const providers = getProvidersForCity(city.city, city.stateAbbr);
+  const providers = await getProvidersForCity(city.city, city.stateAbbr);
   const title = `Top 10 Best Printers in ${city.city}, ${city.stateAbbr} — Updated 2026`;
   const description = `Compare the best printing companies in ${city.city}, ${city.stateAbbr}. Screen printing, DTG, embroidery, and more. Find top-rated local printers. Updated 2026.`;
   return {
@@ -29,10 +29,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CityPage({ params }: PageProps) {
   const { slug } = await params;
-  const city = getCityBySlug(slug);
+  const city = await getCityBySlug(slug);
   if (!city) notFound();
 
-  const providers = getProvidersForCity(city.city, city.stateAbbr);
+  const providers = await getProvidersForCity(city.city, city.stateAbbr);
   const stateSlug = getStateSlug(city.stateAbbr);
 
   return (
