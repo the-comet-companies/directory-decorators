@@ -72,9 +72,21 @@ function providerFromRow(row: any): Provider {
 // ─── Queries ───────────────────────────────────────────────────────────────
 
 export async function getAllProviders(): Promise<Provider[]> {
-  const { data, error } = await supabase.from('companies').select('*');
-  if (error || !data) return [];
-  return data.map(providerFromRow);
+  // Supabase default limit is 1000, so paginate through all rows
+  const all: Provider[] = [];
+  const PAGE_SIZE = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from('companies')
+      .select('*')
+      .range(from, from + PAGE_SIZE - 1);
+    if (error || !data || data.length === 0) break;
+    all.push(...data.map(providerFromRow));
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+  return all;
 }
 
 export async function getProviders(filters: Partial<FilterState>): Promise<{ providers: Provider[]; total: number }> {
@@ -328,17 +340,26 @@ export function getFilterOptions() {
 }
 
 export async function getAllProviderSlugs(): Promise<string[]> {
-  const { data, error } = await supabase.from('companies').select('slug');
-  if (error || !data) return [];
-  return data.map(r => r.slug);
+  const slugs: string[] = [];
+  const PAGE_SIZE = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from('companies')
+      .select('slug')
+      .range(from, from + PAGE_SIZE - 1);
+    if (error || !data || data.length === 0) break;
+    slugs.push(...data.map(r => r.slug));
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+  return slugs;
 }
 
 export async function getProvidersForService(filterValue: string): Promise<Provider[]> {
-  const { data, error } = await supabase.from('companies').select('*');
-  if (error || !data) return [];
+  const all = await getAllProviders();
 
-  const results = data
-    .map(providerFromRow)
+  const results = all
     .filter(p => (p.servicesOffered || []).some(s => s?.toLowerCase() === filterValue.toLowerCase()));
 
   results.sort((a, b) => {
