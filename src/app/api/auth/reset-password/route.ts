@@ -14,10 +14,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Password must be at least 6 characters.' }, { status: 400 })
     }
 
-    const users = getUsers()
+    const users = await getUsers()
     const user = users.find(u =>
       u.email.toLowerCase() === email.toLowerCase() &&
-      (u as unknown as Record<string, unknown>).resetToken === token
+      u.resetToken === token
     )
 
     if (!user) {
@@ -25,18 +25,18 @@ export async function POST(req: NextRequest) {
     }
 
     // Check expiration
-    const expires = (user as unknown as Record<string, unknown>).resetTokenExpires as string
+    const expires = user.resetTokenExpires
     if (!expires || new Date() > new Date(expires)) {
       return NextResponse.json({ ok: false, error: 'Reset link has expired. Please request a new one.' }, { status: 410 })
     }
 
     // Update password and clear token
     const newHash = await hash(password, 10)
-    updateUser(user.id, {
+    await updateUser(user.id, {
       passwordHash: newHash,
       resetToken: '',
       resetTokenExpires: '',
-    } as Partial<typeof user>)
+    })
 
     return NextResponse.json({ ok: true })
   } catch (err) {

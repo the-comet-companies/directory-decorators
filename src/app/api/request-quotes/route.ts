@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Save lead to database
-    createQuoteLead({
+    await createQuoteLead({
       name,
       email,
       phone: phone || '',

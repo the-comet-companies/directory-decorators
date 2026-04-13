@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Not authenticated.' }, { status: 401 })
     }
 
-    const user = getUserByEmail(authUser.email)
+    const user = await getUserByEmail(authUser.email)
     if (!user) {
       return NextResponse.json({ ok: false, error: 'User not found.' }, { status: 404 })
     }
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Business name, city, and state are required.' }, { status: 400 })
     }
 
-    createPendingListing({
+    await createPendingListing({
       userId: user.id,
       userEmail: user.email,
       userName: user.name,

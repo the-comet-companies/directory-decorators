@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'New password must be at least 6 characters.' }, { status: 400 })
     }
 
-    const user = getUserByEmail(authUser.email)
+    const user = await getUserByEmail(authUser.email)
     if (!user) {
       return NextResponse.json({ ok: false, error: 'User not found.' }, { status: 404 })
     }
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     }
 
     const newHash = await hash(newPassword, 10)
-    updateUser(user.id, { passwordHash: newHash })
+    await updateUser(user.id, { passwordHash: newHash })
 
     return NextResponse.json({ ok: true })
   } catch (err) {

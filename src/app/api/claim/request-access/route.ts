@@ -19,12 +19,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Business not found.' }, { status: 404 })
     }
 
-    const existingClaim = getClaimBySlug(slug)
+    const existingClaim = await getClaimBySlug(slug)
     if (existingClaim && existingClaim.status === 'approved') {
       return NextResponse.json({ ok: false, error: 'This business has already been claimed.' }, { status: 409 })
     }
 
-    createClaim({
+    await createClaim({
       businessSlug: slug,
       businessName: provider.name,
       userEmail: email,

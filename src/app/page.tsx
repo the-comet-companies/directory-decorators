@@ -154,7 +154,7 @@ export default async function BrowsePage({ searchParams }: PageProps) {
         {currentPage === 1 && !currentSearch && <FeaturedProviders providers={featured} />}
 
         {/* Results - full width */}
-        <ResultsGrid providers={providers} total={total} claimedSlugs={[...getClaimedSlugs()]} />
+        <ResultsGrid providers={providers} total={total} claimedSlugs={[...(await getClaimedSlugs())]} />
         <Suspense fallback={null}>
           <Pagination currentPage={currentPage} totalResults={total} />
         </Suspense>

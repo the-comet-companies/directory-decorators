@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Find the most recent pending claim for this slug + email
-    const claims = getClaims()
+    const claims = await getClaims()
     const claim = claims
       .filter(c => c.businessSlug === slug && c.userEmail.toLowerCase() === email.toLowerCase() && c.status === 'pending')
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0]
@@ -34,14 +34,14 @@ export async function POST(req: NextRequest) {
     }
 
     // Mark claim as approved
-    updateClaim(claim.id, { verified: true, status: 'approved' })
+    await updateClaim(claim.id, { verified: true, status: 'approved' })
 
     // Create or update user account
-    let user = getUserByEmail(email)
+    let user = await getUserByEmail(email)
     if (!user) {
       user = await createUser(email, claim.userName, password)
     }
-    updateUser(user.id, { claimedBusinessSlug: slug })
+    await updateUser(user.id, { claimedBusinessSlug: slug })
 
     return NextResponse.json({ ok: true })
   } catch (err) {

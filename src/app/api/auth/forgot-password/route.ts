@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Email is required.' }, { status: 400 })
     }
 
-    const user = getUserByEmail(email)
+    const user = await getUserByEmail(email)
     if (!user) {
       // Don't reveal if user exists — always show success
       return NextResponse.json({ ok: true })
@@ -20,8 +20,7 @@ export async function POST(req: NextRequest) {
     const token = crypto.randomBytes(32).toString('hex')
     const expires = new Date(Date.now() + 30 * 60 * 1000).toISOString()
 
-    // Store token on user (using passwordHash field prefix trick won't work, use a simple approach)
-    updateUser(user.id, { resetToken: token, resetTokenExpires: expires } as Record<string, string>)
+    await updateUser(user.id, { resetToken: token, resetTokenExpires: expires })
 
     const baseUrl = process.env.NEXTAUTH_URL || 'https://directory.shoptitan.app'
     const resetUrl = `${baseUrl}/auth/reset-password?token=${token}&email=${encodeURIComponent(email)}`

@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Unauthorized.' }, { status: 401 })
     }
 
-    const claims = getClaims()
+    const claims = await getClaims()
     return NextResponse.json({ ok: true, claims })
   } catch (err) {
     console.error('Admin claims error:', err)
@@ -37,7 +37,7 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Invalid request.' }, { status: 400 })
     }
 
-    const updated = updateClaim(claimId, { status: action })
+    const updated = await updateClaim(claimId, { status: action })
     if (!updated) {
       return NextResponse.json({ ok: false, error: 'Claim not found.' }, { status: 404 })
     }
@@ -46,11 +46,11 @@ export async function PATCH(req: NextRequest) {
     if (action === 'approved' && updated.userEmail) {
       const tempPassword = generateTempPassword()
 
-      let user = getUserByEmail(updated.userEmail)
+      let user = await getUserByEmail(updated.userEmail)
       if (!user) {
         user = await createUser(updated.userEmail, updated.userName, tempPassword)
       }
-      updateUser(user.id, { claimedBusinessSlug: updated.businessSlug })
+      await updateUser(user.id, { claimedBusinessSlug: updated.businessSlug })
 
       // Send credentials email
       const transporter = nodemailer.createTransport({

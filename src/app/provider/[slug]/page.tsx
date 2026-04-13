@@ -49,7 +49,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
   if (!provider) notFound();
 
   const related = getRelatedProviders(slug);
-  const claimed = isBusinessClaimed(slug);
+  const claimed = await isBusinessClaimed(slug);
 
 
   return (

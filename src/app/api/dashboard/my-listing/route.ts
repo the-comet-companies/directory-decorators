@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Not authenticated.' }, { status: 401 })
     }
 
-    const user = getUserByEmail(authUser.email)
+    const user = await getUserByEmail(authUser.email)
     if (!user?.claimedBusinessSlug) {
       return NextResponse.json({ ok: false, error: 'No claimed business.' }, { status: 404 })
     }

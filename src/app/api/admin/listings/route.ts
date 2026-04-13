@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Unauthorized.' }, { status: 401 })
     }
 
-    const listings = getPendingListings()
+    const listings = await getPendingListings()
     return NextResponse.json({ ok: true, listings })
   } catch (err) {
     console.error('Admin listings error:', err)
@@ -36,7 +36,7 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Invalid request.' }, { status: 400 })
     }
 
-    const updated = updatePendingListing(listingId, { status: action })
+    const updated = await updatePendingListing(listingId, { status: action })
     if (!updated) {
       return NextResponse.json({ ok: false, error: 'Listing not found.' }, { status: 404 })
     }
@@ -93,13 +93,13 @@ export async function PATCH(req: NextRequest) {
       fs.writeFileSync(addedPath, JSON.stringify(addedData, null, 2), 'utf-8')
 
       // Link user to business and auto-verify
-      const user = getUserByEmail(updated.userEmail)
+      const user = await getUserByEmail(updated.userEmail)
       if (user) {
-        updateUser(user.id, { claimedBusinessSlug: slug })
+        await updateUser(user.id, { claimedBusinessSlug: slug })
       }
 
       // Create approved claim so it shows verified badge
-      createClaim({
+      await createClaim({
         businessSlug: slug,
         businessName: updated.businessName,
         userEmail: updated.userEmail,

@@ -194,7 +194,7 @@ export default async function ServicePage({ params }: PageProps) {
 
   const providers = getProvidersForService(service.filterValue);
   const relatedServices = getRelatedServices(slug);
-  const claimedSlugs = getClaimedSlugs();
+  const claimedSlugs = await getClaimedSlugs();
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',

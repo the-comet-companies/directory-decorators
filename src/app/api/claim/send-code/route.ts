@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Check if already claimed
-    const existingClaim = getClaimBySlug(slug)
+    const existingClaim = await getClaimBySlug(slug)
     if (existingClaim && existingClaim.status === 'approved') {
       return NextResponse.json({ ok: false, error: 'This business has already been claimed.' }, { status: 409 })
     }
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString() // 15 min
 
     // Save claim
-    createClaim({
+    await createClaim({
       businessSlug: slug,
       businessName: provider.name,
       userEmail: businessEmail,

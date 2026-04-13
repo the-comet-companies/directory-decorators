@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url)
     const format = searchParams.get('format')
 
-    const leads = getQuoteLeads().sort(
+    const leads = (await getQuoteLeads()).sort(
       (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     )
 
