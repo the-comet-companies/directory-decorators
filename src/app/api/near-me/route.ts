@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getAllProviders } from '@/lib/data'
+import { supabase } from '@/lib/supabase'
 
 export async function GET(req: NextRequest) {
   const params = req.nextUrl.searchParams
@@ -9,45 +9,45 @@ export async function GET(req: NextRequest) {
   const w = parseFloat(params.get('w') || '-180')
   const limit = Math.min(parseInt(params.get('limit') || '200'), 500)
 
-  const all = await getAllProviders()
+  // Query Supabase directly with bounds filter (single fast query)
+  const { data, error } = await supabase
+    .from('companies')
+    .select('id, name, slug, address, city, state, service_area, lat, lng, cover_image, rating, review_count, printing_methods, product_categories, services_offered, starting_price, moq, turnaround_days, rush_available, pickup, delivery, eco_friendly, featured')
+    .gte('lat', s)
+    .lte('lat', n)
+    .gte('lng', w)
+    .lte('lng', e)
+    .gt('lat', 0)
+    .order('rating', { ascending: false })
+    .limit(limit)
 
-  const filtered = all.filter(p => {
-    const lat = p.coordinates?.lat
-    const lng = p.coordinates?.lng
-    if (!lat || !lng) return false
-    return lat >= s && lat <= n && lng >= w && lng <= e
-  })
+  if (error || !data) {
+    return NextResponse.json({ companies: [], total: 0 })
+  }
 
-  // Sort by rating * log(reviewCount) for best results first
-  filtered.sort((a, b) => {
-    const scoreA = a.rating * Math.log((a.reviewCount || 0) + 1)
-    const scoreB = b.rating * Math.log((b.reviewCount || 0) + 1)
-    return scoreB - scoreA
-  })
-
-  const results = filtered.slice(0, limit).map(p => ({
+  const results = data.map(p => ({
     id: p.id,
     name: p.name,
     slug: p.slug,
     address: p.address || '',
     city: p.city || '',
-    serviceArea: p.serviceArea || [],
-    coordinates: p.coordinates,
-    coverImage: p.coverImage || '',
+    serviceArea: p.service_area || [],
+    coordinates: { lat: p.lat, lng: p.lng },
+    coverImage: p.cover_image || '',
     rating: p.rating,
-    reviewCount: p.reviewCount,
-    printingMethods: p.printingMethods || [],
-    productCategories: p.productCategories || [],
-    servicesOffered: p.servicesOffered || [],
-    startingPrice: p.startingPrice,
+    reviewCount: p.review_count,
+    printingMethods: p.printing_methods || [],
+    productCategories: p.product_categories || [],
+    servicesOffered: p.services_offered || [],
+    startingPrice: p.starting_price,
     moq: p.moq,
-    turnaroundDays: p.turnaroundDays,
-    rushAvailable: p.rushAvailable,
+    turnaroundDays: p.turnaround_days,
+    rushAvailable: p.rush_available,
     pickup: p.pickup,
     delivery: p.delivery,
-    ecoFriendly: p.ecoFriendly,
+    ecoFriendly: p.eco_friendly,
     featured: p.featured,
   }))
 
-  return NextResponse.json({ companies: results, total: filtered.length })
+  return NextResponse.json({ companies: results, total: results.length })
 }

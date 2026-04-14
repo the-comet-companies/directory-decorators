@@ -1,27 +1,45 @@
 import { NextResponse } from 'next/server'
-import { getAllProviders } from '@/lib/data'
+import { supabase } from '@/lib/supabase'
+
+// Cache filter options for 1 hour — they rarely change
+export const revalidate = 3600
 
 export async function GET() {
-  const all = await getAllProviders()
+  // Only fetch the columns we need (much smaller payload)
+  const PAGE_SIZE = 1000
+  let from = 0
+  const allRows: Array<{
+    state: string | null
+    city: string | null
+    services_offered: string[] | null
+    product_categories: string[] | null
+    printing_methods: string[] | null
+  }> = []
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('companies')
+      .select('state, city, services_offered, product_categories, printing_methods')
+      .range(from, from + PAGE_SIZE - 1)
+    if (error || !data || data.length === 0) break
+    allRows.push(...data)
+    if (data.length < PAGE_SIZE) break
+    from += PAGE_SIZE
+  }
 
   const services = new Set<string>()
   const products = new Set<string>()
   const methods = new Set<string>()
   const stateCities: Record<string, Set<string>> = {}
 
-  for (const p of all) {
-    for (const s of (p.servicesOffered || [])) if (s) services.add(s)
-    for (const c of (p.productCategories || [])) if (c) products.add(c)
-    for (const m of (p.printingMethods || [])) if (m) methods.add(m)
+  for (const p of allRows) {
+    for (const s of (p.services_offered || [])) if (s) services.add(s)
+    for (const c of (p.product_categories || [])) if (c) products.add(c)
+    for (const m of (p.printing_methods || [])) if (m) methods.add(m)
 
-    const sa = p.serviceArea
-    if (sa && sa.length >= 2 && sa[1]) {
-      const state = sa[1]
-      const city = sa[0] || p.city
-      if (city) {
-        if (!stateCities[state]) stateCities[state] = new Set()
-        stateCities[state].add(city)
-      }
+    if (p.state && p.city) {
+      if (!stateCities[p.state]) stateCities[p.state] = new Set()
+      stateCities[p.state].add(p.city)
     }
   }
 
@@ -30,10 +48,13 @@ export async function GET() {
     stateCitiesObj[st] = [...cities].sort()
   }
 
-  return NextResponse.json({
-    services: [...services].sort(),
-    products: [...products].sort(),
-    methods: [...methods].sort(),
-    stateCities: stateCitiesObj,
-  })
+  return NextResponse.json(
+    {
+      services: [...services].sort(),
+      products: [...products].sort(),
+      methods: [...methods].sort(),
+      stateCities: stateCitiesObj,
+    },
+    { headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' } }
+  )
 }
