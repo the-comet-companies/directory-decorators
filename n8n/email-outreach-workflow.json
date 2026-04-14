@@ -1,0 +1,203 @@
+{
+  "name": "Shop Titan - Daily Claim Outreach",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        },
+        "timezone": "America/Los_Angeles"
+      },
+      "id": "schedule-trigger",
+      "name": "Daily at 9 AM LA",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "getAll",
+        "tableId": "companies",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "email",
+              "condition": "neq",
+              "keyValue": ""
+            }
+          ]
+        },
+        "returnAll": false,
+        "limit": 200,
+        "options": {}
+      },
+      "id": "query-companies",
+      "name": "Get Companies with Email",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "getAll",
+        "tableId": "email_outreach",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "query-sent",
+      "name": "Get Already Emailed",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [460, 480],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Filter out companies already emailed and pick 3-5 random\nconst companies = $('Get Companies with Email').all().map(i => i.json);\nconst alreadySent = $('Get Already Emailed').all().map(i => i.json);\nconst sentSlugs = new Set(alreadySent.map(s => s.company_slug));\n\n// Keep only companies with valid email that haven't been emailed yet\nconst available = companies.filter(c =>\n  c.email && c.email.trim() && !sentSlugs.has(c.slug) && c.email.includes('@')\n);\n\n// Shuffle and pick 3-5\nconst shuffled = available.sort(() => Math.random() - 0.5);\nconst count = Math.floor(Math.random() * 3) + 3; // 3, 4, or 5\nconst selected = shuffled.slice(0, count);\n\nreturn selected.map(c => ({ json: c }));"
+      },
+      "id": "filter-pick",
+      "name": "Filter & Pick 3-5 Random",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 380]
+    },
+    {
+      "parameters": {
+        "fromEmail": "team@shoptitan.app",
+        "fromName": "Shop Titan",
+        "toEmail": "={{ $json.email }}",
+        "subject": "Claim your free business listing on Shop Titan Directory",
+        "html": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#1e293b;\">\n  <h2 style=\"color:#0f172a;margin-bottom:8px;\">Claim Your Free Business Listing</h2>\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">Hi {{ $json.name }} team,</p>\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">\n    We found your business in our directory of 15,000+ printing companies at <a href=\"https://directory.shoptitan.app\" style=\"color:#0f172a;font-weight:600;\">directory.shoptitan.app</a>.\n  </p>\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">You can claim your free listing to:</p>\n  <ul style=\"color:#475569;font-size:15px;line-height:1.8;padding-left:20px;\">\n    <li>Edit your business details and add photos</li>\n    <li>Receive quote requests directly from customers</li>\n    <li>Get a verified badge to stand out</li>\n    <li><strong>Be featured on top</strong> — verified businesses get priority placement in search results</li>\n  </ul>\n  <div style=\"margin:32px 0;\">\n    <a href=\"https://directory.shoptitan.app/provider/{{ $json.slug }}\" style=\"display:inline-block;background:#0f172a;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:600;\">\n      Claim Your Listing\n    </a>\n  </div>\n  <p style=\"color:#64748b;font-size:14px;\">No cost. Takes 2 minutes.</p>\n  <hr style=\"border:none;border-top:1px solid #e2e8f0;margin:24px 0;\"/>\n  <p style=\"color:#94a3b8;font-size:12px;margin:0;\">\n    The Shop Titan Team<br/>\n    <a href=\"mailto:team@shoptitan.app\" style=\"color:#94a3b8;\">team@shoptitan.app</a> · <a href=\"https://directory.shoptitan.app\" style=\"color:#94a3b8;\">directory.shoptitan.app</a>\n  </p>\n</div>",
+        "options": {
+          "ccEmail": "",
+          "bccEmail": "team@shoptitan.app"
+        }
+      },
+      "id": "send-email",
+      "name": "Send Email via Hostinger",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [900, 380],
+      "credentials": {
+        "smtp": {
+          "name": "Hostinger SMTP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "create",
+        "tableId": "email_outreach",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "=outreach_{{ $now.toMillis() }}_{{ Math.random().toString(36).substring(2, 8) }}"
+            },
+            {
+              "fieldId": "company_slug",
+              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.slug }}"
+            },
+            {
+              "fieldId": "company_name",
+              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.name }}"
+            },
+            {
+              "fieldId": "email",
+              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.email }}"
+            },
+            {
+              "fieldId": "subject",
+              "fieldValue": "Claim your free business listing on Shop Titan Directory"
+            },
+            {
+              "fieldId": "status",
+              "fieldValue": "sent"
+            }
+          ]
+        }
+      },
+      "id": "record-sent",
+      "name": "Record in Supabase",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1120, 380],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily at 9 AM LA": {
+      "main": [
+        [
+          {
+            "node": "Get Companies with Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Already Emailed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Already Emailed": {
+      "main": [
+        [
+          {
+            "node": "Filter & Pick 3-5 Random",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter & Pick 3-5 Random": {
+      "main": [
+        [
+          {
+            "node": "Send Email via Hostinger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email via Hostinger": {
+      "main": [
+        [
+          {
+            "node": "Record in Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

@@ -1,6 +1,7 @@
 import { Provider, FilterState, SortOption } from './types';
 import { services, neighborhoods, productCategories } from './seed-data';
 import { supabase } from './supabase';
+import { getClaimedSlugs } from './db';
 
 const SCREEN_PRINTING_TYPES = [
   'Puff Printing',
@@ -238,7 +239,21 @@ export async function getProviders(filters: Partial<FilterState>): Promise<{ pro
       break;
   }
 
-  // Pin DTLA Print as #1
+  // Bubble verified (claimed) businesses to the top — but don't reshuffle when searching
+  if (!isSearching) {
+    const claimedSlugs = await getClaimedSlugs();
+    if (claimedSlugs.size > 0) {
+      const verified: Provider[] = [];
+      const unverified: Provider[] = [];
+      for (const p of results) {
+        if (claimedSlugs.has(p.slug)) verified.push(p);
+        else unverified.push(p);
+      }
+      results = [...verified, ...unverified];
+    }
+  }
+
+  // Pin DTLA Print as #1 (always)
   const DTLA_SLUG = 'dtla-print-los-angeles-ca';
   const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
   if (dtlaIndex > 0) {
@@ -359,7 +374,7 @@ export async function getAllProviderSlugs(): Promise<string[]> {
 export async function getProvidersForService(filterValue: string): Promise<Provider[]> {
   const all = await getAllProviders();
 
-  const results = all
+  let results = all
     .filter(p => (p.servicesOffered || []).some(s => s?.toLowerCase() === filterValue.toLowerCase()));
 
   results.sort((a, b) => {
@@ -368,6 +383,19 @@ export async function getProvidersForService(filterValue: string): Promise<Provi
     return scoreB - scoreA;
   });
 
+  // Bubble verified businesses to the top
+  const claimedSlugs = await getClaimedSlugs();
+  if (claimedSlugs.size > 0) {
+    const verified: Provider[] = [];
+    const unverified: Provider[] = [];
+    for (const p of results) {
+      if (claimedSlugs.has(p.slug)) verified.push(p);
+      else unverified.push(p);
+    }
+    results = [...verified, ...unverified];
+  }
+
+  // Pin DTLA Print as #1
   const DTLA_SLUG = 'dtla-print-los-angeles-ca';
   const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
   if (dtlaIndex > 0) {

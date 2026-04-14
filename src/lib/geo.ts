@@ -1,5 +1,6 @@
 import { Provider } from './types';
 import { supabase } from './supabase';
+import { getClaimedSlugs } from './db';
 
 // US state abbreviation → full name
 const STATE_NAMES: Record<string, string> = {
@@ -111,7 +112,7 @@ export async function getStateBySlug(slug: string): Promise<StateInfo | undefine
 
 export async function getProvidersForState(stateAbbr: string): Promise<Provider[]> {
   const PAGE_SIZE = 1000;
-  const all: Provider[] = [];
+  let all: Provider[] = [];
   let from = 0;
   while (true) {
     const { data, error } = await supabase
@@ -125,11 +126,28 @@ export async function getProvidersForState(stateAbbr: string): Promise<Provider[
     from += PAGE_SIZE;
   }
 
-  return all.sort((a, b) => {
-    if (a.slug === 'dtla-print-los-angeles-ca') return -1;
-    if (b.slug === 'dtla-print-los-angeles-ca') return 1;
-    return b.rating - a.rating;
-  });
+  all.sort((a, b) => b.rating - a.rating);
+
+  // Bubble verified businesses to the top
+  const claimedSlugs = await getClaimedSlugs();
+  if (claimedSlugs.size > 0) {
+    const verified: Provider[] = [];
+    const unverified: Provider[] = [];
+    for (const p of all) {
+      if (claimedSlugs.has(p.slug)) verified.push(p);
+      else unverified.push(p);
+    }
+    all = [...verified, ...unverified];
+  }
+
+  // Pin DTLA Print as #1
+  const dtlaIndex = all.findIndex(p => p.slug === 'dtla-print-los-angeles-ca');
+  if (dtlaIndex > 0) {
+    const [dtla] = all.splice(dtlaIndex, 1);
+    all.unshift(dtla);
+  }
+
+  return all;
 }
 
 export async function getProvidersForCity(city: string, stateAbbr: string): Promise<Provider[]> {
@@ -140,11 +158,28 @@ export async function getProvidersForCity(city: string, stateAbbr: string): Prom
     .eq('state', stateAbbr);
   if (error || !data) return [];
 
-  return data.map(providerFromRow).sort((a, b) => {
-    if (a.slug === 'dtla-print-los-angeles-ca') return -1;
-    if (b.slug === 'dtla-print-los-angeles-ca') return 1;
-    return b.rating - a.rating;
-  });
+  let results = data.map(providerFromRow).sort((a, b) => b.rating - a.rating);
+
+  // Bubble verified businesses to the top
+  const claimedSlugs = await getClaimedSlugs();
+  if (claimedSlugs.size > 0) {
+    const verified: Provider[] = [];
+    const unverified: Provider[] = [];
+    for (const p of results) {
+      if (claimedSlugs.has(p.slug)) verified.push(p);
+      else unverified.push(p);
+    }
+    results = [...verified, ...unverified];
+  }
+
+  // Pin DTLA Print as #1
+  const dtlaIndex = results.findIndex(p => p.slug === 'dtla-print-los-angeles-ca');
+  if (dtlaIndex > 0) {
+    const [dtla] = results.splice(dtlaIndex, 1);
+    results.unshift(dtla);
+  }
+
+  return results;
 }
 
 export async function getCityBySlug(slug: string): Promise<{ city: string; stateAbbr: string; stateName: string; slug: string } | undefined> {
