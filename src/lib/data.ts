@@ -135,10 +135,13 @@ export async function getProviders(filters: Partial<FilterState>): Promise<{ pro
     query = query.or(`name.ilike.%${q}%,city.ilike.%${q}%,description.ilike.%${q}%`);
   }
 
-  // Array overlaps
-  if (filters.serviceType?.length) query = query.overlaps('services_offered', filters.serviceType);
-  if (filters.screenPrintingType?.length) query = query.overlaps('printing_methods', filters.screenPrintingType);
-  if (filters.productType?.length) query = query.overlaps('product_categories', filters.productType);
+  // JSON array contains — for OR across multiple values, use .or() with cs (contains string)
+  const jsonAnyContains = (col: string, values: string[]) =>
+    values.map(v => `${col}.cs.${JSON.stringify([v])}`).join(',');
+
+  if (filters.serviceType?.length) query = query.or(jsonAnyContains('services_offered', filters.serviceType));
+  if (filters.screenPrintingType?.length) query = query.or(jsonAnyContains('printing_methods', filters.screenPrintingType));
+  if (filters.productType?.length) query = query.or(jsonAnyContains('product_categories', filters.productType));
 
   // Numeric thresholds
   if (filters.moq) {
