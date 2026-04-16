@@ -211,10 +211,16 @@ export async function getProviders(filters: Partial<FilterState>): Promise<{ pro
   // Sort
   const sort = (filters.sort || 'recommended') as SortOption;
   const isSearching = !!(filters.search?.trim());
+  const hasImages = (p: Provider) => !!(p.coverImage || (p.galleryImages && p.galleryImages.length > 0));
   switch (sort) {
     case 'recommended':
       if (!isSearching) {
-        results.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || b.rating - a.rating);
+        // Priority: featured > has images > rating
+        results.sort((a, b) =>
+          (b.featured ? 1 : 0) - (a.featured ? 1 : 0) ||
+          (hasImages(b) ? 1 : 0) - (hasImages(a) ? 1 : 0) ||
+          b.rating - a.rating
+        );
       }
       break;
     case 'fastest':

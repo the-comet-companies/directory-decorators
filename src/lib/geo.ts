@@ -72,14 +72,24 @@ interface StateInfo {
 }
 
 export async function getAllStates(): Promise<StateInfo[]> {
-  // Query distinct state + city counts from Supabase
-  const { data, error } = await supabase
-    .from('companies')
-    .select('state, city');
-  if (error || !data) return [];
+  // Query distinct state + city counts from Supabase (paginated — default limit is 1000)
+  const PAGE_SIZE = 1000;
+  const rows: { state: string | null; city: string | null }[] = [];
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from('companies')
+      .select('state, city')
+      .range(from, from + PAGE_SIZE - 1);
+    if (error || !data || data.length === 0) break;
+    rows.push(...data);
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+  if (rows.length === 0) return [];
 
   const stateMap = new Map<string, Map<string, number>>();
-  for (const row of data) {
+  for (const row of rows) {
     const abbr = row.state || '';
     if (!abbr) continue;
     if (!stateMap.has(abbr)) stateMap.set(abbr, new Map());

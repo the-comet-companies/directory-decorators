@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getAllProviderSlugs } from '@/lib/data'
 import { getAllStateSlugs, getAllCitySlugs } from '@/lib/geo'
+import { NEAR_ME_CITIES } from '@/lib/near-me-cities'
 
 const BASE_URL = 'https://directory.shoptitan.app'
 
@@ -20,6 +21,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const providerSlugs = await getAllProviderSlugs()
   const stateSlugs = await getAllStateSlugs()
   const citySlugs = await getAllCitySlugs()
+
+  const nearMeCityPages: MetadataRoute.Sitemap = Object.keys(NEAR_ME_CITIES).map(slug => ({
+    url: `${BASE_URL}/near-me/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
@@ -78,5 +86,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  return [...staticPages, ...servicePages, ...statePages, ...cityPages, ...providerPages, ...bestOfPages]
+  return [...staticPages, ...nearMeCityPages, ...servicePages, ...statePages, ...cityPages, ...providerPages, ...bestOfPages]
 }

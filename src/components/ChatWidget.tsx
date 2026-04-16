@@ -153,7 +153,6 @@ function findAnswer(input: string): Message {
 export default function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([WELCOME])
-  const [input, setInput] = useState('')
   const endRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -164,13 +163,6 @@ export default function ChatWidget() {
     const userMsg: Message = { from: 'user', text }
     const botMsg = findAnswer(text)
     setMessages(prev => [...prev, userMsg, botMsg])
-    setInput('')
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!input.trim()) return
-    send(input.trim())
   }
 
   return (
@@ -243,24 +235,6 @@ export default function ChatWidget() {
             ))}
             <div ref={endRef} />
           </div>
-
-          {/* Input */}
-          <form onSubmit={handleSubmit} className="border-t border-surface-100 px-3 py-2.5 flex gap-2">
-            <input
-              value={input}
-              onChange={e => setInput(e.target.value)}
-              placeholder="Ask about printing..."
-              className="flex-1 text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black/20 bg-surface-50"
-            />
-            <button
-              type="submit"
-              className="shrink-0 w-9 h-9 flex items-center justify-center rounded-xl bg-black text-white hover:bg-neutral-800 transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7"/>
-              </svg>
-            </button>
-          </form>
         </div>
       )}
 

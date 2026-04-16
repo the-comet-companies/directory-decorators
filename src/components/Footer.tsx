@@ -1,4 +1,19 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
+type TopCompany = { name: string; slug: string }
+
 export default function Footer() {
+  const [topCompanies, setTopCompanies] = useState<TopCompany[]>([])
+
+  useEffect(() => {
+    fetch('/api/top-companies')
+      .then(r => (r.ok ? r.json() : []))
+      .then(setTopCompanies)
+      .catch(() => setTopCompanies([]))
+  }, [])
+
   return (
     <footer className="mt-16 border-t border-surface-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -72,21 +87,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Top Companies */}
           <div>
-            <h3 className="text-sm font-semibold text-surface-900 mb-3">Company</h3>
+            <h3 className="text-sm font-semibold text-surface-900 mb-3">Top Companies</h3>
             <ul className="space-y-2">
-              {[
-                { label: 'Browse', href: '/' },
-                { label: 'Services', href: '/services' },
-                { label: 'Near Me', href: '/near-me' },
-                { label: 'Cost Estimator', href: '/cost-estimator' },
-                { label: 'Multi Quote', href: '/request-quotes' },
-                { label: 'About', href: '/about' },
-              ].map(link => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-surface-500 hover:text-brand-600 transition-colors">
-                    {link.label}
+              {topCompanies.map(c => (
+                <li key={c.slug}>
+                  <a
+                    href={`/provider/${c.slug}`}
+                    className="text-sm text-surface-500 hover:text-brand-600 transition-colors line-clamp-1"
+                  >
+                    {c.name}
                   </a>
                 </li>
               ))}
