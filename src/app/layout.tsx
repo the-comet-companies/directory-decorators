@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import NavLinks from "@/components/NavLinks";
 import ChatWidget from "@/components/ChatWidget";
 import AuthProvider from "@/components/AuthProvider";
@@ -83,6 +84,7 @@ export default function RootLayout({
           <main>{children}</main>
           <ChatWidget />
         </AuthProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
