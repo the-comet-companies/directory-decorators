@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache';
 import { Provider, FilterState, SortOption } from './types';
 import { services, neighborhoods, productCategories } from './seed-data';
 import { supabase } from './supabase';
@@ -72,210 +73,154 @@ function providerFromRow(row: any): Provider {
 
 // ─── Queries ───────────────────────────────────────────────────────────────
 
-export async function getAllProviders(): Promise<Provider[]> {
-  // Supabase default limit is 1000, so paginate through all rows
-  const all: Provider[] = [];
-  const PAGE_SIZE = 1000;
-  let from = 0;
-  while (true) {
-    const { data, error } = await supabase
-      .from('companies')
-      .select('*')
-      .range(from, from + PAGE_SIZE - 1);
-    if (error || !data || data.length === 0) break;
-    all.push(...data.map(providerFromRow));
-    if (data.length < PAGE_SIZE) break;
-    from += PAGE_SIZE;
+// Cached fetch — paginates through Supabase once per hour, then serves from cache
+// so pagination navigation (page=2, 3, 4...) doesn't re-hit the DB each click.
+const fetchProvidersCached = unstable_cache(
+  async (minReviews: number): Promise<Provider[]> => {
+    const all: Provider[] = [];
+    const PAGE_SIZE = 1000;
+    let from = 0;
+    while (true) {
+      let query = supabase.from('companies').select('*').range(from, from + PAGE_SIZE - 1);
+      if (minReviews > 0) query = query.gte('review_count', minReviews);
+      const { data, error } = await query;
+      if (error || !data || data.length === 0) break;
+      all.push(...data.map(providerFromRow));
+      if (data.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
+    return all;
+  },
+  ['providers-by-min-reviews'],
+  { revalidate: 3600, tags: ['providers'] }
+);
+
+export async function getAllProviders(options?: { minReviews?: number }): Promise<Provider[]> {
+  const minReviews = options?.minReviews || 0;
+  const all = await fetchProvidersCached(minReviews);
+
+  // Always include verified/claimed listings regardless of review count
+  if (minReviews > 0) {
+    const claimedSlugs = await getClaimedSlugs();
+    const existingSlugs = new Set(all.map(p => p.slug));
+    const missingClaimed = Array.from(claimedSlugs).filter(s => !existingSlugs.has(s));
+    if (missingClaimed.length > 0) {
+      const { data: claimedData } = await supabase
+        .from('companies')
+        .select('*')
+        .in('slug', missingClaimed);
+      if (claimedData) return [...all, ...claimedData.map(providerFromRow)];
+    }
   }
+
   return all;
 }
 
 export async function getProviders(filters: Partial<FilterState>): Promise<{ providers: Provider[]; total: number }> {
-  // For complex search with relevance scoring, we load and score in JS
-  // This keeps the same relevance algorithm as before
-  let results = await getAllProviders();
+  // DB-level pagination — only 8 rows leave Supabase per request, not 8k.
+  const page = filters.page || 1;
+  const perPage = 8;
+  const offset = (page - 1) * perPage;
+  const sort = (filters.sort || 'recommended') as SortOption;
+  const isSearching = !!(filters.search?.trim());
 
-  // Search with relevance scoring
+  let query = supabase
+    .from('companies')
+    .select('*', { count: 'estimated' })
+    .gte('review_count', 20);
+
+  // Search — simple ilike across name/city/description
   if (filters.search) {
-    const q = filters.search.toLowerCase().trim();
-    const words = q.split(/\s+/).filter(Boolean);
-
-    results = results
-      .map(p => {
-        let score = 0;
-        const name = (p.name || '').toLowerCase();
-        const city = (p.city || '').toLowerCase();
-        const neighborhood = (p.neighborhood || '').toLowerCase();
-        const description = (p.description || '').toLowerCase();
-        const state = ((p.serviceArea || [])[1] || '').toLowerCase();
-        const srvcs = (p.servicesOffered || []).map(s => (s || '').toLowerCase());
-        const products = (p.productCategories || []).map(c => (c || '').toLowerCase());
-
-        if (name === q) score += 100;
-        else if (name.startsWith(q)) score += 80;
-        else if (name.includes(q)) score += 60;
-        else if (words.every(w => name.includes(w))) score += 50;
-
-        if (city === q || city.includes(q)) score += 40;
-        if (state === q) score += 35;
-        if (neighborhood.includes(q)) score += 30;
-
-        if (srvcs.some(s => s === q)) score += 25;
-        if (srvcs.some(s => s.includes(q))) score += 20;
-
-        if (products.some(c => c === q)) score += 15;
-        if (products.some(c => c.includes(q))) score += 10;
-
-        if (description.includes(q)) score += 5;
-
-        if (words.length > 1) {
-          for (const w of words) {
-            if (name.includes(w)) score += 8;
-            if (city.includes(w)) score += 5;
-            if (srvcs.some(s => s.includes(w))) score += 3;
-            if (products.some(c => c.includes(w))) score += 2;
-          }
-        }
-
-        score += (p.rating || 0) * 0.5;
-
-        return { provider: p, score };
-      })
-      .filter(r => r.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .map(r => r.provider);
+    const q = filters.search.trim().replace(/[%_]/g, ''); // strip wildcards
+    query = query.or(`name.ilike.%${q}%,city.ilike.%${q}%,description.ilike.%${q}%`);
   }
 
-  // Service type
-  if (filters.serviceType?.length) {
-    results = results.filter(p =>
-      filters.serviceType!.some(s => (p.servicesOffered || []).includes(s))
-    );
-  }
+  // Array overlaps
+  if (filters.serviceType?.length) query = query.overlaps('services_offered', filters.serviceType);
+  if (filters.screenPrintingType?.length) query = query.overlaps('printing_methods', filters.screenPrintingType);
+  if (filters.productType?.length) query = query.overlaps('product_categories', filters.productType);
 
-  // Screen printing subtype
-  if (filters.screenPrintingType?.length) {
-    results = results.filter(p =>
-      filters.screenPrintingType!.some(t => (p.printingMethods || []).includes(t))
-    );
-  }
-
-  // Product type
-  if (filters.productType?.length) {
-    results = results.filter(p =>
-      filters.productType!.some(pt => (p.productCategories || []).includes(pt))
-    );
-  }
-
-  // MOQ
+  // Numeric thresholds
   if (filters.moq) {
     const moqMap: Record<string, number> = { '1': 1, '12': 12, '24': 24, '48': 48, '100': 100, '500': 500 };
     const maxMoq = moqMap[filters.moq];
-    if (maxMoq !== undefined) {
-      results = results.filter(p => p.moq <= maxMoq);
-    }
+    if (maxMoq !== undefined) query = query.lte('moq', maxMoq);
   }
-
-  // Turnaround
   if (filters.turnaround) {
     const turnaroundMap: Record<string, number> = { '1': 1, '3': 3, '5': 5, '7': 7, '14': 14 };
     const maxDays = turnaroundMap[filters.turnaround];
-    if (maxDays !== undefined) {
-      results = results.filter(p => p.turnaroundDays <= maxDays);
-    }
+    if (maxDays !== undefined) query = query.lte('turnaround_days', maxDays);
   }
+  if (filters.rating) query = query.gte('rating', parseFloat(filters.rating));
 
-  if (filters.rushAvailable === true) results = results.filter(p => p.rushAvailable);
-  if (filters.ecoFriendly === true) results = results.filter(p => p.ecoFriendly);
-
+  // Booleans
+  if (filters.rushAvailable === true) query = query.eq('rush_available', true);
+  if (filters.ecoFriendly === true) query = query.eq('eco_friendly', true);
+  if (filters.bulkOrders === true) query = query.eq('bulk_orders', true);
+  if (filters.smallBatch === true) query = query.eq('small_batch', true);
+  if (filters.customDesign === true) query = query.eq('custom_design', true);
+  if (filters.onlineOrdering === true) query = query.eq('online_ordering', true);
+  if (filters.nationwideShipping === true) query = query.eq('nationwide_shipping', true);
   if (filters.fulfillment?.length) {
-    results = results.filter(p => {
-      if (filters.fulfillment!.includes('Pickup') && !p.pickup) return false;
-      if (filters.fulfillment!.includes('Delivery') && !p.delivery) return false;
-      if (filters.fulfillment!.includes('Nationwide Shipping') && !p.nationwideShipping) return false;
-      return true;
-    });
-  }
-
-  if (filters.bulkOrders === true) results = results.filter(p => p.bulkOrders);
-  if (filters.smallBatch === true) results = results.filter(p => p.smallBatch);
-  if (filters.customDesign === true) results = results.filter(p => p.customDesign);
-  if (filters.onlineOrdering === true) results = results.filter(p => p.onlineOrdering);
-  if (filters.nationwideShipping === true) results = results.filter(p => p.nationwideShipping);
-
-  if (filters.rating) {
-    const minRating = parseFloat(filters.rating);
-    results = results.filter(p => p.rating >= minRating);
+    if (filters.fulfillment.includes('Pickup')) query = query.eq('pickup', true);
+    if (filters.fulfillment.includes('Delivery')) query = query.eq('delivery', true);
+    if (filters.fulfillment.includes('Nationwide Shipping')) query = query.eq('nationwide_shipping', true);
   }
 
   // Sort
-  const sort = (filters.sort || 'recommended') as SortOption;
-  const isSearching = !!(filters.search?.trim());
-  const hasImages = (p: Provider) => !!(p.coverImage || (p.galleryImages && p.galleryImages.length > 0));
   switch (sort) {
-    case 'recommended':
-      if (!isSearching) {
-        // Priority: featured > has images > rating
-        results.sort((a, b) =>
-          (b.featured ? 1 : 0) - (a.featured ? 1 : 0) ||
-          (hasImages(b) ? 1 : 0) - (hasImages(a) ? 1 : 0) ||
-          b.rating - a.rating
-        );
-      }
-      break;
     case 'fastest':
-      results.sort((a, b) => a.turnaroundDays - b.turnaroundDays);
+      query = query.order('turnaround_days', { ascending: true });
       break;
     case 'lowest-moq':
-      results.sort((a, b) => a.moq - b.moq);
+      query = query.order('moq', { ascending: true });
       break;
     case 'highest-rated':
-      results.sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
-      break;
-    case 'nearest':
-      const center = { lat: 39.5, lng: -98.35 };
-      results.sort((a, b) => {
-        const distA = Math.sqrt(Math.pow(a.coordinates.lat - center.lat, 2) + Math.pow(a.coordinates.lng - center.lng, 2));
-        const distB = Math.sqrt(Math.pow(b.coordinates.lat - center.lat, 2) + Math.pow(b.coordinates.lng - center.lng, 2));
-        return distA - distB;
-      });
+      query = query.order('rating', { ascending: false }).order('review_count', { ascending: false });
       break;
     case 'newest':
-      results.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      query = query.order('created_at', { ascending: false });
       break;
+    case 'recommended':
+    default:
+      query = query.order('featured', { ascending: false }).order('rating', { ascending: false }).order('review_count', { ascending: false });
   }
 
-  // Bubble verified (claimed) businesses to the top — but don't reshuffle when searching
-  if (!isSearching) {
+  query = query.range(offset, offset + perPage - 1);
+
+  const { data, error, count } = await query;
+  if (error || !data) return { providers: [], total: 0 };
+
+  let providers = data.map(providerFromRow);
+  const total = count || 0;
+
+  // Page 1 curation: pin DTLA Print and bubble verified within the page (no search)
+  if (page === 1 && !isSearching) {
+    const DTLA_SLUG = 'dtla-print-los-angeles-ca';
+    if (!providers.some(p => p.slug === DTLA_SLUG)) {
+      const { data: dtlaRow } = await supabase.from('companies').select('*').eq('slug', DTLA_SLUG).maybeSingle();
+      if (dtlaRow) {
+        providers.unshift(providerFromRow(dtlaRow));
+        providers = providers.slice(0, perPage);
+      }
+    } else {
+      const dtlaIndex = providers.findIndex(p => p.slug === DTLA_SLUG);
+      if (dtlaIndex > 0) {
+        const [dtla] = providers.splice(dtlaIndex, 1);
+        providers.unshift(dtla);
+      }
+    }
+
     const claimedSlugs = await getClaimedSlugs();
     if (claimedSlugs.size > 0) {
-      const verified: Provider[] = [];
-      const unverified: Provider[] = [];
-      for (const p of results) {
-        if (claimedSlugs.has(p.slug)) verified.push(p);
-        else unverified.push(p);
-      }
-      results = [...verified, ...unverified];
+      const verified = providers.filter(p => claimedSlugs.has(p.slug) && p.slug !== DTLA_SLUG);
+      const unverified = providers.filter(p => !claimedSlugs.has(p.slug) && p.slug !== DTLA_SLUG);
+      const dtla = providers.find(p => p.slug === DTLA_SLUG);
+      providers = [...(dtla ? [dtla] : []), ...verified, ...unverified];
     }
   }
 
-  // Pin DTLA Print as #1 (always)
-  const DTLA_SLUG = 'dtla-print-los-angeles-ca';
-  const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
-  if (dtlaIndex > 0) {
-    const [dtla] = results.splice(dtlaIndex, 1);
-    results.unshift(dtla);
-  } else if (dtlaIndex === -1) {
-    const { data: dtlaRow } = await supabase.from('companies').select('*').eq('slug', DTLA_SLUG).maybeSingle();
-    if (dtlaRow) results.unshift(providerFromRow(dtlaRow));
-  }
-
-  const total = results.length;
-  const page = filters.page || 1;
-  const perPage = 8;
-  const paginated = results.slice((page - 1) * perPage, page * perPage);
-
-  return { providers: paginated, total };
+  return { providers, total };
 }
 
 export async function getFeaturedProviders(): Promise<Provider[]> {
@@ -375,6 +320,28 @@ export async function getAllProviderSlugs(): Promise<string[]> {
     from += PAGE_SIZE;
   }
   return slugs;
+}
+
+// Strong providers only — for sitemap. Filters to listings with 20+ reviews (signal of
+// real activity) or verified by owner, so Google spends crawl budget on quality pages.
+export async function getStrongProviderSlugs(): Promise<string[]> {
+  const claimedSlugs = await getClaimedSlugs();
+  const slugs = new Set<string>();
+  const PAGE_SIZE = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from('companies')
+      .select('slug')
+      .gte('review_count', 20)
+      .range(from, from + PAGE_SIZE - 1);
+    if (error || !data || data.length === 0) break;
+    for (const r of data) slugs.add(r.slug);
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+  for (const slug of claimedSlugs) slugs.add(slug);
+  return Array.from(slugs);
 }
 
 export async function getProvidersForService(filterValue: string): Promise<Provider[]> {

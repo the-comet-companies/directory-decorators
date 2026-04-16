@@ -53,7 +53,7 @@ function parseSlug(slug: string): { service: typeof SERVICES[0]; city: typeof TO
 }
 
 async function getProviders(serviceName: string, city: string, state: string): Promise<Provider[]> {
-  const all = await getAllProviders()
+  const all = await getAllProviders({ minReviews: 20 })
   return all
     .filter(p =>
       (p.servicesOffered || []).some(s => s?.toLowerCase().includes(serviceName.toLowerCase())) &&

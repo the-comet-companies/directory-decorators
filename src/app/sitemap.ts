@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllProviderSlugs } from '@/lib/data'
+import { getStrongProviderSlugs } from '@/lib/data'
 import { getAllStateSlugs, getAllCitySlugs } from '@/lib/geo'
 import { NEAR_ME_CITIES } from '@/lib/near-me-cities'
 
@@ -18,7 +18,7 @@ const SERVICE_SLUGS = [
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const providerSlugs = await getAllProviderSlugs()
+  const providerSlugs = await getStrongProviderSlugs()
   const stateSlugs = await getAllStateSlugs()
   const citySlugs = await getAllCitySlugs()
 
