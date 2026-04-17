@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, useTransition } from 'react';
 
 interface PaginationProps {
   currentPage: number;
@@ -13,6 +13,7 @@ export default function Pagination({ currentPage, totalResults, perPage = 8 }: P
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [, startTransition] = useTransition();
   const totalPages = Math.ceil(totalResults / perPage);
 
   const goToPage = useCallback((page: number) => {
@@ -22,7 +23,9 @@ export default function Pagination({ currentPage, totalResults, perPage = 8 }: P
     } else {
       params.set('page', page.toString());
     }
-    router.push(`${pathname}?${params.toString()}`, { scroll: true });
+    startTransition(() => {
+      router.push(`${pathname}?${params.toString()}`, { scroll: true });
+    });
   }, [router, pathname, searchParams]);
 
   if (totalPages <= 1) return null;

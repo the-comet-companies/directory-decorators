@@ -8,6 +8,7 @@ import SearchHeader from '@/components/SearchHeader';
 import FilterBar from '@/components/FilterBar';
 import MobileFilterDrawer from '@/components/MobileFilterDrawer';
 import ResultsGrid from '@/components/ResultsGrid';
+import ResultsLoading from '@/components/ResultsLoading';
 import FeaturedProviders from '@/components/FeaturedProviders';
 import Pagination from '@/components/Pagination';
 import SEOContentBlock from '@/components/SEOContentBlock';
@@ -154,7 +155,9 @@ export default async function BrowsePage({ searchParams }: PageProps) {
         {currentPage === 1 && !currentSearch && <FeaturedProviders providers={featured} />}
 
         {/* Results - full width */}
-        <ResultsGrid providers={providers} total={total} claimedSlugs={[...(await getClaimedSlugs())]} />
+        <ResultsLoading>
+          <ResultsGrid providers={providers} total={total} claimedSlugs={[...(await getClaimedSlugs())]} />
+        </ResultsLoading>
         <Suspense fallback={null}>
           <Pagination currentPage={currentPage} totalResults={total} />
         </Suspense>

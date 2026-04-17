@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
-import { useCallback, useState, useEffect, useRef } from 'react';
+import { useCallback, useState, useEffect, useRef, useTransition } from 'react';
 
 interface SearchHeaderProps {
   sortOptions: { label: string; value: string }[];
@@ -14,6 +14,7 @@ export default function SearchHeader({ sortOptions, currentSort, currentSearch }
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [searchValue, setSearchValue] = useState(currentSearch);
+  const [, startTransition] = useTransition();
   const debounceRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
@@ -28,7 +29,9 @@ export default function SearchHeader({ sortOptions, currentSort, currentSearch }
       params.delete(key);
     }
     params.delete('page');
-    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    startTransition(() => {
+      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    });
   }, [router, pathname, searchParams]);
 
   const handleSearchChange = (value: string) => {

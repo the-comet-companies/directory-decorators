@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
-import { useCallback, useState, useRef, useEffect } from 'react';
+import { useCallback, useState, useRef, useEffect, useTransition } from 'react';
 
 interface FilterBarProps {
   filterOptions: {
@@ -20,7 +20,13 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
+  const [pendingKey, setPendingKey] = useState<string | null>(null);
   const barRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isPending) setPendingKey(null);
+  }, [isPending]);
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -33,6 +39,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
   }, []);
 
   const updateFilter = useCallback((key: string, value: string, isArray = false) => {
+    setPendingKey(`${key}:${value}`);
     const params = new URLSearchParams(searchParams.toString());
     params.delete('page');
     if (isArray) {
@@ -50,11 +57,15 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
         params.set(key, value);
       }
     }
-    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    startTransition(() => {
+      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    });
   }, [router, pathname, searchParams]);
 
   const clearAll = useCallback(() => {
-    router.push(pathname, { scroll: false });
+    startTransition(() => {
+      router.push(pathname, { scroll: false });
+    });
   }, [router, pathname]);
 
   const activeServiceTypes = (activeFilters.serviceType as string[]) || [];
@@ -84,6 +95,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={s}
                 checked={activeServiceTypes.includes(s)}
                 onChange={() => updateFilter('serviceType', s, true)}
+                pending={isPending && pendingKey === `serviceType:${s}`}
               />
             ))}
           </div>
@@ -103,6 +115,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={t}
                 checked={activeScreenTypes.includes(t)}
                 onChange={() => updateFilter('screenPrintingType', t, true)}
+                pending={isPending && pendingKey === `screenPrintingType:${t}`}
               />
             ))}
           </div>
@@ -122,6 +135,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={c}
                 checked={activeProductTypes.includes(c)}
                 onChange={() => updateFilter('productType', c, true)}
+                pending={isPending && pendingKey === `productType:${c}`}
               />
             ))}
           </div>
@@ -134,7 +148,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
             activeFilters.rushAvailable === 'true'
               ? 'border-brand-600 bg-brand-600 text-white shadow-sm'
               : 'border-surface-200 bg-white text-surface-700 hover:border-surface-300 hover:bg-surface-50'
-          }`}
+          } ${isPending && pendingKey === 'rushAvailable:true' ? 'opacity-50 pointer-events-none' : ''}`}
         >
           <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
@@ -156,6 +170,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={o.label}
                 checked={activeFilters.moq === o.value}
                 onChange={() => { updateFilter('moq', o.value); setOpenGroup(null); }}
+                pending={isPending && pendingKey === `moq:${o.value}`}
               />
             ))}
           </div>
@@ -175,6 +190,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={o.label}
                 checked={activeFilters.turnaround === o.value}
                 onChange={() => { updateFilter('turnaround', o.value); setOpenGroup(null); }}
+                pending={isPending && pendingKey === `turnaround:${o.value}`}
               />
             ))}
           </div>
@@ -194,6 +210,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label={o.label}
                 checked={activeFilters.rating === o.value}
                 onChange={() => { updateFilter('rating', o.value); setOpenGroup(null); }}
+                pending={isPending && pendingKey === `rating:${o.value}`}
               />
             ))}
           </div>
@@ -217,16 +234,19 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label="Bulk orders"
                 checked={activeFilters.bulkOrders === 'true'}
                 onChange={() => updateFilter('bulkOrders', 'true')}
+                pending={isPending && pendingKey === 'bulkOrders:true'}
               />
               <CheckboxItem
                 label="Small batch / No minimum"
                 checked={activeFilters.smallBatch === 'true'}
                 onChange={() => updateFilter('smallBatch', 'true')}
+                pending={isPending && pendingKey === 'smallBatch:true'}
               />
               <CheckboxItem
                 label="Eco-friendly"
                 checked={activeFilters.ecoFriendly === 'true'}
                 onChange={() => updateFilter('ecoFriendly', 'true')}
+                pending={isPending && pendingKey === 'ecoFriendly:true'}
               />
             </div>
             <div>
@@ -235,11 +255,13 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
                 label="Custom design help"
                 checked={activeFilters.customDesign === 'true'}
                 onChange={() => updateFilter('customDesign', 'true')}
+                pending={isPending && pendingKey === 'customDesign:true'}
               />
               <CheckboxItem
                 label="Online ordering"
                 checked={activeFilters.onlineOrdering === 'true'}
                 onChange={() => updateFilter('onlineOrdering', 'true')}
+                pending={isPending && pendingKey === 'onlineOrdering:true'}
               />
             </div>
           </div>
@@ -257,16 +279,19 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
               label="Pickup available"
               checked={activeFulfillment.includes('Pickup')}
               onChange={() => updateFilter('fulfillment', 'Pickup', true)}
+              pending={isPending && pendingKey === 'fulfillment:Pickup'}
             />
             <CheckboxItem
               label="Delivery available"
               checked={activeFulfillment.includes('Delivery')}
               onChange={() => updateFilter('fulfillment', 'Delivery', true)}
+              pending={isPending && pendingKey === 'fulfillment:Delivery'}
             />
             <CheckboxItem
               label="Nationwide shipping"
               checked={activeFulfillment.includes('Nationwide Shipping') || activeFilters.nationwideShipping === 'true'}
               onChange={() => updateFilter('nationwideShipping', 'true')}
+              pending={isPending && pendingKey === 'nationwideShipping:true'}
             />
           </div>
         </DropdownPill>
@@ -324,10 +349,10 @@ function DropdownPill({
   );
 }
 
-function CheckboxItem({ label, checked, onChange }: { label: string; checked: boolean; onChange: () => void }) {
+function CheckboxItem({ label, checked, onChange, pending }: { label: string; checked: boolean; onChange: () => void; pending?: boolean }) {
   return (
     <label
-      className="flex items-center gap-2.5 py-1 cursor-pointer group"
+      className={`flex items-center gap-2.5 py-1 cursor-pointer group transition-opacity ${pending ? 'opacity-50 pointer-events-none' : ''}`}
       onClick={(e) => { e.preventDefault(); onChange(); }}
     >
       <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition-all duration-150 ${
@@ -346,10 +371,10 @@ function CheckboxItem({ label, checked, onChange }: { label: string; checked: bo
   );
 }
 
-function RadioItem({ label, checked, onChange }: { label: string; checked: boolean; onChange: () => void }) {
+function RadioItem({ label, checked, onChange, pending }: { label: string; checked: boolean; onChange: () => void; pending?: boolean }) {
   return (
     <label
-      className="flex items-center gap-2.5 py-1 cursor-pointer group"
+      className={`flex items-center gap-2.5 py-1 cursor-pointer group transition-opacity ${pending ? 'opacity-50 pointer-events-none' : ''}`}
       onClick={(e) => { e.preventDefault(); onChange(); }}
     >
       <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border transition-all duration-150 ${
