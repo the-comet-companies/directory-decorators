@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getClaims, updateClaim, getUserByEmail, createUser, updateUser } from '@/lib/db'
+import { supabase } from '@/lib/supabase'
 
 export async function POST(req: NextRequest) {
   try {
@@ -35,6 +36,9 @@ export async function POST(req: NextRequest) {
 
     // Mark claim as approved
     await updateClaim(claim.id, { verified: true, status: 'approved' })
+
+    // Auto-feature the claimed business — verified owners get priority placement
+    await supabase.from('companies').update({ featured: true }).eq('slug', slug)
 
     // Create or update user account
     let user = await getUserByEmail(email)

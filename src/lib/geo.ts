@@ -150,12 +150,6 @@ export async function getProvidersForState(stateAbbr: string): Promise<Provider[
     all = [...verified, ...unverified];
   }
 
-  // Pin DTLA Print as #1
-  const dtlaIndex = all.findIndex(p => p.slug === 'dtla-print-los-angeles-ca');
-  if (dtlaIndex > 0) {
-    const [dtla] = all.splice(dtlaIndex, 1);
-    all.unshift(dtla);
-  }
 
   return all;
 }
@@ -180,13 +174,6 @@ export async function getProvidersForCity(city: string, stateAbbr: string): Prom
       else unverified.push(p);
     }
     results = [...verified, ...unverified];
-  }
-
-  // Pin DTLA Print as #1
-  const dtlaIndex = results.findIndex(p => p.slug === 'dtla-print-los-angeles-ca');
-  if (dtlaIndex > 0) {
-    const [dtla] = results.splice(dtlaIndex, 1);
-    results.unshift(dtla);
   }
 
   return results;

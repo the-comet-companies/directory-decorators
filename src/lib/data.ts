@@ -197,29 +197,13 @@ export async function getProviders(filters: Partial<FilterState>): Promise<{ pro
   let providers = data.map(providerFromRow);
   const total = count || 0;
 
-  // Page 1 curation: pin DTLA Print and bubble verified within the page (no search)
+  // Page 1 curation: bubble verified (claimed) businesses within the page (no search)
   if (page === 1 && !isSearching) {
-    const DTLA_SLUG = 'dtla-print-los-angeles-ca';
-    if (!providers.some(p => p.slug === DTLA_SLUG)) {
-      const { data: dtlaRow } = await supabase.from('companies').select('*').eq('slug', DTLA_SLUG).maybeSingle();
-      if (dtlaRow) {
-        providers.unshift(providerFromRow(dtlaRow));
-        providers = providers.slice(0, perPage);
-      }
-    } else {
-      const dtlaIndex = providers.findIndex(p => p.slug === DTLA_SLUG);
-      if (dtlaIndex > 0) {
-        const [dtla] = providers.splice(dtlaIndex, 1);
-        providers.unshift(dtla);
-      }
-    }
-
     const claimedSlugs = await getClaimedSlugs();
     if (claimedSlugs.size > 0) {
-      const verified = providers.filter(p => claimedSlugs.has(p.slug) && p.slug !== DTLA_SLUG);
-      const unverified = providers.filter(p => !claimedSlugs.has(p.slug) && p.slug !== DTLA_SLUG);
-      const dtla = providers.find(p => p.slug === DTLA_SLUG);
-      providers = [...(dtla ? [dtla] : []), ...verified, ...unverified];
+      const verified = providers.filter(p => claimedSlugs.has(p.slug));
+      const unverified = providers.filter(p => !claimedSlugs.has(p.slug));
+      providers = [...verified, ...unverified];
     }
   }
 
@@ -369,14 +353,6 @@ export async function getProvidersForService(filterValue: string): Promise<Provi
       else unverified.push(p);
     }
     results = [...verified, ...unverified];
-  }
-
-  // Pin DTLA Print as #1
-  const DTLA_SLUG = 'dtla-print-los-angeles-ca';
-  const dtlaIndex = results.findIndex(p => p.slug === DTLA_SLUG);
-  if (dtlaIndex > 0) {
-    const [dtla] = results.splice(dtlaIndex, 1);
-    results.unshift(dtla);
   }
 
   return results.slice(0, 60);

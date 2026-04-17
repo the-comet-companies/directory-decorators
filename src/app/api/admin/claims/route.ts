@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { getAuthUser } from '@/lib/auth'
 import { getClaims, updateClaim, getUserByEmail, createUser, updateUser } from '@/lib/db'
+import { supabase } from '@/lib/supabase'
 
 function generateTempPassword(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789'
@@ -42,8 +43,10 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Claim not found.' }, { status: 404 })
     }
 
-    // When approved: create account + send credentials
+    // When approved: auto-feature the business + create account + send credentials
     if (action === 'approved' && updated.userEmail) {
+      await supabase.from('companies').update({ featured: true }).eq('slug', updated.businessSlug)
+
       const tempPassword = generateTempPassword()
 
       let user = await getUserByEmail(updated.userEmail)
