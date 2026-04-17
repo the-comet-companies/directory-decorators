@@ -265,8 +265,8 @@ export default function DtfVsDtgGuide() {
             description: 'DTF vs DTG printing compared: cost, quality, durability, fabric compatibility, and minimums.',
             datePublished: '2026-04-01',
             dateModified: '2026-04-07',
-            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
-            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
+            author: { '@type': 'Organization', name: 'USA Decorator Directory', url: 'https://directory.shoptitan.app' },
+            publisher: { '@type': 'Organization', name: 'USA Decorator Directory', url: 'https://directory.shoptitan.app' },
           }),
         }}
       />

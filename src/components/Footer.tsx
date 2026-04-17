@@ -25,7 +25,7 @@ export default function Footer() {
                 P
               </div>
               <span className="text-base font-bold tracking-tight text-surface-900">
-                Print Services <span className="text-brand-600">Hub USA</span>
+                USA Decorator <span className="text-brand-600">Directory</span>
               </span>
             </div>
             <p className="text-sm text-surface-500 leading-relaxed mb-4">
@@ -108,7 +108,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-surface-100 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-surface-400">
-            © 2026 Print Services Hub USA. All rights reserved.
+            © 2026 USA Decorator Directory. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-surface-400 hover:text-surface-600 transition-colors" aria-label="Instagram">

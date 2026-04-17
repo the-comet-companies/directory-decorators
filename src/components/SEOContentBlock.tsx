@@ -9,7 +9,7 @@ export default function SEOContentBlock() {
           <p>
             The United States is home to a thriving community of custom printing professionals. Whether you need
             <a href="/state/california" className="font-bold text-surface-800 hover:text-brand-600 transition-colors"> screen printing in California</a>, <a href="/state/new-york" className="font-bold text-surface-800 hover:text-brand-600 transition-colors">DTG printing in New York</a>,
-            or <a href="/state/texas" className="font-bold text-surface-800 hover:text-brand-600 transition-colors">embroidery services in Texas</a>, Print Services Hub USA connects you with verified
+            or <a href="/state/texas" className="font-bold text-surface-800 hover:text-brand-600 transition-colors">embroidery services in Texas</a>, USA Decorator Directory connects you with verified
             providers nationwide who deliver exceptional quality and fast turnaround times.
           </p>
           <p>

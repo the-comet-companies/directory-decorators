@@ -109,7 +109,7 @@ export default function FilterSidebar({ filterOptions, activeFilters, resultCoun
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Screen Print Type" defaultOpen={false}>
+      <FilterGroup title="Screen Printing Style" defaultOpen={false}>
         {filterOptions.screenPrintingTypes.map(t => (
           <CheckboxItem
             key={t}

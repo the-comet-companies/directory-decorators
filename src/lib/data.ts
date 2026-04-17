@@ -5,14 +5,11 @@ import { supabase } from './supabase';
 import { getClaimedSlugs } from './db';
 
 const SCREEN_PRINTING_TYPES = [
-  'Puff Printing',
-  'Plastisol Printing',
-  'Waterbased Printing',
-  'Flocking Printing',
-  '3M Reflective Printing',
-  'Headwear Printing',
-  'High Density Printing',
-  'Foil Printing',
+  'Plastisol', 'Waterbased', 'Discharge', 'Puff',
+  'High Density', 'Foil', 'Flocking (Flock)', 'Glitter',
+  'Glow in the Dark', 'Reflective (3M)', 'Metallic / Shimmer',
+  'Crackle', 'Gel / High-Gloss', '4-Color Process (CMYK)',
+  'Simulated Process', 'Spot Color',
 ];
 
 // ─── Row mapper ────────────────────────────────────────────────────────────
@@ -26,8 +23,11 @@ function providerFromRow(row: any): Provider {
     description: row.description || '',
     shortSummary: row.short_summary || '',
     address: row.address || '',
+    addressLine2: row.address_line2 || '',
     neighborhood: row.neighborhood || '',
     city: row.city || '',
+    state: row.state || '',
+    zip: row.zip || '',
     serviceArea: row.service_area || [],
     coordinates: { lat: row.lat || 0, lng: row.lng || 0 },
     phone: row.phone || '',
@@ -37,7 +37,10 @@ function providerFromRow(row: any): Provider {
     productCategories: row.product_categories || [],
     printingMethods: row.printing_methods || [],
     moq: row.moq || 1,
+    moqByService: row.moq_by_service || {},
     turnaroundDays: row.turnaround_days || 7,
+    turnaroundMinDays: row.turnaround_min_days ?? null,
+    turnaroundByService: row.turnaround_by_service || {},
     rushAvailable: !!row.rush_available,
     startingPrice: row.starting_price,
     pricingTiers: row.pricing_tiers || [],

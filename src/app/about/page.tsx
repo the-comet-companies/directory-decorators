@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About Print Services Hub USA — The #1 Printing Directory 2026',
-  description: 'Print Services Hub USA is the most complete directory of 15,000+ verified printing companies across all 50 states. Compare screen printing, embroidery, DTG, and more. Updated 2026.',
+  title: 'About USA Decorator Directory — The #1 Printing Directory 2026',
+  description: 'USA Decorator Directory is the most complete directory of 15,000+ verified printing companies across all 50 states. Compare screen printing, embroidery, DTG, and more. Updated 2026.',
   openGraph: {
-    title: 'About Print Services Hub USA — The #1 Printing Directory',
+    title: 'About USA Decorator Directory — The #1 Printing Directory',
     description: 'The most complete directory of 15,000+ custom printing companies across all 50 states.',
     type: 'website',
   },
@@ -116,7 +116,7 @@ export default function AboutPage() {
             <span className="text-brand-600">shouldn&apos;t be hard</span>
           </h1>
           <p className="text-lg sm:text-xl text-surface-500 max-w-2xl mx-auto leading-relaxed">
-            Print Services Hub USA is the most complete directory of custom printing companies in the United States.
+            USA Decorator Directory is the most complete directory of custom printing companies in the United States.
             We list screen printers, embroiderers, DTG shops, and specialty print houses from coast to coast — so you can
             find the right fit for your project in minutes.
           </p>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 Search results are cluttered, reviews are inconsistent, and quotes require endless back-and-forth.
               </p>
               <p>
-                We built Print Services Hub USA to change that. Our directory gives you a single, structured place to
+                We built USA Decorator Directory to change that. Our directory gives you a single, structured place to
                 discover and compare printing companies across all 50 states. Every listing shows you the services
                 offered, minimum order quantities, turnaround times, and real customer reviews — so you can make a
                 confident decision before you ever pick up the phone.

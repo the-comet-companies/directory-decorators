@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   title: {
     default: "Find the Best Printing Companies Near You | Compare 15,000+ Providers 2026",
-    template: "%s | Print Services Hub USA",
+    template: "%s | USA Decorator Directory",
   },
   description: "Compare 15,000+ top-rated printing companies across all 50 states. Find the best screen printing, DTG, embroidery, and custom apparel providers near you. Updated 2026.",
   keywords: "printing services USA, screen printing near me, custom t-shirts, DTG printing, embroidery services, DTF printing, custom apparel, printing companies, screen printers directory",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Compare 15,000+ top-rated printing companies across all 50 states. Find the best printers near you.",
     type: "website",
     locale: "en_US",
-    siteName: "Print Services Hub USA",
+    siteName: "USA Decorator Directory",
   },
   twitter: {
     card: "summary_large_image",
@@ -68,7 +68,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              name: 'Print Services Hub USA',
+              name: 'USA Decorator Directory',
               url: 'https://directory.shoptitan.app',
               description: 'The #1 directory of printing companies in the United States.',
               potentialAction: {
@@ -95,9 +95,9 @@ function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-surface-200 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="/" className="flex items-center gap-0.1 focus-ring rounded-lg">
-          <Image src="/icon-bg-none.png" alt="Print Services Hub USA — Printing Directory" width={56} height={56} className="object-contain" priority />
+          <Image src="/icon-bg-none.png" alt="USA Decorator Directory — Printing Services" width={56} height={56} className="object-contain" priority />
           <span className="text-lg font-bold tracking-tight text-surface-900">
-            Print Services <span className="text-brand-600">Hub USA</span>
+            USA Decorator <span className="text-brand-600">Directory</span>
           </span>
         </a>
         <div className="hidden md:flex items-center gap-8">

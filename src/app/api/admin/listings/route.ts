@@ -113,14 +113,14 @@ export async function PATCH(req: NextRequest) {
       const loginUrl = `${baseUrl}/auth/login`
 
       await transporter.sendMail({
-        from: `"Print Services Hub" <${process.env.SMTP_USER}>`,
+        from: `"USA Decorator Directory" <${process.env.SMTP_USER}>`,
         to: updated.userEmail,
         subject: `Your business "${updated.businessName}" is now live!`,
         html: `
           <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:24px;">
             <h2 style="color:#1e293b;margin-bottom:8px;">Your Listing is Live!</h2>
             <p style="color:#64748b;">Hi ${updated.userName},</p>
-            <p style="color:#64748b;">Great news! Your business <strong>${updated.businessName}</strong> has been approved and is now live on Print Services Hub USA.</p>
+            <p style="color:#64748b;">Great news! Your business <strong>${updated.businessName}</strong> has been approved and is now live on USA Decorator Directory.</p>
             <div style="margin:24px 0;">
               <a href="${listingUrl}" style="display:inline-block;background:#0f172a;color:#ffffff;text-decoration:none;padding:12px 28px;border-radius:12px;font-size:14px;font-weight:600;">
                 View Your Listing
@@ -128,7 +128,7 @@ export async function PATCH(req: NextRequest) {
             </div>
             <p style="color:#64748b;font-size:13px;">You can manage your listing anytime by logging into your <a href="${loginUrl}" style="color:#0f172a;font-weight:600;">dashboard</a>.</p>
             <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
-            <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from Print Services Hub USA</p>
+            <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from USA Decorator Directory</p>
           </div>
         `,
       }).catch(err => console.error('Failed to send approval email:', err))

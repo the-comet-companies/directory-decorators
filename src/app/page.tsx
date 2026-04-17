@@ -32,7 +32,7 @@ function buildDynamicTitle(params: Record<string, string | string[] | undefined>
   }
 
   if (parts.length > 0) {
-    return `${parts.join(' ')} — Compare Top Providers 2026 | Print Services Hub USA`
+    return `${parts.join(' ')} — Compare Top Providers 2026 | USA Decorator Directory`
   }
 
   return 'Find the Best Printing Companies Near You | Compare 15,000+ Providers 2026'

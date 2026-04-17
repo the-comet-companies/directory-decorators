@@ -73,14 +73,14 @@ export async function PATCH(req: NextRequest) {
         : 'https://directory.shoptitan.app/auth/login'
 
       await transporter.sendMail({
-        from: `"Print Services Hub" <${process.env.SMTP_USER}>`,
+        from: `"USA Decorator Directory" <${process.env.SMTP_USER}>`,
         to: updated.userEmail,
         subject: `Your business "${updated.businessName}" has been approved!`,
         html: `
           <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:24px;">
             <h2 style="color:#1e293b;margin-bottom:8px;">Business Claim Approved</h2>
             <p style="color:#64748b;">Hi ${updated.userName},</p>
-            <p style="color:#64748b;">Your request to claim <strong>${updated.businessName}</strong> on Print Services Hub USA has been approved. You can now log in and manage your listing.</p>
+            <p style="color:#64748b;">Your request to claim <strong>${updated.businessName}</strong> on USA Decorator Directory has been approved. You can now log in and manage your listing.</p>
 
             <div style="background:#f1f5f9;border-radius:12px;padding:20px;margin:24px 0;">
               <p style="color:#64748b;margin:0 0 12px 0;font-size:13px;">Your login credentials:</p>
@@ -104,7 +104,7 @@ export async function PATCH(req: NextRequest) {
               For security, we recommend changing your password after your first login. Go to your <a href="${dashboardUrl}" style="color:#64748b;">dashboard</a> to manage your listing.
             </p>
             <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
-            <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from Print Services Hub USA</p>
+            <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from USA Decorator Directory</p>
           </div>
         `,
       })

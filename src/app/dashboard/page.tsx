@@ -12,6 +12,10 @@ interface BusinessData {
   description: string
   shortSummary: string
   address: string
+  addressLine2: string
+  city: string
+  state: string
+  zip: string
   phone: string
   email: string
   website: string
@@ -19,7 +23,10 @@ interface BusinessData {
   productCategories: string[]
   printingMethods: string[]
   moq: number
+  moqByService: Record<string, number>
   turnaroundDays: number
+  turnaroundMinDays: number | null
+  turnaroundByService: Record<string, { min: number; max: number }>
   rushAvailable: boolean
   pickup: boolean
   delivery: boolean
@@ -44,16 +51,21 @@ const SERVICE_OPTIONS = [
 ]
 
 const PRODUCT_OPTIONS = [
-  'T-Shirts', 'Hoodies & Sweatshirts', 'Caps & Hats', 'Polos',
-  'Tote Bags', 'Promotional Items', 'Uniforms', 'Sportswear',
-  'Banners & Signs', 'Stickers & Decals', 'Custom Apparel',
+  'T-Shirts', 'Tank Tops', 'Long Sleeves', 'Hoodies & Sweatshirts',
+  'Polos', 'Jackets & Outerwear', 'Caps & Hats', 'Aprons & Workwear',
+  'Uniforms', 'Sportswear', 'Youth & Baby Apparel',
+  'Tote Bags', 'Bags & Backpacks', 'Drinkware & Mugs',
+  'Lanyards & Wristbands', 'Koozies & Can Coolers',
+  'Towels & Blankets', 'Patches & Emblems', 'Stickers & Decals',
+  'Banners & Signs', 'Promotional Items',
 ]
 
 const PRINTING_METHOD_OPTIONS = [
-  'Screen Printing', 'DTG Printing', 'DTF Printing', 'Embroidery',
-  'Heat Transfer', 'Sublimation', 'Vinyl Cutting', 'Pad Printing',
-  'Puff Printing', 'Plastisol Printing', 'Waterbased Printing',
-  'Foil Printing', 'Flocking Printing', 'High Density Printing',
+  'Plastisol', 'Waterbased', 'Discharge', 'Puff',
+  'High Density', 'Foil', 'Flocking (Flock)', 'Glitter',
+  'Glow in the Dark', 'Reflective (3M)', 'Metallic / Shimmer',
+  'Crackle', 'Gel / High-Gloss', '4-Color Process (CMYK)',
+  'Simulated Process', 'Spot Color',
 ]
 
 const MAX_GALLERY_IMAGES = 4
@@ -68,6 +80,9 @@ export default function DashboardPage() {
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null)
+  const [customService, setCustomService] = useState('')
+  const [customProduct, setCustomProduct] = useState('')
+  const [customMethod, setCustomMethod] = useState('')
   const coverInputRef = useRef<HTMLInputElement>(null)
   const galleryInputRef = useRef<HTMLInputElement>(null)
 
@@ -124,6 +139,19 @@ export default function DashboardPage() {
     const updated = arr.includes(item) ? arr.filter(s => s !== item) : [...arr, item]
     setBusiness({ ...business, [key]: updated })
   }
+
+  const addCustomItem = (key: 'servicesOffered' | 'productCategories' | 'printingMethods', value: string, reset: (v: string) => void) => {
+    if (!business) return
+    const trimmed = value.trim()
+    if (!trimmed) { reset(''); return }
+    const existing = business[key]
+    if (existing.some(s => s.toLowerCase() === trimmed.toLowerCase())) { reset(''); return }
+    setBusiness({ ...business, [key]: [...existing, trimmed] })
+    reset('')
+  }
+  const addCustomService = () => addCustomItem('servicesOffered', customService, setCustomService)
+  const addCustomProduct = () => addCustomItem('productCategories', customProduct, setCustomProduct)
+  const addCustomMethod = () => addCustomItem('printingMethods', customMethod, setCustomMethod)
 
   const handleImageUpload = async (file: File) => {
     try {
@@ -232,16 +260,42 @@ export default function DashboardPage() {
                   className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-semibold text-surface-800 mb-1.5">Website</label>
-                <input type="url" value={business.website} onChange={e => setBusiness({ ...business, website: e.target.value })}
-                  className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-surface-800 mb-1.5">Address</label>
-                <input type="text" value={business.address} onChange={e => setBusiness({ ...business, address: e.target.value })}
-                  className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+            <div>
+              <label className="block text-sm font-semibold text-surface-800 mb-1.5">Website</label>
+              <input type="url" value={business.website} onChange={e => setBusiness({ ...business, website: e.target.value })}
+                className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+            </div>
+
+            <div className="pt-2">
+              <h3 className="text-sm font-semibold text-surface-900 mb-3">Address</h3>
+              <div className="grid gap-4">
+                <div>
+                  <label className="block text-xs font-medium text-surface-700 mb-1.5">Street Address</label>
+                  <input type="text" placeholder="123 Main St" value={business.address} onChange={e => setBusiness({ ...business, address: e.target.value })}
+                    className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-surface-700 mb-1.5">Apt / Suite / Unit (optional)</label>
+                  <input type="text" placeholder="Suite 200" value={business.addressLine2} onChange={e => setBusiness({ ...business, addressLine2: e.target.value })}
+                    className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+                </div>
+                <div className="grid sm:grid-cols-[1fr_100px_120px] gap-3">
+                  <div>
+                    <label className="block text-xs font-medium text-surface-700 mb-1.5">City</label>
+                    <input type="text" value={business.city} onChange={e => setBusiness({ ...business, city: e.target.value })}
+                      className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-surface-700 mb-1.5">State</label>
+                    <input type="text" maxLength={2} placeholder="CA" value={business.state} onChange={e => setBusiness({ ...business, state: e.target.value.toUpperCase() })}
+                      className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black uppercase" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-surface-700 mb-1.5">ZIP</label>
+                    <input type="text" maxLength={10} placeholder="90058" value={business.zip} onChange={e => setBusiness({ ...business, zip: e.target.value })}
+                      className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -257,6 +311,21 @@ export default function DashboardPage() {
                   business.servicesOffered.includes(s) ? 'bg-black text-white' : 'bg-surface-100 text-surface-600 hover:bg-surface-200'
                 }`}>{s}</button>
             ))}
+            {business.servicesOffered.filter(s => !SERVICE_OPTIONS.includes(s)).map(s => (
+              <span key={s} className="inline-flex items-center gap-1.5 rounded-full bg-black text-white px-3.5 py-1.5 text-sm font-medium">
+                {s}
+                <button type="button" onClick={() => setBusiness({ ...business, servicesOffered: business.servicesOffered.filter(x => x !== s) })}
+                  className="text-white/70 hover:text-white" aria-label={`Remove ${s}`}>×</button>
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 flex gap-2">
+            <input type="text" value={customService} onChange={e => setCustomService(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomService() } }}
+              placeholder="Add a service not listed…"
+              className="flex-1 h-10 rounded-lg border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+            <button type="button" onClick={addCustomService}
+              className="h-10 rounded-lg bg-surface-100 hover:bg-surface-200 px-4 text-sm font-medium text-surface-800">Add</button>
           </div>
         </section>
 
@@ -270,12 +339,28 @@ export default function DashboardPage() {
                   business.productCategories.includes(p) ? 'bg-black text-white' : 'bg-surface-100 text-surface-600 hover:bg-surface-200'
                 }`}>{p}</button>
             ))}
+            {business.productCategories.filter(p => !PRODUCT_OPTIONS.includes(p)).map(p => (
+              <span key={p} className="inline-flex items-center gap-1.5 rounded-full bg-black text-white px-3.5 py-1.5 text-sm font-medium">
+                {p}
+                <button type="button" onClick={() => setBusiness({ ...business, productCategories: business.productCategories.filter(x => x !== p) })}
+                  className="text-white/70 hover:text-white" aria-label={`Remove ${p}`}>×</button>
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 flex gap-2">
+            <input type="text" value={customProduct} onChange={e => setCustomProduct(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomProduct() } }}
+              placeholder="Add a product not listed…"
+              className="flex-1 h-10 rounded-lg border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+            <button type="button" onClick={addCustomProduct}
+              className="h-10 rounded-lg bg-surface-100 hover:bg-surface-200 px-4 text-sm font-medium text-surface-800">Add</button>
           </div>
         </section>
 
-        {/* Printing Methods */}
+        {/* Screen Printing Styles */}
         <section className="bg-white rounded-2xl border border-surface-200 p-6 mb-6">
-          <h2 className="text-lg font-semibold text-surface-900 mb-4">Printing Methods</h2>
+          <h2 className="text-lg font-semibold text-surface-900 mb-4">Screen Printing Styles</h2>
+          <p className="text-sm text-surface-500 mb-4 -mt-2">Specialty ink effects and techniques you offer. Leave empty if you don&apos;t do screen printing.</p>
           <div className="flex flex-wrap gap-2">
             {PRINTING_METHOD_OPTIONS.map(m => (
               <button key={m} onClick={() => toggleArrayItem('printingMethods', m)}
@@ -283,24 +368,108 @@ export default function DashboardPage() {
                   business.printingMethods.includes(m) ? 'bg-black text-white' : 'bg-surface-100 text-surface-600 hover:bg-surface-200'
                 }`}>{m}</button>
             ))}
+            {business.printingMethods.filter(m => !PRINTING_METHOD_OPTIONS.includes(m)).map(m => (
+              <span key={m} className="inline-flex items-center gap-1.5 rounded-full bg-black text-white px-3.5 py-1.5 text-sm font-medium">
+                {m}
+                <button type="button" onClick={() => setBusiness({ ...business, printingMethods: business.printingMethods.filter(x => x !== m) })}
+                  className="text-white/70 hover:text-white" aria-label={`Remove ${m}`}>×</button>
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 flex gap-2">
+            <input type="text" value={customMethod} onChange={e => setCustomMethod(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomMethod() } }}
+              placeholder="Add a style not listed…"
+              className="flex-1 h-10 rounded-lg border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+            <button type="button" onClick={addCustomMethod}
+              className="h-10 rounded-lg bg-surface-100 hover:bg-surface-200 px-4 text-sm font-medium text-surface-800">Add</button>
           </div>
         </section>
 
         {/* Operations */}
         <section className="bg-white rounded-2xl border border-surface-200 p-6 mb-6">
           <h2 className="text-lg font-semibold text-surface-900 mb-4">Operations</h2>
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label className="block text-sm font-semibold text-surface-800 mb-1.5">Min Order Quantity</label>
-              <input type="number" min="1" value={business.moq} onChange={e => setBusiness({ ...business, moq: Math.max(1, Number(e.target.value)) })}
-                className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+
+          <div className="mb-5">
+            <label className="block text-sm font-semibold text-surface-800 mb-1.5">Default Min Order Quantity</label>
+            <p className="text-xs text-surface-400 mb-2">Overall minimum. Used when a per-service MOQ isn&apos;t set.</p>
+            <input type="number" min="1" value={business.moq} onChange={e => setBusiness({ ...business, moq: Math.max(1, Number(e.target.value)) })}
+              className="w-40 h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+          </div>
+
+          {business.servicesOffered.length > 0 && (
+            <div className="mb-5">
+              <label className="block text-sm font-semibold text-surface-800 mb-1.5">MOQ per Service (optional)</label>
+              <p className="text-xs text-surface-400 mb-3">Override the default MOQ for specific services (e.g., DTG 1, Screen Printing 24, Embroidery 12).</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {business.servicesOffered.map(s => (
+                  <div key={s} className="flex items-center gap-2">
+                    <span className="text-sm text-surface-700 flex-1 truncate">{s}</span>
+                    <input type="number" min="1" placeholder={String(business.moq)}
+                      value={business.moqByService[s] ?? ''}
+                      onChange={e => {
+                        const v = e.target.value
+                        const next = { ...business.moqByService }
+                        if (v === '') delete next[s]
+                        else next[s] = Math.max(1, Number(v))
+                        setBusiness({ ...business, moqByService: next })
+                      }}
+                      className="w-24 h-9 rounded-lg border border-surface-200 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-black text-center" />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-semibold text-surface-800 mb-1.5">Turnaround (days)</label>
-              <input type="number" min="1" value={business.turnaroundDays} onChange={e => setBusiness({ ...business, turnaroundDays: Math.max(1, Number(e.target.value)) })}
-                className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+          )}
+
+          <div className="mb-5">
+            <label className="block text-sm font-semibold text-surface-800 mb-1.5">Standard Turnaround (days)</label>
+            <p className="text-xs text-surface-400 mb-2">The typical range from art approval to ready-to-ship.</p>
+            <div className="flex items-center gap-2">
+              <input type="number" min="1" placeholder="Min" value={business.turnaroundMinDays ?? ''}
+                onChange={e => {
+                  const v = e.target.value
+                  setBusiness({ ...business, turnaroundMinDays: v === '' ? null : Math.max(1, Number(v)) })
+                }}
+                className="w-24 h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black text-center" />
+              <span className="text-surface-400">–</span>
+              <input type="number" min="1" placeholder="Max" value={business.turnaroundDays}
+                onChange={e => setBusiness({ ...business, turnaroundDays: Math.max(1, Number(e.target.value)) })}
+                className="w-24 h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black text-center" />
+              <span className="text-sm text-surface-500">days</span>
             </div>
           </div>
+
+          {business.servicesOffered.length > 0 && (
+            <div className="mb-4">
+              <label className="block text-sm font-semibold text-surface-800 mb-1.5">Turnaround per Service (optional)</label>
+              <p className="text-xs text-surface-400 mb-3">Override the standard turnaround for specific services.</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {business.servicesOffered.map(s => {
+                  const current = business.turnaroundByService[s] || { min: 0, max: 0 }
+                  const updateTurnaround = (field: 'min' | 'max', v: string) => {
+                    const next = { ...business.turnaroundByService }
+                    const entry = { ...(next[s] || { min: 0, max: 0 }) }
+                    entry[field] = v === '' ? 0 : Math.max(1, Number(v))
+                    if (!entry.min && !entry.max) delete next[s]
+                    else next[s] = entry
+                    setBusiness({ ...business, turnaroundByService: next })
+                  }
+                  return (
+                    <div key={s} className="flex items-center gap-2">
+                      <span className="text-sm text-surface-700 flex-1 truncate">{s}</span>
+                      <input type="number" min="1" placeholder="Min" value={current.min || ''}
+                        onChange={e => updateTurnaround('min', e.target.value)}
+                        className="w-16 h-9 rounded-lg border border-surface-200 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-black text-center" />
+                      <span className="text-surface-400 text-xs">–</span>
+                      <input type="number" min="1" placeholder="Max" value={current.max || ''}
+                        onChange={e => updateTurnaround('max', e.target.value)}
+                        className="w-16 h-9 rounded-lg border border-surface-200 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-black text-center" />
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
               { key: 'rushAvailable', label: 'Rush Available' },

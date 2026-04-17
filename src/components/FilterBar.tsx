@@ -89,9 +89,9 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
           </div>
         </DropdownPill>
 
-        {/* Screen Print Type */}
+        {/* Screen Printing Style */}
         <DropdownPill
-          label="Screen Print Type"
+          label="Screen Printing Style"
           isActive={activeScreenTypes.length > 0}
           isOpen={openGroup === 'screenprint'}
           onToggle={() => setOpenGroup(openGroup === 'screenprint' ? null : 'screenprint')}
@@ -115,7 +115,7 @@ export default function FilterBar({ filterOptions, activeFilters }: FilterBarPro
           isOpen={openGroup === 'product'}
           onToggle={() => setOpenGroup(openGroup === 'product' ? null : 'product')}
         >
-          <div className="space-y-0.5 min-w-[180px]">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 min-w-[380px]">
             {filterOptions.productCategories.map(c => (
               <CheckboxItem
                 key={c}

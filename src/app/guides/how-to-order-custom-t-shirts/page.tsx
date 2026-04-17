@@ -35,7 +35,7 @@ const steps = [
   },
   {
     title: 'Get Quotes from Multiple Printers',
-    description: 'Contact 2–3 printing companies and compare quotes. Prices vary significantly based on location, method, quantity, and turnaround time. Ask about setup fees, shipping costs, and rush charges. Use Print Services Hub to find and compare printers in your area.',
+    description: 'Contact 2–3 printing companies and compare quotes. Prices vary significantly based on location, method, quantity, and turnaround time. Ask about setup fees, shipping costs, and rush charges. Use USA Decorator Directory to find and compare printers in your area.',
     tip: 'Request a printed sample or proof before committing to a large order.',
   },
   {

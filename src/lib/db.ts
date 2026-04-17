@@ -51,8 +51,10 @@ export interface PendingListing {
   businessName: string
   description: string
   address: string
+  addressLine2: string
   city: string
   state: string
+  zip: string
   phone: string
   email: string
   website: string
@@ -60,7 +62,10 @@ export interface PendingListing {
   productCategories: string[]
   printingMethods: string[]
   moq: number
+  moqByService: Record<string, number>
   turnaroundDays: number
+  turnaroundMinDays: number | null
+  turnaroundByService: Record<string, { min: number; max: number }>
   rushAvailable: boolean
   pickup: boolean
   delivery: boolean
@@ -167,8 +172,10 @@ type PendingListingRow = {
   business_name: string
   description: string | null
   address: string | null
+  address_line2: string | null
   city: string | null
   state: string | null
+  zip: string | null
   phone: string | null
   email: string | null
   website: string | null
@@ -176,7 +183,10 @@ type PendingListingRow = {
   product_categories: string[]
   printing_methods: string[]
   moq: number
+  moq_by_service: Record<string, number> | null
   turnaround_days: number
+  turnaround_min_days: number | null
+  turnaround_by_service: Record<string, { min: number; max: number }> | null
   rush_available: boolean
   pickup: boolean
   delivery: boolean
@@ -196,8 +206,10 @@ function listingFromRow(row: PendingListingRow): PendingListing {
     businessName: row.business_name,
     description: row.description || '',
     address: row.address || '',
+    addressLine2: row.address_line2 || '',
     city: row.city || '',
     state: row.state || '',
+    zip: row.zip || '',
     phone: row.phone || '',
     email: row.email || '',
     website: row.website || '',
@@ -205,7 +217,10 @@ function listingFromRow(row: PendingListingRow): PendingListing {
     productCategories: row.product_categories || [],
     printingMethods: row.printing_methods || [],
     moq: row.moq,
+    moqByService: row.moq_by_service || {},
     turnaroundDays: row.turnaround_days,
+    turnaroundMinDays: row.turnaround_min_days ?? null,
+    turnaroundByService: row.turnaround_by_service || {},
     rushAvailable: row.rush_available,
     pickup: row.pickup,
     delivery: row.delivery,
@@ -422,8 +437,10 @@ export async function createPendingListing(data: Omit<PendingListing, 'id' | 'cr
     business_name: data.businessName,
     description: data.description || null,
     address: data.address || null,
+    address_line2: data.addressLine2 || null,
     city: data.city || null,
     state: data.state || null,
+    zip: data.zip || null,
     phone: data.phone || null,
     email: data.email || null,
     website: data.website || null,
@@ -431,7 +448,10 @@ export async function createPendingListing(data: Omit<PendingListing, 'id' | 'cr
     product_categories: data.productCategories,
     printing_methods: data.printingMethods,
     moq: data.moq,
+    moq_by_service: data.moqByService || {},
     turnaround_days: data.turnaroundDays,
+    turnaround_min_days: data.turnaroundMinDays ?? null,
+    turnaround_by_service: data.turnaroundByService || {},
     rush_available: data.rushAvailable,
     pickup: data.pickup,
     delivery: data.delivery,
@@ -450,8 +470,10 @@ export async function updatePendingListing(id: string, updates: Partial<PendingL
   if (updates.businessName !== undefined) row.business_name = updates.businessName
   if (updates.description !== undefined) row.description = updates.description || null
   if (updates.address !== undefined) row.address = updates.address || null
+  if (updates.addressLine2 !== undefined) row.address_line2 = updates.addressLine2 || null
   if (updates.city !== undefined) row.city = updates.city || null
   if (updates.state !== undefined) row.state = updates.state || null
+  if (updates.zip !== undefined) row.zip = updates.zip || null
   if (updates.phone !== undefined) row.phone = updates.phone || null
   if (updates.email !== undefined) row.email = updates.email || null
   if (updates.website !== undefined) row.website = updates.website || null

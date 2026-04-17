@@ -30,6 +30,10 @@ export async function POST(req: NextRequest) {
     if (updates.description !== undefined) row.description = updates.description
     if (updates.shortSummary !== undefined) row.short_summary = updates.shortSummary
     if (updates.address !== undefined) row.address = updates.address
+    if (updates.addressLine2 !== undefined) row.address_line2 = updates.addressLine2
+    if (updates.city !== undefined) row.city = updates.city
+    if (updates.state !== undefined) row.state = updates.state
+    if (updates.zip !== undefined) row.zip = updates.zip
     if (updates.phone !== undefined) row.phone = updates.phone
     if (updates.email !== undefined) row.email = updates.email
     if (updates.website !== undefined) row.website = updates.website
@@ -37,7 +41,16 @@ export async function POST(req: NextRequest) {
     if (updates.productCategories !== undefined) row.product_categories = updates.productCategories
     if (updates.printingMethods !== undefined) row.printing_methods = updates.printingMethods
     if (updates.moq !== undefined) row.moq = updates.moq
+    if (updates.moqByService !== undefined) {
+      const map = updates.moqByService as Record<string, number>
+      row.moq_by_service = map
+      // Overall moq auto-set to min of per-service values (if any)
+      const values = Object.values(map).filter(v => typeof v === 'number' && v > 0)
+      if (values.length > 0) row.moq = Math.min(...values)
+    }
     if (updates.turnaroundDays !== undefined) row.turnaround_days = updates.turnaroundDays
+    if (updates.turnaroundMinDays !== undefined) row.turnaround_min_days = updates.turnaroundMinDays
+    if (updates.turnaroundByService !== undefined) row.turnaround_by_service = updates.turnaroundByService
     if (updates.rushAvailable !== undefined) row.rush_available = updates.rushAvailable
     if (updates.pickup !== undefined) row.pickup = updates.pickup
     if (updates.delivery !== undefined) row.delivery = updates.delivery

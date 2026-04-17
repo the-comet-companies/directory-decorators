@@ -14,9 +14,13 @@ const SERVICE_OPTIONS = [
 ]
 
 const PRODUCT_OPTIONS = [
-  'T-Shirts', 'Hoodies & Sweatshirts', 'Caps & Hats', 'Polos',
-  'Tote Bags', 'Promotional Items', 'Uniforms', 'Sportswear',
-  'Banners & Signs', 'Stickers & Decals', 'Custom Apparel',
+  'T-Shirts', 'Tank Tops', 'Long Sleeves', 'Hoodies & Sweatshirts',
+  'Polos', 'Jackets & Outerwear', 'Caps & Hats', 'Aprons & Workwear',
+  'Uniforms', 'Sportswear', 'Youth & Baby Apparel',
+  'Tote Bags', 'Bags & Backpacks', 'Drinkware & Mugs',
+  'Lanyards & Wristbands', 'Koozies & Can Coolers',
+  'Towels & Blankets', 'Patches & Emblems', 'Stickers & Decals',
+  'Banners & Signs', 'Promotional Items',
 ]
 
 const US_STATES = [
@@ -34,16 +38,21 @@ export default function ListBusinessPage() {
   const { data: session, status } = useSession()
   const router = useRouter()
   const [form, setForm] = useState({
-    businessName: '', description: '', address: '', city: '', state: '',
+    businessName: '', description: '',
+    address: '', addressLine2: '', city: '', state: '', zip: '',
     phone: '', email: '', website: '',
     servicesOffered: [] as string[], productCategories: [] as string[], printingMethods: [] as string[],
-    moq: 1, turnaroundDays: 7,
+    moq: 1, moqByService: {} as Record<string, number>,
+    turnaroundDays: 7, turnaroundMinDays: null as number | null,
+    turnaroundByService: {} as Record<string, { min: number; max: number }>,
     rushAvailable: false, pickup: false, delivery: false, ecoFriendly: false,
     galleryImages: [] as string[], coverImage: '',
   })
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+  const [customService, setCustomService] = useState('')
+  const [customProduct, setCustomProduct] = useState('')
   const galleryRef = useRef<HTMLInputElement>(null)
   const coverRef = useRef<HTMLInputElement>(null)
 
@@ -63,6 +72,34 @@ export default function ListBusinessPage() {
         ? prev.servicesOffered.filter(x => x !== s)
         : [...prev.servicesOffered, s],
     }))
+  }
+
+  const addCustomService = () => {
+    const trimmed = customService.trim()
+    if (!trimmed) return
+    setForm(prev => {
+      if (prev.servicesOffered.some(s => s.toLowerCase() === trimmed.toLowerCase())) return prev
+      return { ...prev, servicesOffered: [...prev.servicesOffered, trimmed] }
+    })
+    setCustomService('')
+  }
+
+  const removeService = (s: string) => {
+    setForm(prev => ({ ...prev, servicesOffered: prev.servicesOffered.filter(x => x !== s) }))
+  }
+
+  const addCustomProduct = () => {
+    const trimmed = customProduct.trim()
+    if (!trimmed) return
+    setForm(prev => {
+      if (prev.productCategories.some(p => p.toLowerCase() === trimmed.toLowerCase())) return prev
+      return { ...prev, productCategories: [...prev.productCategories, trimmed] }
+    })
+    setCustomProduct('')
+  }
+
+  const removeProduct = (p: string) => {
+    setForm(prev => ({ ...prev, productCategories: prev.productCategories.filter(x => x !== p) }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -158,7 +195,17 @@ export default function ListBusinessPage() {
                 <textarea value={form.description} onChange={e => setForm({ ...form, description: e.target.value })}
                   rows={3} className="w-full rounded-xl border border-surface-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black resize-none" />
               </div>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-surface-800 mb-1.5">Street Address <span className="text-red-500">*</span></label>
+                <input type="text" placeholder="123 Main St" value={form.address} onChange={e => setForm({ ...form, address: e.target.value })}
+                  className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-surface-800 mb-1.5">Apt / Suite / Unit (optional)</label>
+                <input type="text" placeholder="Suite 200" value={form.addressLine2} onChange={e => setForm({ ...form, addressLine2: e.target.value })}
+                  className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+              </div>
+              <div className="grid sm:grid-cols-[1fr_140px_120px] gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-surface-800 mb-1.5">City <span className="text-red-500">*</span></label>
                   <input type="text" value={form.city} onChange={e => setForm({ ...form, city: e.target.value })}
@@ -168,13 +215,13 @@ export default function ListBusinessPage() {
                   <label className="block text-sm font-semibold text-surface-800 mb-1.5">State <span className="text-red-500">*</span></label>
                   <select value={form.state} onChange={e => setForm({ ...form, state: e.target.value })}
                     className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black bg-white appearance-none cursor-pointer">
-                    <option value="">Select State</option>
+                    <option value="">Select</option>
                     {US_STATES.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-surface-800 mb-1.5">Address <span className="text-red-500">*</span></label>
-                  <input type="text" value={form.address} onChange={e => setForm({ ...form, address: e.target.value })}
+                  <label className="block text-sm font-semibold text-surface-800 mb-1.5">ZIP</label>
+                  <input type="text" maxLength={10} placeholder="90058" value={form.zip} onChange={e => setForm({ ...form, zip: e.target.value })}
                     className="w-full h-11 rounded-xl border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
                 </div>
               </div>
@@ -207,6 +254,21 @@ export default function ListBusinessPage() {
                     form.servicesOffered.includes(s) ? 'bg-black text-white' : 'bg-surface-100 text-surface-600 hover:bg-surface-200'
                   }`}>{s}</button>
               ))}
+              {form.servicesOffered.filter(s => !SERVICE_OPTIONS.includes(s)).map(s => (
+                <span key={s} className="inline-flex items-center gap-1.5 rounded-full bg-black text-white px-3.5 py-1.5 text-sm font-medium">
+                  {s}
+                  <button type="button" onClick={() => removeService(s)}
+                    className="text-white/70 hover:text-white" aria-label={`Remove ${s}`}>×</button>
+                </span>
+              ))}
+            </div>
+            <div className="mt-4 flex gap-2">
+              <input type="text" value={customService} onChange={e => setCustomService(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomService() } }}
+                placeholder="Add a service not listed…"
+                className="flex-1 h-10 rounded-lg border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+              <button type="button" onClick={addCustomService}
+                className="h-10 rounded-lg bg-surface-100 hover:bg-surface-200 px-4 text-sm font-medium text-surface-800">Add</button>
             </div>
           </section>
 
@@ -224,6 +286,21 @@ export default function ListBusinessPage() {
                     form.productCategories.includes(p) ? 'bg-black text-white' : 'bg-surface-100 text-surface-600 hover:bg-surface-200'
                   }`}>{p}</button>
               ))}
+              {form.productCategories.filter(p => !PRODUCT_OPTIONS.includes(p)).map(p => (
+                <span key={p} className="inline-flex items-center gap-1.5 rounded-full bg-black text-white px-3.5 py-1.5 text-sm font-medium">
+                  {p}
+                  <button type="button" onClick={() => removeProduct(p)}
+                    className="text-white/70 hover:text-white" aria-label={`Remove ${p}`}>×</button>
+                </span>
+              ))}
+            </div>
+            <div className="mt-4 flex gap-2">
+              <input type="text" value={customProduct} onChange={e => setCustomProduct(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomProduct() } }}
+                placeholder="Add a product not listed…"
+                className="flex-1 h-10 rounded-lg border border-surface-200 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black" />
+              <button type="button" onClick={addCustomProduct}
+                className="h-10 rounded-lg bg-surface-100 hover:bg-surface-200 px-4 text-sm font-medium text-surface-800">Add</button>
             </div>
           </section>
 

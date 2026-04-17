@@ -296,8 +296,8 @@ export default function ScreenPrintingCostGuide() {
             description: 'Screen printing costs $5–$15 per shirt for orders of 72+. Full pricing table by quantity, number of colors, and garment type.',
             datePublished: '2026-04-01',
             dateModified: '2026-04-07',
-            author: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
-            publisher: { '@type': 'Organization', name: 'Print Services Hub USA', url: 'https://directory.shoptitan.app' },
+            author: { '@type': 'Organization', name: 'USA Decorator Directory', url: 'https://directory.shoptitan.app' },
+            publisher: { '@type': 'Organization', name: 'USA Decorator Directory', url: 'https://directory.shoptitan.app' },
           }),
         }}
       />

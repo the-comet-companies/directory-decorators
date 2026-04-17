@@ -5,8 +5,11 @@ export interface Provider {
   description: string;
   shortSummary: string;
   address: string;
+  addressLine2: string;
   neighborhood: string;
   city: string;
+  state: string;
+  zip: string;
   serviceArea: string[];
   coordinates: { lat: number; lng: number };
   phone: string;
@@ -16,7 +19,10 @@ export interface Provider {
   productCategories: string[];
   printingMethods: string[];
   moq: number;
+  moqByService: Record<string, number>;
   turnaroundDays: number;
+  turnaroundMinDays: number | null;
+  turnaroundByService: Record<string, { min: number; max: number }>;
   rushAvailable: boolean;
   startingPrice: number | null;
   pricingTiers: PricingTier[];

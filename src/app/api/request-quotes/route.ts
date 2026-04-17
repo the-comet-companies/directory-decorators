@@ -51,20 +51,20 @@ export async function POST(req: NextRequest) {
     for (const provider of providers) {
       if (provider.email && provider.email.trim()) {
         await transporter.sendMail({
-          from: `"Print Services Hub" <${process.env.SMTP_USER}>`,
+          from: `"USA Decorator Directory" <${process.env.SMTP_USER}>`,
           to: provider.email,
           replyTo: email,
           subject: `Quote Request: ${serviceType || 'Custom Printing'} — ${quantity ? quantity + ' pieces' : 'Quote needed'}`,
           html: `
             <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
               <h2 style="color:#1e293b;margin-bottom:4px;">New Quote Request</h2>
-              <p style="color:#64748b;margin-top:0;">A customer found you on <a href="https://directory.shoptitan.app/provider/${provider.slug}">Print Services Hub USA</a></p>
+              <p style="color:#64748b;margin-top:0;">A customer found you on <a href="https://directory.shoptitan.app/provider/${provider.slug}">USA Decorator Directory</a></p>
               <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
               ${projectHtml}
               <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
               <p style="color:#1e293b;font-weight:600;">Reply directly to this email to respond to the customer.</p>
               <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
-              <p style="color:#94a3b8;font-size:12px;margin:0;">Sent via Print Services Hub USA · ${new Date().toLocaleString()}</p>
+              <p style="color:#94a3b8;font-size:12px;margin:0;">Sent via USA Decorator Directory · ${new Date().toLocaleString()}</p>
             </div>
           `,
         })
@@ -92,14 +92,14 @@ export async function POST(req: NextRequest) {
     ).join('')
 
     await transporter.sendMail({
-      from: `"Print Services Hub" <${process.env.SMTP_USER}>`,
+      from: `"USA Decorator Directory" <${process.env.SMTP_USER}>`,
       to: 'jepoylorem@gmail.com',
       replyTo: email,
       subject: `Quote Request Summary: ${name} → ${providers.length} provider${providers.length > 1 ? 's' : ''} — ${serviceType || 'Custom Printing'}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
           <h2 style="color:#1e293b;margin-bottom:4px;">Quote Request Summary</h2>
-          <p style="color:#64748b;margin-top:0;">Submitted via Print Services Hub USA</p>
+          <p style="color:#64748b;margin-top:0;">Submitted via USA Decorator Directory</p>
           <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
 
           ${projectHtml}
@@ -112,7 +112,7 @@ export async function POST(req: NextRequest) {
           ${noEmail.length > 0 ? `<p style="color:#dc2626;font-size:13px;margin-top:8px;">✗ No email on file (forward manually): ${noEmail.join(', ')}</p>` : ''}
 
           <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
-          <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from Print Services Hub USA · ${new Date().toLocaleString()}</p>
+          <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from USA Decorator Directory · ${new Date().toLocaleString()}</p>
         </div>
       `,
     })

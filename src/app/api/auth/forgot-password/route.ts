@@ -34,9 +34,9 @@ export async function POST(req: NextRequest) {
     })
 
     await transporter.sendMail({
-      from: `"Print Services Hub" <${process.env.SMTP_USER}>`,
+      from: `"USA Decorator Directory" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: 'Reset Your Password — Print Services Hub',
+      subject: 'Reset Your Password — USA Decorator Directory',
       html: `
         <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:24px;">
           <h2 style="color:#1e293b;margin-bottom:8px;">Reset Your Password</h2>
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
           </a>
           <p style="color:#94a3b8;font-size:12px;">This link expires in 30 minutes. If you didn't request this, you can ignore this email.</p>
           <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
-          <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from Print Services Hub USA</p>
+          <p style="color:#94a3b8;font-size:12px;margin:0;">Sent from USA Decorator Directory</p>
         </div>
       `,
     })
