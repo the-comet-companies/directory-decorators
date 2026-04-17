@@ -1,0 +1,209 @@
+{
+  "name": "Shop Titan - Follow-up #1 (3 days)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * *"
+            }
+          ]
+        },
+        "timezone": "America/Los_Angeles"
+      },
+      "id": "schedule-trigger",
+      "name": "Daily at 10 AM LA",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "getAll",
+        "tableId": "email_outreach",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "query-outreach",
+      "name": "Get All Outreach",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [460, 240],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "getAll",
+        "tableId": "claims",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "status",
+              "condition": "eq",
+              "keyValue": "approved"
+            }
+          ]
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "query-claims",
+      "name": "Get Approved Claims",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [460, 420],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Find companies eligible for a 3-day follow-up:\n// - Received stage=1 at least 3 days ago\n// - Never received stage=2\n// - Haven't claimed their listing\n// - Pick 2-3 random\n\nconst outreach = $('Get All Outreach').all().map(i => i.json);\nconst claims = $('Get Approved Claims').all().map(i => i.json);\n\nconst claimedSlugs = new Set(claims.map(c => c.business_slug));\n\nconst THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;\nconst now = Date.now();\n\n// Build a map of slug -> stages already sent\nconst stagesBySlug = new Map();\nfor (const row of outreach) {\n  const slug = row.company_slug;\n  if (!slug) continue;\n  if (!stagesBySlug.has(slug)) stagesBySlug.set(slug, []);\n  stagesBySlug.get(slug).push(row);\n}\n\n// Eligible = sent stage=1, not stage=2, not claimed, 3+ days ago\nconst eligible = [];\nfor (const [slug, rows] of stagesBySlug) {\n  if (claimedSlugs.has(slug)) continue;\n\n  const stage1 = rows.find(r => r.stage === 1);\n  const stage2 = rows.find(r => r.stage === 2);\n  if (!stage1 || stage2) continue;\n\n  const sentAt = new Date(stage1.sent_at).getTime();\n  if (now - sentAt < THREE_DAYS_MS) continue;\n\n  eligible.push({\n    slug,\n    name: stage1.company_name,\n    email: stage1.email,\n  });\n}\n\n// Shuffle and pick 2-3\nconst shuffled = eligible.sort(() => Math.random() - 0.5);\nconst count = Math.floor(Math.random() * 2) + 2; // 2 or 3\nconst selected = shuffled.slice(0, count);\n\nreturn selected.map(c => ({ json: c }));"
+      },
+      "id": "filter-pick",
+      "name": "Filter & Pick 2-3 Random",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 330]
+    },
+    {
+      "parameters": {
+        "fromEmail": "team@shoptitan.app",
+        "fromName": "Shop Titan",
+        "toEmail": "={{ $json.email }}",
+        "subject": "Quick follow-up on your Shop Titan listing",
+        "html": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#1e293b;\">\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">Hi {{ $json.name }} team,</p>\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">\n    Following up on the email we sent a few days ago about claiming your free listing on <a href=\"https://directory.shoptitan.app\" style=\"color:#0f172a;font-weight:600;\">Shop Titan Directory</a> — wanted to make sure it didn't get buried.\n  </p>\n  <p style=\"color:#475569;font-size:15px;line-height:1.6;\">\n    Claiming takes about 2 minutes and lets you:\n  </p>\n  <ul style=\"color:#475569;font-size:15px;line-height:1.8;padding-left:20px;\">\n    <li>Edit your business info and add photos</li>\n    <li>Receive quote requests from customers directly</li>\n    <li>Get the <strong>verified badge</strong> — priority placement in search</li>\n  </ul>\n  <div style=\"margin:32px 0;\">\n    <a href=\"https://directory.shoptitan.app/provider/{{ $json.slug }}\" style=\"display:inline-block;background:#0f172a;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:600;\">\n      Claim Your Listing\n    </a>\n  </div>\n  <p style=\"color:#64748b;font-size:14px;\">If you're not interested or aren't the right contact, no worries — just ignore this email and we won't follow up again.</p>\n  <hr style=\"border:none;border-top:1px solid #e2e8f0;margin:24px 0;\"/>\n  <p style=\"color:#94a3b8;font-size:12px;margin:0;\">\n    The Shop Titan Team<br/>\n    <a href=\"mailto:team@shoptitan.app\" style=\"color:#94a3b8;\">team@shoptitan.app</a> · <a href=\"https://directory.shoptitan.app\" style=\"color:#94a3b8;\">directory.shoptitan.app</a>\n  </p>\n</div>",
+        "options": {
+          "ccEmail": "",
+          "bccEmail": "team@shoptitan.app"
+        }
+      },
+      "id": "send-email",
+      "name": "Send Follow-up Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [900, 330],
+      "credentials": {
+        "smtp": {
+          "name": "Hostinger SMTP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "create",
+        "tableId": "email_outreach",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "=outreach_{{ $now.toMillis() }}_{{ Math.random().toString(36).substring(2, 8) }}"
+            },
+            {
+              "fieldId": "company_slug",
+              "fieldValue": "={{ $('Filter & Pick 2-3 Random').item.json.slug }}",
+              "fieldValueType": "expression"
+            },
+            {
+              "fieldId": "company_name",
+              "fieldValue": "={{ $('Filter & Pick 2-3 Random').item.json.name }}",
+              "fieldValueType": "expression"
+            },
+            {
+              "fieldId": "email",
+              "fieldValue": "={{ $('Filter & Pick 2-3 Random').item.json.email }}",
+              "fieldValueType": "expression"
+            },
+            {
+              "fieldId": "subject",
+              "fieldValue": "Quick follow-up on your Shop Titan listing"
+            },
+            {
+              "fieldId": "status",
+              "fieldValue": "sent"
+            },
+            {
+              "fieldId": "stage",
+              "fieldValue": "2"
+            }
+          ]
+        }
+      },
+      "id": "record-sent",
+      "name": "Record in Supabase",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1120, 330],
+      "credentials": {
+        "supabaseApi": {
+          "name": "Supabase"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily at 10 AM LA": {
+      "main": [
+        [
+          {
+            "node": "Get All Outreach",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Approved Claims",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Approved Claims": {
+      "main": [
+        [
+          {
+            "node": "Filter & Pick 2-3 Random",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter & Pick 2-3 Random": {
+      "main": [
+        [
+          {
+            "node": "Send Follow-up Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Follow-up Email": {
+      "main": [
+        [
+          {
+            "node": "Record in Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

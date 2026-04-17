@@ -48,7 +48,7 @@ export default function ClaimPage() {
     const res = await fetch('/api/claim/send-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug, name }),
+      body: JSON.stringify({ slug }),
     })
     const data = await res.json()
 

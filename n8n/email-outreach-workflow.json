@@ -69,10 +69,10 @@
     },
     {
       "parameters": {
-        "jsCode": "// Filter out companies already emailed and pick 3-5 random\nconst companies = $('Get Companies with Email').all().map(i => i.json);\nconst alreadySent = $('Get Already Emailed').all().map(i => i.json);\nconst sentSlugs = new Set(alreadySent.map(s => s.company_slug));\n\n// Keep only companies with valid email that haven't been emailed yet\nconst available = companies.filter(c =>\n  c.email && c.email.trim() && !sentSlugs.has(c.slug) && c.email.includes('@')\n);\n\n// Shuffle and pick 3-5\nconst shuffled = available.sort(() => Math.random() - 0.5);\nconst count = Math.floor(Math.random() * 3) + 3; // 3, 4, or 5\nconst selected = shuffled.slice(0, count);\n\nreturn selected.map(c => ({ json: c }));"
+        "jsCode": "// Filter out companies already emailed and pick 3 random\nconst companies = $('Get Companies with Email').all().map(i => i.json);\nconst alreadySent = $('Get Already Emailed').all().map(i => i.json);\nconst sentSlugs = new Set(alreadySent.map(s => s.company_slug));\n\n// Keep only companies with valid email that haven't been emailed yet\nconst available = companies.filter(c =>\n  c.email && c.email.trim() && !sentSlugs.has(c.slug) && c.email.includes('@')\n);\n\n// Shuffle and pick 3\nconst shuffled = available.sort(() => Math.random() - 0.5);\nconst selected = shuffled.slice(0, 3);\n\nreturn selected.map(c => ({ json: c }));"
       },
       "id": "filter-pick",
-      "name": "Filter & Pick 3-5 Random",
+      "name": "Filter & Pick 3 Random",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [680, 380]
@@ -113,15 +113,18 @@
             },
             {
               "fieldId": "company_slug",
-              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.slug }}"
+              "fieldValue": "={{ $('Filter & Pick 3 Random').item.json.slug }}",
+              "fieldValueType": "expression"
             },
             {
               "fieldId": "company_name",
-              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.name }}"
+              "fieldValue": "={{ $('Filter & Pick 3 Random').item.json.name }}",
+              "fieldValueType": "expression"
             },
             {
               "fieldId": "email",
-              "fieldValue": "={{ $('Filter & Pick 3-5 Random').item.json.email }}"
+              "fieldValue": "={{ $('Filter & Pick 3 Random').item.json.email }}",
+              "fieldValueType": "expression"
             },
             {
               "fieldId": "subject",
@@ -130,6 +133,10 @@
             {
               "fieldId": "status",
               "fieldValue": "sent"
+            },
+            {
+              "fieldId": "stage",
+              "fieldValue": "1"
             }
           ]
         }
@@ -167,14 +174,14 @@
       "main": [
         [
           {
-            "node": "Filter & Pick 3-5 Random",
+            "node": "Filter & Pick 3 Random",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Filter & Pick 3-5 Random": {
+    "Filter & Pick 3 Random": {
       "main": [
         [
           {

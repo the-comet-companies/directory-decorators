@@ -5,9 +5,9 @@ import { createClaim, getClaimBySlug } from '@/lib/db'
 
 export async function POST(req: NextRequest) {
   try {
-    const { slug, name } = await req.json()
+    const { slug } = await req.json()
 
-    if (!slug || !name) {
+    if (!slug) {
       return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 400 })
     }
 
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       businessSlug: slug,
       businessName: provider.name,
       userEmail: businessEmail,
-      userName: name,
+      userName: '',
       verificationCode: code,
       codeExpiresAt: expiresAt,
       verified: false,
