@@ -148,7 +148,7 @@ function DropdownPill({
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute left-0 top-full mt-2 z-30 rounded-xl border border-surface-200 bg-white p-3 shadow-lg">
+        <div className="absolute left-0 top-full mt-2 z-[1001] rounded-xl border border-surface-200 bg-white p-3 shadow-lg max-h-[70vh] overflow-y-auto">
           {children}
         </div>
       )}

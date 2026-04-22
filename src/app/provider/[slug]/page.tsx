@@ -103,7 +103,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             {/* Gallery */}
             <div className="aspect-[16/9] md:aspect-auto">
               <GalleryLightbox
-                images={[provider.coverImage, ...provider.galleryImages].filter(Boolean) as string[]}
+                images={Array.from(new Set([provider.coverImage, ...provider.galleryImages].filter(Boolean) as string[]))}
                 providerName={provider.name}
               />
             </div>
