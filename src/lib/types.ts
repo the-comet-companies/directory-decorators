@@ -53,6 +53,11 @@ export interface Provider {
   nationwideShipping?: boolean;
   contractPrinting?: boolean;
   dropshipping?: boolean;
+  facebook?: string;
+  instagram?: string;
+  tiktok?: string;
+  youtube?: string;
+  linkedin?: string;
 }
 
 export interface PricingTier {

@@ -70,6 +70,11 @@ function providerFromRow(row: any): Provider {
     nationwideShipping: !!row.nationwide_shipping,
     contractPrinting: !!row.contract_printing,
     dropshipping: !!row.dropshipping,
+    facebook: row.facebook || '',
+    instagram: row.instagram || '',
+    tiktok: row.tiktok || '',
+    youtube: row.youtube || '',
+    linkedin: row.linkedin || '',
   };
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
